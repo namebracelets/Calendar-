@@ -1,0 +1,123 @@
+{
+  "month": "2026-09",
+  "lastUpdated": "2026-09-28",
+  "sample": true,
+  "events": [
+    {
+      "title": "SAMPLE – Regional Medical Association Annual Meeting",
+      "category": "Conventions",
+      "startDate": "2026-09-14",
+      "endDate": "2026-09-17",
+      "totalAttendance": 11000,
+      "dailyAttendance": { "2026-09-14": 2500, "2026-09-15": 3200, "2026-09-16": 3200, "2026-09-17": 2100 },
+      "impactWindow": "5:00 PM – 8:00 PM",
+      "location": "Ernest N. Morial Convention Center",
+      "proximity": "MCCNO Corridor",
+      "sources": ["https://www.mccno.com"]
+    },
+    {
+      "title": "SAMPLE – Ocean Cruise Turn Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-09-19",
+      "totalAttendance": 4200,
+      "impactWindow": "8:00 AM – 12:00 PM",
+      "location": "Erato St. Cruise Terminal",
+      "proximity": "Riverfront (1.2 mi)",
+      "sources": ["https://portnola.com"]
+    },
+    {
+      "title": "SAMPLE – Ocean Cruise Turn Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-09-26",
+      "totalAttendance": 4200,
+      "impactWindow": "8:00 AM – 12:00 PM",
+      "location": "Erato St. Cruise Terminal",
+      "proximity": "Riverfront (1.2 mi)"
+    },
+    {
+      "title": "SAMPLE – River Cruise Boat Docking",
+      "category": "Cruise Ships",
+      "startDate": "2026-09-12",
+      "totalAttendance": 380,
+      "impactWindow": "10:30 AM – 1:30 PM",
+      "location": "Toulouse St. Wharf",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)"
+    },
+    {
+      "title": "SAMPLE – Pro Football Home Game",
+      "category": "Sports",
+      "startDate": "2026-09-20",
+      "totalAttendance": 70000,
+      "impactWindow": "9:00 AM – 11:30 AM",
+      "location": "Caesars Superdome",
+      "proximity": "Superdome"
+    },
+    {
+      "title": "SAMPLE – College Football Classic",
+      "category": "Sports",
+      "startDate": "2026-09-05",
+      "totalAttendance": 48000,
+      "impactWindow": "10:00 AM – 2:00 PM",
+      "location": "Caesars Superdome",
+      "proximity": "Superdome"
+    },
+    {
+      "title": "SAMPLE – Arena Concert",
+      "category": "Concerts",
+      "startDate": "2026-09-12",
+      "totalAttendance": 15500,
+      "impactWindow": "3:00 PM – 6:30 PM",
+      "location": "Smoothie King Center",
+      "proximity": "Superdome"
+    },
+    {
+      "title": "SAMPLE – High School Band Travel Charter",
+      "category": "Youth Events",
+      "startDate": "2026-09-12",
+      "totalAttendance": 250,
+      "impactWindow": "11:00 AM – 1:00 PM",
+      "location": "French Market Flea Market Sheds",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)"
+    },
+    {
+      "title": "SAMPLE – Riverfront Music Festival",
+      "category": "Festivals",
+      "startDate": "2026-09-25",
+      "endDate": "2026-09-27",
+      "totalAttendance": 36000,
+      "dailyAttendance": { "2026-09-25": 9000, "2026-09-26": 14000, "2026-09-27": 13000 },
+      "impactWindow": "11:00 AM – 6:00 PM",
+      "location": "Woldenberg & Spanish Plaza",
+      "proximity": "French Quarter Riverfront"
+    },
+    {
+      "title": "SAMPLE – Permitted Second Line",
+      "category": "Parades",
+      "startDate": "2026-09-12",
+      "totalAttendance": 850,
+      "impactWindow": "2:00 PM – 4:00 PM",
+      "location": "Esplanade Ave. to N. Peters St.",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Street closures on N. Peters between Esplanade and Barracks during route."
+    },
+    {
+      "title": "SAMPLE – Senior Motorcoach Tour Group",
+      "category": "Tours/Charters",
+      "startDate": "2026-09-15",
+      "endDate": "2026-09-16",
+      "totalAttendance": 1400,
+      "impactWindow": "10:30 AM – 1:30 PM",
+      "location": "French Market Bus Drop (N. Peters)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)"
+    },
+    {
+      "title": "SAMPLE – Riverfront 5K",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-12",
+      "totalAttendance": 2300,
+      "impactWindow": "7:00 AM – 10:00 AM",
+      "location": "Crescent Park to Jackson Square",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)"
+    }
+  ]
+}

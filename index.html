@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>French Market Foot Traffic</title>
+  <meta name="description" content="Calendar of events expected to drive foot traffic to the New Orleans French Market and the 1200 block of N. Peters St.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚜️</text></svg>">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    body { -webkit-tap-highlight-color: transparent; }
+    .day-cell:focus-visible { outline: 2px solid #1e3a8a; outline-offset: -2px; }
+  </style>
+</head>
+<body class="bg-stone-100 text-stone-900 min-h-screen antialiased">
+
+  <header class="bg-emerald-900 text-white sticky top-0 z-40 shadow">
+    <div class="max-w-5xl mx-auto px-3 sm:px-4 pt-3 pb-2">
+      <div class="flex items-baseline justify-between gap-2">
+        <h1 class="text-base sm:text-xl font-bold leading-tight">⚜️ French Market Foot Traffic</h1>
+        <span id="updated" class="shrink-0 text-[10px] sm:text-xs text-emerald-200 text-right"></span>
+      </div>
+      <p class="text-[11px] sm:text-xs text-emerald-200">Event-driven crowds near the French Market &amp; 1200 Block N. Peters St.</p>
+
+      <nav class="mt-2 grid grid-cols-3 gap-1.5 sm:gap-2" aria-label="Month">
+        <button data-offset="-1" class="month-btn rounded-lg py-2 px-1 text-xs sm:text-sm font-semibold">◄ Last Month</button>
+        <button data-offset="0"  class="month-btn rounded-lg py-2 px-1 text-xs sm:text-sm font-semibold">This Month</button>
+        <button data-offset="1"  class="month-btn rounded-lg py-2 px-1 text-xs sm:text-sm font-semibold">Next Month ►</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-2 sm:px-4 py-3">
+    <div class="flex items-end justify-between mb-2 px-1">
+      <h2 id="month-title" class="text-xl sm:text-2xl font-bold"></h2>
+      <span id="month-total" class="text-xs sm:text-sm text-stone-600"></span>
+    </div>
+
+    <div id="sample-banner" class="hidden mb-2 rounded-lg border border-amber-300 bg-amber-50 text-amber-900 text-xs sm:text-sm px-3 py-2">
+      <strong>Sample data.</strong> These events are placeholders for demonstration and have not been audited. Replace this month's file with verified data before sharing.
+    </div>
+
+    <div id="calendar" class="bg-white rounded-xl shadow-sm overflow-hidden"></div>
+
+    <section class="mt-4 bg-white rounded-xl shadow-sm p-3" aria-label="Legend">
+      <h3 class="text-xs font-semibold uppercase tracking-wide text-stone-500 mb-2">Categories</h3>
+      <div id="legend" class="flex flex-wrap gap-1.5"></div>
+      <p class="text-[11px] text-stone-500 mt-2">
+        Badges show estimated attendance for that day, rounded (under 1,000 → nearest 100; 1,000+ → nearest 1K).
+        Darker day shading = bigger total crowd. Tap any day for details.
+      </p>
+    </section>
+  </main>
+
+  <!-- Drill-down modal -->
+  <div id="modal" class="hidden fixed inset-0 z-50 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div id="modal-backdrop" class="fixed inset-0 bg-black/50"></div>
+    <div class="relative min-h-full flex items-start sm:items-center justify-center p-2 sm:p-6">
+      <div class="relative w-full max-w-lg bg-white rounded-2xl shadow-xl">
+        <div class="sticky top-0 bg-white rounded-t-2xl border-b border-stone-200 px-4 py-3 pr-14">
+          <h2 id="modal-title" class="text-lg font-bold leading-snug"></h2>
+          <p id="modal-total" class="text-sm text-stone-600"></p>
+          <button id="modal-close" aria-label="Close"
+            class="absolute top-2 right-2 h-10 w-10 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-800 text-2xl leading-none font-bold flex items-center justify-center">×</button>
+        </div>
+        <div id="modal-body" class="p-3 sm:p-4 space-y-3"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/shared.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

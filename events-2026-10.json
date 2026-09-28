@@ -1,0 +1,119 @@
+{
+  "month": "2026-10",
+  "lastUpdated": "2026-09-28",
+  "sample": true,
+  "events": [
+    {
+      "title": "SAMPLE – Technology Industry Conference",
+      "category": "Conventions",
+      "startDate": "2026-10-16",
+      "endDate": "2026-10-18",
+      "totalAttendance": 35000,
+      "dailyAttendance": { "2026-10-16": 12000, "2026-10-17": 13000, "2026-10-18": 10000 },
+      "impactWindow": "5:00 PM – 8:00 PM",
+      "location": "Ernest N. Morial Convention Center",
+      "proximity": "MCCNO Corridor"
+    },
+    {
+      "title": "SAMPLE – Hotel Buyout Corporate Retreat",
+      "category": "Conventions",
+      "startDate": "2026-10-06",
+      "endDate": "2026-10-08",
+      "totalAttendance": 2400,
+      "impactWindow": "12:00 PM – 2:00 PM",
+      "location": "Downtown Riverfront Hotel",
+      "proximity": "Canal St. / CBD"
+    },
+    {
+      "title": "SAMPLE – Ocean Cruise Turn Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-10-03",
+      "totalAttendance": 4200,
+      "impactWindow": "8:00 AM – 12:00 PM",
+      "location": "Erato St. Cruise Terminal",
+      "proximity": "Riverfront (1.2 mi)"
+    },
+    {
+      "title": "SAMPLE – Ocean Cruise Turn Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-10-17",
+      "totalAttendance": 4200,
+      "impactWindow": "8:00 AM – 12:00 PM",
+      "location": "Erato St. Cruise Terminal",
+      "proximity": "Riverfront (1.2 mi)"
+    },
+    {
+      "title": "SAMPLE – Pro Football Home Game",
+      "category": "Sports",
+      "startDate": "2026-10-18",
+      "totalAttendance": 72000,
+      "impactWindow": "9:00 AM – 11:30 AM",
+      "location": "Caesars Superdome",
+      "proximity": "Superdome"
+    },
+    {
+      "title": "SAMPLE – Pro Basketball Home Opener",
+      "category": "Sports",
+      "startDate": "2026-10-22",
+      "totalAttendance": 16800,
+      "impactWindow": "4:00 PM – 6:30 PM",
+      "location": "Smoothie King Center",
+      "proximity": "Superdome"
+    },
+    {
+      "title": "SAMPLE – Theater Touring Concert",
+      "category": "Concerts",
+      "startDate": "2026-10-17",
+      "totalAttendance": 2700,
+      "impactWindow": "4:00 PM – 7:00 PM",
+      "location": "Saenger Theatre",
+      "proximity": "Canal St. / CBD"
+    },
+    {
+      "title": "SAMPLE – High School Choir Performance Tour",
+      "category": "Youth Events",
+      "startDate": "2026-10-17",
+      "totalAttendance": 180,
+      "impactWindow": "10:30 AM – 12:30 PM",
+      "location": "French Market Flea Market Sheds",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)"
+    },
+    {
+      "title": "SAMPLE – Frenchmen St. Art Walk",
+      "category": "Festivals",
+      "startDate": "2026-10-10",
+      "totalAttendance": 5400,
+      "impactWindow": "5:00 PM – 9:00 PM",
+      "location": "Frenchmen St.",
+      "proximity": "Marigny (3 blocks)"
+    },
+    {
+      "title": "SAMPLE – Halloween Parade",
+      "category": "Parades",
+      "startDate": "2026-10-24",
+      "totalAttendance": 25000,
+      "impactWindow": "5:30 PM – 9:00 PM",
+      "location": "French Quarter route ending at French Market",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)"
+    },
+    {
+      "title": "SAMPLE – Veterans Reunion Motorcoach Group",
+      "category": "Tours/Charters",
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-19",
+      "totalAttendance": 900,
+      "impactWindow": "10:30 AM – 1:30 PM",
+      "location": "French Market Bus Drop (N. Peters)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)"
+    },
+    {
+      "title": "SAMPLE – Riverfront Fireworks",
+      "category": "Miscellaneous",
+      "startDate": "2026-10-31",
+      "totalAttendance": 6000,
+      "impactWindow": "6:00 PM – 9:00 PM",
+      "location": "Mississippi Riverfront",
+      "proximity": "French Quarter Riverfront"
+    }
+  ]
+}
