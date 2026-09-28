@@ -1,0 +1,925 @@
+{
+  "month": "2026-09",
+  "lastUpdated": "2026-09-28",
+  "events": [
+    {
+      "title": "New Orleans & Company Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-01",
+      "totalAttendance": 3000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "New Orleans & Company Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-02",
+      "totalAttendance": 2000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "New Orleans & Company Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-03",
+      "totalAttendance": 2000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "Southern Decadence Kickoff",
+      "category": "Parades",
+      "startDate": "2026-09-03",
+      "totalAttendance": 30000,
+      "impactWindow": "2:00 PM - 8:00 PM",
+      "location": "French Quarter & Decatur St",
+      "proximity": "Direct Market Proximity",
+      "notes": "French Quarter festival crowds and walking tours.",
+      "sources": [
+        "WWL-TV / OffBeat"
+      ]
+    },
+    {
+      "title": "New Orleans & Company Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-04",
+      "totalAttendance": 2000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "Southern Decadence Friday",
+      "category": "Parades",
+      "startDate": "2026-09-04",
+      "totalAttendance": 55000,
+      "impactWindow": "2:00 PM - 10:00 PM",
+      "location": "French Quarter & Decatur St",
+      "proximity": "Direct Market Proximity",
+      "notes": "Festival foot traffic across lower French Quarter.",
+      "sources": [
+        "WWL-TV / OffBeat"
+      ]
+    },
+    {
+      "title": "New Orleans & Company Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-05",
+      "totalAttendance": 1000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "Youth Soccer Tournament",
+      "category": "Youth Events",
+      "startDate": "2026-09-05",
+      "totalAttendance": 3000,
+      "impactWindow": "9:00 AM - 3:00 PM",
+      "location": "Regional Athletic Fields",
+      "proximity": "Greater New Orleans Area",
+      "notes": "Regional youth athletic tournament.",
+      "sources": [
+        "Local Calendar"
+      ]
+    },
+    {
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-09-05",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM - 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "title": "College Football Kickoff Game",
+      "category": "Sports",
+      "startDate": "2026-09-05",
+      "totalAttendance": 40000,
+      "impactWindow": "3:00 PM - 8:00 PM",
+      "location": "Caesars Superdome",
+      "proximity": "Superdome / CBD Corridor",
+      "notes": "College football kickoff game.",
+      "sources": [
+        "Superdome Schedule"
+      ]
+    },
+    {
+      "title": "Southern Decadence Saturday Peak",
+      "category": "Parades",
+      "startDate": "2026-09-05",
+      "totalAttendance": 80000,
+      "impactWindow": "12:00 PM - 10:00 PM",
+      "location": "French Quarter & Decatur St",
+      "proximity": "Direct Market Proximity",
+      "notes": "Peak festival attendance and street walking traffic.",
+      "sources": [
+        "WWL-TV / OffBeat"
+      ]
+    },
+    {
+      "title": "Riverfront Cultural Gathering",
+      "category": "Festivals",
+      "startDate": "2026-09-05",
+      "totalAttendance": 14000,
+      "impactWindow": "2:00 PM - 8:00 PM",
+      "location": "Woldenberg Park / Riverfront",
+      "proximity": "Direct Market Proximity",
+      "notes": "Riverfront park gatherings adjacent to market.",
+      "sources": [
+        "Local Calendar"
+      ]
+    },
+    {
+      "title": "New Orleans & Company Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-06",
+      "totalAttendance": 1000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-09-06",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM - 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "title": "Southern Decadence Parade Day",
+      "category": "Parades",
+      "startDate": "2026-09-06",
+      "totalAttendance": 85000,
+      "impactWindow": "1:00 PM - 7:00 PM",
+      "location": "French Quarter / Decatur St",
+      "proximity": "Direct Market Proximity",
+      "notes": "Official Southern Decadence grand parade.",
+      "sources": [
+        "WWL-TV / OffBeat"
+      ]
+    },
+    {
+      "title": "Labor Day Weekend Riverfront Fireworks",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-06",
+      "totalAttendance": 30000,
+      "impactWindow": "7:00 PM - 9:30 PM",
+      "location": "Mississippi Riverfront",
+      "proximity": "Direct Market Proximity",
+      "notes": "Holiday fireworks display along riverfront railing.",
+      "sources": [
+        "Local Calendar"
+      ]
+    },
+    {
+      "title": "Youth Soccer Tournament",
+      "category": "Youth Events",
+      "startDate": "2026-09-06",
+      "totalAttendance": 3000,
+      "impactWindow": "9:00 AM - 3:00 PM",
+      "location": "Regional Athletic Fields",
+      "proximity": "Greater New Orleans Area",
+      "notes": "Regional youth athletic tournament.",
+      "sources": [
+        "Local Calendar"
+      ]
+    },
+    {
+      "title": "New Orleans & Company Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-07",
+      "totalAttendance": 1000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "Labor Day Holiday Crowds",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-07",
+      "totalAttendance": 1000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "French Quarter / Market Sheds",
+      "proximity": "Direct Market Proximity",
+      "notes": "Labor Day holiday weekend foot traffic.",
+      "sources": [
+        "Local Calendar"
+      ]
+    },
+    {
+      "title": "Southern Decadence Finale",
+      "category": "Parades",
+      "startDate": "2026-09-07",
+      "totalAttendance": 25000,
+      "impactWindow": "12:00 PM - 6:00 PM",
+      "location": "French Quarter & Decatur St",
+      "proximity": "Direct Market Proximity",
+      "notes": "Holiday weekend closing crowds.",
+      "sources": [
+        "WWL-TV / OffBeat"
+      ]
+    },
+    {
+      "title": "New Orleans & Company Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-08",
+      "totalAttendance": 1000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "New Orleans & Company Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-09",
+      "totalAttendance": 2000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "New Orleans & Company Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-10",
+      "totalAttendance": 1000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-09-10",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM - 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "title": "New Orleans & Company Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-11",
+      "totalAttendance": 1000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "Arena / Theater Concert Event",
+      "category": "Concerts",
+      "startDate": "2026-09-11",
+      "totalAttendance": 15000,
+      "impactWindow": "5:30 PM - 9:00 PM",
+      "location": "Smoothie King Center / Saenger",
+      "proximity": "Superdome / CBD Corridor",
+      "notes": "Evening concert event driving pre-show Quarter dining.",
+      "sources": [
+        "Local Press"
+      ]
+    },
+    {
+      "title": "New Orleans & Company Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-12",
+      "totalAttendance": 1000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "NOLA River Fest",
+      "category": "Festivals",
+      "startDate": "2026-09-12",
+      "totalAttendance": 5000,
+      "impactWindow": "11:00 AM - 8:00 PM",
+      "location": "New Orleans Jazz Museum / Esplanade",
+      "proximity": "Direct Market Proximity",
+      "notes": "Annual River Fest adjacent to French Market sheds.",
+      "sources": [
+        "NOLA Jazz Museum"
+      ]
+    },
+    {
+      "title": "New Orleans & Company Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-13",
+      "totalAttendance": 2000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-09-13",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM - 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "title": "Local Music Festival",
+      "category": "Festivals",
+      "startDate": "2026-09-13",
+      "totalAttendance": 5000,
+      "impactWindow": "2:00 PM - 8:00 PM",
+      "location": "French Quarter / Riverfront",
+      "proximity": "Direct Market Proximity",
+      "notes": "Outdoor music gathering.",
+      "sources": [
+        "Local Calendar"
+      ]
+    },
+    {
+      "title": "New Orleans & Company Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-14",
+      "totalAttendance": 3000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-09-14",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM - 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "title": "Psych Congress & Registered Meetings",
+      "category": "Conventions",
+      "startDate": "2026-09-15",
+      "totalAttendance": 3000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "MCCNO & French Quarter Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Psych Congress + registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "Psych Congress & Registered Meetings",
+      "category": "Conventions",
+      "startDate": "2026-09-16",
+      "totalAttendance": 5000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "MCCNO & French Quarter Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Psych Congress + registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "Bruno Mars - The Romantic Tour",
+      "category": "Concerts",
+      "startDate": "2026-09-16",
+      "totalAttendance": 45000,
+      "impactWindow": "5:00 PM - 8:30 PM",
+      "location": "Caesars Superdome",
+      "proximity": "Superdome / CBD Corridor",
+      "notes": "Stadium concert event driving pre-show dining across the Quarter.",
+      "sources": [
+        "Caesars Superdome Schedule"
+      ]
+    },
+    {
+      "title": "YMCA General Assembly & Major Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-17",
+      "totalAttendance": 14000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "MCCNO & French Quarter Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "YMCA General Assembly + registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "YMCA General Assembly & Major Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-18",
+      "totalAttendance": 14000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "MCCNO & French Quarter Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "YMCA General Assembly + registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "Superdome Concert Event",
+      "category": "Concerts",
+      "startDate": "2026-09-18",
+      "totalAttendance": 12000,
+      "impactWindow": "5:00 PM - 8:30 PM",
+      "location": "Caesars Superdome",
+      "proximity": "Superdome / CBD Corridor",
+      "notes": "Major stadium concert event.",
+      "sources": [
+        "Superdome Schedule"
+      ]
+    },
+    {
+      "title": "YMCA General Assembly & Major Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-19",
+      "totalAttendance": 14000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "MCCNO & French Quarter Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "YMCA General Assembly + registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-09-19",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM - 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "title": "New Orleans & Company Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-20",
+      "totalAttendance": 2000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-09-20",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM - 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "title": "New Orleans & Company Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-21",
+      "totalAttendance": 3000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "New Orleans & Company Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-22",
+      "totalAttendance": 3000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "Saenger Theatre Broadway Show",
+      "category": "Concerts",
+      "startDate": "2026-09-22",
+      "endDate": "2026-09-27",
+      "totalAttendance": 12000,
+      "dailyAttendance": {
+        "2026-09-22": 2000,
+        "2026-09-23": 2000,
+        "2026-09-24": 2000,
+        "2026-09-25": 2000,
+        "2026-09-26": 2000,
+        "2026-09-27": 2000
+      },
+      "impactWindow": "6:00 PM - 8:00 PM",
+      "location": "Saenger Theatre",
+      "proximity": "Canal St Corridor",
+      "notes": "Broadway theater musical run.",
+      "sources": [
+        "Saenger NOLA"
+      ]
+    },
+    {
+      "title": "New Orleans & Company Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-23",
+      "totalAttendance": 5000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "LeadHERship Network Summit",
+      "category": "Conventions",
+      "startDate": "2026-09-23",
+      "endDate": "2026-09-25",
+      "totalAttendance": 1000,
+      "dailyAttendance": {
+        "2026-09-23": 300,
+        "2026-09-24": 400,
+        "2026-09-25": 300
+      },
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "Hilton New Orleans Riverside",
+      "proximity": "Convention Center Corridor",
+      "notes": "Leadership summit hotel event.",
+      "sources": [
+        "Hilton Riverside Calendar"
+      ]
+    },
+    {
+      "title": "New Orleans & Company Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-24",
+      "totalAttendance": 5000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-09-24",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM - 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "title": "NOLAxNOLA Live Music Festival",
+      "category": "Festivals",
+      "startDate": "2026-09-24",
+      "endDate": "2026-09-30",
+      "totalAttendance": 15000,
+      "dailyAttendance": {
+        "2026-09-24": 1500,
+        "2026-09-25": 3000,
+        "2026-09-26": 4000,
+        "2026-09-27": 3500,
+        "2026-09-28": 1000,
+        "2026-09-29": 1000,
+        "2026-09-30": 1000
+      },
+      "impactWindow": "4:00 PM - 9:00 PM",
+      "location": "Frenchmen St & French Quarter",
+      "proximity": "Direct Market Proximity",
+      "notes": "Citywide live music festival with heavy Marigny/Frenchmen spillover.",
+      "sources": [
+        "NOLAxNOLA"
+      ]
+    },
+    {
+      "title": "New Orleans & Company Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-25",
+      "totalAttendance": 4000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "BlackAmericana Fest",
+      "category": "Festivals",
+      "startDate": "2026-09-25",
+      "endDate": "2026-09-26",
+      "totalAttendance": 2000,
+      "dailyAttendance": {
+        "2026-09-25": 1000,
+        "2026-09-26": 1000
+      },
+      "impactWindow": "3:00 PM - 8:00 PM",
+      "location": "The Broadside / Mid-City",
+      "proximity": "Mid-City / Outer French Quarter",
+      "notes": "Cultural music festival.",
+      "sources": [
+        "Local Press"
+      ]
+    },
+    {
+      "title": "Major Arena / Theater Concert",
+      "category": "Concerts",
+      "startDate": "2026-09-25",
+      "totalAttendance": 14000,
+      "impactWindow": "5:30 PM - 9:00 PM",
+      "location": "Smoothie King Center / Saenger",
+      "proximity": "Superdome / CBD Corridor",
+      "notes": "Major evening musical show.",
+      "sources": [
+        "Local Press"
+      ]
+    },
+    {
+      "title": "New Orleans & Company Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-26",
+      "totalAttendance": 2000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "Saints Kickoff 5K Run",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-26",
+      "totalAttendance": 5000,
+      "impactWindow": "7:30 AM - 11:30 AM",
+      "location": "Champions Square & French Quarter Perimeter",
+      "proximity": "Superdome / French Quarter Radius",
+      "notes": "5K road race with runners visiting downtown spots post-race.",
+      "sources": [
+        "Saints5K.com"
+      ]
+    },
+    {
+      "title": "Regional Culinary Food Fest",
+      "category": "Festivals",
+      "startDate": "2026-09-26",
+      "totalAttendance": 7000,
+      "impactWindow": "11:00 AM - 6:00 PM",
+      "location": "French Quarter / Riverfront Park",
+      "proximity": "Direct Market Proximity",
+      "notes": "Local food tasting and cultural festival.",
+      "sources": [
+        "Local Calendar"
+      ]
+    },
+    {
+      "title": "Youth Basketball Tournament",
+      "category": "Youth Events",
+      "startDate": "2026-09-26",
+      "totalAttendance": 2000,
+      "impactWindow": "9:00 AM - 4:00 PM",
+      "location": "Convention Center / Local Gyms",
+      "proximity": "Greater New Orleans Area",
+      "notes": "Youth basketball tournament.",
+      "sources": [
+        "Local Calendar"
+      ]
+    },
+    {
+      "title": "New Orleans & Company Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-27",
+      "totalAttendance": 3000,
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-09-27",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM - 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "title": "Regional Culinary Food Fest",
+      "category": "Festivals",
+      "startDate": "2026-09-27",
+      "totalAttendance": 6000,
+      "impactWindow": "11:00 AM - 5:00 PM",
+      "location": "French Quarter / Riverfront Park",
+      "proximity": "Direct Market Proximity",
+      "notes": "Local food tasting and cultural festival.",
+      "sources": [
+        "Local Calendar"
+      ]
+    },
+    {
+      "title": "Youth Basketball Tournament",
+      "category": "Youth Events",
+      "startDate": "2026-09-27",
+      "totalAttendance": 2000,
+      "impactWindow": "9:00 AM - 4:00 PM",
+      "location": "Convention Center / Local Gyms",
+      "proximity": "Greater New Orleans Area",
+      "notes": "Youth basketball tournament.",
+      "sources": [
+        "Local Calendar"
+      ]
+    },
+    {
+      "title": "Saints Home Opener vs Las Vegas Raiders",
+      "category": "Sports",
+      "startDate": "2026-09-27",
+      "totalAttendance": 70000,
+      "impactWindow": "11:00 AM - 3:30 PM",
+      "location": "Caesars Superdome",
+      "proximity": "Superdome / CBD Corridor",
+      "notes": "NFL Regular Season Home Game (3:25 PM Kickoff).",
+      "sources": [
+        "NFL / Saints Schedule"
+      ]
+    },
+    {
+      "title": "WEFTEC 2026 Water Environment Federation",
+      "category": "Conventions",
+      "startDate": "2026-09-28",
+      "totalAttendance": 22000,
+      "impactWindow": "11:30 AM - 2:00 PM",
+      "location": "MCCNO The Great Hall",
+      "proximity": "Convention Center Corridor",
+      "notes": "WEFTEC (18",
+      "sources": [
+        "000) + registered hotel meetings (4"
+      ]
+    },
+    {
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-09-28",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM - 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "title": "WEFTEC 2026 Water Environment Federation",
+      "category": "Conventions",
+      "startDate": "2026-09-29",
+      "totalAttendance": 22000,
+      "impactWindow": "11:30 AM - 2:00 PM",
+      "location": "MCCNO The Great Hall",
+      "proximity": "Convention Center Corridor",
+      "notes": "WEFTEC (18",
+      "sources": [
+        "000) + registered hotel meetings (4"
+      ]
+    },
+    {
+      "title": "LAGCOE Energy Exposition",
+      "category": "Conventions",
+      "startDate": "2026-09-29",
+      "endDate": "2026-09-30",
+      "totalAttendance": 5000,
+      "dailyAttendance": {
+        "2026-09-29": 2500,
+        "2026-09-30": 2500
+      },
+      "impactWindow": "10:00 AM - 4:00 PM",
+      "location": "Ernest N. Morial Convention Center",
+      "proximity": "Convention Center Corridor",
+      "notes": "Energy industry expo.",
+      "sources": [
+        "Tradefest / MCCNO"
+      ]
+    },
+    {
+      "title": "WEFTEC 2026 Water Environment Federation",
+      "category": "Conventions",
+      "startDate": "2026-09-30",
+      "totalAttendance": 22000,
+      "impactWindow": "11:30 AM - 2:00 PM",
+      "location": "MCCNO The Great Hall",
+      "proximity": "Convention Center Corridor",
+      "notes": "WEFTEC (18",
+      "sources": [
+        "000) + registered hotel meetings (4"
+      ]
+    }
+  ]
+}
