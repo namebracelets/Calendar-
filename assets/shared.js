@@ -1,4 +1,4 @@
-// Shared config + helpers used by the dashboard (index.html) and the data builder (builder.html).
+// Shared config + helpers used by the dashboard (index.html) and the admin page (admin/).
 // Tailwind scans these literal class strings at runtime, so keep every class written out in full.
 
 // Folder the monthly files live in, relative to index.html. "" = repo root.
@@ -55,7 +55,7 @@ function eachDay(start, end) {
 }
 
 // Accepts either file layout and returns { month, lastUpdated, sample, events: [...] }:
-//   • { "month": ..., "events": [ { "startDate": ..., "totalAttendance": ... } ] }  (builder.html output)
+//   • { "month": ..., "events": [ { "startDate": ..., "totalAttendance": ... } ] }  (admin page output)
 //   • [ { "start_date": ..., "total_attendance": ..., "daily_attendance": "2026-10-16:12000; ..." } ]  (spreadsheet-style)
 function normalizeMonthFile(json) {
   const root = Array.isArray(json) ? { events: json } : json;

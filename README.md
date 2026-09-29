@@ -5,59 +5,44 @@ A mobile-first calendar of events expected to drive foot traffic to the New Orle
 | File | What it is |
 |---|---|
 | `index.html` | The calendar vendors use |
-| `builder.html` | Turns a spreadsheet (CSV) into a monthly data file |
-| `events-YYYY-MM.json` | One data file per month, e.g. `events-2026-10.json` |
-| `events-template.csv` | Spreadsheet template for `builder.html` |
-| `assets/` | Shared code (categories, colors, rounding) and the calendar logic |
+| `admin/` | Private admin page for adding, editing, importing, and publishing events |
+| `events-YYYY-MM.json` | One data file per month, e.g. `events-2026-10.json`. The admin page writes these for you |
+| `events-template.csv` | Example spreadsheet layout (optional; the admin page reads most layouts) |
+| `assets/` | Calendar code, shared settings (categories, colors, rounding), the importer, and the admin code |
 
-> The included `events-2026-09.json` and `events-2026-10.json` are **sample data**, marked `"sample": true`, which shows a yellow "Sample data" banner. Replace them with audited data before sharing the link.
-
----
-
-## One-time setup: publish on GitHub Pages (about 10 minutes)
-
-1. Create a free account at <https://github.com> if you don't have one.
-2. Click **+ → New repository**. Name it something like `french-market-events`, set it to **Public**, and click **Create repository**.
-3. On the new repo page, click **uploading an existing file**. Drag in **everything inside this folder**, including the `assets` folder, then click **Commit changes**.
-4. Go to **Settings → Pages**. Under *Build and deployment*, set **Source: Deploy from a branch**, **Branch: `main`**, folder **`/ (root)`**, and click **Save**.
-5. After a minute or two the site is live at
-   `https://YOUR-USERNAME.github.io/french-market-events/`
-   Share that link with vendors. It works on any phone browser, and they can use *Add to Home Screen* to get an app icon.
-
-(Netlify or Vercel also work. Drag the folder onto <https://app.netlify.com/drop>.)
+Live site: <https://namebracelets.github.io/Calendar-/>
+Admin: <https://namebracelets.github.io/Calendar-/admin/> (not linked from the calendar; bookmark it)
 
 ---
 
-## Monthly update (about 5 minutes)
+## Admin page
 
-1. Fill in the spreadsheet using the columns from `events-template.csv` (one row per event):
+### First time on a device (about 5 minutes)
 
-   | Column | Required | Example |
-   |---|---|---|
-   | `title` | ✔ | Tech Industry Conference |
-   | `category` | ✔ | One of the 9 names exactly: Conventions, Cruise Ships, Sports, Concerts, Youth Events, Festivals, Parades, Tours/Charters, Miscellaneous |
-   | `start_date` | ✔ | 2026-10-16 |
-   | `end_date` | | 2026-10-18 (blank = one-day event) |
-   | `total_attendance` | ✔ | 35000 |
-   | `daily_attendance` | | `2026-10-16:12000; 2026-10-17:13000; 2026-10-18:10000` (blank = total split evenly across the days) |
-   | `impact_window` | | 10:30 AM – 1:30 PM |
-   | `location` | | Ernest N. Morial Convention Center |
-   | `proximity` | | Direct Market Proximity (1200 Block N. Peters) · MCCNO Corridor · Superdome |
-   | `notes` | | Street closure on N. Peters during route |
-   | `sources` | | URLs separated by `;` |
+1. **Create a GitHub token** (a key that lets the admin page save to this repository):
+   - Signed in to GitHub, open <https://github.com/settings/personal-access-tokens/new>.
+   - Name it *Calendar admin*. For Expiration, choose the longest option offered.
+   - Repository access: **Only select repositories**, then choose **Calendar-**.
+   - Permissions → Repository permissions → **Contents: Read and write**.
+   - Click **Generate token** and copy it. GitHub only shows it once.
+2. Open the admin page. Your username and repository are filled in. Paste the token, choose an **admin password**, and tap **Connect**.
 
-2. Export it as CSV (Google Sheets: *File → Download → CSV*; Excel: *Save As → CSV UTF-8*).
-3. Open `https://YOUR-USERNAME.github.io/french-market-events/builder.html`, pick the month, load the CSV, fix any red errors, and click **Download JSON**. You get a file named like `events-2026-11.json`.
-4. On GitHub, open your repo, click **Add file → Upload files**, drop in the JSON file, and click **Commit changes**. Uploading a file with the same name replaces that month.
-5. The calendar updates within a minute or two. If a phone shows old data, refresh the page.
+The token is encrypted with your admin password and saved only in that browser. It is never put on the public website. Next time, you just type your password. On a new phone or computer, repeat step 2 (you can reuse the same token if you saved it somewhere safe, or make a new one).
 
-**File names must match exactly:** `events-2026-11.json`, not `events-2026-11 (1).json`. Browsers add " (1)" when you download a file twice. Rename the file before uploading, or upload over the existing file on GitHub.
+### Everyday use
 
-**Two file layouts work:** the builder's output (`{"month": ..., "events": [...]}` with `startDate`, `totalAttendance`, …) or a plain list of events using the spreadsheet column names (`start_date`, `total_attendance`, `daily_attendance`, …).
+- **Events tab:** browse by month, search, **+ Add event**, **Edit**, **Delete**, or tick several and **Delete selected**. Changes collect in a bar at the bottom. Tap **Update Dashboard** to publish them all at once, or **Discard**.
+- **Import / Paste tab:** drop in a file or paste text, then tap **Check data**. It reads:
+  - Excel files (.xlsx, .xls), CSV, and JSON (including the old file layouts)
+  - Rows copied straight out of Google Sheets or Excel
+  - Typed lines, one event per line, e.g. `Oct 18 | Saints vs Falcons | Sports | 70,000 | Caesars Superdome | 9am-11:30am`
 
-**Multi-month events** (e.g. Sep 30 – Oct 2): put the event in *both* months' spreadsheets. Each calendar shows only the days in its own month. The modal still shows the full span and total.
+  Column names don't need to match exactly ("Event", "Venue", "Expected Attendance", "Dates" all work). Rows it can't use are shown in red with **Fix** buttons. Choose **Replace** (swap out everything in those months, which is best for a full month's list) or **Add**, then tap **Update Dashboard**.
+- Publishing saves straight to GitHub. The live calendar updates **about a minute later** while GitHub rebuilds the site.
+- Every publish is saved in the repository's history, so an older version can always be recovered.
+- If the token expires, log in and choose **Use a different GitHub token** to paste a new one.
 
----
+Events that run across two months (e.g. Oct 30 – Nov 1) are saved into both months' files automatically.
 
 ## How the app behaves
 
