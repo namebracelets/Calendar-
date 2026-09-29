@@ -54,6 +54,46 @@ function eachDay(start, end) {
   return out;
 }
 
+// Accepts either file layout and returns { month, lastUpdated, sample, events: [...] }:
+//   • { "month": ..., "events": [ { "startDate": ..., "totalAttendance": ... } ] }  (builder.html output)
+//   • [ { "start_date": ..., "total_attendance": ..., "daily_attendance": "2026-10-16:12000; ..." } ]  (spreadsheet-style)
+function normalizeMonthFile(json) {
+  const root = Array.isArray(json) ? { events: json } : json;
+  if (!root || !Array.isArray(root.events)) return null;
+  const pick = (o, ...keys) => {
+    for (const k of keys) if (o[k] !== undefined && o[k] !== null && o[k] !== "") return o[k];
+    return undefined;
+  };
+  const toNumber = (v) => (typeof v === "number" ? v : Number(String(v ?? "").replace(/[,\s]/g, "")) || 0);
+  const events = root.events.filter((e) => e && typeof e === "object").map((e) => {
+    let daily = pick(e, "dailyAttendance", "daily_attendance");
+    if (typeof daily === "string") {
+      const obj = {};
+      for (const part of daily.split(/[;|,]/)) {
+        const [d, n] = part.split(":").map((x) => x.trim());
+        if (parseDate(d)) obj[d] = toNumber(n);
+      }
+      daily = obj;
+    }
+    let sources = pick(e, "sources", "source");
+    if (typeof sources === "string") sources = sources.split(/\s*[;|]\s*/).filter(Boolean);
+    return {
+      title: pick(e, "title", "name") || "Untitled event",
+      category: pick(e, "category"),
+      startDate: String(pick(e, "startDate", "start_date", "date") || "").trim(),
+      endDate: String(pick(e, "endDate", "end_date") || "").trim() || undefined,
+      totalAttendance: toNumber(pick(e, "totalAttendance", "total_attendance", "attendance")),
+      dailyAttendance: daily && typeof daily === "object" && Object.keys(daily).length ? daily : undefined,
+      impactWindow: pick(e, "impactWindow", "impact_window"),
+      location: pick(e, "location"),
+      proximity: pick(e, "proximity"),
+      notes: pick(e, "notes"),
+      sources,
+    };
+  });
+  return { month: root.month, lastUpdated: pick(root, "lastUpdated", "last_updated"), sample: !!root.sample, events };
+}
+
 // Returns { "YYYY-MM-DD": attendance } for an event. Uses dailyAttendance when given,
 // otherwise splits totalAttendance evenly across the event span.
 function dailyBreakdown(ev) {

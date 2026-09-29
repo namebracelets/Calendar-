@@ -25,8 +25,8 @@ async function loadMonth(y, m) {
   try {
     const res = await fetch(url, { cache: "no-cache" });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const json = await res.json();
-    if (!json || !Array.isArray(json.events)) throw new Error("Missing events array");
+    const json = normalizeMonthFile(await res.json());
+    if (!json) throw new Error("No events list found in file");
     result = { ok: true, json };
   } catch (err) {
     console.warn(`Could not load ${url}:`, err);

@@ -51,6 +51,10 @@ A mobile-first calendar of events expected to drive foot traffic to the New Orle
 4. On GitHub, open your repo, click **Add file → Upload files**, drop in the JSON file, and click **Commit changes**. Uploading a file with the same name replaces that month.
 5. The calendar updates within a minute or two. If a phone shows old data, refresh the page.
 
+**File names must match exactly:** `events-2026-11.json`, not `events-2026-11 (1).json`. Browsers add " (1)" when you download a file twice. Rename the file before uploading, or upload over the existing file on GitHub.
+
+**Two file layouts work:** the builder's output (`{"month": ..., "events": [...]}` with `startDate`, `totalAttendance`, …) or a plain list of events using the spreadsheet column names (`start_date`, `total_attendance`, `daily_attendance`, …).
+
 **Multi-month events** (e.g. Sep 30 – Oct 2): put the event in *both* months' spreadsheets. Each calendar shows only the days in its own month. The modal still shows the full span and total.
 
 ---
