@@ -3,21 +3,35 @@
   "lastUpdated": "2026-09-29",
   "events": [
     {
-      "id": "ev-kxr74xho",
+      "id": "ev-3iqmlyxr",
       "title": "Hotel & Mid-Sized Registered Conventions",
       "category": "Conventions",
       "startDate": "2026-09-01",
+      "totalAttendance": 3000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-qlqzifr1",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-02",
       "totalAttendance": 2000,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "French Quarter & CBD Hotels",
       "proximity": "Convention Center Corridor",
-      "notes": "Daily sum of registered hotel meetings and small conferences.",
+      "notes": "Daily sum of registered hotel meetings.",
       "sources": [
-        "New Orleans & Company Calendar"
+        "New Orleans & Company"
       ]
     },
     {
-      "id": "ev-uj85pczr",
+      "id": "ev-mhtzwntv",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-09-03",
@@ -31,27 +45,57 @@
       ]
     },
     {
-      "id": "ev-k7cq41a4",
-      "title": "NOLA Labor Day Music & Heritage Weekend",
-      "category": "Festivals",
-      "startDate": "2026-09-04",
-      "endDate": "2026-09-06",
-      "totalAttendance": 18000,
-      "dailyAttendance": {
-        "2026-09-04": 4000,
-        "2026-09-05": 8000,
-        "2026-09-06": 6000
-      },
-      "impactWindow": "1:00 PM – 10:00 PM",
-      "location": "Frenchmen St & Lower Decatur Corridor",
-      "proximity": "Direct Market Proximity",
-      "notes": "Holiday weekend live music",
+      "id": "ev-dttyilj3",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-03",
+      "totalAttendance": 2000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
       "sources": [
-        "Frenchmen street crowds"
+        "New Orleans & Company"
       ]
     },
     {
-      "id": "ev-wzwvk974",
+      "id": "ev-4a7vrj0r",
+      "title": "Southern Decadence Festival",
+      "category": "Festivals",
+      "startDate": "2026-09-03",
+      "endDate": "2026-09-07",
+      "totalAttendance": 275000,
+      "dailyAttendance": {
+        "2026-09-03": 30000,
+        "2026-09-04": 55000,
+        "2026-09-05": 80000,
+        "2026-09-06": 85000,
+        "2026-09-07": 25000
+      },
+      "impactWindow": "12:00 PM – 11:59 PM",
+      "location": "French Quarter / Decatur & Bourbon St",
+      "proximity": "Direct Market Proximity",
+      "notes": "Massive LGBTQ+ festival driving major French Quarter walking",
+      "sources": [
+        "dining"
+      ]
+    },
+    {
+      "id": "ev-2a4e4zc0",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-04",
+      "totalAttendance": 2000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-ov1lph8y",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-09-05",
@@ -65,15 +109,29 @@
       ]
     },
     {
-      "id": "ev-y1htm5mf",
+      "id": "ev-imu1y0sr",
+      "title": "Labor Day College Football Classic",
+      "category": "Sports",
+      "startDate": "2026-09-05",
+      "totalAttendance": 40000,
+      "impactWindow": "2:00 PM – 7:00 PM",
+      "location": "Caesars Superdome",
+      "proximity": "Superdome / CBD Corridor",
+      "notes": "Major college football kickoff game driving pre-game downtown dining.",
+      "sources": [
+        "Superdome Schedule"
+      ]
+    },
+    {
+      "id": "ev-6iyflzl3",
       "title": "NOLA Youth Soccer Labor Day Kickoff",
       "category": "Youth Events",
       "startDate": "2026-09-05",
       "endDate": "2026-09-06",
-      "totalAttendance": 3200,
+      "totalAttendance": 6000,
       "dailyAttendance": {
-        "2026-09-05": 1600,
-        "2026-09-06": 1600
+        "2026-09-05": 3000,
+        "2026-09-06": 3000
       },
       "impactWindow": "8:30 AM – 3:30 PM",
       "location": "Regional Sports Complex",
@@ -84,7 +142,21 @@
       ]
     },
     {
-      "id": "ev-de8n6ly6",
+      "id": "ev-6psiz0qr",
+      "title": "Riverboat & Harbor Holiday Excursions",
+      "category": "Tours/Charters",
+      "startDate": "2026-09-05",
+      "totalAttendance": 14000,
+      "impactWindow": "10:00 AM – 8:00 PM",
+      "location": "Poydras St Wharf / French Market Riverfront",
+      "proximity": "Direct Market Proximity",
+      "notes": "Holiday riverboat and harbor tour passenger influx.",
+      "sources": [
+        "Port NOLA / Riverboat Logs"
+      ]
+    },
+    {
+      "id": "ev-jndg693v",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-09-06",
@@ -98,21 +170,63 @@
       ]
     },
     {
-      "id": "ev-aq7jstum",
-      "title": "Hotel & Mid-Sized Registered Conventions",
-      "category": "Conventions",
-      "startDate": "2026-09-08",
-      "totalAttendance": 3000,
-      "impactWindow": "10:00 AM – 4:00 PM",
-      "location": "French Quarter & CBD Hotels",
-      "proximity": "Convention Center Corridor",
-      "notes": "Daily sum of registered hotel meetings and small conferences.",
+      "id": "ev-70y6c323",
+      "title": "Labor Day Riverfront Fireworks",
+      "category": "Festivals",
+      "startDate": "2026-09-06",
+      "totalAttendance": 30000,
+      "impactWindow": "6:00 PM – 9:30 PM",
+      "location": "Mississippi Riverfront / Woldenberg Park",
+      "proximity": "Direct Market Proximity",
+      "notes": "Labor Day weekend fireworks display driving dense evening crowds past French Market.",
       "sources": [
-        "New Orleans & Company Calendar"
+        "City Permit / NOLA Ready"
       ]
     },
     {
-      "id": "ev-0d523kyx",
+      "id": "ev-f9qqonjw",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-07",
+      "totalAttendance": 1000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-sr4k5mqb",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-08",
+      "totalAttendance": 1000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-x117e2pf",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-09",
+      "totalAttendance": 2000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-d82ns0df",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-09-10",
@@ -126,7 +240,49 @@
       ]
     },
     {
-      "id": "ev-k9wl7ppz",
+      "id": "ev-0p034tgk",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-10",
+      "totalAttendance": 1000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-5acx8ga7",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-11",
+      "totalAttendance": 1000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-gfhiqmim",
+      "title": "Major Arena Concert Performance",
+      "category": "Concerts",
+      "startDate": "2026-09-11",
+      "totalAttendance": 15000,
+      "impactWindow": "5:30 PM – 9:30 PM",
+      "location": "Smoothie King Center",
+      "proximity": "Superdome / CBD Corridor",
+      "notes": "Major arena concert tour stop.",
+      "sources": [
+        "Smoothie King Center Schedule"
+      ]
+    },
+    {
+      "id": "ev-58jnr51t",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-09-12",
@@ -140,7 +296,40 @@
       ]
     },
     {
-      "id": "ev-7ope39ld",
+      "id": "ev-l1yt7i18",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-12",
+      "totalAttendance": 1000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-c794q1wj",
+      "title": "NOLA Regional Music Festival",
+      "category": "Festivals",
+      "startDate": "2026-09-12",
+      "endDate": "2026-09-13",
+      "totalAttendance": 10000,
+      "dailyAttendance": {
+        "2026-09-12": 5000,
+        "2026-09-13": 5000
+      },
+      "impactWindow": "1:00 PM – 9:00 PM",
+      "location": "Frenchmen St / Lower Decatur Corridor",
+      "proximity": "Direct Market Proximity",
+      "notes": "Outdoor music festival showcase.",
+      "sources": [
+        "New Orleans Events"
+      ]
+    },
+    {
+      "id": "ev-0n1n7hgq",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-09-13",
@@ -154,28 +343,77 @@
       ]
     },
     {
-      "id": "ev-1nscap8h",
-      "title": "SHRM Talent Conference & Expo 2026",
+      "id": "ev-er25rj3n",
+      "title": "Hotel & Mid-Sized Registered Conventions",
       "category": "Conventions",
-      "startDate": "2026-09-14",
-      "endDate": "2026-09-17",
-      "totalAttendance": 5000,
-      "dailyAttendance": {
-        "2026-09-14": 5000,
-        "2026-09-15": 5000,
-        "2026-09-16": 5000,
-        "2026-09-17": 5000
-      },
-      "impactWindow": "10:00 AM – 3:00 PM",
-      "location": "Ernest N. Morial Convention Center",
+      "startDate": "2026-09-13",
+      "totalAttendance": 2000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
       "proximity": "Convention Center Corridor",
-      "notes": "National human resources conference driving hotel and French Quarter dining crowds.",
+      "notes": "Daily sum of registered hotel meetings.",
       "sources": [
-        "MCCNO Schedule"
+        "New Orleans & Company"
       ]
     },
     {
-      "id": "ev-pwi7kiro",
+      "id": "ev-pihgw1j2",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-09-14",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-36gl76qq",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-14",
+      "totalAttendance": 3000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-3hrwqj55",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-15",
+      "totalAttendance": 3000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-gilqvc2p",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-16",
+      "totalAttendance": 5000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-0de8u4pi",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-09-17",
@@ -189,21 +427,41 @@
       ]
     },
     {
-      "id": "ev-l3u9dwu1",
-      "title": "Live Arena Concert Performance",
+      "id": "ev-tzb9en27",
+      "title": "SHRM Talent Conference & Expo 2026",
+      "category": "Conventions",
+      "startDate": "2026-09-17",
+      "endDate": "2026-09-19",
+      "totalAttendance": 42000,
+      "dailyAttendance": {
+        "2026-09-17": 14000,
+        "2026-09-18": 14000,
+        "2026-09-19": 14000
+      },
+      "impactWindow": "10:00 AM – 3:00 PM",
+      "location": "Ernest N. Morial Convention Center",
+      "proximity": "Convention Center Corridor",
+      "notes": "National HR conference driving heavy hotel and Quarter dining crowds.",
+      "sources": [
+        "MCCNO Schedule"
+      ]
+    },
+    {
+      "id": "ev-g3bwknrn",
+      "title": "Live Arena Concert Event",
       "category": "Concerts",
       "startDate": "2026-09-18",
       "totalAttendance": 12000,
       "impactWindow": "5:30 PM – 9:00 PM",
       "location": "Smoothie King Center",
       "proximity": "Superdome / CBD Corridor",
-      "notes": "Arena concert tour stop driving pre-show dining and Quarter activity.",
+      "notes": "Arena concert tour stop.",
       "sources": [
         "Smoothie King Center Schedule"
       ]
     },
     {
-      "id": "ev-d7v8jc0p",
+      "id": "ev-s2nfqh3a",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-09-19",
@@ -217,7 +475,7 @@
       ]
     },
     {
-      "id": "ev-91sgjbsk",
+      "id": "ev-h16vt1d9",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-09-20",
@@ -231,7 +489,35 @@
       ]
     },
     {
-      "id": "ev-mzcd8kxi",
+      "id": "ev-2vnaxhyb",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-20",
+      "totalAttendance": 2000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-9vo6aw2t",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-21",
+      "totalAttendance": 3000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-deycm6lo",
       "title": "Diamond Tours Motorcoach Drop-Off",
       "category": "Tours/Charters",
       "startDate": "2026-09-22",
@@ -245,7 +531,35 @@
       ]
     },
     {
-      "id": "ev-0a4o07qw",
+      "id": "ev-8krqmdes",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-22",
+      "totalAttendance": 3000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-pxs6enzj",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-23",
+      "totalAttendance": 5000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-cyn0ki6a",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-09-24",
@@ -259,43 +573,109 @@
       ]
     },
     {
-      "id": "ev-x8ga81ry",
-      "title": "Carnival Cruise Turn-Day",
-      "category": "Cruise Ships",
-      "startDate": "2026-09-26",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
+      "id": "ev-6wv4v6yp",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-24",
+      "totalAttendance": 5000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
       "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "notes": "Daily sum of registered hotel meetings.",
       "sources": [
-        "Port NOLA Schedule"
+        "New Orleans & Company"
       ]
     },
     {
-      "id": "ev-xo7tf2ej",
-      "title": "WEFTEC 2026 (Water Environment Federation Conference)",
+      "id": "ev-xssgh419",
+      "title": "Evening Theater / Arena Concert",
+      "category": "Concerts",
+      "startDate": "2026-09-25",
+      "totalAttendance": 14000,
+      "impactWindow": "5:30 PM – 9:00 PM",
+      "location": "Smoothie King Center / Saenger",
+      "proximity": "Canal St / Superdome Corridor",
+      "notes": "Major live evening show performance.",
+      "sources": [
+        "Venue Schedule"
+      ]
+    },
+    {
+      "id": "ev-p9jh4zqb",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-09-25",
+      "totalAttendance": 4000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-ixibojuh",
+      "title": "NOLA Food & Culinary Festival",
+      "category": "Festivals",
+      "startDate": "2026-09-26",
+      "endDate": "2026-09-27",
+      "totalAttendance": 13000,
+      "dailyAttendance": {
+        "2026-09-26": 7000,
+        "2026-09-27": 6000
+      },
+      "impactWindow": "11:00 AM – 7:00 PM",
+      "location": "French Market / Riverfront Park",
+      "proximity": "Direct Market Proximity",
+      "notes": "Local food and culinary festival driving market foot traffic.",
+      "sources": [
+        "New Orleans Events"
+      ]
+    },
+    {
+      "id": "ev-xephzawx",
+      "title": "WEFTEC 2026 (Water Environment Federation)",
       "category": "Conventions",
       "startDate": "2026-09-26",
       "endDate": "2026-09-30",
-      "totalAttendance": 20000,
+      "totalAttendance": 110000,
       "dailyAttendance": {
-        "2026-09-26": 20000,
-        "2026-09-27": 20000,
-        "2026-09-28": 20000,
-        "2026-09-29": 20000,
-        "2026-09-30": 15000
+        "2026-09-26": 22000,
+        "2026-09-27": 22000,
+        "2026-09-28": 22000,
+        "2026-09-29": 22000,
+        "2026-09-30": 22000
       },
       "impactWindow": "10:00 AM – 3:00 PM",
       "location": "Ernest N. Morial Convention Center",
       "proximity": "Convention Center Corridor",
-      "notes": "Massive international technical exhibition driving heavy hotel occupancy",
+      "notes": "Massive international technical expo driving peak hotel occupancy and French Quarter dining.",
       "sources": [
-        "shuttle traffic"
+        "MCCNO Schedule"
       ]
     },
     {
-      "id": "ev-7vo4joe5",
+      "id": "ev-ctntlxvm",
+      "title": "Youth Basketball Tournament",
+      "category": "Youth Events",
+      "startDate": "2026-09-26",
+      "endDate": "2026-09-27",
+      "totalAttendance": 4000,
+      "dailyAttendance": {
+        "2026-09-26": 2000,
+        "2026-09-27": 2000
+      },
+      "impactWindow": "8:30 AM – 4:00 PM",
+      "location": "Regional Sports Complex",
+      "proximity": "Greater New Orleans Area",
+      "notes": "Youth basketball tournament bringing visiting families downtown.",
+      "sources": [
+        "Tourneyboard"
+      ]
+    },
+    {
+      "id": "ev-clxym1pb",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-09-27",
@@ -309,7 +689,7 @@
       ]
     },
     {
-      "id": "ev-fodtctjy",
+      "id": "ev-xaxd0ino",
       "title": "Saints vs. Las Vegas Raiders",
       "category": "Sports",
       "startDate": "2026-09-27",
@@ -317,9 +697,23 @@
       "impactWindow": "12:00 PM – 3:25 PM",
       "location": "Caesars Superdome",
       "proximity": "Superdome / CBD Corridor",
-      "notes": "NFL Regular Season Home Game (3:25 PM Kickoff) driving heavy pre-game and post-game French Quarter foot traffic.",
+      "notes": "NFL Regular Season Home Game (3:25 PM Kickoff).",
       "sources": [
         "NFL Schedule"
+      ]
+    },
+    {
+      "id": "ev-xiy7n551",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-09-28",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
       ]
     }
   ]
