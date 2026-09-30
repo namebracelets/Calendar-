@@ -694,7 +694,7 @@ $("paste-box").addEventListener("input", () => { if (loadedFile) { loadedFile = 
 $("read-btn").addEventListener("click", runImport);
 $("clear-import").addEventListener("click", () => {
   loadedFile = null; $("file-name").textContent = ""; $("paste-box").value = "";
-  S.importRows = []; $("import-results").classList.add("hidden");
+  S.importRows = []; S.importLeftover = false; $("import-results").classList.add("hidden");
 });
 
 function runImport() {
@@ -714,6 +714,7 @@ function runImport() {
     rows = r.rows; format = r.format;
   }
   S.importRows = rows.map((r) => (r.kind === "occupancy" ? r : { ...r, event: { ...r.event, id: newId() } }));
+  S.importLeftover = false;
   if (!S.importRows.length) return toast("No events found in that data.", "error");
   renderImport(format);
 }
@@ -734,7 +735,20 @@ function renderImport(format = "") {
   const bad = rows.length - ready.length;
   const months = [...new Set(ready.flatMap((r) => monthsOf(r.event)))].sort();
   $("import-results").classList.remove("hidden");
-  $("import-summary").innerHTML = `
+  const blocked = allRows.filter((r) => r.errors.length).length;
+  const alert = blocked ? `
+    <div class="mb-3 flex items-start gap-3 rounded-xl border-2 border-red-500 bg-red-50 p-3 text-red-900">
+      <span class="inline-flex shrink-0 items-center justify-center w-8 h-8 rounded-full bg-red-600 text-white text-lg font-black leading-none" aria-hidden="true">!</span>
+      <div>
+        <p class="text-base font-bold">${S.importLeftover
+          ? `${blocked} row${blocked === 1 ? " wasn't" : "s weren't"} published`
+          : `${blocked} row${blocked === 1 ? " needs" : "s need"} fixing`}</p>
+        <p class="text-sm mt-0.5">${S.importLeftover
+          ? `The rest of your import was published. Fix ${blocked === 1 ? "this row" : "these rows"} below, then tap <strong>Update Dashboard</strong> to add ${blocked === 1 ? "it" : "them"}. <strong>Add</strong> is selected so your published events stay.`
+          : `${blocked === 1 ? "It's" : "They're"} listed first below. Tap <strong>Fix</strong> to correct ${blocked === 1 ? "it" : "each one"}, or <strong>Remove</strong> ${blocked === 1 ? "it" : "them"}. Rows that still have problems won't be published.`}</p>
+      </div>
+    </div>` : "";
+  $("import-summary").innerHTML = alert + `
     ${rows.length || !occRows.length ? `<p class="font-semibold">${rows.length} event${rows.length === 1 ? "" : "s"} found${format ? ` <span class="font-normal text-stone-500">(${escapeHtml(format)})</span>` : ""}:
       <span class="text-emerald-800">${ready.length} ready</span>${bad ? `, <span class="text-red-700">${bad} need fixing</span>` : ""}.</p>` : ""}
     ${occRows.length ? `<p class="font-semibold ${rows.length ? "mt-1" : ""}">${readyOcc.length
@@ -743,13 +757,15 @@ function renderImport(format = "") {
     ${flaggedCount(readyOcc.map((r) => r.occupancy)) ? `<p class="text-xs text-red-700 mt-1"><span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-red-600 text-white text-[10px] font-black align-[-2px]">!</span>
       ${flaggedCount(readyOcc.map((r) => r.occupancy))} hotel occupancy ${flaggedCount(readyOcc.map((r) => r.occupancy)) === 1 ? "entry has a problem" : "entries have problems"}.
       The good figures will be published. Bad entries will be marked on the calendar with a red <strong>!</strong> and an explanation until you import a corrected row.</p>` : ""}
-    ${bad ? `<p class="text-stone-600 text-xs mt-1">Tap <strong>Fix</strong> on the red ones, or remove them. Rows that still have problems will be skipped.</p>` : ""}`;
+`;
   const replaceWhat = [];
   if (rows.length || !readyOcc.length) replaceWhat.push(`all events in ${months.length ? months.map(monthLabel).join(", ") : "the months covered"}`);
   if (readyOcc.length) replaceWhat.push(`the hotel occupancy figures for ${occMonths.map(monthLabel).join(", ")}`);
   $("import-replace-what").textContent = replaceWhat.join(" and ");
   $("import-add-occ").classList.toggle("hidden", !readyOcc.length);
-  $("import-rows").innerHTML = allRows.map((r, i) => r.kind === "occupancy" ? `
+  // Rows that can't be published are listed first so they can't be missed.
+  const order = allRows.map((r, i) => i).sort((a, b) => (allRows[b].errors.length > 0) - (allRows[a].errors.length > 0) || a - b);
+  $("import-rows").innerHTML = order.map((i) => [allRows[i], i]).map(([r, i]) => r.kind === "occupancy" ? `
     <div class="rounded-lg border ${r.errors.length || (r.occupancy.issues || []).length ? "border-red-300 bg-red-50/50" : "border-sky-200 bg-sky-50/60"} p-3">
       <div class="flex items-start gap-3">
         <p class="min-w-0 flex-1 font-semibold leading-snug">🏨 ${escapeHtml(summarizeOccupancy(r.occupancy))}</p>
@@ -774,6 +790,9 @@ function renderImport(format = "") {
   if (rows.length || !readyOcc.length) what.push(`${ready.length} event${ready.length === 1 ? "" : "s"}`);
   if (readyOcc.length) what.push("hotel occupancy");
   $("import-publish").textContent = `Update Dashboard (${what.join(" + ")})`;
+  $("import-skip-note").classList.toggle("hidden", !blocked);
+  $("import-skip-note").innerHTML = `<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-red-600 text-white text-xs font-black align-[-3px]" aria-hidden="true">!</span>
+    ${blocked} row${blocked === 1 ? "" : "s"} with problems ${blocked === 1 ? "is" : "are"} listed at the top and will <strong>not</strong> be published until fixed.`;
 }
 
 $("import-rows").addEventListener("click", (e) => {
@@ -798,15 +817,15 @@ $("import-publish").addEventListener("click", async () => {
   const occDays = new Set(readyOcc.flatMap((o) => Object.keys(o.figures))).size;
   const lines = [];
   if (ready.length) lines.push(mode === "replace"
-    ? `Replace every event in ${months.map(monthLabel).join(", ")} with these ${ready.length} events?`
-    : `Add ${ready.length} events to the calendar?`);
+    ? `Replace every event in ${months.map(monthLabel).join(", ")} with ${ready.length === 1 ? "this event" : `these ${ready.length} events`}?`
+    : `Add ${ready.length} event${ready.length === 1 ? "" : "s"} to the calendar?`);
   if (readyOcc.length) lines.push(mode === "replace"
     ? `${ready.length ? "Also replace" : "Replace"} the hotel occupancy figures for ${occMonths.map(monthLabel).join(", ")} (${occDays} day${occDays === 1 ? "" : "s"})?`
     : `${ready.length ? "Also set" : "Set"} hotel occupancy figures for ${occDays} day${occDays === 1 ? "" : "s"} in ${occMonths.map(monthLabel).join(", ")}, overwriting any already there?`);
   const flagged = flaggedCount(readyOcc);
   if (flagged) lines.push(`${flagged} bad hotel occupancy entr${flagged === 1 ? "y" : "ies"} will be flagged on the calendar with a red ! until fixed.`);
   let msg = lines.join("\n\n");
-  if (skipped) msg += `\n\n${skipped} row${skipped === 1 ? "" : "s"} with problems will be skipped.`;
+  if (skipped) msg += `\n\n⚠ ${skipped} row${skipped === 1 ? "" : "s"} with problems will NOT be published. ${skipped === 1 ? "It stays" : "They stay"} on this screen so you can fix ${skipped === 1 ? "it" : "them"} afterwards.`;
   if (!confirm(msg)) return;
 
   const before = S.events;
@@ -855,11 +874,24 @@ $("import-publish").addEventListener("click", async () => {
   renderAll();
   const ok = await publish();
   if (ok) {
-    S.importRows = [];
-    $("import-results").classList.add("hidden");
     loadedFile = null; $("file-name").textContent = ""; $("paste-box").value = "";
-    if (dupes) toast(`Published. ${dupes} duplicate${dupes === 1 ? " was" : "s were"} skipped.`);
-    switchTab("events");
+    const leftover = S.importRows.filter((r) => r.errors.length);
+    if (leftover.length) {
+      // Keep the unpublished rows in front of the user, switched to Add so fixing them can't wipe what was just published.
+      S.importRows = leftover;
+      S.importLeftover = true;
+      document.querySelector('input[name="import-mode"][value="add"]').checked = true;
+      renderImport();
+      $("import-results").scrollIntoView({ block: "start" });
+      toast(`Published, but ${leftover.length} row${leftover.length === 1 ? " wasn't" : "s weren't"} because of problems. ${leftover.length === 1 ? "It's" : "They're"} still here to fix.` +
+        (dupes ? ` ${dupes} duplicate${dupes === 1 ? " was" : "s were"} skipped.` : ""), "error");
+    } else {
+      S.importRows = [];
+      S.importLeftover = false;
+      $("import-results").classList.add("hidden");
+      if (dupes) toast(`Published. ${dupes} duplicate${dupes === 1 ? " was" : "s were"} skipped.`);
+      switchTab("events");
+    }
   } else {
     S.events = before; // publishing failed: undo so nothing half-applied lingers
     S.occ = beforeOcc;
