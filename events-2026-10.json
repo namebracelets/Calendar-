@@ -1,0 +1,760 @@
+{
+  "month": "2026-10",
+  "lastUpdated": "2026-09-29",
+  "events": [
+    {
+      "id": "ev-viia6umd",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-10-01",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-y17fakxh",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-10-01",
+      "totalAttendance": 3000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "id": "ev-6zy1efmq",
+      "title": "NOLAxNOLA Culture & Music Spillover",
+      "category": "Festivals",
+      "startDate": "2026-10-01",
+      "endDate": "2026-10-04",
+      "totalAttendance": 12000,
+      "dailyAttendance": {
+        "2026-10-01": 2000,
+        "2026-10-02": 3000,
+        "2026-10-03": 4000,
+        "2026-10-04": 3000
+      },
+      "impactWindow": "4:00 PM – 9:00 PM",
+      "location": "Frenchmen St & French Quarter",
+      "proximity": "Direct Market Proximity",
+      "notes": "Frenchmen Street venue spillover and Jazz Museum talks.",
+      "sources": [
+        "New Orleans Events & Festivals"
+      ]
+    },
+    {
+      "id": "ev-b0p7xase",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-10-02",
+      "totalAttendance": 4000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "id": "ev-6be7yjn9",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-10-03",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-ob5h4pnj",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-10-03",
+      "totalAttendance": 2000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "id": "ev-yp1rnrk6",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-10-04",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-zkv4is2k",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-10-04",
+      "totalAttendance": 2000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "id": "ev-p89xrtgt",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-10-05",
+      "totalAttendance": 4000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "id": "ev-63cv7os3",
+      "title": "Saints vs. Atlanta Falcons (Monday Night Football)",
+      "category": "Sports",
+      "startDate": "2026-10-05",
+      "totalAttendance": 70000,
+      "impactWindow": "2:00 PM – 7:00 PM",
+      "location": "Caesars Superdome",
+      "proximity": "Superdome / CBD Corridor",
+      "notes": "Prime-time home division game driving heavy pre-game French Quarter dining.",
+      "sources": [
+        "NFL Schedule"
+      ]
+    },
+    {
+      "id": "ev-avep7c9e",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-10-06",
+      "totalAttendance": 3000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "id": "ev-0z53q1m0",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-10-07",
+      "totalAttendance": 3000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "id": "ev-3zawnkej",
+      "title": "Amyl and the Sniffers Concert",
+      "category": "Concerts",
+      "startDate": "2026-10-08",
+      "totalAttendance": 2500,
+      "impactWindow": "5:30 PM – 9:00 PM",
+      "location": "The Fillmore New Orleans",
+      "proximity": "Canal St / French Quarter Radius",
+      "notes": "Evening concert near lower Quarter/Canal.",
+      "sources": [
+        "Fillmore NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-snneybo7",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-10-08",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-cziz094h",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-10-08",
+      "totalAttendance": 4000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "id": "ev-ur2h3hzc",
+      "title": "American Academy of Ophthalmology (AAO) Annual Meeting",
+      "category": "Conventions",
+      "startDate": "2026-10-09",
+      "endDate": "2026-10-12",
+      "totalAttendance": 22000,
+      "dailyAttendance": {
+        "2026-10-09": 22000,
+        "2026-10-10": 22000,
+        "2026-10-11": 22000,
+        "2026-10-12": 18000
+      },
+      "impactWindow": "10:30 AM – 2:30 PM",
+      "location": "Ernest N. Morial Convention Center",
+      "proximity": "Convention Center Corridor",
+      "notes": "Massive national medical congress driving heavy Quarter dining and shopping crowds.",
+      "sources": [
+        "MCCNO Official Schedule"
+      ]
+    },
+    {
+      "id": "ev-v143mgka",
+      "title": "Crescent City Blues & BBQ Festival",
+      "category": "Festivals",
+      "startDate": "2026-10-09",
+      "endDate": "2026-10-11",
+      "totalAttendance": 20000,
+      "dailyAttendance": {
+        "2026-10-09": 5000,
+        "2026-10-10": 8000,
+        "2026-10-11": 7000
+      },
+      "impactWindow": "12:00 PM – 7:00 PM",
+      "location": "Lafayette Square Park",
+      "proximity": "CBD / Outer French Quarter Radius",
+      "notes": "Major regional music & food festival.",
+      "sources": [
+        "New Orleans Events & Festivals"
+      ]
+    },
+    {
+      "id": "ev-bniknnbd",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-10-09",
+      "totalAttendance": 3000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "id": "ev-1xs0tp2t",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-10-10",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-7fwbi6gm",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-10-11",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-fhfws2pz",
+      "title": "Saints vs. Minnesota Vikings",
+      "category": "Sports",
+      "startDate": "2026-10-11",
+      "totalAttendance": 70000,
+      "impactWindow": "10:00 AM – 12:00 PM",
+      "location": "Caesars Superdome",
+      "proximity": "Superdome / CBD Corridor",
+      "notes": "NFL Regular Season Home Game (12:00 PM Kickoff).",
+      "sources": [
+        "NFL Schedule"
+      ]
+    },
+    {
+      "id": "ev-ns7e3epm",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-10-12",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-jpf6qagc",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-10-12",
+      "totalAttendance": 3000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "id": "ev-tfex71yx",
+      "title": "Americas Energy Summit 2026",
+      "category": "Conventions",
+      "startDate": "2026-10-13",
+      "endDate": "2026-10-15",
+      "totalAttendance": 4000,
+      "dailyAttendance": {
+        "2026-10-13": 4000,
+        "2026-10-14": 4000,
+        "2026-10-15": 4000
+      },
+      "impactWindow": "10:00 AM – 3:00 PM",
+      "location": "Ernest N. Morial Convention Center",
+      "proximity": "Convention Center Corridor",
+      "notes": "International energy sector trade expo.",
+      "sources": [
+        "MCCNO Schedule"
+      ]
+    },
+    {
+      "id": "ev-efn04ie6",
+      "title": "$uicideboy$ - Grey Day Tour 2026",
+      "category": "Concerts",
+      "startDate": "2026-10-14",
+      "totalAttendance": 15000,
+      "impactWindow": "5:00 PM – 8:30 PM",
+      "location": "Smoothie King Center",
+      "proximity": "Superdome / CBD Corridor",
+      "notes": "Major arena concert event driving downtown pre-show dining crowds.",
+      "sources": [
+        "Smoothie King Center Schedule"
+      ]
+    },
+    {
+      "id": "ev-8n3x3l74",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-10-15",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-ffg4g2xi",
+      "title": "Global Site Solutions Summit (SCRS)",
+      "category": "Conventions",
+      "startDate": "2026-10-15",
+      "endDate": "2026-10-17",
+      "totalAttendance": 3000,
+      "dailyAttendance": {
+        "2026-10-15": 3000,
+        "2026-10-16": 3000,
+        "2026-10-17": 3000
+      },
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "MCCNO & Downtown Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Clinical research industry conference.",
+      "sources": [
+        "Paradigm Research"
+      ]
+    },
+    {
+      "id": "ev-nv1jtovb",
+      "title": "Pelicans vs. Washington Wizards (Preseason)",
+      "category": "Sports",
+      "startDate": "2026-10-16",
+      "totalAttendance": 14000,
+      "impactWindow": "5:00 PM – 7:00 PM",
+      "location": "Smoothie King Center",
+      "proximity": "Superdome / CBD Corridor",
+      "notes": "NBA Preseason Home Opener.",
+      "sources": [
+        "NBA Schedule"
+      ]
+    },
+    {
+      "id": "ev-lk2i9pjn",
+      "title": "American College of Chest Physicians (CHEST 2026)",
+      "category": "Conventions",
+      "startDate": "2026-10-18",
+      "endDate": "2026-10-21",
+      "totalAttendance": 14000,
+      "dailyAttendance": {
+        "2026-10-18": 14000,
+        "2026-10-19": 14000,
+        "2026-10-20": 14000,
+        "2026-10-21": 10000
+      },
+      "impactWindow": "10:30 AM – 2:30 PM",
+      "location": "Ernest N. Morial Convention Center",
+      "proximity": "Convention Center Corridor",
+      "notes": "National medical convention driving Quarter hotel and dining crowds.",
+      "sources": [
+        "MCCNO Schedule"
+      ]
+    },
+    {
+      "id": "ev-7pj3g34x",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-10-18",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-bdbb638a",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-10-19",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-44rzryjy",
+      "title": "American Society of Nephrology (ASN) Kidney Week",
+      "category": "Conventions",
+      "startDate": "2026-10-21",
+      "endDate": "2026-10-25",
+      "totalAttendance": 18000,
+      "dailyAttendance": {
+        "2026-10-21": 18000,
+        "2026-10-22": 18000,
+        "2026-10-23": 18000,
+        "2026-10-24": 18000,
+        "2026-10-25": 12000
+      },
+      "impactWindow": "10:30 AM – 2:30 PM",
+      "location": "Ernest N. Morial Convention Center",
+      "proximity": "Convention Center Corridor",
+      "notes": "Major international medical conference driving heavy hotel & dining demand.",
+      "sources": [
+        "MCCNO Schedule"
+      ]
+    },
+    {
+      "id": "ev-8qqvvuud",
+      "title": "Disney's The Lion King Broadway Run",
+      "category": "Concerts",
+      "startDate": "2026-10-21",
+      "endDate": "2026-10-31",
+      "totalAttendance": 24000,
+      "dailyAttendance": {
+        "2026-10-21": 2400,
+        "2026-10-22": 2400,
+        "2026-10-23": 2400,
+        "2026-10-24": 2400,
+        "2026-10-25": 2400,
+        "2026-10-27": 2400,
+        "2026-10-28": 2400,
+        "2026-10-29": 2400,
+        "2026-10-30": 2400,
+        "2026-10-31": 2400
+      },
+      "impactWindow": "6:00 PM – 8:30 PM",
+      "location": "Saenger Theatre",
+      "proximity": "Canal St Corridor",
+      "notes": "Major Broadway musical run driving evening theater & dining traffic.",
+      "sources": [
+        "Saenger NOLA"
+      ]
+    },
+    {
+      "id": "ev-3akzqrj4",
+      "title": "Pelicans vs. Indiana Pacers (Regular Season Home Opener)",
+      "category": "Sports",
+      "startDate": "2026-10-21",
+      "totalAttendance": 17000,
+      "impactWindow": "5:00 PM – 7:00 PM",
+      "location": "Smoothie King Center",
+      "proximity": "Superdome / CBD Corridor",
+      "notes": "NBA Regular Season Home Opener.",
+      "sources": [
+        "NBA Schedule"
+      ]
+    },
+    {
+      "id": "ev-k603wsm4",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-10-24",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-lek1jbmg",
+      "title": "CeCe Winans - Come Worship Tour",
+      "category": "Concerts",
+      "startDate": "2026-10-24",
+      "totalAttendance": 8000,
+      "impactWindow": "5:30 PM – 8:30 PM",
+      "location": "Smoothie King Center",
+      "proximity": "Superdome / CBD Corridor",
+      "notes": "Arena gospel concert event.",
+      "sources": [
+        "Smoothie King Center Schedule"
+      ]
+    },
+    {
+      "id": "ev-ng79fiyh",
+      "title": "Krewe of BOO! Halloween Parade",
+      "category": "Parades",
+      "startDate": "2026-10-24",
+      "totalAttendance": 65000,
+      "impactWindow": "1:00 PM – 9:00 PM",
+      "location": "Elysian Fields to Decatur St & Canal",
+      "proximity": "Direct Market Proximity",
+      "notes": "Official New Orleans Halloween Parade assembling at Elysian Fields and marching down Decatur right past the Flea Market sheds.",
+      "sources": [
+        "Krewe of BOO! Official"
+      ]
+    },
+    {
+      "id": "ev-4qfjprd4",
+      "title": "NOLA Fall Championship Youth Baseball Tournament",
+      "category": "Youth Events",
+      "startDate": "2026-10-24",
+      "endDate": "2026-10-25",
+      "totalAttendance": 3000,
+      "dailyAttendance": {
+        "2026-10-24": 1500,
+        "2026-10-25": 1500
+      },
+      "impactWindow": "8:30 AM – 4:00 PM",
+      "location": "Regional Sports Complex",
+      "proximity": "Greater New Orleans Area",
+      "notes": "Regional youth baseball tournament bringing visiting families downtown.",
+      "sources": [
+        "Tourneyboard"
+      ]
+    },
+    {
+      "id": "ev-cig02sg5",
+      "title": "IFEBP Annual Employee Benefits Conference",
+      "category": "Conventions",
+      "startDate": "2026-10-25",
+      "endDate": "2026-10-27",
+      "totalAttendance": 8000,
+      "dailyAttendance": {
+        "2026-10-25": 8000,
+        "2026-10-26": 8000,
+        "2026-10-27": 8000
+      },
+      "impactWindow": "10:00 AM – 3:00 PM",
+      "location": "Ernest N. Morial Convention Center",
+      "proximity": "Convention Center Corridor",
+      "notes": "National employee benefits conference.",
+      "sources": [
+        "MCCNO Schedule"
+      ]
+    },
+    {
+      "id": "ev-d8tf1s79",
+      "title": "AAPS PharmSci 360",
+      "category": "Conventions",
+      "startDate": "2026-10-26",
+      "endDate": "2026-10-28",
+      "totalAttendance": 6000,
+      "dailyAttendance": {
+        "2026-10-26": 6000,
+        "2026-10-27": 6000,
+        "2026-10-28": 6000
+      },
+      "impactWindow": "10:00 AM – 3:00 PM",
+      "location": "Ernest N. Morial Convention Center",
+      "proximity": "Convention Center Corridor",
+      "notes": "Pharmaceutical science exposition.",
+      "sources": [
+        "MCCNO Schedule"
+      ]
+    },
+    {
+      "id": "ev-i9id5i8n",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-10-27",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-rqgyo9cj",
+      "title": "Diamond Tours Bus Drop-Off",
+      "category": "Tours/Charters",
+      "startDate": "2026-10-27",
+      "totalAttendance": 300,
+      "impactWindow": "10:30 AM – 2:00 PM",
+      "location": "Lower Decatur St & French Market",
+      "proximity": "Direct Market Proximity",
+      "notes": "Wholesale senior motorcoach market shopping excursion.",
+      "sources": [
+        "Diamond Tours Schedule"
+      ]
+    },
+    {
+      "id": "ev-ujygo5fu",
+      "title": "Pelicans vs. Denver Nuggets",
+      "category": "Sports",
+      "startDate": "2026-10-28",
+      "totalAttendance": 17000,
+      "impactWindow": "5:00 PM – 7:00 PM",
+      "location": "Smoothie King Center",
+      "proximity": "Superdome / CBD Corridor",
+      "notes": "NBA Regular Season Home Game.",
+      "sources": [
+        "NBA Schedule"
+      ]
+    },
+    {
+      "id": "ev-lliryp30",
+      "title": "Pelicans vs. Sacramento Kings",
+      "category": "Sports",
+      "startDate": "2026-10-29",
+      "totalAttendance": 17000,
+      "impactWindow": "5:00 PM – 7:00 PM",
+      "location": "Smoothie King Center",
+      "proximity": "Superdome / CBD Corridor",
+      "notes": "NBA Regular Season Home Game.",
+      "sources": [
+        "NBA Schedule"
+      ]
+    },
+    {
+      "id": "ev-czug0wqv",
+      "title": "Halloween New Orleans (HNO) Weekend Kickoff",
+      "category": "Festivals",
+      "startDate": "2026-10-30",
+      "endDate": "2026-10-31",
+      "totalAttendance": 35000,
+      "dailyAttendance": {
+        "2026-10-30": 15000,
+        "2026-10-31": 20000
+      },
+      "impactWindow": "12:00 PM – 11:00 PM",
+      "location": "French Quarter & Decatur Corridor",
+      "proximity": "Direct Market Proximity",
+      "notes": "Massive Halloween weekend costume street crowds and French Quarter festivities.",
+      "sources": [
+        "New Orleans Events & Festivals"
+      ]
+    },
+    {
+      "id": "ev-nizkxxbb",
+      "title": "Victoria Monét Concert",
+      "category": "Concerts",
+      "startDate": "2026-10-30",
+      "totalAttendance": 2500,
+      "impactWindow": "5:30 PM – 9:00 PM",
+      "location": "The Fillmore New Orleans",
+      "proximity": "Canal St / French Quarter Radius",
+      "notes": "Concert event at the Fillmore near Poydras/Canal.",
+      "sources": [
+        "Fillmore NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-er71qv54",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-10-31",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-31dlw6dz",
+      "title": "Pelicans vs. Atlanta Hawks",
+      "category": "Sports",
+      "startDate": "2026-10-31",
+      "totalAttendance": 17000,
+      "impactWindow": "4:00 PM – 6:00 PM",
+      "location": "Smoothie King Center",
+      "proximity": "Superdome / CBD Corridor",
+      "notes": "NBA Regular Season Home Game (6:00 PM Tip-off).",
+      "sources": [
+        "NBA Schedule"
+      ]
+    }
+  ]
+}
