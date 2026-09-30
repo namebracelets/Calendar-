@@ -122,6 +122,20 @@
       ]
     },
     {
+      "id": "ev-7stvhlj1",
+      "title": "Viking Mississippi River Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-10-03",
+      "totalAttendance": 380,
+      "impactWindow": "8:00 AM – 1:00 PM",
+      "location": "Poydras St Wharf / Canal St Riverfront",
+      "proximity": "Direct Market Proximity",
+      "notes": "Riverboat disembarkation & turn day bringing immediate pedestrian traffic near Riverwalk & Market.",
+      "sources": [
+        "Viking River Cruises"
+      ]
+    },
+    {
       "id": "ev-q0pup2td",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
@@ -269,6 +283,21 @@
       ]
     },
     {
+      "id": "ev-bwm09zqo",
+      "title": "American Cruise Lines - Round Trip NOLA",
+      "category": "Cruise Ships",
+      "startDate": "2026-10-09",
+      "endDate": "2026-10-10",
+      "totalAttendance": 200,
+      "impactWindow": "9:00 AM – 2:00 PM",
+      "location": "Toulouse St Wharf / French Quarter Riverfront",
+      "proximity": "Direct Market Proximity",
+      "notes": "Small luxury riverboat arrival and boarding right at Jackson Square and Decatur St corridor.",
+      "sources": [
+        "American Cruise Lines Schedule"
+      ]
+    },
+    {
       "id": "ev-apmprk5y",
       "title": "Crescent City Blues & BBQ Festival",
       "category": "Festivals",
@@ -393,6 +422,21 @@
       ]
     },
     {
+      "id": "ev-s8fuf7t0",
+      "title": "American Cruise Lines - Mississippi Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-10-15",
+      "endDate": "2026-10-16",
+      "totalAttendance": 200,
+      "impactWindow": "8:30 AM – 1:00 PM",
+      "location": "Toulouse St Wharf / French Quarter Riverfront",
+      "proximity": "Direct Market Proximity",
+      "notes": "Small luxury riverboat return & departure directly adjacent to the French Market.",
+      "sources": [
+        "American Cruise Lines Schedule"
+      ]
+    },
+    {
       "id": "ev-pe452idm",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
@@ -458,6 +502,25 @@
       "notes": "Annual convention expo driving local walking crowds.",
       "sources": [
         "MCCNO Schedule"
+      ]
+    },
+    {
+      "id": "ev-bkszoeq0",
+      "title": "Viking Mississippi River Cruise Arrival & Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-18",
+      "totalAttendance": 380,
+      "dailyAttendance": {
+        "2026-10-17": 380,
+        "2026-10-18": 380
+      },
+      "impactWindow": "8:00 AM – 2:00 PM",
+      "location": "Poydras St Wharf / Canal St Riverfront",
+      "proximity": "Direct Market Proximity",
+      "notes": "Overnight riverboat docking in NOLA bringing two consecutive days of high-conversion Quarter foot traffic.",
+      "sources": [
+        "Viking River Cruises"
       ]
     },
     {
@@ -748,6 +811,20 @@
       "notes": "NBA Regular Season Home Game.",
       "sources": [
         "NBA Schedule"
+      ]
+    },
+    {
+      "id": "ev-ug76busl",
+      "title": "American Cruise Lines - Mississippi Explorer",
+      "category": "Cruise Ships",
+      "startDate": "2026-10-29",
+      "totalAttendance": 200,
+      "impactWindow": "8:30 AM – 1:00 PM",
+      "location": "Toulouse St Wharf / French Quarter Riverfront",
+      "proximity": "Direct Market Proximity",
+      "notes": "Small luxury riverboat departure upriver to Memphis.",
+      "sources": [
+        "American Cruise Lines Schedule"
       ]
     },
     {
