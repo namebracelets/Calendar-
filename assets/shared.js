@@ -100,8 +100,21 @@ function normalizeMonthFile(json) {
     hotelOccupancy: readOccupancyMap(pick(root, "hotelOccupancy", "hotel_occupancy")),
     hotelOccupancyNotes: pick(root, "hotelOccupancyNotes", "hotel_occupancy_notes"),
     hotelOccupancySources: Array.isArray(occSources) && occSources.length ? occSources : undefined,
+    hotelOccupancyIssues: readOccupancyIssues(pick(root, "hotelOccupancyIssues", "hotel_occupancy_issues")),
     events,
   };
+}
+
+// Bad hotel occupancy entries kept from an import so they can be flagged on the calendar:
+// [{ date: "YYYY-MM-DD" | null, entry, problem, fix }]. date is null when the entry's own date wasn't real.
+function readOccupancyIssues(value) {
+  if (!Array.isArray(value)) return [];
+  return value.filter((i) => i && typeof i === "object").map((i) => ({
+    date: parseDate(i.date) ? String(i.date).trim() : null,
+    entry: String(i.entry ?? ""),
+    problem: String(i.problem ?? "This entry couldn't be read."),
+    fix: String(i.fix ?? ""),
+  }));
 }
 
 // Daily hotel occupancy percentages: { "YYYY-MM-DD": 0–100 }. Accepts an object or

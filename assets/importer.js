@@ -301,46 +301,78 @@ function recordToEvent(rec, defaultYear) {
 
 const isOccupancyRecord = (rec) => /^\s*hotel\s+occupancy\s*$/i.test(String(rec.category ?? ""));
 
-function parseOccupancyFigures(value, defaultYear) {
-  const figures = {}, errors = [], warnings = [];
+// How to fix each kind of bad entry, shown in the admin preview and on the calendar.
+const OCC_FIX = {
+  date: "Correct the date so it's a real calendar day written like 2026-10-05, then import the Hotel Occupancy row again.",
+  value: "Use a whole number from 0 to 100 with no decimals, e.g. 2026-10-05:87, then import the Hotel Occupancy row again.",
+  missing: "Add the percentage after a colon, e.g. 2026-10-05:87, then import the Hotel Occupancy row again.",
+};
+
+// Splits daily_attendance into good figures and bad entries ("issues").
+// An issue is { date, entry, problem, fix }. date is null when the entry's date isn't a real day;
+// such issues get month = "YYYY-MM" when a month can still be worked out (else they block the row).
+function parseOccupancyFigures(value, defaultYear, fallbackMonth) {
+  const figures = {}, issues = [], errors = [], warnings = [];
   const entries = value && typeof value === "object" && !(value instanceof Date)
     ? Object.entries(value)
     : String(value ?? "").split(/[;|\n]/).map((p) => p.trim()).filter(Boolean).map((p) => {
       const m = /^(.+?)\s*[:=]\s*(.*)$/.exec(p);
       return m ? [m[1], m[2]] : [p, undefined];
     });
+  const monthOfText = (t) => {
+    const m = /^(\d{4})-(\d{1,2})\b/.exec(t);
+    return m && +m[2] >= 1 && +m[2] <= 12 ? `${m[1]}-${String(m[2]).padStart(2, "0")}` : null;
+  };
   for (const [rawDate, rawValue] of entries) {
     const label = String(rawDate).trim();
-    if (rawValue === undefined) { errors.push(`"${label}" has no figure. Use date:percent, e.g. 2026-10-01:51.`); continue; }
+    const shown = String(rawValue ?? "").trim();
+    const entry = rawValue === undefined ? label : `${label}:${shown}`;
     const date = parseFlexibleDate(label, defaultYear);
-    if (!date) { errors.push(`"${label}" isn't a real date.`); continue; }
-    const v = String(rawValue).trim().replace(/%$/, "");
-    if (!/^\d+$/.test(v) || Number(v) > 100) { errors.push(`${date}: "${String(rawValue).trim()}" must be a whole number from 0 to 100.`); continue; }
+    if (!date) {
+      const month = monthOfText(label) || fallbackMonth;
+      const problem = `"${label}" isn't a real date.`;
+      if (month) issues.push({ date: null, month, entry, problem, fix: OCC_FIX.date });
+      else errors.push(`${problem} ${OCC_FIX.date}`);
+      continue;
+    }
+    if (rawValue === undefined || shown === "") { issues.push({ date, entry, problem: `${date} has no percentage.`, fix: OCC_FIX.missing }); delete figures[date]; continue; }
+    const v = shown.replace(/%$/, "");
+    if (!/^\d+$/.test(v) || Number(v) > 100) {
+      issues.push({ date, entry, problem: `"${shown}" isn't a whole number from 0 to 100.`, fix: OCC_FIX.value });
+      delete figures[date];
+      continue;
+    }
     if (date in figures) warnings.push(`${date} is listed more than once; the last figure is used.`);
     figures[date] = Number(v);
   }
+  // A date that also has a good figure later in the row isn't a problem any more.
+  const kept = issues.filter((i) => !(i.date && i.date in figures));
   if (!entries.length) errors.push("No daily occupancy figures found. Put them in daily_attendance, e.g. 2026-10-01:51; 2026-10-02:74.");
-  return { figures, errors, warnings };
+  return { figures, issues: kept, errors, warnings };
 }
 
 function recordToOccupancy(rec, defaultYear) {
   const str = (v) => (v === undefined || v === null ? "" : String(v).trim());
-  const { figures, errors, warnings } = parseOccupancyFigures(rec.dailyAttendance, defaultYear);
+  const start = parseFlexibleDate(rec.startDate, defaultYear);
+  const { figures, issues, errors, warnings } = parseOccupancyFigures(rec.dailyAttendance, defaultYear, start ? start.slice(0, 7) : null);
   const occupancy = { figures };
+  if (issues.length) occupancy.issues = issues;
   if (str(rec.notes)) occupancy.notes = str(rec.notes);
   const src = Array.isArray(rec.sources) ? rec.sources.map(str).filter(Boolean) : str(rec.sources).split(/\s*[;|]\s*|\s+(?=https?:)/).filter(Boolean);
   if (src.length) occupancy.sources = src;
   return { kind: "occupancy", occupancy, errors, warnings };
 }
 
-// "Estimated hotel occupancy: Oct 1–31 (31 days), 43%–97%"
+// "Estimated hotel occupancy: Oct 1–31 (31 days), 43%–97%" (+ ", 2 entries flagged")
 function summarizeOccupancy(occ) {
   const dates = Object.keys(occ.figures || {}).sort();
-  if (!dates.length) return "Estimated hotel occupancy: no valid figures";
+  const n = (occ.issues || []).length;
+  const flagged = n ? `${n} entr${n === 1 ? "y" : "ies"} flagged` : "";
+  if (!dates.length) return `Estimated hotel occupancy: no valid figures${flagged ? ` (${flagged})` : ""}`;
   const vals = dates.map((d) => occ.figures[d]);
   const lo = Math.min(...vals), hi = Math.max(...vals);
   return `Estimated hotel occupancy: ${formatSpan(dates[0], dates[dates.length - 1])} (${dates.length} day${dates.length === 1 ? "" : "s"}), ` +
-    (lo === hi ? `${lo}%` : `${lo}%–${hi}%`);
+    (lo === hi ? `${lo}%` : `${lo}%–${hi}%`) + (flagged ? `, ${flagged}` : "");
 }
 
 // Shared checks for every event, whatever its source. Mutates/cleans ev.

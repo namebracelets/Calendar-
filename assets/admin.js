@@ -131,11 +131,14 @@ function canonical(ev) {
 }
 const canonJson = (ev) => JSON.stringify(canonical(ev));
 
-// Hotel occupancy for one month, with dates sorted; null when there are no figures.
+// Hotel occupancy for one month, with dates sorted; null when there are no figures or flagged entries.
 function canonicalOcc(o) {
   const dates = Object.keys((o && o.figures) || {}).sort();
-  if (!dates.length) return null;
+  const issues = ((o && o.issues) || []).map((i) => ({ ...(i.date ? { date: i.date } : {}), entry: i.entry, problem: i.problem, fix: i.fix }))
+    .sort((a, b) => (a.date || "9999").localeCompare(b.date || "9999") || a.entry.localeCompare(b.entry));
+  if (!dates.length && !issues.length) return null;
   const out = { figures: Object.fromEntries(dates.map((d) => [d, o.figures[d]])) };
+  if (issues.length) out.issues = issues;
   if (o.notes) out.notes = o.notes;
   if (o.sources && o.sources.length) out.sources = o.sources;
   return out;
@@ -282,6 +285,10 @@ async function loadAll() {
       try { raw = JSON.parse(text); } catch { problems.push(f.name); return; }
       const list = Array.isArray(raw) ? raw : Array.isArray(raw && raw.events) ? raw.events : [];
       const whole = normalizeMonthFile(raw);
+      for (const issue of (whole && whole.hotelOccupancyIssues) || []) {
+        const o = (occ[issue.date ? issue.date.slice(0, 7) : f.name.slice(7, 14)] ||= { figures: {} });
+        (o.issues ||= []).push(issue);
+      }
       if (whole && Object.keys(whole.hotelOccupancy).length) {
         for (const [d, pct] of Object.entries(whole.hotelOccupancy)) {
           const o = (occ[d.slice(0, 7)] ||= { figures: {} });
@@ -306,7 +313,8 @@ async function loadAll() {
     S.loadedHead = head;
     S.selected.clear();
     $("load-status").textContent = `${S.events.length} events loaded from ${files.length} month file${files.length === 1 ? "" : "s"}.` +
-      (Object.keys(occ).length ? ` Hotel occupancy figures: ${Object.keys(occ).sort().map(monthLabel).join(", ")}.` : "") +
+      (Object.keys(occ).length ? ` Hotel occupancy figures: ${Object.keys(occ).sort().map((m) => monthLabel(m) +
+        (occ[m].issues && occ[m].issues.length ? ` (${occ[m].issues.length} flagged entr${occ[m].issues.length === 1 ? "y" : "ies"})` : "")).join(", ")}.` : "") +
       (problems.length ? ` Couldn't read: ${problems.join(", ")} (it will be rewritten if you publish that month).` : "");
     renderAll();
   } catch (err) {
@@ -348,9 +356,10 @@ function buildMonthFile(month) {
   if (!events.length && !occ) return null;
   const file = { month, lastUpdated: toKey(new Date()) };
   if (occ) {
-    file.hotelOccupancy = occ.figures;
+    if (Object.keys(occ.figures).length) file.hotelOccupancy = occ.figures;
     if (occ.notes) file.hotelOccupancyNotes = occ.notes;
     if (occ.sources) file.hotelOccupancySources = occ.sources;
+    if (occ.issues) file.hotelOccupancyIssues = occ.issues;
   }
   file.events = events;
   return JSON.stringify(file, null, 2) + "\n";
@@ -710,7 +719,10 @@ function runImport() {
 }
 
 // Months ("YYYY-MM") that an occupancy row has figures for.
-const occMonthsOf = (occupancy) => [...new Set(Object.keys(occupancy.figures).map((d) => d.slice(0, 7)))].sort();
+const issueMonth = (i) => (i.date ? i.date.slice(0, 7) : i.month);
+const occMonthsOf = (occupancy) => [...new Set([...Object.keys(occupancy.figures).map((d) => d.slice(0, 7)),
+  ...(occupancy.issues || []).map(issueMonth)])].sort();
+const flaggedCount = (list) => list.reduce((n, o) => n + (o.issues || []).length, 0);
 
 function renderImport(format = "") {
   const allRows = S.importRows;
@@ -728,6 +740,9 @@ function renderImport(format = "") {
     ${occRows.length ? `<p class="font-semibold ${rows.length ? "mt-1" : ""}">${readyOcc.length
       ? `${rows.length ? "Plus hotel" : "Hotel"} occupancy figures for ${escapeHtml(occMonths.map(monthLabel).join(", "))}.`
       : `<span class="text-red-700">The hotel occupancy row has problems and will be skipped.</span>`}</p>` : ""}
+    ${flaggedCount(readyOcc.map((r) => r.occupancy)) ? `<p class="text-xs text-red-700 mt-1"><span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-red-600 text-white text-[10px] font-black align-[-2px]">!</span>
+      ${flaggedCount(readyOcc.map((r) => r.occupancy))} hotel occupancy ${flaggedCount(readyOcc.map((r) => r.occupancy)) === 1 ? "entry has a problem" : "entries have problems"}.
+      The good figures will be published. Bad entries will be marked on the calendar with a red <strong>!</strong> and an explanation until you import a corrected row.</p>` : ""}
     ${bad ? `<p class="text-stone-600 text-xs mt-1">Tap <strong>Fix</strong> on the red ones, or remove them. Rows that still have problems will be skipped.</p>` : ""}`;
   const replaceWhat = [];
   if (rows.length || !readyOcc.length) replaceWhat.push(`all events in ${months.length ? months.map(monthLabel).join(", ") : "the months covered"}`);
@@ -735,13 +750,15 @@ function renderImport(format = "") {
   $("import-replace-what").textContent = replaceWhat.join(" and ");
   $("import-add-occ").classList.toggle("hidden", !readyOcc.length);
   $("import-rows").innerHTML = allRows.map((r, i) => r.kind === "occupancy" ? `
-    <div class="rounded-lg border ${r.errors.length ? "border-red-300 bg-red-50/50" : "border-sky-200 bg-sky-50/60"} p-3">
+    <div class="rounded-lg border ${r.errors.length || (r.occupancy.issues || []).length ? "border-red-300 bg-red-50/50" : "border-sky-200 bg-sky-50/60"} p-3">
       <div class="flex items-start gap-3">
         <p class="min-w-0 flex-1 font-semibold leading-snug">🏨 ${escapeHtml(summarizeOccupancy(r.occupancy))}</p>
         <button data-remove="${i}" class="shrink-0 rounded-lg bg-stone-100 hover:bg-stone-200 px-3 py-1.5 text-sm">Remove</button>
       </div>
       <p class="text-[11px] text-stone-400 mt-1">${escapeHtml(r.label)}</p>
       ${r.errors.map((m) => `<p class="text-xs text-red-700 mt-0.5">✖ ${escapeHtml(m)}</p>`).join("")}
+      ${(r.occupancy.issues || []).map((x) => `<p class="text-xs text-red-700 mt-0.5">✖ <strong>${escapeHtml(x.entry)}</strong>: ${escapeHtml(x.problem)}
+        <span class="text-stone-600">${x.date ? `Flagged on ${escapeHtml(formatSpan(x.date))}.` : `Flagged above the ${escapeHtml(monthLabel(x.month))} calendar.`}</span></p>`).join("")}
       ${r.warnings.map((m) => `<p class="text-xs text-amber-700 mt-0.5">⚠ ${escapeHtml(m)}</p>`).join("")}
     </div>` : `
     <div class="rounded-lg border ${r.errors.length ? "border-red-300 bg-red-50/50" : "border-stone-200"} p-3">
@@ -786,6 +803,8 @@ $("import-publish").addEventListener("click", async () => {
   if (readyOcc.length) lines.push(mode === "replace"
     ? `${ready.length ? "Also replace" : "Replace"} the hotel occupancy figures for ${occMonths.map(monthLabel).join(", ")} (${occDays} day${occDays === 1 ? "" : "s"})?`
     : `${ready.length ? "Also set" : "Set"} hotel occupancy figures for ${occDays} day${occDays === 1 ? "" : "s"} in ${occMonths.map(monthLabel).join(", ")}, overwriting any already there?`);
+  const flagged = flaggedCount(readyOcc);
+  if (flagged) lines.push(`${flagged} bad hotel occupancy entr${flagged === 1 ? "y" : "ies"} will be flagged on the calendar with a red ! until fixed.`);
   let msg = lines.join("\n\n");
   if (skipped) msg += `\n\n${skipped} row${skipped === 1 ? "" : "s"} with problems will be skipped.`;
   if (!confirm(msg)) return;
@@ -793,15 +812,31 @@ $("import-publish").addEventListener("click", async () => {
   const before = S.events;
   const beforeOcc = cloneOcc(S.occ);
   // Hotel occupancy: Replace swaps out whole months the import has figures for; Add overwrites just the dates given.
+  // Each date holds either a figure or a flagged bad entry, never both.
   const cleared = new Set();
+  const monthFor = (m) => {
+    if (mode === "replace" && !cleared.has(m)) { S.occ[m] = { figures: {} }; cleared.add(m); }
+    return (S.occ[m] ||= { figures: {} });
+  };
   for (const o of readyOcc) {
-    for (const [d, pct] of Object.entries(o.figures)) {
-      const m = d.slice(0, 7);
-      if (mode === "replace" && !cleared.has(m)) { S.occ[m] = { figures: {} }; cleared.add(m); }
-      const target = (S.occ[m] ||= { figures: {} });
-      target.figures[d] = pct;
+    for (const m of occMonthsOf(o)) {
+      const target = monthFor(m);
+      // A new occupancy row for a month supersedes that month's old flags that had no usable date.
+      if (target.issues) target.issues = target.issues.filter((i) => i.date);
       if (o.notes) target.notes = o.notes;
       if (o.sources) target.sources = [...o.sources];
+    }
+    for (const [d, pct] of Object.entries(o.figures)) {
+      const target = monthFor(d.slice(0, 7));
+      target.figures[d] = pct;
+      if (target.issues) target.issues = target.issues.filter((i) => i.date !== d);
+    }
+    for (const issue of o.issues || []) {
+      const target = monthFor(issueMonth(issue));
+      const same = (i) => (issue.date ? i.date === issue.date : !i.date && i.entry === issue.entry);
+      if (issue.date) delete target.figures[issue.date];
+      target.issues = [...(target.issues || []).filter((i) => !same(i)),
+        { ...(issue.date ? { date: issue.date } : {}), entry: issue.entry, problem: issue.problem, fix: issue.fix }];
     }
   }
   let added = ready, dupes = 0;

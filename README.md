@@ -57,11 +57,16 @@ title,category,start_date,end_date,total_attendance,daily_attendance,impact_wind
   - `daily_attendance`: one whole-number percentage (0–100) per date, e.g. `2026-10-01:51; 2026-10-02:74; …; 2026-10-31:92`.
   - `total_attendance`: the month's average. `start_date`/`end_date` give the period it covers.
   - `notes` and `sources`: how the estimate was made. They're saved with the figures.
-  - The import preview shows it as one line (e.g. *Estimated hotel occupancy: Oct 1–31 (31 days), 51%–95%*) and flags any entry that isn't a real date with a whole number from 0 to 100.
-  - **Replace** swaps out the figures for each month the row covers. **Add** sets the listed dates and leaves the other days alone.
+  - The import preview shows it as one line (e.g. *Estimated hotel occupancy: Oct 1–31 (31 days), 51%–95%*).
+  - **Bad entries** (not a real date, no percentage, or not a whole number from 0 to 100) don't stop the import. The good figures are published, and each bad entry is flagged:
+    - The calendar shows a red **!** next to that day's date.
+    - The day window explains which entry was wrong and how to fix it.
+    - An entry whose date isn't a real day (e.g. `2026-10-32:40`) is shown in a red notice above that month's calendar instead.
+    - To clear a flag, correct the entry in the spreadsheet and import the Hotel Occupancy row again (Add or Replace).
+  - **Replace** swaps out the figures and flags for each month the row covers. **Add** sets the listed dates, clears their old flags, and leaves the other days alone.
   - See the last row of `events-template.csv` for an example.
 
-In each month file, the admin page stores the figures as `"hotelOccupancy": { "2026-10-01": 51, … }`, with `hotelOccupancyNotes` and `hotelOccupancySources`. A month with figures but no events still gets a file.
+In each month file, the admin page stores the figures as `"hotelOccupancy": { "2026-10-01": 51, … }`, with `hotelOccupancyNotes`, `hotelOccupancySources`, and any flagged entries in `hotelOccupancyIssues`. A month with figures but no events still gets a file.
 
 ## How the app behaves
 

@@ -8,6 +8,23 @@ const today = new Date();
 const state = { offset: 0, data: null, days: {} };
 const cache = new Map();
 
+// Bad hotel occupancy entries flagged by the admin import. date === null → shown above the month.
+const occupancyIssues = () => (state.data && state.data.hotelOccupancyIssues) || [];
+const issuesFor = (key) => occupancyIssues().filter((i) => i.date === key);
+
+const issueIcon = (size) => `<span class="inline-flex shrink-0 items-center justify-center rounded-full bg-red-600 text-white font-black leading-none ${size}" aria-hidden="true">!</span>`;
+
+// Red box explaining bad hotel occupancy entries: which entry, what's wrong, how to fix it.
+function issuesBoxHtml(issues, heading) {
+  return `<div class="rounded-xl border border-red-300 bg-red-50 text-red-900 p-3 text-sm">
+    <p class="flex items-center gap-2 font-bold">${issueIcon("w-5 h-5 text-xs")} ${escapeHtml(heading)}</p>
+    ${issues.map((i) => `<div class="mt-2">
+      <p>Entry <code class="rounded bg-white/80 px-1 font-semibold">${escapeHtml(i.entry)}</code>: ${escapeHtml(i.problem)}</p>
+      ${i.fix ? `<p class="text-xs text-red-800 mt-0.5"><strong>How to fix:</strong> ${escapeHtml(i.fix)}</p>` : ""}
+    </div>`).join("")}
+  </div>`;
+}
+
 // Estimated hotel occupancy (%) for a date in the loaded month, or null.
 function occupancyFor(key) {
   const v = state.data && state.data.hotelOccupancy ? state.data.hotelOccupancy[key] : undefined;
@@ -108,6 +125,7 @@ function renderCalendar() {
   $("month-total").textContent = "";
   $("updated").textContent = "";
   $("sample-banner").classList.add("hidden");
+  $("issue-banner").classList.add("hidden");
 
   if (!state.data) {
     cal.innerHTML = `
@@ -121,6 +139,11 @@ function renderCalendar() {
 
   const json = state.data;
   if (json.sample) $("sample-banner").classList.remove("hidden");
+  const undated = occupancyIssues().filter((i) => !i.date);
+  if (undated.length) {
+    $("issue-banner").innerHTML = issuesBoxHtml(undated, `Hotel occupancy data problem${undated.length === 1 ? "" : "s"} (not shown on a day)`);
+    $("issue-banner").classList.remove("hidden");
+  }
   const upd = parseDate(json.lastUpdated);
   if (upd) $("updated").textContent = `Updated ${MONTHS_SHORT[upd.getMonth()]} ${upd.getDate()}`;
 
@@ -146,16 +169,17 @@ function renderCalendar() {
     const key = dateKey(y, m, d);
     const day = days[key];
     const occ = occupancyFor(key);
-    const opens = !!day || occ !== null; // an occupancy-only day still opens its window
+    const issues = issuesFor(key);
+    const opens = !!day || occ !== null || issues.length > 0; // occupancy-only or flagged days still open
     const isToday = key === todayKey;
     const cats = day ? Object.entries(day.cats).sort((a, b) => b[1] - a[1]) : [];
     const extra = cats.length - MAX_MOBILE_BADGES;
 
     html += `<button type="button" data-date="${key}"
         class="day-cell relative flex flex-col items-stretch gap-0.5 p-0.5 sm:p-1.5 min-h-20 sm:min-h-28 min-w-0 text-left border-b border-r border-stone-100 ${day ? heatClass(day.total) + " hover:brightness-95 cursor-pointer" : opens ? "bg-white cursor-pointer" : "bg-white cursor-default"}"
-        ${opens ? "" : 'tabindex="-1"'} aria-label="${MONTHS_LONG[m]} ${d}${day ? `, about ${formatAttendance(day.total)} expected` : ", no tracked events"}${occ !== null ? `, estimated hotel occupancy ${occ}%` : ""}">
+        ${opens ? "" : 'tabindex="-1"'} aria-label="${MONTHS_LONG[m]} ${d}${day ? `, about ${formatAttendance(day.total)} expected` : ", no tracked events"}${occ !== null ? `, estimated hotel occupancy ${occ}%` : ""}${issues.length ? ", hotel occupancy data problem" : ""}">
       <div class="flex items-center justify-between gap-0.5 px-0.5">
-        <span class="text-[11px] sm:text-sm font-semibold ${isToday ? "bg-emerald-800 text-white rounded-full w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center" : "text-stone-700"}">${d}</span>
+        ${issues.length ? `<span class="flex items-center gap-0.5">` : ""}<span class="text-[11px] sm:text-sm font-semibold ${isToday ? "bg-emerald-800 text-white rounded-full w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center" : "text-stone-700"}">${d}</span>${issues.length ? `${issueIcon("w-4 h-4 sm:w-5 sm:h-5 text-[10px] sm:text-xs")}</span>` : ""}
         ${day ? `<span class="hidden sm:inline text-[10px] font-semibold text-stone-500">~${formatAttendance(day.total)}</span>` : ""}
       </div>
       ${cats.map(([name, att], i) => badgeHtml(name, att, i)).join("")}
@@ -187,7 +211,8 @@ let lastFocus = null;
 
 function openModal(key, focusCat) {
   const occ = occupancyFor(key);
-  const day = state.days[key] || (occ !== null ? { total: 0, items: [] } : null);
+  const issues = issuesFor(key);
+  const day = state.days[key] || (occ !== null || issues.length ? { total: 0, items: [] } : null);
   if (!day) return;
   const d = parseDate(key);
   $("modal-title").textContent = d.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" });
@@ -230,6 +255,10 @@ function openModal(key, focusCat) {
           : escapeHtml(s)).join(", ")}</p>` : ""}
     </article>`;
   }).join("") || `<p class="py-6 text-center text-sm text-stone-500">No tracked events</p>`;
+  if (issues.length) {
+    $("modal-body").insertAdjacentHTML("afterbegin",
+      issuesBoxHtml(issues, `Hotel occupancy entry problem${issues.length === 1 ? "" : "s"} for this day`));
+  }
 
   lastFocus = document.activeElement;
   $("modal").classList.remove("hidden");
