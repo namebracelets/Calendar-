@@ -69,6 +69,26 @@
       ]
     },
     {
+      "id": "ev-g3ih3xj1",
+      "title": "Tours of Distinction Cajun & NOLA Charter",
+      "category": "Tours/Charters",
+      "startDate": "2026-11-01",
+      "endDate": "2026-11-07",
+      "totalAttendance": 350,
+      "dailyAttendance": {
+        "2026-11-01": 100,
+        "2026-11-02": 250,
+        "2026-11-03": 250
+      },
+      "impactWindow": "9:00 AM – 3:00 PM",
+      "location": "French Market & Decatur Corridor",
+      "proximity": "Direct Market Proximity",
+      "notes": "Multi-day guided charter bus tour featuring direct drop-offs at Jackson Square",
+      "sources": [
+        "Cafe du Monde"
+      ]
+    },
+    {
       "id": "ev-5vog7t64",
       "title": "Hotel & Mid-Sized Registered Conventions",
       "category": "Conventions",
@@ -319,6 +339,20 @@
       ]
     },
     {
+      "id": "ev-py49q0ub",
+      "title": "Victory Ball",
+      "category": "Miscellaneous",
+      "startDate": "2026-11-13",
+      "totalAttendance": 1200,
+      "impactWindow": "6:00 PM – 10:00 PM",
+      "location": "National WWII Museum (US Freedom Pavilion)",
+      "proximity": "CBD / Outer French Quarter Radius",
+      "notes": "Annual Veterans Day weekend military appreciation gala drawing active-duty service members",
+      "sources": [
+        "veterans"
+      ]
+    },
+    {
       "id": "ev-zei9th5y",
       "title": "AARC International Congress 2026",
       "category": "Conventions",
@@ -351,6 +385,20 @@
       "notes": "Ocean cruise turn day shuttle traffic.",
       "sources": [
         "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-8xbv2evq",
+      "title": "Family and Military Appreciation Block Party",
+      "category": "Miscellaneous",
+      "startDate": "2026-11-14",
+      "totalAttendance": 3500,
+      "impactWindow": "9:00 AM – 3:00 PM",
+      "location": "National WWII Museum (Magazine & Andrew Higgins)",
+      "proximity": "CBD / Outer French Quarter Radius",
+      "notes": "Annual Veterans Day weekend military block party with live entertainment driving veteran motorcoach groups and families into the CBD and adjacent Quarter.",
+      "sources": [
+        "National WWII Museum / New Orleans & Company"
       ]
     },
     {
