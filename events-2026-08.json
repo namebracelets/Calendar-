@@ -3,7 +3,7 @@
   "lastUpdated": "2026-09-29",
   "events": [
     {
-      "id": "ev-q70s8xkb",
+      "id": "ev-r4t3ki0y",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-08-01",
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "id": "ev-m3wxjeth",
+      "id": "ev-391gm2i9",
       "title": "COOLinary New Orleans Month Kickoff",
       "category": "Festivals",
       "startDate": "2026-08-01",
@@ -32,7 +32,7 @@
       ]
     },
     {
-      "id": "ev-flakmhye",
+      "id": "ev-brrtbaeb",
       "title": "Fidelity Bank White Linen Night",
       "category": "Festivals",
       "startDate": "2026-08-01",
@@ -46,7 +46,7 @@
       ]
     },
     {
-      "id": "ev-0hbkx326",
+      "id": "ev-hyuqx21h",
       "title": "Hotel & Mid-Sized Registered Conventions",
       "category": "Conventions",
       "startDate": "2026-08-01",
@@ -60,7 +60,7 @@
       ]
     },
     {
-      "id": "ev-vftxh7tg",
+      "id": "ev-s11l33a2",
       "title": "Satchmo SummerFest",
       "category": "Festivals",
       "startDate": "2026-08-01",
@@ -70,16 +70,16 @@
         "2026-08-01": 8000,
         "2026-08-02": 7000
       },
-      "impactWindow": "12:00 PM – 8:00 PM",
+      "impactWindow": "11:30 AM – 5:00 PM",
       "location": "New Orleans Jazz Museum (Esplanade Ave)",
       "proximity": "Direct Market Proximity",
       "notes": "Louis Armstrong heritage jazz and food festival adjacent to lower French Market.",
       "sources": [
-        "French Quarter Festivals Inc"
+        "New Orleans Jazz Museum"
       ]
     },
     {
-      "id": "ev-pbqzbcez",
+      "id": "ev-aej7qtcb",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-08-02",
@@ -93,7 +93,7 @@
       ]
     },
     {
-      "id": "ev-09rvelvh",
+      "id": "ev-92qihk0r",
       "title": "Hotel & Mid-Sized Registered Conventions",
       "category": "Conventions",
       "startDate": "2026-08-04",
@@ -107,7 +107,7 @@
       ]
     },
     {
-      "id": "ev-0bny8hpd",
+      "id": "ev-r9plm55q",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-08-06",
@@ -121,26 +121,26 @@
       ]
     },
     {
-      "id": "ev-d0ret46g",
+      "id": "ev-klld1yjw",
       "title": "NOENMCC Porchside Performances - Big Sam's Funky Nation",
       "category": "Concerts",
       "startDate": "2026-08-06",
       "totalAttendance": 1200,
-      "impactWindow": "5:00 PM – 8:00 PM",
+      "impactWindow": "5:30 PM – 7:00 PM",
       "location": "Heritage Porch at Morial Convention Center",
       "proximity": "Convention Center Corridor",
-      "notes": "Free outdoor summer concert series.",
+      "notes": "Free outdoor summer concert series at Hall D Porch.",
       "sources": [
         "MCCNO Official Schedule"
       ]
     },
     {
-      "id": "ev-majd4sk2",
+      "id": "ev-hgqwsxrp",
       "title": "Ella Mai - Do You Still Love Me? Tour",
       "category": "Concerts",
       "startDate": "2026-08-07",
       "totalAttendance": 2600,
-      "impactWindow": "6:00 PM – 9:30 PM",
+      "impactWindow": "7:00 PM – 10:00 PM",
       "location": "Saenger Theatre",
       "proximity": "Canal St Corridor",
       "notes": "Grammy-winning R&B concert driving theater and dining traffic.",
@@ -149,7 +149,7 @@
       ]
     },
     {
-      "id": "ev-amwif5pr",
+      "id": "ev-u2kmz2vz",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-08-08",
@@ -163,35 +163,35 @@
       ]
     },
     {
-      "id": "ev-rtceuhq0",
+      "id": "ev-uk4tge4i",
       "title": "Dirty Linen Night",
       "category": "Festivals",
       "startDate": "2026-08-08",
       "totalAttendance": 12000,
-      "impactWindow": "6:00 PM – 10:00 PM",
+      "impactWindow": "6:00 PM – 9:00 PM",
       "location": "Royal Street Commercial Corridor",
       "proximity": "Direct Market Proximity",
-      "notes": "French Quarter art gallery and retail shopping block event.",
+      "notes": "23rd annual French Quarter art gallery and retail shopping block event.",
       "sources": [
-        "Dirty Linen Night Official"
+        "Royal Street Association"
       ]
     },
     {
-      "id": "ev-j5mbubew",
+      "id": "ev-oqturuhs",
       "title": "New Orleans Red Dress Run",
       "category": "Festivals",
       "startDate": "2026-08-08",
       "totalAttendance": 25000,
       "impactWindow": "9:00 AM – 4:00 PM",
-      "location": "Crescent Park to French Quarter",
+      "location": "Crescent Park / Armstrong Park to French Quarter",
       "proximity": "Direct Market Proximity",
-      "notes": "Massive charity run/walk through Quarter streets and French Market corridor.",
+      "notes": "Massive charity run/walk through Quarter streets turning Bourbon into a sea of red.",
       "sources": [
-        "New Orleans Hash House Harriers"
+        "Hash House Harriers / Local Press"
       ]
     },
     {
-      "id": "ev-afhomzco",
+      "id": "ev-8wulibdh",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-08-09",
@@ -205,7 +205,21 @@
       ]
     },
     {
-      "id": "ev-vif26t8l",
+      "id": "ev-oadciw11",
+      "title": "Eagles of Death Metal Concert",
+      "category": "Concerts",
+      "startDate": "2026-08-10",
+      "totalAttendance": 1800,
+      "impactWindow": "6:30 PM – 9:30 PM",
+      "location": "The Fillmore New Orleans",
+      "proximity": "Canal St / French Quarter Radius",
+      "notes": "Rock concert tour stop near lower Quarter.",
+      "sources": [
+        "Fillmore NOLA"
+      ]
+    },
+    {
+      "id": "ev-zhhtqgcn",
       "title": "Stage Door Idol Finals",
       "category": "Concerts",
       "startDate": "2026-08-11",
@@ -219,7 +233,7 @@
       ]
     },
     {
-      "id": "ev-kxvk48ew",
+      "id": "ev-0vcaigm5",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-08-13",
@@ -233,8 +247,8 @@
       ]
     },
     {
-      "id": "ev-qkl8h18t",
-      "title": "Ganking Mr. Guidry Play Production",
+      "id": "ev-xe7z8sj3",
+      "title": "Le Petit Théâtre Season Production",
       "category": "Concerts",
       "startDate": "2026-08-13",
       "endDate": "2026-08-16",
@@ -254,12 +268,12 @@
       ]
     },
     {
-      "id": "ev-h336q2dv",
+      "id": "ev-5ghjrc5p",
       "title": "NOENMCC Porchside Performances - Honey Island Swamp Band",
       "category": "Concerts",
       "startDate": "2026-08-13",
       "totalAttendance": 1200,
-      "impactWindow": "5:00 PM – 8:00 PM",
+      "impactWindow": "5:30 PM – 7:00 PM",
       "location": "Heritage Porch at Morial Convention Center",
       "proximity": "Convention Center Corridor",
       "notes": "Free outdoor summer concert series.",
@@ -268,7 +282,7 @@
       ]
     },
     {
-      "id": "ev-zj94owyx",
+      "id": "ev-6y0xrptw",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-08-15",
@@ -282,21 +296,21 @@
       ]
     },
     {
-      "id": "ev-ubn63b7c",
-      "title": "Saints vs. Jacksonville Jaguars (NFL Preseason Home Opener)",
+      "id": "ev-pu8ps37l",
+      "title": "Saints vs. Jacksonville Jaguars (NFL Preseason Week 1)",
       "category": "Sports",
       "startDate": "2026-08-15",
       "totalAttendance": 65000,
-      "impactWindow": "12:00 PM – 3:00 PM",
+      "impactWindow": "3:00 PM – 6:00 PM",
       "location": "Caesars Superdome",
       "proximity": "Superdome / CBD Corridor",
-      "notes": "First home NFL preseason game driving heavy downtown pre-game dining crowds.",
+      "notes": "NFL preseason opener driving heavy downtown pre-game dining crowds (24-20 Jaguars).",
       "sources": [
         "NFL Schedule"
       ]
     },
     {
-      "id": "ev-5cuajwgu",
+      "id": "ev-0c27trcn",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-08-16",
@@ -310,7 +324,7 @@
       ]
     },
     {
-      "id": "ev-0eaws99q",
+      "id": "ev-ckrw33gf",
       "title": "Diamond Tours Bus Drop-Off",
       "category": "Tours/Charters",
       "startDate": "2026-08-18",
@@ -324,7 +338,27 @@
       ]
     },
     {
-      "id": "ev-58he0uy8",
+      "id": "ev-bewdmbw7",
+      "title": "Louisiana Travel Summit 2026",
+      "category": "Conventions",
+      "startDate": "2026-08-18",
+      "endDate": "2026-08-20",
+      "totalAttendance": 1500,
+      "dailyAttendance": {
+        "2026-08-18": 500,
+        "2026-08-19": 500,
+        "2026-08-20": 500
+      },
+      "impactWindow": "8:00 AM – 5:00 PM",
+      "location": "CBD / French Quarter Hotel Properties",
+      "proximity": "Convention Center Corridor",
+      "notes": "Annual statewide tourism industry leadership summit.",
+      "sources": [
+        "Biz New Orleans / Louisiana Travel"
+      ]
+    },
+    {
+      "id": "ev-e9tl7ipt",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-08-20",
@@ -338,12 +372,12 @@
       ]
     },
     {
-      "id": "ev-in51h571",
+      "id": "ev-zh4reab3",
       "title": "NOENMCC Porchside Performances - Rockin' Dopsie & the Zydeco Twisters",
       "category": "Concerts",
       "startDate": "2026-08-20",
       "totalAttendance": 1500,
-      "impactWindow": "5:00 PM – 8:00 PM",
+      "impactWindow": "5:30 PM – 7:00 PM",
       "location": "Heritage Porch at Morial Convention Center",
       "proximity": "Convention Center Corridor",
       "notes": "Free outdoor summer concert series.",
@@ -352,7 +386,7 @@
       ]
     },
     {
-      "id": "ev-oh8rr9rq",
+      "id": "ev-lh0xdy3b",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-08-22",
@@ -366,8 +400,8 @@
       ]
     },
     {
-      "id": "ev-e1f3qea0",
-      "title": "NOLA Youth Late-Summer Classic",
+      "id": "ev-ah0p787b",
+      "title": "NOLA Youth Late-Summer Basketball Classic",
       "category": "Youth Events",
       "startDate": "2026-08-22",
       "endDate": "2026-08-23",
@@ -385,7 +419,21 @@
       ]
     },
     {
-      "id": "ev-2bq1xmc0",
+      "id": "ev-yrsn8l8j",
+      "title": "Benson Boone - WANTED MAN TOUR 2026",
+      "category": "Concerts",
+      "startDate": "2026-08-23",
+      "totalAttendance": 15000,
+      "impactWindow": "7:00 PM – 10:30 PM",
+      "location": "Smoothie King Center",
+      "proximity": "Superdome / CBD Corridor",
+      "notes": "Major pop arena concert stop with special guest Luna Li.",
+      "sources": [
+        "Smoothie King Center Official"
+      ]
+    },
+    {
+      "id": "ev-70pkxvcl",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-08-23",
@@ -399,7 +447,7 @@
       ]
     },
     {
-      "id": "ev-eyfx5r6z",
+      "id": "ev-xfjcw32z",
       "title": "Buddy Guy 90th Birthday Tour with D.K. Harrell",
       "category": "Concerts",
       "startDate": "2026-08-25",
@@ -413,7 +461,7 @@
       ]
     },
     {
-      "id": "ev-kw3szv60",
+      "id": "ev-hyid48qt",
       "title": "Devo - Mutate Don't Stagnate Tour",
       "category": "Concerts",
       "startDate": "2026-08-25",
@@ -427,7 +475,7 @@
       ]
     },
     {
-      "id": "ev-4bot57er",
+      "id": "ev-bmode01o",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-08-27",
@@ -441,12 +489,12 @@
       ]
     },
     {
-      "id": "ev-ok997gsu",
+      "id": "ev-c8xbz54z",
       "title": "NOENMCC Porchside Performances - Robin Barnes & the Fiya Birds",
       "category": "Concerts",
       "startDate": "2026-08-27",
       "totalAttendance": 1500,
-      "impactWindow": "5:00 PM – 8:00 PM",
+      "impactWindow": "5:30 PM – 7:00 PM",
       "location": "Heritage Porch at Morial Convention Center",
       "proximity": "Convention Center Corridor",
       "notes": "Free outdoor summer concert series finale.",
@@ -455,7 +503,7 @@
       ]
     },
     {
-      "id": "ev-cln8u1bg",
+      "id": "ev-alvq65u5",
       "title": "Bluey's Big Play Theatrical Run",
       "category": "Concerts",
       "startDate": "2026-08-28",
@@ -475,7 +523,7 @@
       ]
     },
     {
-      "id": "ev-5agktw4l",
+      "id": "ev-w6p79erh",
       "title": "Anime Conclave 2026",
       "category": "Conventions",
       "startDate": "2026-08-29",
@@ -494,7 +542,7 @@
       ]
     },
     {
-      "id": "ev-esvucach",
+      "id": "ev-n5yoejjg",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-08-29",
@@ -508,7 +556,7 @@
       ]
     },
     {
-      "id": "ev-xwuy7tiy",
+      "id": "ev-zqqgaj1l",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-08-30",
@@ -522,7 +570,7 @@
       ]
     },
     {
-      "id": "ev-dedj3nu8",
+      "id": "ev-972vocun",
       "title": "Gary Clark Jr. Concert",
       "category": "Concerts",
       "startDate": "2026-08-30",
