@@ -80,6 +80,20 @@
       ]
     },
     {
+      "id": "ev-7wqboacy",
+      "title": "BAM Travel New Orleans Whirlwind Excursion",
+      "category": "Tours/Charters",
+      "startDate": "2026-10-03",
+      "totalAttendance": 250,
+      "impactWindow": "8:00 AM – 10:00 PM",
+      "location": "Lower Decatur St & French Market",
+      "proximity": "Direct Market Proximity",
+      "notes": "Regional overnight motorcoach drop-off from KY/TN bringing full-day French Quarter pedestrians.",
+      "sources": [
+        "BAM Travel Tours Official"
+      ]
+    },
+    {
       "id": "ev-vc0szlni",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
@@ -493,6 +507,20 @@
       "notes": "Ocean cruise turn day shuttle traffic.",
       "sources": [
         "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-n66exze0",
+      "title": "Diamond Tours Fall Foliage Excursion",
+      "category": "Tours/Charters",
+      "startDate": "2026-10-20",
+      "totalAttendance": 350,
+      "impactWindow": "10:30 AM – 2:00 PM",
+      "location": "Lower Decatur St & French Market",
+      "proximity": "Direct Market Proximity",
+      "notes": "Mid-month autumn senior motorcoach market shopping drop-off.",
+      "sources": [
+        "Diamond Tours Schedule"
       ]
     },
     {
