@@ -3,7 +3,7 @@
   "lastUpdated": "2026-09-29",
   "events": [
     {
-      "id": "ev-j2aupjz2",
+      "id": "ev-8jfurcno",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-11-01",
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "id": "ev-b0pzf9kx",
+      "id": "ev-5ahm3xz2",
       "title": "Disney's The Lion King Broadway Run Finale",
       "category": "Concerts",
       "startDate": "2026-11-01",
@@ -41,7 +41,7 @@
       ]
     },
     {
-      "id": "ev-gr16brff",
+      "id": "ev-8kbdqt8l",
       "title": "Hotel & Mid-Sized Registered Conventions",
       "category": "Conventions",
       "startDate": "2026-11-01",
@@ -55,7 +55,7 @@
       ]
     },
     {
-      "id": "ev-dh4c6l1b",
+      "id": "ev-g1xdha6m",
       "title": "Oak Street Po-Boy Festival",
       "category": "Festivals",
       "startDate": "2026-11-01",
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "id": "ev-uivx8n01",
+      "id": "ev-5vog7t64",
       "title": "Hotel & Mid-Sized Registered Conventions",
       "category": "Conventions",
       "startDate": "2026-11-02",
@@ -83,7 +83,7 @@
       ]
     },
     {
-      "id": "ev-xoqjpxon",
+      "id": "ev-qokg64zr",
       "title": "Vision 2026 - Vantaca Conference",
       "category": "Conventions",
       "startDate": "2026-11-03",
@@ -103,7 +103,7 @@
       ]
     },
     {
-      "id": "ev-vd1h7fbx",
+      "id": "ev-kei9vs93",
       "title": "Pelicans vs. Utah Jazz",
       "category": "Sports",
       "startDate": "2026-11-04",
@@ -117,7 +117,7 @@
       ]
     },
     {
-      "id": "ev-1ow65skc",
+      "id": "ev-6412dmgp",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-11-05",
@@ -131,7 +131,7 @@
       ]
     },
     {
-      "id": "ev-5289n361",
+      "id": "ev-33zeug9g",
       "title": "Pelicans vs. Minnesota Timberwolves (NBA Cup)",
       "category": "Sports",
       "startDate": "2026-11-06",
@@ -145,7 +145,7 @@
       ]
     },
     {
-      "id": "ev-xkvfp0v7",
+      "id": "ev-yvp1ud6s",
       "title": "Tremé Creole Gumbo & Congo Square Rhythms Festival",
       "category": "Festivals",
       "startDate": "2026-11-06",
@@ -165,7 +165,7 @@
       ]
     },
     {
-      "id": "ev-gc6ca2mn",
+      "id": "ev-5qkcmi1n",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-11-07",
@@ -179,7 +179,7 @@
       ]
     },
     {
-      "id": "ev-x9vprosi",
+      "id": "ev-f7a7hrli",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-11-08",
@@ -193,7 +193,7 @@
       ]
     },
     {
-      "id": "ev-o2tydcw7",
+      "id": "ev-z8jrm34c",
       "title": "Saints vs. Cleveland Browns",
       "category": "Sports",
       "startDate": "2026-11-08",
@@ -207,7 +207,49 @@
       ]
     },
     {
-      "id": "ev-qukiqcap",
+      "id": "ev-7s42t09o",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-11-09",
+      "totalAttendance": 2000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-d5x40a9k",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-11-10",
+      "totalAttendance": 2500,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-og1edslm",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-11-11",
+      "totalAttendance": 2000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-4b0ytocs",
       "title": "Pelicans vs. Brooklyn Nets",
       "category": "Sports",
       "startDate": "2026-11-11",
@@ -221,7 +263,7 @@
       ]
     },
     {
-      "id": "ev-uh11vnmq",
+      "id": "ev-kzfdk16f",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-11-12",
@@ -235,7 +277,35 @@
       ]
     },
     {
-      "id": "ev-kitt0y47",
+      "id": "ev-xjf4c0sk",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-11-12",
+      "totalAttendance": 3000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-3a5dh8up",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-11-13",
+      "totalAttendance": 3000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-pdua7h6u",
       "title": "Pelicans vs. Memphis Grizzlies (NBA Cup)",
       "category": "Sports",
       "startDate": "2026-11-13",
@@ -249,7 +319,7 @@
       ]
     },
     {
-      "id": "ev-4dux5hz0",
+      "id": "ev-zei9th5y",
       "title": "AARC International Congress 2026",
       "category": "Conventions",
       "startDate": "2026-11-14",
@@ -270,7 +340,7 @@
       ]
     },
     {
-      "id": "ev-bvojem31",
+      "id": "ev-s2v8qcl7",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-11-14",
@@ -284,7 +354,7 @@
       ]
     },
     {
-      "id": "ev-0iew2kny",
+      "id": "ev-yy15xlzg",
       "title": "International Pool | Spa | Patio Expo",
       "category": "Conventions",
       "startDate": "2026-11-14",
@@ -307,7 +377,7 @@
       ]
     },
     {
-      "id": "ev-qnau4rov",
+      "id": "ev-wy7s7mf6",
       "title": "NOLA November Youth Soccer Classic",
       "category": "Youth Events",
       "startDate": "2026-11-14",
@@ -326,7 +396,7 @@
       ]
     },
     {
-      "id": "ev-2u2hutj4",
+      "id": "ev-uossrvkp",
       "title": "Pelicans vs. Denver Nuggets",
       "category": "Sports",
       "startDate": "2026-11-14",
@@ -340,7 +410,7 @@
       ]
     },
     {
-      "id": "ev-ly33yyz9",
+      "id": "ev-dwt746wy",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-11-15",
@@ -354,7 +424,7 @@
       ]
     },
     {
-      "id": "ev-6jde7v3i",
+      "id": "ev-r64bea0v",
       "title": "Saints vs. Carolina Panthers",
       "category": "Sports",
       "startDate": "2026-11-15",
@@ -368,7 +438,7 @@
       ]
     },
     {
-      "id": "ev-iul7a743",
+      "id": "ev-vuk0a6yz",
       "title": "Pelicans vs. Golden State Warriors",
       "category": "Sports",
       "startDate": "2026-11-16",
@@ -382,7 +452,7 @@
       ]
     },
     {
-      "id": "ev-i01fhzdh",
+      "id": "ev-ygu6zgq1",
       "title": "Pelicans vs. Detroit Pistons",
       "category": "Sports",
       "startDate": "2026-11-18",
@@ -396,7 +466,7 @@
       ]
     },
     {
-      "id": "ev-4giudgyu",
+      "id": "ev-pb1088ys",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-11-19",
@@ -410,7 +480,21 @@
       ]
     },
     {
-      "id": "ev-o0c4dkb4",
+      "id": "ev-tlb6n2bs",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-11-20",
+      "totalAttendance": 3000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-waqxbf47",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-11-21",
@@ -424,7 +508,26 @@
       ]
     },
     {
-      "id": "ev-xvfkbqvi",
+      "id": "ev-vvsm6h09",
+      "title": "NOLA November Youth Basketball Classic",
+      "category": "Youth Events",
+      "startDate": "2026-11-21",
+      "endDate": "2026-11-22",
+      "totalAttendance": 3000,
+      "dailyAttendance": {
+        "2026-11-21": 1500,
+        "2026-11-22": 1500
+      },
+      "impactWindow": "8:30 AM – 4:00 PM",
+      "location": "Regional Sports Complex",
+      "proximity": "Greater New Orleans Area",
+      "notes": "Youth sports tournament bringing visiting families downtown.",
+      "sources": [
+        "Tourneyboard"
+      ]
+    },
+    {
+      "id": "ev-ojyr3hnx",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-11-22",
@@ -438,7 +541,7 @@
       ]
     },
     {
-      "id": "ev-j3b9xfdg",
+      "id": "ev-aqlxutde",
       "title": "Pelicans vs. Phoenix Suns",
       "category": "Sports",
       "startDate": "2026-11-23",
@@ -452,7 +555,7 @@
       ]
     },
     {
-      "id": "ev-cm1dlmo6",
+      "id": "ev-8wz8lkvw",
       "title": "Diamond Tours Thanksgiving Excursion",
       "category": "Tours/Charters",
       "startDate": "2026-11-24",
@@ -466,7 +569,35 @@
       ]
     },
     {
-      "id": "ev-vn9q025x",
+      "id": "ev-rg30mln2",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-11-24",
+      "totalAttendance": 2000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-wknc1o71",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-11-25",
+      "totalAttendance": 1500,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Pre-holiday registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-ql8y3enm",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-11-26",
@@ -480,7 +611,7 @@
       ]
     },
     {
-      "id": "ev-6yi2m5nc",
+      "id": "ev-2i2lgnwr",
       "title": "Bayou Classic Parade & Fan Fest",
       "category": "Parades",
       "startDate": "2026-11-27",
@@ -494,7 +625,7 @@
       ]
     },
     {
-      "id": "ev-u76a2hm4",
+      "id": "ev-vbr0jzmf",
       "title": "Annual 53rd Bayou Classic (Southern U vs. Grambling State)",
       "category": "Sports",
       "startDate": "2026-11-28",
@@ -508,7 +639,7 @@
       ]
     },
     {
-      "id": "ev-ho6li3bd",
+      "id": "ev-dx3jfspl",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-11-28",
@@ -522,7 +653,7 @@
       ]
     },
     {
-      "id": "ev-vwcuxq7u",
+      "id": "ev-rwho1yx9",
       "title": "Celebration in the Oaks Opening",
       "category": "Festivals",
       "startDate": "2026-11-28",
@@ -542,7 +673,7 @@
       ]
     },
     {
-      "id": "ev-uwfkdzwi",
+      "id": "ev-akf0nhsm",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-11-29",
@@ -556,7 +687,7 @@
       ]
     },
     {
-      "id": "ev-qsi7h3nk",
+      "id": "ev-02rc2xzd",
       "title": "Hotel & Mid-Sized Registered Conventions",
       "category": "Conventions",
       "startDate": "2026-11-30",
