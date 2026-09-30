@@ -3,7 +3,7 @@
   "lastUpdated": "2026-09-29",
   "events": [
     {
-      "id": "ev-viia6umd",
+      "id": "ev-1kl21li5",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-10-01",
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "id": "ev-y17fakxh",
+      "id": "ev-l023ilvq",
       "title": "Hotel & Mid-Sized Registered Conventions",
       "category": "Conventions",
       "startDate": "2026-10-01",
@@ -31,7 +31,21 @@
       ]
     },
     {
-      "id": "ev-6zy1efmq",
+      "id": "ev-um6lqas1",
+      "title": "MCCNO Career Expo",
+      "category": "Conventions",
+      "startDate": "2026-10-01",
+      "totalAttendance": 1000,
+      "impactWindow": "11:30 AM – 3:30 PM",
+      "location": "Ernest N. Morial Convention Center",
+      "proximity": "Convention Center Corridor",
+      "notes": "Local workforce and talent exposition.",
+      "sources": [
+        "MCCNO Schedule"
+      ]
+    },
+    {
+      "id": "ev-lrr9o1vm",
       "title": "NOLAxNOLA Culture & Music Spillover",
       "category": "Festivals",
       "startDate": "2026-10-01",
@@ -52,7 +66,7 @@
       ]
     },
     {
-      "id": "ev-b0p7xase",
+      "id": "ev-vqi2l91p",
       "title": "Hotel & Mid-Sized Registered Conventions",
       "category": "Conventions",
       "startDate": "2026-10-02",
@@ -66,7 +80,7 @@
       ]
     },
     {
-      "id": "ev-6be7yjn9",
+      "id": "ev-vc0szlni",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-10-03",
@@ -80,7 +94,7 @@
       ]
     },
     {
-      "id": "ev-ob5h4pnj",
+      "id": "ev-fs81kyow",
       "title": "Hotel & Mid-Sized Registered Conventions",
       "category": "Conventions",
       "startDate": "2026-10-03",
@@ -94,7 +108,7 @@
       ]
     },
     {
-      "id": "ev-yp1rnrk6",
+      "id": "ev-q0pup2td",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-10-04",
@@ -108,7 +122,7 @@
       ]
     },
     {
-      "id": "ev-zkv4is2k",
+      "id": "ev-gk9ko066",
       "title": "Hotel & Mid-Sized Registered Conventions",
       "category": "Conventions",
       "startDate": "2026-10-04",
@@ -122,7 +136,7 @@
       ]
     },
     {
-      "id": "ev-p89xrtgt",
+      "id": "ev-ov4umrbw",
       "title": "Hotel & Mid-Sized Registered Conventions",
       "category": "Conventions",
       "startDate": "2026-10-05",
@@ -136,7 +150,7 @@
       ]
     },
     {
-      "id": "ev-63cv7os3",
+      "id": "ev-d8rwmq0n",
       "title": "Saints vs. Atlanta Falcons (Monday Night Football)",
       "category": "Sports",
       "startDate": "2026-10-05",
@@ -150,7 +164,7 @@
       ]
     },
     {
-      "id": "ev-avep7c9e",
+      "id": "ev-r1s18032",
       "title": "Hotel & Mid-Sized Registered Conventions",
       "category": "Conventions",
       "startDate": "2026-10-06",
@@ -164,7 +178,7 @@
       ]
     },
     {
-      "id": "ev-0z53q1m0",
+      "id": "ev-sxzd7hl2",
       "title": "Hotel & Mid-Sized Registered Conventions",
       "category": "Conventions",
       "startDate": "2026-10-07",
@@ -178,7 +192,7 @@
       ]
     },
     {
-      "id": "ev-3zawnkej",
+      "id": "ev-nytp9z9j",
       "title": "Amyl and the Sniffers Concert",
       "category": "Concerts",
       "startDate": "2026-10-08",
@@ -192,7 +206,7 @@
       ]
     },
     {
-      "id": "ev-snneybo7",
+      "id": "ev-01iysdgh",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-10-08",
@@ -206,7 +220,7 @@
       ]
     },
     {
-      "id": "ev-cziz094h",
+      "id": "ev-wrdekk62",
       "title": "Hotel & Mid-Sized Registered Conventions",
       "category": "Conventions",
       "startDate": "2026-10-08",
@@ -220,7 +234,7 @@
       ]
     },
     {
-      "id": "ev-ur2h3hzc",
+      "id": "ev-0m8opvnf",
       "title": "American Academy of Ophthalmology (AAO) Annual Meeting",
       "category": "Conventions",
       "startDate": "2026-10-09",
@@ -241,7 +255,7 @@
       ]
     },
     {
-      "id": "ev-v143mgka",
+      "id": "ev-apmprk5y",
       "title": "Crescent City Blues & BBQ Festival",
       "category": "Festivals",
       "startDate": "2026-10-09",
@@ -261,21 +275,7 @@
       ]
     },
     {
-      "id": "ev-bniknnbd",
-      "title": "Hotel & Mid-Sized Registered Conventions",
-      "category": "Conventions",
-      "startDate": "2026-10-09",
-      "totalAttendance": 3000,
-      "impactWindow": "10:00 AM – 4:00 PM",
-      "location": "French Quarter & CBD Hotels",
-      "proximity": "Convention Center Corridor",
-      "notes": "Daily sum of registered hotel meetings and small conferences.",
-      "sources": [
-        "New Orleans & Company Calendar"
-      ]
-    },
-    {
-      "id": "ev-1xs0tp2t",
+      "id": "ev-att2it2x",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-10-10",
@@ -289,7 +289,7 @@
       ]
     },
     {
-      "id": "ev-7fwbi6gm",
+      "id": "ev-frw98eu8",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-10-11",
@@ -303,7 +303,7 @@
       ]
     },
     {
-      "id": "ev-fhfws2pz",
+      "id": "ev-4yhakoxs",
       "title": "Saints vs. Minnesota Vikings",
       "category": "Sports",
       "startDate": "2026-10-11",
@@ -317,7 +317,7 @@
       ]
     },
     {
-      "id": "ev-ns7e3epm",
+      "id": "ev-yn26rbiv",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-10-12",
@@ -331,7 +331,7 @@
       ]
     },
     {
-      "id": "ev-jpf6qagc",
+      "id": "ev-08gglmwg",
       "title": "Hotel & Mid-Sized Registered Conventions",
       "category": "Conventions",
       "startDate": "2026-10-12",
@@ -345,7 +345,7 @@
       ]
     },
     {
-      "id": "ev-tfex71yx",
+      "id": "ev-ne09y45w",
       "title": "Americas Energy Summit 2026",
       "category": "Conventions",
       "startDate": "2026-10-13",
@@ -365,7 +365,7 @@
       ]
     },
     {
-      "id": "ev-efn04ie6",
+      "id": "ev-8bohmg25",
       "title": "$uicideboy$ - Grey Day Tour 2026",
       "category": "Concerts",
       "startDate": "2026-10-14",
@@ -379,7 +379,7 @@
       ]
     },
     {
-      "id": "ev-8n3x3l74",
+      "id": "ev-pe452idm",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-10-15",
@@ -393,7 +393,7 @@
       ]
     },
     {
-      "id": "ev-ffg4g2xi",
+      "id": "ev-akautdkn",
       "title": "Global Site Solutions Summit (SCRS)",
       "category": "Conventions",
       "startDate": "2026-10-15",
@@ -413,7 +413,7 @@
       ]
     },
     {
-      "id": "ev-nv1jtovb",
+      "id": "ev-xwh356al",
       "title": "Pelicans vs. Washington Wizards (Preseason)",
       "category": "Sports",
       "startDate": "2026-10-16",
@@ -427,8 +427,42 @@
       ]
     },
     {
-      "id": "ev-lk2i9pjn",
-      "title": "American College of Chest Physicians (CHEST 2026)",
+      "id": "ev-la5t0ytr",
+      "title": "New Orleans Tattoo Arts Festival",
+      "category": "Festivals",
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-19",
+      "totalAttendance": 3000,
+      "dailyAttendance": {
+        "2026-10-17": 1000,
+        "2026-10-18": 1000,
+        "2026-10-19": 1000
+      },
+      "impactWindow": "11:00 AM – 8:00 PM",
+      "location": "Ernest N. Morial Convention Center (Hall I)",
+      "proximity": "Convention Center Corridor",
+      "notes": "Annual convention expo driving local walking crowds.",
+      "sources": [
+        "MCCNO Schedule"
+      ]
+    },
+    {
+      "id": "ev-d7b5jykz",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-10-18",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-i5ti8kzi",
+      "title": "Healthcare Design Expo & Conference (CHEST / Healthcare)",
       "category": "Conventions",
       "startDate": "2026-10-18",
       "endDate": "2026-10-21",
@@ -442,27 +476,13 @@
       "impactWindow": "10:30 AM – 2:30 PM",
       "location": "Ernest N. Morial Convention Center",
       "proximity": "Convention Center Corridor",
-      "notes": "National medical convention driving Quarter hotel and dining crowds.",
+      "notes": "National healthcare congress driving Quarter hotel and dining crowds.",
       "sources": [
         "MCCNO Schedule"
       ]
     },
     {
-      "id": "ev-7pj3g34x",
-      "title": "Carnival Cruise Turn-Day",
-      "category": "Cruise Ships",
-      "startDate": "2026-10-18",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
-      "sources": [
-        "Port NOLA Schedule"
-      ]
-    },
-    {
-      "id": "ev-bdbb638a",
+      "id": "ev-guvtv97y",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-10-19",
@@ -476,7 +496,7 @@
       ]
     },
     {
-      "id": "ev-44rzryjy",
+      "id": "ev-9eg5rjrt",
       "title": "American Society of Nephrology (ASN) Kidney Week",
       "category": "Conventions",
       "startDate": "2026-10-21",
@@ -498,7 +518,7 @@
       ]
     },
     {
-      "id": "ev-8qqvvuud",
+      "id": "ev-g2tkud91",
       "title": "Disney's The Lion King Broadway Run",
       "category": "Concerts",
       "startDate": "2026-10-21",
@@ -525,7 +545,7 @@
       ]
     },
     {
-      "id": "ev-3akzqrj4",
+      "id": "ev-3nr1jj4h",
       "title": "Pelicans vs. Indiana Pacers (Regular Season Home Opener)",
       "category": "Sports",
       "startDate": "2026-10-21",
@@ -539,7 +559,7 @@
       ]
     },
     {
-      "id": "ev-k603wsm4",
+      "id": "ev-luwe99uo",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-10-24",
@@ -553,7 +573,7 @@
       ]
     },
     {
-      "id": "ev-lek1jbmg",
+      "id": "ev-gf669soh",
       "title": "CeCe Winans - Come Worship Tour",
       "category": "Concerts",
       "startDate": "2026-10-24",
@@ -567,7 +587,7 @@
       ]
     },
     {
-      "id": "ev-ng79fiyh",
+      "id": "ev-cpmsa5hv",
       "title": "Krewe of BOO! Halloween Parade",
       "category": "Parades",
       "startDate": "2026-10-24",
@@ -581,7 +601,7 @@
       ]
     },
     {
-      "id": "ev-4qfjprd4",
+      "id": "ev-cwnhyiio",
       "title": "NOLA Fall Championship Youth Baseball Tournament",
       "category": "Youth Events",
       "startDate": "2026-10-24",
@@ -600,7 +620,7 @@
       ]
     },
     {
-      "id": "ev-cig02sg5",
+      "id": "ev-k80xo7ub",
       "title": "IFEBP Annual Employee Benefits Conference",
       "category": "Conventions",
       "startDate": "2026-10-25",
@@ -620,7 +640,7 @@
       ]
     },
     {
-      "id": "ev-d8tf1s79",
+      "id": "ev-31t8rn7b",
       "title": "AAPS PharmSci 360",
       "category": "Conventions",
       "startDate": "2026-10-26",
@@ -640,7 +660,7 @@
       ]
     },
     {
-      "id": "ev-i9id5i8n",
+      "id": "ev-j9y413m0",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-10-27",
@@ -654,7 +674,7 @@
       ]
     },
     {
-      "id": "ev-rqgyo9cj",
+      "id": "ev-dto1n4sh",
       "title": "Diamond Tours Bus Drop-Off",
       "category": "Tours/Charters",
       "startDate": "2026-10-27",
@@ -668,7 +688,28 @@
       ]
     },
     {
-      "id": "ev-ujygo5fu",
+      "id": "ev-7ro6k850",
+      "title": "New Orleans Investment Conference 2026",
+      "category": "Conventions",
+      "startDate": "2026-10-28",
+      "endDate": "2026-10-31",
+      "totalAttendance": 2500,
+      "dailyAttendance": {
+        "2026-10-28": 2500,
+        "2026-10-29": 2500,
+        "2026-10-30": 2500,
+        "2026-10-31": 2500
+      },
+      "impactWindow": "9:00 AM – 5:00 PM",
+      "location": "Hilton New Orleans Riverside",
+      "proximity": "Convention Center Corridor",
+      "notes": "52nd annual private investor conference bringing high-net-worth attendees directly adjacent to Poydras/Riverwalk.",
+      "sources": [
+        "Hilton Schedule / Investor Conf"
+      ]
+    },
+    {
+      "id": "ev-1y3wyyzv",
       "title": "Pelicans vs. Denver Nuggets",
       "category": "Sports",
       "startDate": "2026-10-28",
@@ -682,7 +723,21 @@
       ]
     },
     {
-      "id": "ev-lliryp30",
+      "id": "ev-3z57hr0z",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-10-29",
+      "totalAttendance": 1500,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings and corporate retreats across Canal St / FQ hotel properties.",
+      "sources": [
+        "New Orleans & Company Convention Calendar"
+      ]
+    },
+    {
+      "id": "ev-i76mynrt",
       "title": "Pelicans vs. Sacramento Kings",
       "category": "Sports",
       "startDate": "2026-10-29",
@@ -696,7 +751,7 @@
       ]
     },
     {
-      "id": "ev-czug0wqv",
+      "id": "ev-y2yyr94z",
       "title": "Halloween New Orleans (HNO) Weekend Kickoff",
       "category": "Festivals",
       "startDate": "2026-10-30",
@@ -715,7 +770,21 @@
       ]
     },
     {
-      "id": "ev-nizkxxbb",
+      "id": "ev-4pgf34ob",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-10-30",
+      "totalAttendance": 2000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-63zfn62a",
       "title": "Victoria Monét Concert",
       "category": "Concerts",
       "startDate": "2026-10-30",
@@ -729,7 +798,7 @@
       ]
     },
     {
-      "id": "ev-er71qv54",
+      "id": "ev-cxjw5po1",
       "title": "Carnival Cruise Turn-Day",
       "category": "Cruise Ships",
       "startDate": "2026-10-31",
@@ -743,7 +812,21 @@
       ]
     },
     {
-      "id": "ev-31dlw6dz",
+      "id": "ev-gbmryw94",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-10-31",
+      "totalAttendance": 1500,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-ejodlzjq",
       "title": "Pelicans vs. Atlanta Hawks",
       "category": "Sports",
       "startDate": "2026-10-31",
