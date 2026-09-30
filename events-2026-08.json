@@ -1,0 +1,539 @@
+{
+  "month": "2026-08",
+  "lastUpdated": "2026-09-29",
+  "events": [
+    {
+      "id": "ev-q70s8xkb",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-08-01",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-m3wxjeth",
+      "title": "COOLinary New Orleans Month Kickoff",
+      "category": "Festivals",
+      "startDate": "2026-08-01",
+      "endDate": "2026-08-31",
+      "totalAttendance": 40000,
+      "impactWindow": "11:30 AM – 9:00 PM",
+      "location": "French Quarter & CBD Restaurants",
+      "proximity": "Direct Market Proximity",
+      "notes": "Month-long curated prix-fixe dining promotion driving local restaurant foot traffic.",
+      "sources": [
+        "New Orleans & Company"
+      ]
+    },
+    {
+      "id": "ev-flakmhye",
+      "title": "Fidelity Bank White Linen Night",
+      "category": "Festivals",
+      "startDate": "2026-08-01",
+      "totalAttendance": 20000,
+      "impactWindow": "5:30 PM – 10:00 PM",
+      "location": "Arts District / Julia St Corridor",
+      "proximity": "CBD / Outer French Quarter Radius",
+      "notes": "Annual block party with art gallery walk",
+      "sources": [
+        "live music"
+      ]
+    },
+    {
+      "id": "ev-0hbkx326",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-08-01",
+      "totalAttendance": 2000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "id": "ev-vftxh7tg",
+      "title": "Satchmo SummerFest",
+      "category": "Festivals",
+      "startDate": "2026-08-01",
+      "endDate": "2026-08-02",
+      "totalAttendance": 15000,
+      "dailyAttendance": {
+        "2026-08-01": 8000,
+        "2026-08-02": 7000
+      },
+      "impactWindow": "12:00 PM – 8:00 PM",
+      "location": "New Orleans Jazz Museum (Esplanade Ave)",
+      "proximity": "Direct Market Proximity",
+      "notes": "Louis Armstrong heritage jazz and food festival adjacent to lower French Market.",
+      "sources": [
+        "French Quarter Festivals Inc"
+      ]
+    },
+    {
+      "id": "ev-pbqzbcez",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-08-02",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-09rvelvh",
+      "title": "Hotel & Mid-Sized Registered Conventions",
+      "category": "Conventions",
+      "startDate": "2026-08-04",
+      "totalAttendance": 3000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "French Quarter & CBD Hotels",
+      "proximity": "Convention Center Corridor",
+      "notes": "Daily sum of registered hotel meetings and small conferences.",
+      "sources": [
+        "New Orleans & Company Calendar"
+      ]
+    },
+    {
+      "id": "ev-0bny8hpd",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-08-06",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-d0ret46g",
+      "title": "NOENMCC Porchside Performances - Big Sam's Funky Nation",
+      "category": "Concerts",
+      "startDate": "2026-08-06",
+      "totalAttendance": 1200,
+      "impactWindow": "5:00 PM – 8:00 PM",
+      "location": "Heritage Porch at Morial Convention Center",
+      "proximity": "Convention Center Corridor",
+      "notes": "Free outdoor summer concert series.",
+      "sources": [
+        "MCCNO Official Schedule"
+      ]
+    },
+    {
+      "id": "ev-majd4sk2",
+      "title": "Ella Mai - Do You Still Love Me? Tour",
+      "category": "Concerts",
+      "startDate": "2026-08-07",
+      "totalAttendance": 2600,
+      "impactWindow": "6:00 PM – 9:30 PM",
+      "location": "Saenger Theatre",
+      "proximity": "Canal St Corridor",
+      "notes": "Grammy-winning R&B concert driving theater and dining traffic.",
+      "sources": [
+        "Saenger NOLA"
+      ]
+    },
+    {
+      "id": "ev-amwif5pr",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-08-08",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-rtceuhq0",
+      "title": "Dirty Linen Night",
+      "category": "Festivals",
+      "startDate": "2026-08-08",
+      "totalAttendance": 12000,
+      "impactWindow": "6:00 PM – 10:00 PM",
+      "location": "Royal Street Commercial Corridor",
+      "proximity": "Direct Market Proximity",
+      "notes": "French Quarter art gallery and retail shopping block event.",
+      "sources": [
+        "Dirty Linen Night Official"
+      ]
+    },
+    {
+      "id": "ev-j5mbubew",
+      "title": "New Orleans Red Dress Run",
+      "category": "Festivals",
+      "startDate": "2026-08-08",
+      "totalAttendance": 25000,
+      "impactWindow": "9:00 AM – 4:00 PM",
+      "location": "Crescent Park to French Quarter",
+      "proximity": "Direct Market Proximity",
+      "notes": "Massive charity run/walk through Quarter streets and French Market corridor.",
+      "sources": [
+        "New Orleans Hash House Harriers"
+      ]
+    },
+    {
+      "id": "ev-afhomzco",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-08-09",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-vif26t8l",
+      "title": "Stage Door Idol Finals",
+      "category": "Concerts",
+      "startDate": "2026-08-11",
+      "totalAttendance": 500,
+      "impactWindow": "6:00 PM – 9:00 PM",
+      "location": "BB's Stage Door Canteen (WWII Museum)",
+      "proximity": "CBD / Outer French Quarter Radius",
+      "notes": "Live vocal talent showcase finals.",
+      "sources": [
+        "National WWII Museum"
+      ]
+    },
+    {
+      "id": "ev-kxvk48ew",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-08-13",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-qkl8h18t",
+      "title": "Ganking Mr. Guidry Play Production",
+      "category": "Concerts",
+      "startDate": "2026-08-13",
+      "endDate": "2026-08-16",
+      "totalAttendance": 1200,
+      "dailyAttendance": {
+        "2026-08-13": 300,
+        "2026-08-14": 300,
+        "2026-08-15": 300,
+        "2026-08-16": 300
+      },
+      "impactWindow": "6:30 PM – 9:00 PM",
+      "location": "Le Petit Théâtre du Vieux Carré",
+      "proximity": "Direct Market Proximity",
+      "notes": "Historic French Quarter theater play run.",
+      "sources": [
+        "Le Petit Théâtre"
+      ]
+    },
+    {
+      "id": "ev-h336q2dv",
+      "title": "NOENMCC Porchside Performances - Honey Island Swamp Band",
+      "category": "Concerts",
+      "startDate": "2026-08-13",
+      "totalAttendance": 1200,
+      "impactWindow": "5:00 PM – 8:00 PM",
+      "location": "Heritage Porch at Morial Convention Center",
+      "proximity": "Convention Center Corridor",
+      "notes": "Free outdoor summer concert series.",
+      "sources": [
+        "MCCNO Official Schedule"
+      ]
+    },
+    {
+      "id": "ev-zj94owyx",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-08-15",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-ubn63b7c",
+      "title": "Saints vs. Jacksonville Jaguars (NFL Preseason Home Opener)",
+      "category": "Sports",
+      "startDate": "2026-08-15",
+      "totalAttendance": 65000,
+      "impactWindow": "12:00 PM – 3:00 PM",
+      "location": "Caesars Superdome",
+      "proximity": "Superdome / CBD Corridor",
+      "notes": "First home NFL preseason game driving heavy downtown pre-game dining crowds.",
+      "sources": [
+        "NFL Schedule"
+      ]
+    },
+    {
+      "id": "ev-5cuajwgu",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-08-16",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-0eaws99q",
+      "title": "Diamond Tours Bus Drop-Off",
+      "category": "Tours/Charters",
+      "startDate": "2026-08-18",
+      "totalAttendance": 300,
+      "impactWindow": "10:30 AM – 2:00 PM",
+      "location": "Lower Decatur St & French Market",
+      "proximity": "Direct Market Proximity",
+      "notes": "Wholesale senior motorcoach market shopping excursion.",
+      "sources": [
+        "Diamond Tours Schedule"
+      ]
+    },
+    {
+      "id": "ev-58he0uy8",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-08-20",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-in51h571",
+      "title": "NOENMCC Porchside Performances - Rockin' Dopsie & the Zydeco Twisters",
+      "category": "Concerts",
+      "startDate": "2026-08-20",
+      "totalAttendance": 1500,
+      "impactWindow": "5:00 PM – 8:00 PM",
+      "location": "Heritage Porch at Morial Convention Center",
+      "proximity": "Convention Center Corridor",
+      "notes": "Free outdoor summer concert series.",
+      "sources": [
+        "MCCNO Official Schedule"
+      ]
+    },
+    {
+      "id": "ev-oh8rr9rq",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-08-22",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-e1f3qea0",
+      "title": "NOLA Youth Late-Summer Classic",
+      "category": "Youth Events",
+      "startDate": "2026-08-22",
+      "endDate": "2026-08-23",
+      "totalAttendance": 2800,
+      "dailyAttendance": {
+        "2026-08-22": 1400,
+        "2026-08-23": 1400
+      },
+      "impactWindow": "8:30 AM – 4:00 PM",
+      "location": "Regional Sports Complex",
+      "proximity": "Greater New Orleans Area",
+      "notes": "Youth sports tournament bringing visiting families downtown.",
+      "sources": [
+        "Tourneyboard"
+      ]
+    },
+    {
+      "id": "ev-2bq1xmc0",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-08-23",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-eyfx5r6z",
+      "title": "Buddy Guy 90th Birthday Tour with D.K. Harrell",
+      "category": "Concerts",
+      "startDate": "2026-08-25",
+      "totalAttendance": 2600,
+      "impactWindow": "5:30 PM – 9:00 PM",
+      "location": "Saenger Theatre",
+      "proximity": "Canal St Corridor",
+      "notes": "Blues legend 90th birthday concert tour stop.",
+      "sources": [
+        "Saenger NOLA"
+      ]
+    },
+    {
+      "id": "ev-kw3szv60",
+      "title": "Devo - Mutate Don't Stagnate Tour",
+      "category": "Concerts",
+      "startDate": "2026-08-25",
+      "totalAttendance": 2000,
+      "impactWindow": "6:00 PM – 9:00 PM",
+      "location": "The Fillmore New Orleans",
+      "proximity": "Canal St / French Quarter Radius",
+      "notes": "New wave icon concert near lower Quarter.",
+      "sources": [
+        "Fillmore NOLA"
+      ]
+    },
+    {
+      "id": "ev-4bot57er",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-08-27",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-ok997gsu",
+      "title": "NOENMCC Porchside Performances - Robin Barnes & the Fiya Birds",
+      "category": "Concerts",
+      "startDate": "2026-08-27",
+      "totalAttendance": 1500,
+      "impactWindow": "5:00 PM – 8:00 PM",
+      "location": "Heritage Porch at Morial Convention Center",
+      "proximity": "Convention Center Corridor",
+      "notes": "Free outdoor summer concert series finale.",
+      "sources": [
+        "MCCNO Official Schedule"
+      ]
+    },
+    {
+      "id": "ev-cln8u1bg",
+      "title": "Bluey's Big Play Theatrical Run",
+      "category": "Concerts",
+      "startDate": "2026-08-28",
+      "endDate": "2026-08-30",
+      "totalAttendance": 6000,
+      "dailyAttendance": {
+        "2026-08-28": 2000,
+        "2026-08-29": 2000,
+        "2026-08-30": 2000
+      },
+      "impactWindow": "1:00 PM – 6:00 PM",
+      "location": "Mahalia Jackson Theater",
+      "proximity": "Direct Market Proximity",
+      "notes": "Family theatrical show adjacent to Armstrong Park and upper Quarter.",
+      "sources": [
+        "Mahalia Jackson NOLA"
+      ]
+    },
+    {
+      "id": "ev-5agktw4l",
+      "title": "Anime Conclave 2026",
+      "category": "Conventions",
+      "startDate": "2026-08-29",
+      "endDate": "2026-08-30",
+      "totalAttendance": 3000,
+      "dailyAttendance": {
+        "2026-08-29": 1500,
+        "2026-08-30": 1500
+      },
+      "impactWindow": "10:00 AM – 5:00 PM",
+      "location": "Hilton New Orleans Riverside",
+      "proximity": "Convention Center Corridor",
+      "notes": "Fan anime and gaming convention driving Riverwalk and downtown foot traffic.",
+      "sources": [
+        "Anime Conclave Official"
+      ]
+    },
+    {
+      "id": "ev-esvucach",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-08-29",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-xwuy7tiy",
+      "title": "Carnival Cruise Turn-Day",
+      "category": "Cruise Ships",
+      "startDate": "2026-08-30",
+      "totalAttendance": 4000,
+      "impactWindow": "9:00 AM – 1:00 PM",
+      "location": "Port NOLA Cruise Terminal",
+      "proximity": "Convention Center Corridor",
+      "notes": "Ocean cruise turn day shuttle traffic.",
+      "sources": [
+        "Port NOLA Schedule"
+      ]
+    },
+    {
+      "id": "ev-dedj3nu8",
+      "title": "Gary Clark Jr. Concert",
+      "category": "Concerts",
+      "startDate": "2026-08-30",
+      "totalAttendance": 1700,
+      "impactWindow": "6:00 PM – 9:30 PM",
+      "location": "Orpheum Theater",
+      "proximity": "CBD / Outer French Quarter Radius",
+      "notes": "Blues",
+      "sources": [
+        "rock and R&B concert performance."
+      ]
+    }
+  ]
+}
