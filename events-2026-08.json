@@ -1,586 +1,828 @@
 {
   "month": "2026-08",
-  "lastUpdated": "2026-09-29",
+  "lastUpdated": "2026-09-30",
+  "hotelOccupancy": {
+    "2026-08-01": 66,
+    "2026-08-02": 61,
+    "2026-08-03": 37,
+    "2026-08-04": 34,
+    "2026-08-05": 36,
+    "2026-08-06": 40,
+    "2026-08-07": 54,
+    "2026-08-08": 70,
+    "2026-08-09": 58,
+    "2026-08-10": 32,
+    "2026-08-11": 31,
+    "2026-08-12": 35,
+    "2026-08-13": 41,
+    "2026-08-14": 52,
+    "2026-08-15": 68,
+    "2026-08-16": 59,
+    "2026-08-17": 34,
+    "2026-08-18": 31,
+    "2026-08-19": 34,
+    "2026-08-20": 38,
+    "2026-08-21": 50,
+    "2026-08-22": 65,
+    "2026-08-23": 56,
+    "2026-08-24": 33,
+    "2026-08-25": 31,
+    "2026-08-26": 34,
+    "2026-08-27": 38,
+    "2026-08-28": 50,
+    "2026-08-29": 66,
+    "2026-08-30": 56,
+    "2026-08-31": 34
+  },
+  "hotelOccupancyNotes": "Rough estimate of how full downtown hotels were, as it bears on each day (within about 10 points). Each day blends 60% of the night before with 40% of that night. Nights are built from the day of the week, the season, meetings in town, the night before cruise departures and a few visitor-heavy weekends (Satchmo/White Linen, Red Dress Run, the Saints game, Ye). The August level is set to match CoStar's published August 2026 figures for the New Orleans market (43.3% for the month; 40.6% for Aug 23–29), plus about 2 points because downtown ran a few points above the metro in 2025. The total is the month's average.",
+  "hotelOccupancySources": [
+    "https://www.hotel-online.com/news/us-hotel-performance-posts-modest-gains-in-august",
+    "https://www.dshhoteladvisors.com/us-hotel-performance-august-23-29-2026/",
+    "https://www.hotel-online.com/news/whats-changed-in-new-orleans-tourism-industry-rising-visitors-but-a-steeper-summer-slump",
+    "https://www.hospitalitynet.org/report/4131906/looking-toward-the-normalization-of-the-new-orleans-hotel-market"
+  ],
   "events": [
     {
-      "id": "ev-r4t3ki0y",
-      "title": "Carnival Cruise Turn-Day",
-      "category": "Cruise Ships",
-      "startDate": "2026-08-01",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
-      "sources": [
-        "Port NOLA Schedule"
-      ]
-    },
-    {
-      "id": "ev-391gm2i9",
-      "title": "COOLinary New Orleans Month Kickoff",
-      "category": "Festivals",
-      "startDate": "2026-08-01",
-      "endDate": "2026-08-31",
-      "totalAttendance": 40000,
-      "impactWindow": "11:30 AM – 9:00 PM",
-      "location": "French Quarter & CBD Restaurants",
-      "proximity": "Direct Market Proximity",
-      "notes": "Month-long curated prix-fixe dining promotion driving local restaurant foot traffic.",
-      "sources": [
-        "New Orleans & Company"
-      ]
-    },
-    {
-      "id": "ev-brrtbaeb",
+      "id": "ev-xu6ivmxy",
       "title": "Fidelity Bank White Linen Night",
       "category": "Festivals",
       "startDate": "2026-08-01",
-      "totalAttendance": 20000,
-      "impactWindow": "5:30 PM – 10:00 PM",
-      "location": "Arts District / Julia St Corridor",
-      "proximity": "CBD / Outer French Quarter Radius",
-      "notes": "Annual block party with art gallery walk",
+      "totalAttendance": 15000,
+      "impactWindow": "5:00 PM – 10:00 PM",
+      "location": "Julia St. Arts District (300–600 blocks)",
+      "proximity": "MCCNO Corridor",
+      "notes": "Free gallery walk and street party. Late afternoon and evening; little overlap with market business hours. 15,000 is the organizer's figure on the 2026 city permit (14,000 in 2024, 15,000 in 2025).",
       "sources": [
-        "live music"
+        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-18890-SPMA",
+        "https://www.myneworleans.com/august-2026-events-in-new-orleans/"
       ]
     },
     {
-      "id": "ev-hyuqx21h",
-      "title": "Hotel & Mid-Sized Registered Conventions",
-      "category": "Conventions",
-      "startDate": "2026-08-01",
-      "totalAttendance": 2000,
-      "impactWindow": "10:00 AM – 4:00 PM",
-      "location": "French Quarter & CBD Hotels",
-      "proximity": "Convention Center Corridor",
-      "notes": "Daily sum of registered hotel meetings and small conferences.",
-      "sources": [
-        "New Orleans & Company Calendar"
-      ]
-    },
-    {
-      "id": "ev-s11l33a2",
+      "id": "ev-be0l7h89",
       "title": "Satchmo SummerFest",
       "category": "Festivals",
       "startDate": "2026-08-01",
       "endDate": "2026-08-02",
-      "totalAttendance": 15000,
+      "totalAttendance": 7000,
       "dailyAttendance": {
-        "2026-08-01": 8000,
-        "2026-08-02": 7000
+        "2026-08-01": 4000,
+        "2026-08-02": 3000
       },
-      "impactWindow": "11:30 AM – 5:00 PM",
-      "location": "New Orleans Jazz Museum (Esplanade Ave)",
-      "proximity": "Direct Market Proximity",
-      "notes": "Louis Armstrong heritage jazz and food festival adjacent to lower French Market.",
+      "impactWindow": "11:30 AM – 8:00 PM",
+      "location": "New Orleans Jazz Museum (400 Esplanade Ave.) and the 400 blocks of Esplanade and Barracks (Decatur to N. Peters)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free. Stages right beside the Flea Market; the 400 blocks of Esplanade and Barracks are closed between Decatur and N. Peters. Sunday second line (starts 11:30 AM, about 400 marchers) ends at the Jazz Museum. 7,000 is the organizer's figure on the 2026 city permit (7,000 in 2024–25, 5,000–6,000 in 2021–23); split 4,000 Saturday / 3,000 Sunday.",
       "sources": [
-        "New Orleans Jazz Museum"
+        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-17982-SPMA",
+        "https://frenchquarterfest.org/satchmo-summerfest-wraps-26-years-of-music-and-community-in-the-french-quarter/",
+        "https://www.myneworleans.com/august-2026-events-in-new-orleans/"
       ]
     },
     {
-      "id": "ev-aej7qtcb",
-      "title": "Carnival Cruise Turn-Day",
+      "id": "ev-bexw0u64",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-08-01",
+      "totalAttendance": 1500,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels (mostly the Marriott and Sheraton on Canal St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Meetings found by name: TKE (Tau Kappa Epsilon) 63rd Biennial Conclave, based at the New Orleans Marriott (~1,000, estimate; its July 31 second line alone listed 650 guests); \"Band of Brothers\" 25th Anniversary Symposium, National WWII Museum (~500, estimate). The city's convention calendar no longer shows August, so smaller meetings are missing and this total is low. Counted once per day.",
+      "sources": [
+        "https://legacy.tke.org/programs/conclave",
+        "https://legis.la.gov/legis/ViewDocument.aspx?d=1474042",
+        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-20772-SPMA",
+        "https://www.nationalww2museum.org/events-programs/events/band-brothers-25th-anniversary-symposium"
+      ]
+    },
+    {
+      "id": "ev-1i6rjml9",
+      "title": "Carnival Liberty turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-08-02",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 2978,
+      "impactWindow": "8:00 AM – 3:30 PM",
+      "location": "Port NOLA cruise terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "About 2,978 guests off at 8:00 AM and 2,978 on for the 3:30 PM departure (double-occupancy capacity). Dates from the ship's own sailings.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://www.cruisemapper.com/ships/Carnival-Liberty-568",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-liberty/2026-07-26/7-nights",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-liberty/2026-08-02/7-nights"
       ]
     },
     {
-      "id": "ev-92qihk0r",
-      "title": "Hotel & Mid-Sized Registered Conventions",
+      "id": "ev-8drolmlf",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-08-02",
+      "totalAttendance": 2787,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels (mostly the Marriott and Sheraton on Canal St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Meetings found by name: TKE (Tau Kappa Epsilon) 63rd Biennial Conclave, based at the New Orleans Marriott (~1,000, estimate; its July 31 second line alone listed 650 guests); NACE Experience 2026 (catering and events professionals), New Orleans Marriott (1,787 per Vendelux). The city's convention calendar no longer shows August, so smaller meetings are missing and this total is low. Counted once per day.",
+      "sources": [
+        "https://legacy.tke.org/programs/conclave",
+        "https://legis.la.gov/legis/ViewDocument.aspx?d=1474042",
+        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-20772-SPMA",
+        "https://vendelux.com/app/event/nace-experience-2026/63cb7d0c-c641-4efe-ae0c-007a85a795fb",
+        "https://nace.glueup.com/event/2026-experience-conference-for-catering-and-events-save-the-date-148125/"
+      ]
+    },
+    {
+      "id": "ev-fqu90ssn",
+      "title": "Carnival Valor turnaround",
+      "category": "Cruise Ships",
+      "startDate": "2026-08-03",
+      "totalAttendance": 2984,
+      "impactWindow": "8:00 AM – 3:30 PM",
+      "location": "Port NOLA cruise terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "About 2,984 guests off at 8:00 AM and 2,984 on for the 3:30 PM departure (double-occupancy capacity). Dates from the ship's own sailings.",
+      "sources": [
+        "https://www.cruisemapper.com/ships/Carnival-Valor-604",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-valor/2026-07-30/4-nights",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-valor/2026-08-03/5-nights"
+      ]
+    },
+    {
+      "id": "ev-al0522td",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-08-03",
+      "totalAttendance": 1787,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels (mostly the Marriott and Sheraton on Canal St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Meetings found by name: NACE Experience 2026 (catering and events professionals), New Orleans Marriott (1,787 per Vendelux). The city's convention calendar no longer shows August, so smaller meetings are missing and this total is low. Counted once per day.",
+      "sources": [
+        "https://vendelux.com/app/event/nace-experience-2026/63cb7d0c-c641-4efe-ae0c-007a85a795fb",
+        "https://nace.glueup.com/event/2026-experience-conference-for-catering-and-events-save-the-date-148125/"
+      ]
+    },
+    {
+      "id": "ev-cn1hnvy3",
+      "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-08-04",
-      "totalAttendance": 3000,
+      "totalAttendance": 2287,
       "impactWindow": "10:00 AM – 4:00 PM",
-      "location": "French Quarter & CBD Hotels",
-      "proximity": "Convention Center Corridor",
-      "notes": "Daily sum of registered hotel meetings and small conferences.",
+      "location": "Downtown hotels (mostly the Marriott and Sheraton on Canal St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Meetings found by name: NACE Experience 2026 (catering and events professionals), New Orleans Marriott (1,787 per Vendelux); AEJMC pre-conference day, New Orleans Marriott (~500, estimate). The city's convention calendar no longer shows August, so smaller meetings are missing and this total is low. Counted once per day.",
       "sources": [
-        "New Orleans & Company Calendar"
+        "https://vendelux.com/app/event/nace-experience-2026/63cb7d0c-c641-4efe-ae0c-007a85a795fb",
+        "https://nace.glueup.com/event/2026-experience-conference-for-catering-and-events-save-the-date-148125/",
+        "https://www.aejmc.org/aejmc-events/conference"
       ]
     },
     {
-      "id": "ev-r9plm55q",
-      "title": "Carnival Cruise Turn-Day",
-      "category": "Cruise Ships",
+      "id": "ev-770wi7p5",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-08-05",
+      "totalAttendance": 2000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels (mostly the Marriott and Sheraton on Canal St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Meetings found by name: AEJMC 2026 (journalism and mass communication educators), New Orleans Marriott (~2,000, estimate). The city's convention calendar no longer shows August, so smaller meetings are missing and this total is low. Counted once per day.",
+      "sources": [
+        "https://www.aejmc.org/aejmc-events/conference"
+      ]
+    },
+    {
+      "id": "ev-rubfv3of",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
       "startDate": "2026-08-06",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 2000,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels (mostly the Marriott and Sheraton on Canal St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Meetings found by name: AEJMC 2026 (journalism and mass communication educators), New Orleans Marriott (~2,000, estimate). The city's convention calendar no longer shows August, so smaller meetings are missing and this total is low. Counted once per day.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://www.aejmc.org/aejmc-events/conference"
       ]
     },
     {
-      "id": "ev-klld1yjw",
-      "title": "NOENMCC Porchside Performances - Big Sam's Funky Nation",
-      "category": "Concerts",
-      "startDate": "2026-08-06",
-      "totalAttendance": 1200,
-      "impactWindow": "5:30 PM – 7:00 PM",
-      "location": "Heritage Porch at Morial Convention Center",
-      "proximity": "Convention Center Corridor",
-      "notes": "Free outdoor summer concert series at Hall D Porch.",
+      "id": "ev-mltog0cb",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-08-07",
+      "totalAttendance": 2250,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels (mostly the Marriott and Sheraton on Canal St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Meetings found by name: AEJMC 2026 (journalism and mass communication educators), New Orleans Marriott (~2,000, estimate); New Orleans Antiques Forum (The Historic New Orleans Collection), Williams Research Center, 410 Chartres St. (~250, estimate). The city's convention calendar no longer shows August, so smaller meetings are missing and this total is low. Counted once per day.",
       "sources": [
-        "MCCNO Official Schedule"
+        "https://www.aejmc.org/aejmc-events/conference",
+        "https://hnoc.org/events/antiques-forum-2026"
       ]
     },
     {
-      "id": "ev-hgqwsxrp",
-      "title": "Ella Mai - Do You Still Love Me? Tour",
+      "id": "ev-5yggyviv",
+      "title": "Smaller evening shows (grouped)",
       "category": "Concerts",
       "startDate": "2026-08-07",
-      "totalAttendance": 2600,
-      "impactWindow": "7:00 PM – 10:00 PM",
-      "location": "Saenger Theatre",
-      "proximity": "Canal St Corridor",
-      "notes": "Grammy-winning R&B concert driving theater and dining traffic.",
+      "totalAttendance": 2200,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "Downtown theaters and clubs (Canal St. and lower Decatur St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Touring acts likely to draw fans from out of town: Ella Mai, Saenger Theatre (~2,200). Each number is an estimate from the venue's size (no counts published). Evening only; little overlap with market business hours. Local club nights that mostly serve people already in town are left off (see the notes file).",
       "sources": [
-        "Saenger NOLA"
+        "https://www.setlist.fm/venue/saenger-performing-arts-theater-new-orleans-la-usa-63d626ab.html",
+        "https://us.atgtickets.com/events/ella-mai/saenger-theatre/"
       ]
     },
     {
-      "id": "ev-u2kmz2vz",
-      "title": "Carnival Cruise Turn-Day",
+      "id": "ev-rapf1omc",
+      "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-08-08",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 2984,
+      "impactWindow": "8:00 AM – 3:30 PM",
+      "location": "Port NOLA cruise terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "About 2,984 guests off at 8:00 AM and 2,984 on for the 3:30 PM departure (double-occupancy capacity). Dates from the ship's own sailings.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://www.cruisemapper.com/ships/Carnival-Valor-604",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-valor/2026-08-03/5-nights",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-valor/2026-08-08/5-nights"
       ]
     },
     {
-      "id": "ev-uk4tge4i",
+      "id": "ev-y070lwl4",
       "title": "Dirty Linen Night",
       "category": "Festivals",
       "startDate": "2026-08-08",
-      "totalAttendance": 12000,
+      "totalAttendance": 5000,
       "impactWindow": "6:00 PM – 9:00 PM",
-      "location": "Royal Street Commercial Corridor",
-      "proximity": "Direct Market Proximity",
-      "notes": "23rd annual French Quarter art gallery and retail shopping block event.",
+      "location": "Royal St., 300–1100 blocks (Bienville St. to Ursulines Ave.)",
+      "proximity": "French Quarter (interior)",
+      "notes": "Free gallery night on Royal St.; the downriver end is about three blocks from the sheds. Evening only; little overlap with market business hours. 5,000 is the organizer's figure on the 2026 city permit.",
       "sources": [
-        "Royal Street Association"
+        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-21209-SPMA",
+        "https://www.myneworleans.com/august-2026-events-in-new-orleans/"
       ]
     },
     {
-      "id": "ev-oqturuhs",
-      "title": "New Orleans Red Dress Run",
+      "id": "ev-68nuidh9",
+      "title": "New Orleans Hip Hop Festival",
       "category": "Festivals",
       "startDate": "2026-08-08",
-      "totalAttendance": 25000,
-      "impactWindow": "9:00 AM – 4:00 PM",
-      "location": "Crescent Park / Armstrong Park to French Quarter",
-      "proximity": "Direct Market Proximity",
-      "notes": "Massive charity run/walk through Quarter streets turning Bourbon into a sea of red.",
+      "totalAttendance": 1500,
+      "impactWindow": "1:00 PM – 10:00 PM",
+      "location": "Washington Square Park (700 Elysian Fields Ave.)",
+      "proximity": "Marigny",
+      "notes": "Ticketed main day of the Aug 7–9 festival (Friday was an evening kickoff; Sunday a media day). Starts 1:00 PM (OffBeat); no end time was published, so 10 PM is an estimate. About three blocks from the Flea Market. Rough estimate of attendance (no count on the permit or published).",
       "sources": [
-        "Hash House Harriers / Local Press"
+        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-21651-SPMA",
+        "https://www.offbeat.com/news/new-orleans-hip-hop-festival-announces-2026-return/"
       ]
     },
     {
-      "id": "ev-8wulibdh",
-      "title": "Carnival Cruise Turn-Day",
+      "id": "ev-cwlojv0p",
+      "title": "New Orleans Red Dress Run",
+      "category": "Miscellaneous",
+      "startDate": "2026-08-08",
+      "totalAttendance": 3500,
+      "impactWindow": "7:00 AM – 4:00 PM",
+      "location": "Starts and ends at N. Peters St. & Elysian Fields Ave.; route N. Peters, Esplanade, N. Rampart, St. Ann, Chartres; after-party in Crescent Park",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "New Orleans Hash House Harriers charity run; lineup 7 AM, run 9 AM, events until 4 PM. Starts and finishes a block or two past the Flea Market, with runners coming back along Chartres and N. Peters. 3,500 is the organizer's figure on the city permit (Fox 8: \"thousands\"; many unregistered runners join too). A separate block party ran 11 AM–9 PM at 930 Poydras St.",
+      "sources": [
+        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-06193-SPMA",
+        "https://www.fox8live.com/2026/08/08/red-dress-run-draws-thousands-new-orleans-unregistered-participants-hurt-charity-funding/",
+        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-21771-SPMA"
+      ]
+    },
+    {
+      "id": "ev-lz5yv5l3",
+      "title": "New Orleans SERA Invitational Rodeo",
+      "category": "Sports",
+      "startDate": "2026-08-08",
+      "totalAttendance": 16867,
+      "impactWindow": "6:00 PM – 10:00 PM",
+      "location": "Smoothie King Center",
+      "proximity": "Superdome",
+      "notes": "First New Orleans SERA rodeo; doors 6:00 PM, rodeo 7:30 PM. Evening only; little overlap with market business hours. Attendance = arena capacity (an upper bound); with the arena floor used for the rodeo and a first-year event, the real crowd was likely much smaller.",
+      "sources": [
+        "https://www.smoothiekingcenter.com/events/detail/new-orleans-sera-invitational-rodeo",
+        "https://sports.yahoo.com/articles/rodeo-coming-orleans-smoothie-king-194031714.html",
+        "https://en.wikipedia.org/wiki/Smoothie_King_Center"
+      ]
+    },
+    {
+      "id": "ev-6gs7l8k3",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-08-08",
+      "totalAttendance": 2250,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels (mostly the Marriott and Sheraton on Canal St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Meetings found by name: AEJMC 2026 (journalism and mass communication educators), New Orleans Marriott (~2,000, estimate); New Orleans Antiques Forum (The Historic New Orleans Collection), Williams Research Center, 410 Chartres St. (~250, estimate). The city's convention calendar no longer shows August, so smaller meetings are missing and this total is low. Counted once per day.",
+      "sources": [
+        "https://www.aejmc.org/aejmc-events/conference",
+        "https://hnoc.org/events/antiques-forum-2026"
+      ]
+    },
+    {
+      "id": "ev-1ce5v0rl",
+      "title": "Smaller evening shows (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-08-08",
+      "totalAttendance": 1000,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "Downtown theaters and clubs (Canal St. and lower Decatur St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Touring acts likely to draw fans from out of town: 42 Dugg & Babyface Ray, Joy Theater (~1,000). Each number is an estimate from the venue's size (no counts published). Evening only; little overlap with market business hours. Local club nights that mostly serve people already in town are left off (see the notes file).",
+      "sources": [
+        "https://www.jambase.com/show/42-dugg-the-joy-theater-20260808",
+        "https://www.songkick.com/venues/1587063-joy-theater/gigography"
+      ]
+    },
+    {
+      "id": "ev-rf43kdml",
+      "title": "Carnival Liberty turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-08-09",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 2978,
+      "impactWindow": "8:00 AM – 3:30 PM",
+      "location": "Port NOLA cruise terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "About 2,978 guests off at 8:00 AM and 2,978 on for the 3:30 PM departure (double-occupancy capacity). Dates from the ship's own sailings.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://www.cruisemapper.com/ships/Carnival-Liberty-568",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-liberty/2026-08-02/7-nights",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-liberty/2026-08-09/7-nights"
       ]
     },
     {
-      "id": "ev-oadciw11",
-      "title": "Eagles of Death Metal Concert",
+      "id": "ev-d7qsxt3x",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-08-09",
+      "totalAttendance": 250,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Williams Research Center, 410 Chartres St. (The Historic New Orleans Collection)",
+      "proximity": "French Quarter (interior)",
+      "notes": "Meetings found by name: New Orleans Antiques Forum (The Historic New Orleans Collection), Williams Research Center, 410 Chartres St. (~250, estimate). The city's convention calendar no longer shows August, so smaller meetings are missing and this total is low. Counted once per day.",
+      "sources": [
+        "https://hnoc.org/events/antiques-forum-2026"
+      ]
+    },
+    {
+      "id": "ev-61afo3z0",
+      "title": "Smaller evening shows (grouped)",
       "category": "Concerts",
       "startDate": "2026-08-10",
-      "totalAttendance": 1800,
-      "impactWindow": "6:30 PM – 9:30 PM",
-      "location": "The Fillmore New Orleans",
-      "proximity": "Canal St / French Quarter Radius",
-      "notes": "Rock concert tour stop near lower Quarter.",
+      "totalAttendance": 2500,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "Downtown theaters and clubs (Canal St. and lower Decatur St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Touring acts likely to draw fans from out of town: Masego, The Fillmore (~1,800); Eagles of Death Metal, House of Blues (~700). Each number is an estimate from the venue's size (no counts published). Evening only; little overlap with market business hours. Local club nights that mostly serve people already in town are left off (see the notes file).",
       "sources": [
-        "Fillmore NOLA"
+        "https://www.jambase.com/band/masego/setlists",
+        "https://www.songkick.com/venues/4060459-fillmore-new-orleans/gigography",
+        "https://www.setlist.fm/venue/house-of-blues-new-orleans-la-usa-23d61c9f.html?page=2",
+        "https://www.songkick.com/venues/30481-house-of-blues-new-orleans/gigography"
       ]
     },
     {
-      "id": "ev-zhhtqgcn",
-      "title": "Stage Door Idol Finals",
-      "category": "Concerts",
+      "id": "ev-12qpbkm0",
+      "title": "BK House Bicentennial Birthday Bash",
+      "category": "Festivals",
       "startDate": "2026-08-11",
-      "totalAttendance": 500,
-      "impactWindow": "6:00 PM – 9:00 PM",
-      "location": "BB's Stage Door Canteen (WWII Museum)",
-      "proximity": "CBD / Outer French Quarter Radius",
-      "notes": "Live vocal talent showcase finals.",
+      "totalAttendance": 400,
+      "impactWindow": "6:00 PM – 8:00 PM",
+      "location": "Chartres St. block party in front of the Beauregard-Keyes House (1113 Chartres St.)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free street party (Chartres closed between Ursulines and Gov. Nicholls), about two blocks from the sheds. Evening only; little overlap with market business hours. Rough estimate (no count published).",
       "sources": [
-        "National WWII Museum"
+        "https://www.myneworleans.com/bk-house-celebrates-200th-anniversary-with-august-events/",
+        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-19091-SPMA"
       ]
     },
     {
-      "id": "ev-0vcaigm5",
-      "title": "Carnival Cruise Turn-Day",
+      "id": "ev-l3c1a1i0",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-08-12",
+      "totalAttendance": 1500,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels (mostly the Marriott and Sheraton on Canal St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Meetings found by name: Handweavers Guild of America's Convergence 2026, Sheraton New Orleans (~1,500, the guild's own figure). The city's convention calendar no longer shows August, so smaller meetings are missing and this total is low. Counted once per day.",
+      "sources": [
+        "https://www.handweavers.org/convergence",
+        "https://www.handweavers.org/sponsorships",
+        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-20682-SPMA"
+      ]
+    },
+    {
+      "id": "ev-nvkwng91",
+      "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-08-13",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 2984,
+      "impactWindow": "8:00 AM – 3:30 PM",
+      "location": "Port NOLA cruise terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "About 2,984 guests off at 8:00 AM and 2,984 on for the 3:30 PM departure (double-occupancy capacity). Dates from the ship's own sailings.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://www.cruisemapper.com/ships/Carnival-Valor-604",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-valor/2026-08-08/5-nights",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-valor/2026-08-13/4-nights"
       ]
     },
     {
-      "id": "ev-xe7z8sj3",
-      "title": "Le Petit Théâtre Season Production",
-      "category": "Concerts",
+      "id": "ev-0q8tt7vl",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
       "startDate": "2026-08-13",
-      "endDate": "2026-08-16",
-      "totalAttendance": 1200,
-      "dailyAttendance": {
-        "2026-08-13": 300,
-        "2026-08-14": 300,
-        "2026-08-15": 300,
-        "2026-08-16": 300
-      },
-      "impactWindow": "6:30 PM – 9:00 PM",
-      "location": "Le Petit Théâtre du Vieux Carré",
-      "proximity": "Direct Market Proximity",
-      "notes": "Historic French Quarter theater play run.",
+      "totalAttendance": 1500,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels (mostly the Marriott and Sheraton on Canal St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Meetings found by name: Handweavers Guild of America's Convergence 2026, Sheraton New Orleans (~1,500, the guild's own figure). The city's convention calendar no longer shows August, so smaller meetings are missing and this total is low. Counted once per day.",
       "sources": [
-        "Le Petit Théâtre"
+        "https://www.handweavers.org/convergence",
+        "https://www.handweavers.org/sponsorships",
+        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-20682-SPMA"
       ]
     },
     {
-      "id": "ev-5ghjrc5p",
-      "title": "NOENMCC Porchside Performances - Honey Island Swamp Band",
-      "category": "Concerts",
-      "startDate": "2026-08-13",
-      "totalAttendance": 1200,
-      "impactWindow": "5:30 PM – 7:00 PM",
-      "location": "Heritage Porch at Morial Convention Center",
-      "proximity": "Convention Center Corridor",
-      "notes": "Free outdoor summer concert series.",
+      "id": "ev-vtxjypyf",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-08-14",
+      "totalAttendance": 1500,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels (mostly the Marriott and Sheraton on Canal St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Meetings found by name: Handweavers Guild of America's Convergence 2026, Sheraton New Orleans (~1,500, the guild's own figure). The city's convention calendar no longer shows August, so smaller meetings are missing and this total is low. Counted once per day.",
       "sources": [
-        "MCCNO Official Schedule"
+        "https://www.handweavers.org/convergence",
+        "https://www.handweavers.org/sponsorships",
+        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-20682-SPMA"
       ]
     },
     {
-      "id": "ev-6y0xrptw",
-      "title": "Carnival Cruise Turn-Day",
-      "category": "Cruise Ships",
-      "startDate": "2026-08-15",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
-      "sources": [
-        "Port NOLA Schedule"
-      ]
-    },
-    {
-      "id": "ev-pu8ps37l",
-      "title": "Saints vs. Jacksonville Jaguars (NFL Preseason Week 1)",
+      "id": "ev-tyegc49e",
+      "title": "Saints vs. Jacksonville Jaguars (preseason)",
       "category": "Sports",
       "startDate": "2026-08-15",
-      "totalAttendance": 65000,
-      "impactWindow": "3:00 PM – 6:00 PM",
+      "totalAttendance": 73208,
+      "impactWindow": "12:00 PM – 3:00 PM",
       "location": "Caesars Superdome",
-      "proximity": "Superdome / CBD Corridor",
-      "notes": "NFL preseason opener driving heavy downtown pre-game dining crowds (24-20 Jaguars).",
+      "proximity": "Superdome",
+      "notes": "Saturday, kickoff 3:00 PM; Jaguars won 24–20. Attendance = stadium capacity (an upper bound); preseason crowds often run smaller.",
       "sources": [
-        "NFL Schedule"
+        "https://www.neworleanssaints.com/news/2026-nfl-preseason-week-1-jacksonville-jaguars-vs-new-orleans-saints-game-recap",
+        "https://www.neworleanssaints.com/schedule/",
+        "https://en.wikipedia.org/wiki/Caesars_Superdome"
       ]
     },
     {
-      "id": "ev-0c27trcn",
-      "title": "Carnival Cruise Turn-Day",
+      "id": "ev-42b8qgev",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-08-15",
+      "totalAttendance": 1500,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels (mostly the Marriott and Sheraton on Canal St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Meetings found by name: Handweavers Guild of America's Convergence 2026, Sheraton New Orleans (~1,500, the guild's own figure). The city's convention calendar no longer shows August, so smaller meetings are missing and this total is low. Counted once per day.",
+      "sources": [
+        "https://www.handweavers.org/convergence",
+        "https://www.handweavers.org/sponsorships",
+        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-20682-SPMA"
+      ]
+    },
+    {
+      "id": "ev-94jj4qga",
+      "title": "Carnival Liberty turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-08-16",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 2978,
+      "impactWindow": "8:00 AM – 3:30 PM",
+      "location": "Port NOLA cruise terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "About 2,978 guests off at 8:00 AM and 2,978 on for the 3:30 PM departure (double-occupancy capacity). Dates from the ship's own sailings.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://www.cruisemapper.com/ships/Carnival-Liberty-568",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-liberty/2026-08-09/7-nights",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-liberty/2026-08-16/7-nights"
       ]
     },
     {
-      "id": "ev-ckrw33gf",
-      "title": "Diamond Tours Bus Drop-Off",
-      "category": "Tours/Charters",
-      "startDate": "2026-08-18",
-      "totalAttendance": 300,
-      "impactWindow": "10:30 AM – 2:00 PM",
-      "location": "Lower Decatur St & French Market",
-      "proximity": "Direct Market Proximity",
-      "notes": "Wholesale senior motorcoach market shopping excursion.",
+      "id": "ev-1wk0s311",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-08-16",
+      "totalAttendance": 1500,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels (mostly the Marriott and Sheraton on Canal St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Meetings found by name: Handweavers Guild of America's Convergence 2026, Sheraton New Orleans (~1,500, the guild's own figure). The city's convention calendar no longer shows August, so smaller meetings are missing and this total is low. Counted once per day.",
       "sources": [
-        "Diamond Tours Schedule"
+        "https://www.handweavers.org/convergence",
+        "https://www.handweavers.org/sponsorships",
+        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-20682-SPMA"
       ]
     },
     {
-      "id": "ev-bewdmbw7",
-      "title": "Louisiana Travel Summit 2026",
+      "id": "ev-uyv8xo9t",
+      "title": "Carnival Valor turnaround",
+      "category": "Cruise Ships",
+      "startDate": "2026-08-17",
+      "totalAttendance": 2984,
+      "impactWindow": "8:00 AM – 3:30 PM",
+      "location": "Port NOLA cruise terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "About 2,984 guests off at 8:00 AM and 2,984 on for the 3:30 PM departure (double-occupancy capacity). Dates from the ship's own sailings.",
+      "sources": [
+        "https://www.cruisemapper.com/ships/Carnival-Valor-604",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-valor/2026-08-13/4-nights",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-valor/2026-08-17/5-nights"
+      ]
+    },
+    {
+      "id": "ev-xu62a4mr",
+      "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-08-18",
-      "endDate": "2026-08-20",
-      "totalAttendance": 1500,
-      "dailyAttendance": {
-        "2026-08-18": 500,
-        "2026-08-19": 500,
-        "2026-08-20": 500
-      },
-      "impactWindow": "8:00 AM – 5:00 PM",
-      "location": "CBD / French Quarter Hotel Properties",
-      "proximity": "Convention Center Corridor",
-      "notes": "Annual statewide tourism industry leadership summit.",
+      "totalAttendance": 500,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels (mostly the Marriott and Sheraton on Canal St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Meetings found by name: Louisiana Travel Summit, JW Marriott (~500, estimate: sold out; 2025's summit expected 400+). The city's convention calendar no longer shows August, so smaller meetings are missing and this total is low. Counted once per day.",
       "sources": [
-        "Biz New Orleans / Louisiana Travel"
+        "https://hoodline.com/2026/08/sold-out-louisiana-travel-summit-lands-in-new-orleans-with-5-billion-on-the-line/",
+        "https://www.visitlakecharles.org/articles/post/louisianas-playground-welcomes-2025-louisiana-travel-summit/"
       ]
     },
     {
-      "id": "ev-e9tl7ipt",
-      "title": "Carnival Cruise Turn-Day",
-      "category": "Cruise Ships",
+      "id": "ev-kimk1nbl",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-08-19",
+      "totalAttendance": 500,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels (mostly the Marriott and Sheraton on Canal St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Meetings found by name: Louisiana Travel Summit, JW Marriott (~500, estimate: sold out; 2025's summit expected 400+). The city's convention calendar no longer shows August, so smaller meetings are missing and this total is low. Counted once per day.",
+      "sources": [
+        "https://hoodline.com/2026/08/sold-out-louisiana-travel-summit-lands-in-new-orleans-with-5-billion-on-the-line/",
+        "https://www.visitlakecharles.org/articles/post/louisianas-playground-welcomes-2025-louisiana-travel-summit/"
+      ]
+    },
+    {
+      "id": "ev-voa0jnuk",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
       "startDate": "2026-08-20",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 500,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels (mostly the Marriott and Sheraton on Canal St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Meetings found by name: Louisiana Travel Summit, JW Marriott (~500, estimate: sold out; 2025's summit expected 400+). The city's convention calendar no longer shows August, so smaller meetings are missing and this total is low. Counted once per day.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://hoodline.com/2026/08/sold-out-louisiana-travel-summit-lands-in-new-orleans-with-5-billion-on-the-line/",
+        "https://www.visitlakecharles.org/articles/post/louisianas-playground-welcomes-2025-louisiana-travel-summit/"
       ]
     },
     {
-      "id": "ev-zh4reab3",
-      "title": "NOENMCC Porchside Performances - Rockin' Dopsie & the Zydeco Twisters",
-      "category": "Concerts",
-      "startDate": "2026-08-20",
-      "totalAttendance": 1500,
-      "impactWindow": "5:30 PM – 7:00 PM",
-      "location": "Heritage Porch at Morial Convention Center",
-      "proximity": "Convention Center Corridor",
-      "notes": "Free outdoor summer concert series.",
-      "sources": [
-        "MCCNO Official Schedule"
-      ]
-    },
-    {
-      "id": "ev-lh0xdy3b",
-      "title": "Carnival Cruise Turn-Day",
+      "id": "ev-6k9dewn7",
+      "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-08-22",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 2984,
+      "impactWindow": "8:00 AM – 3:30 PM",
+      "location": "Port NOLA cruise terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "About 2,984 guests off at 8:00 AM and 2,984 on for the 3:30 PM departure (double-occupancy capacity). Dates from the ship's own sailings.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://www.cruisemapper.com/ships/Carnival-Valor-604",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-valor/2026-08-17/5-nights",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-valor/2026-08-22/5-nights"
       ]
     },
     {
-      "id": "ev-ah0p787b",
-      "title": "NOLA Youth Late-Summer Basketball Classic",
-      "category": "Youth Events",
-      "startDate": "2026-08-22",
-      "endDate": "2026-08-23",
-      "totalAttendance": 2800,
-      "dailyAttendance": {
-        "2026-08-22": 1400,
-        "2026-08-23": 1400
-      },
-      "impactWindow": "8:30 AM – 4:00 PM",
-      "location": "Regional Sports Complex",
-      "proximity": "Greater New Orleans Area",
-      "notes": "Youth sports tournament bringing visiting families downtown.",
-      "sources": [
-        "Tourneyboard"
-      ]
-    },
-    {
-      "id": "ev-yrsn8l8j",
-      "title": "Benson Boone - WANTED MAN TOUR 2026",
+      "id": "ev-2taf2hcv",
+      "title": "Benson Boone",
       "category": "Concerts",
       "startDate": "2026-08-23",
-      "totalAttendance": 15000,
-      "impactWindow": "7:00 PM – 10:30 PM",
+      "totalAttendance": 17221,
+      "impactWindow": "7:00 PM – 11:00 PM",
       "location": "Smoothie King Center",
-      "proximity": "Superdome / CBD Corridor",
-      "notes": "Major pop arena concert stop with special guest Luna Li.",
+      "proximity": "Superdome",
+      "notes": "Sunday, 8:00 PM. Evening only; little overlap with market business hours. Attendance = arena capacity (an upper bound).",
       "sources": [
-        "Smoothie King Center Official"
+        "https://www.setlist.fm/show/2026-08-23/smoothie-king-center-new-orleans-la-6b89de72.html?setlist=1376b5f5",
+        "https://www.shazam.com/event/f0b6b688-6a91-4db1-adcb-9acbd1efd60a",
+        "https://en.wikipedia.org/wiki/Smoothie_King_Center"
       ]
     },
     {
-      "id": "ev-70pkxvcl",
-      "title": "Carnival Cruise Turn-Day",
+      "id": "ev-ck6ztl91",
+      "title": "Carnival Liberty turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-08-23",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 2978,
+      "impactWindow": "8:00 AM – 3:30 PM",
+      "location": "Port NOLA cruise terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "About 2,978 guests off at 8:00 AM and 2,978 on for the 3:30 PM departure (double-occupancy capacity). Dates from the ship's own sailings.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://www.cruisemapper.com/ships/Carnival-Liberty-568",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-liberty/2026-08-16/7-nights",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-liberty/2026-08-23/7-nights"
       ]
     },
     {
-      "id": "ev-xfjcw32z",
-      "title": "Buddy Guy 90th Birthday Tour with D.K. Harrell",
+      "id": "ev-yag91ukd",
+      "title": "Smaller evening shows (grouped)",
       "category": "Concerts",
       "startDate": "2026-08-25",
-      "totalAttendance": 2600,
-      "impactWindow": "5:30 PM – 9:00 PM",
-      "location": "Saenger Theatre",
-      "proximity": "Canal St Corridor",
-      "notes": "Blues legend 90th birthday concert tour stop.",
+      "totalAttendance": 4200,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "Downtown theaters and clubs (Canal St. and lower Decatur St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Touring acts likely to draw fans from out of town: Buddy Guy's 90th-birthday tour, Saenger Theatre (~2,300); Devo, The Fillmore (~1,900). Each number is an estimate from the venue's size (no counts published). Evening only; little overlap with market business hours. Local club nights that mostly serve people already in town are left off (see the notes file).",
       "sources": [
-        "Saenger NOLA"
+        "https://www.setlist.fm/venue/saenger-performing-arts-theater-new-orleans-la-usa-63d626ab.html",
+        "https://www.axs.com/events/1331510/buddy-guy-tickets",
+        "https://www.setlist.fm/venue/the-fillmore-new-orleans-la-usa-23d3a47f.html?page=2",
+        "https://www.songkick.com/venues/4060459-fillmore-new-orleans/gigography"
       ]
     },
     {
-      "id": "ev-hyid48qt",
-      "title": "Devo - Mutate Don't Stagnate Tour",
+      "id": "ev-akw5jk0w",
+      "title": "Smaller evening shows (grouped)",
       "category": "Concerts",
-      "startDate": "2026-08-25",
-      "totalAttendance": 2000,
-      "impactWindow": "6:00 PM – 9:00 PM",
-      "location": "The Fillmore New Orleans",
-      "proximity": "Canal St / French Quarter Radius",
-      "notes": "New wave icon concert near lower Quarter.",
+      "startDate": "2026-08-26",
+      "totalAttendance": 700,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "Downtown theaters and clubs (Canal St. and lower Decatur St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Touring acts likely to draw fans from out of town: K Camp & Jacquees, House of Blues (~700). Each number is an estimate from the venue's size (no counts published). Evening only; little overlap with market business hours. Local club nights that mostly serve people already in town are left off (see the notes file).",
       "sources": [
-        "Fillmore NOLA"
+        "https://www.songkick.com/venues/30481-house-of-blues-new-orleans/gigography"
       ]
     },
     {
-      "id": "ev-bmode01o",
-      "title": "Carnival Cruise Turn-Day",
+      "id": "ev-6nbqyk3i",
+      "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-08-27",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 2984,
+      "impactWindow": "8:00 AM – 3:30 PM",
+      "location": "Port NOLA cruise terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "About 2,984 guests off at 8:00 AM and 2,984 on for the 3:30 PM departure (double-occupancy capacity). Dates from the ship's own sailings.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://www.cruisemapper.com/ships/Carnival-Valor-604",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-valor/2026-08-22/5-nights",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-valor/2026-08-27/4-nights"
       ]
     },
     {
-      "id": "ev-c8xbz54z",
-      "title": "NOENMCC Porchside Performances - Robin Barnes & the Fiya Birds",
-      "category": "Concerts",
-      "startDate": "2026-08-27",
-      "totalAttendance": 1500,
-      "impactWindow": "5:30 PM – 7:00 PM",
-      "location": "Heritage Porch at Morial Convention Center",
-      "proximity": "Convention Center Corridor",
-      "notes": "Free outdoor summer concert series finale.",
-      "sources": [
-        "MCCNO Official Schedule"
-      ]
-    },
-    {
-      "id": "ev-alvq65u5",
-      "title": "Bluey's Big Play Theatrical Run",
-      "category": "Concerts",
+      "id": "ev-0u377pwd",
+      "title": "Bluey's Big Play",
+      "category": "Youth Events",
       "startDate": "2026-08-28",
       "endDate": "2026-08-30",
-      "totalAttendance": 6000,
+      "totalAttendance": 7200,
       "dailyAttendance": {
-        "2026-08-28": 2000,
-        "2026-08-29": 2000,
-        "2026-08-30": 2000
+        "2026-08-28": 1800,
+        "2026-08-29": 3600,
+        "2026-08-30": 1800
       },
-      "impactWindow": "1:00 PM – 6:00 PM",
-      "location": "Mahalia Jackson Theater",
-      "proximity": "Direct Market Proximity",
-      "notes": "Family theatrical show adjacent to Armstrong Park and upper Quarter.",
+      "impactWindow": "10:30 AM – 4:30 PM",
+      "location": "Mahalia Jackson Theater, Armstrong Park (1419 Basin St.)",
+      "proximity": "Armstrong Park / Tremé",
+      "notes": "Touring stage show for young children and their families; four shows: Fri 6:30 PM, Sat 10:30 AM and 2:30 PM, Sun 2:00 PM. Estimate ~1,800 per show in the ~2,100-seat theater (no counts published).",
       "sources": [
-        "Mahalia Jackson NOLA"
+        "https://us.atgtickets.com/events/blueys-big-play/mahalia-jackson-theater/",
+        "https://www.ticketnews.com/2026/05/blueys-big-play-tickets-on-sale-in-new-orleans/",
+        "https://en.wikipedia.org/wiki/Mahalia_Jackson_Theater_of_the_Performing_Arts"
       ]
     },
     {
-      "id": "ev-w6p79erh",
+      "id": "ev-lvgvi4y8",
+      "title": "Ye (Kanye West)",
+      "category": "Concerts",
+      "startDate": "2026-08-28",
+      "totalAttendance": 65000,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "Caesars Superdome",
+      "proximity": "Superdome",
+      "notes": "Friday; set ran about 9:05–10:45 PM. Evening only; little overlap with market business hours. More than 65,000 reported (XXL, The Source); weeks earlier, many seats were still unsold.",
+      "sources": [
+        "https://www.setlist.fm/setlist/ye/2026/caesars-superdome-new-orleans-la-3373e455.html",
+        "https://www.xxlmag.com/ye-new-orleans-concert/",
+        "https://thesource.com/2026/08/31/ye-2026-world-tour-one-million-fans-new-orleans/"
+      ]
+    },
+    {
+      "id": "ev-3spgv2i4",
       "title": "Anime Conclave 2026",
-      "category": "Conventions",
+      "category": "Miscellaneous",
       "startDate": "2026-08-29",
       "endDate": "2026-08-30",
-      "totalAttendance": 3000,
+      "totalAttendance": 1300,
       "dailyAttendance": {
-        "2026-08-29": 1500,
-        "2026-08-30": 1500
+        "2026-08-29": 800,
+        "2026-08-30": 500
       },
       "impactWindow": "10:00 AM – 5:00 PM",
-      "location": "Hilton New Orleans Riverside",
-      "proximity": "Convention Center Corridor",
-      "notes": "Fan anime and gaming convention driving Riverwalk and downtown foot traffic.",
+      "location": "Hilton New Orleans Riverside (2 Poydras St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Third-year, fan-run anime and gaming convention with a hotel room block. Saturday programming runs until 11 PM. Rough estimate (no count published), summed across the two days (daily badges).",
       "sources": [
-        "Anime Conclave Official"
+        "https://www.animeconclave.com/badges-accomodations",
+        "https://animecons.com/events/info/27142/anime-conclave-2026",
+        "https://www.myneworleans.com/august-2026-events-in-new-orleans/"
       ]
     },
     {
-      "id": "ev-n5yoejjg",
-      "title": "Carnival Cruise Turn-Day",
-      "category": "Cruise Ships",
+      "id": "ev-81yjlxhx",
+      "title": "Smaller evening shows (grouped)",
+      "category": "Concerts",
       "startDate": "2026-08-29",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 2200,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "Downtown theaters and clubs (Canal St. and lower Decatur St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Touring acts likely to draw fans from out of town: Don McLean, The Fillmore (~1,500); The Pretty Reckless with Paris Jackson, House of Blues (~700). Each number is an estimate from the venue's size (no counts published). Evening only; little overlap with market business hours. Local club nights that mostly serve people already in town are left off (see the notes file).",
       "sources": [
-        "Port NOLA Schedule"
+        "https://www.setlist.fm/venue/the-fillmore-new-orleans-la-usa-23d3a47f.html?page=2",
+        "https://www.songkick.com/venues/4060459-fillmore-new-orleans/gigography",
+        "https://www.setlist.fm/setlist/the-pretty-reckless/2026/house-of-blues-new-orleans-la-63498ee7.html",
+        "https://www.songkick.com/venues/30481-house-of-blues-new-orleans/gigography"
       ]
     },
     {
-      "id": "ev-zqqgaj1l",
-      "title": "Carnival Cruise Turn-Day",
+      "id": "ev-iiwl90f4",
+      "title": "Carnival Liberty turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-08-30",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 2978,
+      "impactWindow": "8:00 AM – 3:30 PM",
+      "location": "Port NOLA cruise terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "About 2,978 guests off at 8:00 AM and 2,978 on for the 3:30 PM departure (double-occupancy capacity). Dates from the ship's own sailings.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://www.cruisemapper.com/ships/Carnival-Liberty-568",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-liberty/2026-08-23/7-nights",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-liberty/2026-08-30/7-nights"
       ]
     },
     {
-      "id": "ev-972vocun",
-      "title": "Gary Clark Jr. Concert",
+      "id": "ev-pkweu8wy",
+      "title": "Smaller evening shows (grouped)",
       "category": "Concerts",
       "startDate": "2026-08-30",
-      "totalAttendance": 1700,
-      "impactWindow": "6:00 PM – 9:30 PM",
-      "location": "Orpheum Theater",
-      "proximity": "CBD / Outer French Quarter Radius",
-      "notes": "Blues",
+      "totalAttendance": 1300,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "Downtown theaters and clubs (Canal St. and lower Decatur St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Touring acts likely to draw fans from out of town: Gary Clark Jr., Orpheum Theater (~1,300). Each number is an estimate from the venue's size (no counts published). Evening only; little overlap with market business hours. Local club nights that mostly serve people already in town are left off (see the notes file).",
       "sources": [
-        "rock and R&B concert performance."
+        "https://www.songkick.com/venues/115639-orpheum-theater/gigography",
+        "https://orpheumnola.com/event/gary-clark-jr/"
+      ]
+    },
+    {
+      "id": "ev-su0xrd1l",
+      "title": "Carnival Valor turnaround",
+      "category": "Cruise Ships",
+      "startDate": "2026-08-31",
+      "totalAttendance": 2984,
+      "impactWindow": "8:00 AM – 3:30 PM",
+      "location": "Port NOLA cruise terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "About 2,984 guests off at 8:00 AM and 2,984 on for the 3:30 PM departure (double-occupancy capacity). Dates from the ship's own sailings.",
+      "sources": [
+        "https://www.cruisemapper.com/ships/Carnival-Valor-604",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-valor/2026-08-27/4-nights",
+        "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-valor/2026-08-31/5-nights"
+      ]
+    },
+    {
+      "id": "ev-86yb8s6g",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-08-31",
+      "totalAttendance": 800,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels (mostly the Marriott and Sheraton on Canal St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Meetings found by name: Georgia REALTORS Annual Conference & Expo, New Orleans Marriott (Aug 31–Sep 4; ~800, estimate). The city's convention calendar no longer shows August, so smaller meetings are missing and this total is low. Counted once per day.",
+      "sources": [
+        "https://garealtor.com/events/future-gar-conferences/"
       ]
     }
   ]
