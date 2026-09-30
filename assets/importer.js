@@ -251,6 +251,7 @@ function splitDaily(value) {
 
 // Build a clean event from a { field: value } record (from a header row or JSON object).
 function recordToEvent(rec, defaultYear) {
+  if (isOccupancyRecord(rec)) return recordToOccupancy(rec, defaultYear);
   const errors = [], warnings = [];
   const str = (v) => (v === undefined || v === null ? "" : v instanceof Date ? toKey(v) : String(v).trim());
   const ev = { title: str(rec.title) };
@@ -292,6 +293,54 @@ function recordToEvent(rec, defaultYear) {
   if (src.length) ev.sources = src;
 
   return finishEvent(ev, errors, warnings);
+}
+
+// ---------- Hotel occupancy rows ----------
+// A row whose category is "Hotel Occupancy" isn't an event. Its daily_attendance holds one
+// percentage per date ("2026-10-01:51; 2026-10-02:74"), stored as the month's hotelOccupancy.
+
+const isOccupancyRecord = (rec) => /^\s*hotel\s+occupancy\s*$/i.test(String(rec.category ?? ""));
+
+function parseOccupancyFigures(value, defaultYear) {
+  const figures = {}, errors = [], warnings = [];
+  const entries = value && typeof value === "object" && !(value instanceof Date)
+    ? Object.entries(value)
+    : String(value ?? "").split(/[;|\n]/).map((p) => p.trim()).filter(Boolean).map((p) => {
+      const m = /^(.+?)\s*[:=]\s*(.*)$/.exec(p);
+      return m ? [m[1], m[2]] : [p, undefined];
+    });
+  for (const [rawDate, rawValue] of entries) {
+    const label = String(rawDate).trim();
+    if (rawValue === undefined) { errors.push(`"${label}" has no figure. Use date:percent, e.g. 2026-10-01:51.`); continue; }
+    const date = parseFlexibleDate(label, defaultYear);
+    if (!date) { errors.push(`"${label}" isn't a real date.`); continue; }
+    const v = String(rawValue).trim().replace(/%$/, "");
+    if (!/^\d+$/.test(v) || Number(v) > 100) { errors.push(`${date}: "${String(rawValue).trim()}" must be a whole number from 0 to 100.`); continue; }
+    if (date in figures) warnings.push(`${date} is listed more than once; the last figure is used.`);
+    figures[date] = Number(v);
+  }
+  if (!entries.length) errors.push("No daily occupancy figures found. Put them in daily_attendance, e.g. 2026-10-01:51; 2026-10-02:74.");
+  return { figures, errors, warnings };
+}
+
+function recordToOccupancy(rec, defaultYear) {
+  const str = (v) => (v === undefined || v === null ? "" : String(v).trim());
+  const { figures, errors, warnings } = parseOccupancyFigures(rec.dailyAttendance, defaultYear);
+  const occupancy = { figures };
+  if (str(rec.notes)) occupancy.notes = str(rec.notes);
+  const src = Array.isArray(rec.sources) ? rec.sources.map(str).filter(Boolean) : str(rec.sources).split(/\s*[;|]\s*|\s+(?=https?:)/).filter(Boolean);
+  if (src.length) occupancy.sources = src;
+  return { kind: "occupancy", occupancy, errors, warnings };
+}
+
+// "Estimated hotel occupancy: Oct 1–31 (31 days), 43%–97%"
+function summarizeOccupancy(occ) {
+  const dates = Object.keys(occ.figures || {}).sort();
+  if (!dates.length) return "Estimated hotel occupancy: no valid figures";
+  const vals = dates.map((d) => occ.figures[d]);
+  const lo = Math.min(...vals), hi = Math.max(...vals);
+  return `Estimated hotel occupancy: ${formatSpan(dates[0], dates[dates.length - 1])} (${dates.length} day${dates.length === 1 ? "" : "s"}), ` +
+    (lo === hi ? `${lo}%` : `${lo}%–${hi}%`);
 }
 
 // Shared checks for every event, whatever its source. Mutates/cleans ev.
@@ -402,14 +451,21 @@ function importAnything(input, defaultYear = new Date().getFullYear()) {
 
   if (/^[\[{]/.test(text)) {
     try {
-      const arrays = collectObjectArrays(JSON.parse(text));
-      const objs = arrays.flat();
-      if (objs.length) {
-        return {
-          format: "JSON",
-          rows: objs.map((o, i) => ({ ...recordToEvent(objectToRecord(o), defaultYear), label: `Item ${i + 1}` })),
-        };
+      const parsed = JSON.parse(text);
+      const objs = collectObjectArrays(parsed).flat();
+      const rows = objs.map((o, i) => ({ ...recordToEvent(objectToRecord(o), defaultYear), label: `Item ${i + 1}` }));
+      const occ = parsed && !Array.isArray(parsed) && (parsed.hotelOccupancy ?? parsed.hotel_occupancy);
+      if (occ) {
+        rows.push({
+          ...recordToOccupancy({
+            dailyAttendance: occ,
+            notes: parsed.hotelOccupancyNotes ?? parsed.hotel_occupancy_notes,
+            sources: parsed.hotelOccupancySources ?? parsed.hotel_occupancy_sources,
+          }, defaultYear),
+          label: "hotelOccupancy",
+        });
       }
+      if (rows.length) return { format: "JSON", rows };
     } catch { /* not JSON after all; fall through to text */ }
   }
 
@@ -456,4 +512,4 @@ function monthsOf(ev) {
   return out;
 }
 
-if (typeof module !== "undefined") module.exports = { importAnything, parseFlexibleDate, findDateRange, findAttendance, validateEvent, monthsOf };
+if (typeof module !== "undefined") module.exports = { importAnything, parseFlexibleDate, findDateRange, findAttendance, validateEvent, monthsOf, summarizeOccupancy };

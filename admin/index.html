@@ -158,9 +158,9 @@ Oct 16-18 Dental Association Annual Meeting 12K at Morial Convention Center 5-8p
         <fieldset class="space-y-2 border-t border-stone-200 pt-3">
           <legend class="text-sm font-semibold mb-1">How should these be added?</legend>
           <label class="flex items-start gap-2 text-sm"><input type="radio" name="import-mode" value="replace" checked class="mt-1">
-            <span><strong>Replace</strong> all events in <span id="import-months"></span> with this data <span class="text-stone-500">(best for a full month's list)</span></span></label>
+            <span><strong>Replace</strong> <span id="import-replace-what"></span> with this data <span class="text-stone-500">(best for a full month's list)</span></span></label>
           <label class="flex items-start gap-2 text-sm"><input type="radio" name="import-mode" value="add" class="mt-1">
-            <span><strong>Add</strong> to the events already there <span class="text-stone-500">(exact duplicates are skipped)</span></span></label>
+            <span><strong>Add</strong> to the events already there <span class="text-stone-500">(exact duplicates are skipped)</span><span id="import-add-occ" class="hidden text-stone-500">. Hotel occupancy figures are set for the dates listed, overwriting any already there.</span></span></label>
         </fieldset>
         <button id="import-publish" class="w-full rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-bold py-3 text-base disabled:opacity-40">Update Dashboard</button>
       </div>

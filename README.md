@@ -44,12 +44,32 @@ The token is encrypted with your admin password and saved only in that browser. 
 
 Events that run across two months (e.g. Oct 30 – Nov 1) are saved into both months' files automatically.
 
+### Data format
+
+Spreadsheets and CSVs use one row per event, with this header (other column names are recognized too):
+
+```
+title,category,start_date,end_date,total_attendance,daily_attendance,impact_window,location,proximity,notes,sources
+```
+
+- `category` is one of the 9 categories. `daily_attendance` is optional (`2026-10-16:12000; 2026-10-17:13000`). If it's left blank, the total is split evenly across the days. `sources` are separated by `;`.
+- **Estimated hotel occupancy** goes in one extra row with the same header and **Hotel Occupancy** as its category (any capitalization). It isn't an event: it never becomes a badge and never counts toward crowd totals.
+  - `daily_attendance`: one whole-number percentage (0–100) per date, e.g. `2026-10-01:51; 2026-10-02:74; …; 2026-10-31:92`.
+  - `total_attendance`: the month's average. `start_date`/`end_date` give the period it covers.
+  - `notes` and `sources`: how the estimate was made. They're saved with the figures.
+  - The import preview shows it as one line (e.g. *Estimated hotel occupancy: Oct 1–31 (31 days), 51%–95%*) and flags any entry that isn't a real date with a whole number from 0 to 100.
+  - **Replace** swaps out the figures for each month the row covers. **Add** sets the listed dates and leaves the other days alone.
+  - See the last row of `events-template.csv` for an example.
+
+In each month file, the admin page stores the figures as `"hotelOccupancy": { "2026-10-01": 51, … }`, with `hotelOccupancyNotes` and `hotelOccupancySources`. A month with figures but no events still gets a file.
+
 ## How the app behaves
 
 - It opens on the device's current month. **◄ Last Month / This Month / Next Month ►** switch between the three months around today without reloading the page.
 - Each day shows one colored badge per category that has events, labeled `[rounded attendance] [category]`. Phones show at most 3 badges plus "+X more". Day shading gets darker as the total crowd grows.
 - Rounding: under 1,000 goes to the nearest 100 (250 → 300). At 1,000 and up it goes to the nearest thousand (12,800 → 13K).
 - Tap a day or badge to see the full date, the daily total, and a card for each event with its daily attendance, span and total, French Market impact window, location, and proximity tag. Close with ×, a tap outside the card, or Esc.
+- If a day has an estimated hotel occupancy figure, its window shows *Estimated Hotel Occupancy: 51%* under the foot-traffic line. A day with a figure but no events still opens, showing the figure and "No tracked events".
 - If a month's file hasn't been uploaded yet, the page says: *"Data for [Month Year] is currently being audited and will be available shortly."*
 
 To change category colors or names, edit the `CATEGORIES` list in `assets/shared.js`. To keep data files in a subfolder, set `DATA_PATH` in the same file (e.g. `"data/"`).

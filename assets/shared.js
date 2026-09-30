@@ -91,7 +91,31 @@ function normalizeMonthFile(json) {
       sources,
     };
   });
-  return { month: root.month, lastUpdated: pick(root, "lastUpdated", "last_updated"), sample: !!root.sample, events };
+  let occSources = pick(root, "hotelOccupancySources", "hotel_occupancy_sources");
+  if (typeof occSources === "string") occSources = occSources.split(/\s*[;|]\s*/).filter(Boolean);
+  return {
+    month: root.month,
+    lastUpdated: pick(root, "lastUpdated", "last_updated"),
+    sample: !!root.sample,
+    hotelOccupancy: readOccupancyMap(pick(root, "hotelOccupancy", "hotel_occupancy")),
+    hotelOccupancyNotes: pick(root, "hotelOccupancyNotes", "hotel_occupancy_notes"),
+    hotelOccupancySources: Array.isArray(occSources) && occSources.length ? occSources : undefined,
+    events,
+  };
+}
+
+// Daily hotel occupancy percentages: { "YYYY-MM-DD": 0–100 }. Accepts an object or
+// "2026-10-01:51; 2026-10-02:74" text. Entries that aren't a real date with a
+// whole number 0–100 are dropped. Returns {} when there are none.
+function readOccupancyMap(value) {
+  const entries = value && typeof value === "object" ? Object.entries(value)
+    : String(value ?? "").split(/[;|\n]/).map((p) => p.split(":").map((x) => x.trim()));
+  const out = {};
+  for (const [d, v] of entries) {
+    const n = Number(String(v ?? "").trim().replace(/%$/, ""));
+    if (parseDate(d) && String(v ?? "").trim() !== "" && Number.isInteger(n) && n >= 0 && n <= 100) out[d.trim()] = n;
+  }
+  return out;
 }
 
 // Returns { "YYYY-MM-DD": attendance } for an event. Uses dailyAttendance when given,

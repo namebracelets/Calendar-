@@ -8,6 +8,12 @@ const today = new Date();
 const state = { offset: 0, data: null, days: {} };
 const cache = new Map();
 
+// Estimated hotel occupancy (%) for a date in the loaded month, or null.
+function occupancyFor(key) {
+  const v = state.data && state.data.hotelOccupancy ? state.data.hotelOccupancy[key] : undefined;
+  return v === undefined ? null : v;
+}
+
 const $ = (id) => document.getElementById(id);
 
 function monthFor(offset) {
@@ -139,13 +145,15 @@ function renderCalendar() {
   for (let d = 1; d <= count; d++) {
     const key = dateKey(y, m, d);
     const day = days[key];
+    const occ = occupancyFor(key);
+    const opens = !!day || occ !== null; // an occupancy-only day still opens its window
     const isToday = key === todayKey;
     const cats = day ? Object.entries(day.cats).sort((a, b) => b[1] - a[1]) : [];
     const extra = cats.length - MAX_MOBILE_BADGES;
 
     html += `<button type="button" data-date="${key}"
-        class="day-cell relative flex flex-col items-stretch gap-0.5 p-0.5 sm:p-1.5 min-h-20 sm:min-h-28 min-w-0 text-left border-b border-r border-stone-100 ${day ? heatClass(day.total) + " hover:brightness-95 cursor-pointer" : "bg-white cursor-default"}"
-        ${day ? "" : 'tabindex="-1"'} aria-label="${MONTHS_LONG[m]} ${d}${day ? `, about ${formatAttendance(day.total)} expected` : ", no tracked events"}">
+        class="day-cell relative flex flex-col items-stretch gap-0.5 p-0.5 sm:p-1.5 min-h-20 sm:min-h-28 min-w-0 text-left border-b border-r border-stone-100 ${day ? heatClass(day.total) + " hover:brightness-95 cursor-pointer" : opens ? "bg-white cursor-pointer" : "bg-white cursor-default"}"
+        ${opens ? "" : 'tabindex="-1"'} aria-label="${MONTHS_LONG[m]} ${d}${day ? `, about ${formatAttendance(day.total)} expected` : ", no tracked events"}${occ !== null ? `, estimated hotel occupancy ${occ}%` : ""}">
       <div class="flex items-center justify-between gap-0.5 px-0.5">
         <span class="text-[11px] sm:text-sm font-semibold ${isToday ? "bg-emerald-800 text-white rounded-full w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center" : "text-stone-700"}">${d}</span>
         ${day ? `<span class="hidden sm:inline text-[10px] font-semibold text-stone-500">~${formatAttendance(day.total)}</span>` : ""}
@@ -178,11 +186,17 @@ async function showMonth(offset) {
 let lastFocus = null;
 
 function openModal(key, focusCat) {
-  const day = state.days[key];
+  const occ = occupancyFor(key);
+  const day = state.days[key] || (occ !== null ? { total: 0, items: [] } : null);
   if (!day) return;
   const d = parseDate(key);
   $("modal-title").textContent = d.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" });
-  $("modal-total").innerHTML = `Estimated foot-traffic drivers: <strong class="text-stone-900">~${day.total.toLocaleString()}</strong> <span class="text-stone-400">(${formatAttendance(day.total)})</span>`;
+  $("modal-total").innerHTML = day.items.length
+    ? `Estimated foot-traffic drivers: <strong class="text-stone-900">~${day.total.toLocaleString()}</strong> <span class="text-stone-400">(${formatAttendance(day.total)})</span>`
+    : "";
+  $("modal-total").classList.toggle("hidden", !day.items.length);
+  $("modal-occupancy").innerHTML = occ !== null ? `Estimated Hotel Occupancy: <strong class="text-stone-900">${occ}%</strong>` : "";
+  $("modal-occupancy").classList.toggle("hidden", occ === null);
 
   const items = [...day.items].sort((a, b) => {
     if (focusCat) {
@@ -215,7 +229,7 @@ function openModal(key, focusCat) {
           ? `<a class="underline" href="${escapeHtml(s)}" target="_blank" rel="noopener">${escapeHtml(new URL(s).hostname)}</a>`
           : escapeHtml(s)).join(", ")}</p>` : ""}
     </article>`;
-  }).join("");
+  }).join("") || `<p class="py-6 text-center text-sm text-stone-500">No tracked events</p>`;
 
   lastFocus = document.activeElement;
   $("modal").classList.remove("hidden");
