@@ -44,7 +44,7 @@
   ],
   "events": [
     {
-      "id": "ev-4pd3wug7",
+      "id": "ev-jxpfr0c0",
       "title": "Anniversary second line (Washington Artillery Park → Cane & Table)",
       "category": "Parades",
       "startDate": "2026-10-01",
@@ -58,7 +58,7 @@
       ]
     },
     {
-      "id": "ev-duronur8",
+      "id": "ev-mqdh3t6b",
       "title": "NOLAxNOLA (final days)",
       "category": "Festivals",
       "startDate": "2026-10-01",
@@ -80,7 +80,7 @@
       ]
     },
     {
-      "id": "ev-y0ubllrb",
+      "id": "ev-osve9bfn",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-01",
@@ -94,7 +94,50 @@
       ]
     },
     {
-      "id": "ev-rtfxtwco",
+      "id": "ev-gqyaz1d1",
+      "title": "Bayside (with Driveways and Grave Secrets)",
+      "category": "Concerts",
+      "startDate": "2026-10-02",
+      "totalAttendance": 800,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "House of Blues (225 Decatur St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Friday. Evening only; little overlap with market business hours. Attendance = venue capacity (an upper bound).",
+      "sources": [
+        "https://www.setlist.fm/venue/house-of-blues-new-orleans-la-usa-23d61c9f.html"
+      ]
+    },
+    {
+      "id": "ev-oamvqnd8",
+      "title": "Live music near the market (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-10-02",
+      "totalAttendance": 375,
+      "impactWindow": "11:00 AM – 3:30 PM",
+      "location": "French Market (Farmers Market stage, Dutch Alley) and New Orleans Jazz Museum (400 Esplanade Ave.)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free or small shows within a few blocks of the sheds: Johnette Downing's Family Music Series, Dutch Alley (916 N. Peters), 11:00–11:45 AM (~75); Hispanic Heritage Concert, French Market, 1:30–3:30 PM (~150); Hispanic Heritage Month: OVJ Collective, New Orleans Jazz Museum (400 Esplanade Ave.), 2:00–3:00 PM (~150). Rough estimates (no counts published). Listed under your rule for music near the market during the business day or just after 5 PM.",
+      "sources": [
+        "https://www.frenchmarket.org/events/month/2026-10/",
+        "https://nolajazzmuseum.org/events"
+      ]
+    },
+    {
+      "id": "ev-918pcyq5",
+      "title": "Of Monsters and Men",
+      "category": "Concerts",
+      "startDate": "2026-10-02",
+      "totalAttendance": 1200,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "Civic Theatre (510 O'Keefe Ave.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Friday. Evening only; little overlap with market business hours. Attendance = venue capacity (an upper bound).",
+      "sources": [
+        "https://www.songkick.com/venues/2372864-civic-theatre"
+      ]
+    },
+    {
+      "id": "ev-9g48hdhs",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-02",
@@ -108,7 +151,21 @@
       ]
     },
     {
-      "id": "ev-qo0u04np",
+      "id": "ev-rpag2808",
+      "title": "Terry Fator – Pure Imagination",
+      "category": "Concerts",
+      "startDate": "2026-10-02",
+      "totalAttendance": 2100,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "Mahalia Jackson Theater (1419 Basin St.), Armstrong Park",
+      "proximity": "Armstrong Park / Tremé",
+      "notes": "Friday. Las Vegas headliner (ventriloquist and singer) with an older, traveling audience. Evening only; little overlap with market business hours. Attendance = venue capacity (an upper bound).",
+      "sources": [
+        "https://us.atgtickets.com/venues/mahalia-jackson-theater/"
+      ]
+    },
+    {
+      "id": "ev-fjiafwq1",
       "title": "BAM Travel – New Orleans Whirlwind",
       "category": "Tours/Charters",
       "startDate": "2026-10-03",
@@ -122,7 +179,7 @@
       ]
     },
     {
-      "id": "ev-n12zu91p",
+      "id": "ev-7171o8il",
       "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-10-03",
@@ -136,7 +193,21 @@
       ]
     },
     {
-      "id": "ev-dwiywo0i",
+      "id": "ev-0zbwdihm",
+      "title": "Live music near the market (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-10-03",
+      "totalAttendance": 300,
+      "impactWindow": "12:00 PM – 2:00 PM",
+      "location": "French Market (Farmers Market stage, Dutch Alley)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free or small shows within a few blocks of the sheds: Culture & Cuisine: New Orleans Black Masking Indians and a cooking demo, Farmers Market stage, 12:00–1:00 PM (~150); Hispanic Heritage Concert, French Market, 1:00–2:00 PM (~150). Rough estimates (no counts published). Listed under your rule for music near the market during the business day or just after 5 PM.",
+      "sources": [
+        "https://www.frenchmarket.org/events/month/2026-10/"
+      ]
+    },
+    {
+      "id": "ev-4jt4h7ut",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-03",
@@ -150,7 +221,7 @@
       ]
     },
     {
-      "id": "ev-524qu4rh",
+      "id": "ev-hq98s4cd",
       "title": "Viking Mississippi turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-10-03",
@@ -163,7 +234,7 @@
       ]
     },
     {
-      "id": "ev-c87nac7y",
+      "id": "ev-rcn10wc8",
       "title": "Carnival Liberty turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-10-04",
@@ -177,7 +248,35 @@
       ]
     },
     {
-      "id": "ev-iq2g2r51",
+      "id": "ev-1y8h4cti",
+      "title": "José Madero",
+      "category": "Concerts",
+      "startDate": "2026-10-04",
+      "totalAttendance": 800,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "House of Blues (225 Decatur St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Sunday. Evening only; little overlap with market business hours. Attendance = venue capacity (an upper bound).",
+      "sources": [
+        "https://www.setlist.fm/venue/house-of-blues-new-orleans-la-usa-23d61c9f.html"
+      ]
+    },
+    {
+      "id": "ev-nopp5fg8",
+      "title": "Live music near the market (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-10-04",
+      "totalAttendance": 300,
+      "impactWindow": "4:00 PM – 7:00 PM",
+      "location": "New Orleans Jazz Museum (400 Esplanade Ave.)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free or small shows within a few blocks of the sheds: First Annual Filipino Legacy and Culture Fiesta, New Orleans Jazz Museum (400 Esplanade Ave.), 4:00–7:00 PM (~300). Rough estimates (no counts published). Listed under your rule for music near the market during the business day or just after 5 PM.",
+      "sources": [
+        "https://nolajazzmuseum.org/events"
+      ]
+    },
+    {
+      "id": "ev-0ayxkyov",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-04",
@@ -191,7 +290,7 @@
       ]
     },
     {
-      "id": "ev-ct6lrw83",
+      "id": "ev-z1g1on0m",
       "title": "Saints vs. Atlanta Falcons (Monday Night Football)",
       "category": "Sports",
       "startDate": "2026-10-05",
@@ -206,7 +305,7 @@
       ]
     },
     {
-      "id": "ev-odm7w3ou",
+      "id": "ev-hiy2pebp",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-05",
@@ -220,7 +319,21 @@
       ]
     },
     {
-      "id": "ev-dwu0ok4e",
+      "id": "ev-edhag6ze",
+      "title": "Mike Campbell & The Dirty Knobs (with Sarah Lee Guthrie)",
+      "category": "Concerts",
+      "startDate": "2026-10-06",
+      "totalAttendance": 1200,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "Joy Theater (1200 Canal St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Tuesday. Evening only; little overlap with market business hours. Attendance = venue capacity (an upper bound).",
+      "sources": [
+        "https://www.songkick.com/venues/1587063-joy-theater"
+      ]
+    },
+    {
+      "id": "ev-rna8zxyo",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-06",
@@ -234,7 +347,7 @@
       ]
     },
     {
-      "id": "ev-ed3150u5",
+      "id": "ev-48r7a0rv",
       "title": "Carla Pesono's Taste of Italy",
       "category": "Festivals",
       "startDate": "2026-10-07",
@@ -252,7 +365,21 @@
       ]
     },
     {
-      "id": "ev-s48elg93",
+      "id": "ev-afg8n936",
+      "title": "Live music near the market (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-10-07",
+      "totalAttendance": 150,
+      "impactWindow": "2:00 PM – 3:00 PM",
+      "location": "New Orleans Jazz Museum (400 Esplanade Ave.)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free or small shows within a few blocks of the sheds: Jazz Foundation of America presents Louis Ford and His New Orleans Flairs, New Orleans Jazz Museum (400 Esplanade Ave.), 2:00–3:00 PM (~150). Rough estimates (no counts published). Listed under your rule for music near the market during the business day or just after 5 PM.",
+      "sources": [
+        "https://nolajazzmuseum.org/events"
+      ]
+    },
+    {
+      "id": "ev-7i9z81f3",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-07",
@@ -266,7 +393,7 @@
       ]
     },
     {
-      "id": "ev-jdharhzz",
+      "id": "ev-do5q3rba",
       "title": "AAO 2026 – American Academy of Ophthalmology Annual Meeting",
       "category": "Conventions",
       "startDate": "2026-10-08",
@@ -289,7 +416,7 @@
       ]
     },
     {
-      "id": "ev-f9lz1evj",
+      "id": "ev-nz6mu714",
       "title": "Amyl and the Sniffers",
       "category": "Concerts",
       "startDate": "2026-10-08",
@@ -302,7 +429,7 @@
       ]
     },
     {
-      "id": "ev-fn6gos4t",
+      "id": "ev-447e5m0q",
       "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-10-08",
@@ -316,7 +443,21 @@
       ]
     },
     {
-      "id": "ev-wh1brnqh",
+      "id": "ev-ixl7d5g7",
+      "title": "Live music near the market (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-10-08",
+      "totalAttendance": 150,
+      "impactWindow": "2:00 PM – 3:00 PM",
+      "location": "New Orleans Jazz Museum (400 Esplanade Ave.)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free or small shows within a few blocks of the sheds: Live Jazz at the New Orleans Jazz Museum, New Orleans Jazz Museum (400 Esplanade Ave.), 2:00–3:00 PM (~150). Rough estimates (no counts published). Listed under your rule for music near the market during the business day or just after 5 PM.",
+      "sources": [
+        "https://nolajazzmuseum.org/events"
+      ]
+    },
+    {
+      "id": "ev-02jqwx4a",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-08",
@@ -330,7 +471,7 @@
       ]
     },
     {
-      "id": "ev-t2qdfvh5",
+      "id": "ev-637dvh1o",
       "title": "Crescent City Blues & BBQ Festival",
       "category": "Festivals",
       "startDate": "2026-10-09",
@@ -352,7 +493,22 @@
       ]
     },
     {
-      "id": "ev-w0ywvd45",
+      "id": "ev-5xcjt55h",
+      "title": "Live music near the market (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-10-09",
+      "totalAttendance": 300,
+      "impactWindow": "1:30 PM – 3:30 PM",
+      "location": "French Market (Farmers Market stage, Dutch Alley) and New Orleans Jazz Museum (400 Esplanade Ave.)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free or small shows within a few blocks of the sheds: Hispanic Heritage Concert, French Market, 1:30–3:30 PM (~150); Hispanic Heritage Month: Alesia and Sasong, New Orleans Jazz Museum (400 Esplanade Ave.), 2:00–3:00 PM (~150). Rough estimates (no counts published). Listed under your rule for music near the market during the business day or just after 5 PM.",
+      "sources": [
+        "https://www.frenchmarket.org/events/month/2026-10/",
+        "https://nolajazzmuseum.org/events"
+      ]
+    },
+    {
+      "id": "ev-l9fs0b21",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-09",
@@ -366,7 +522,51 @@
       ]
     },
     {
-      "id": "ev-ktoog6nk",
+      "id": "ev-a7bwa6zr",
+      "title": "Live music near the market (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-10-10",
+      "totalAttendance": 800,
+      "impactWindow": "12:00 PM – 9:00 PM",
+      "location": "French Market (Farmers Market stage, Dutch Alley) and New Orleans Jazz Museum (400 Esplanade Ave.)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free or small shows within a few blocks of the sheds: Culture & Cuisine: New Orleans Black Masking Indians and a cooking demo, Farmers Market stage, 12:00–1:00 PM (~150); Hispanic Heritage Concert, French Market, 1:00–2:00 PM (~150); Cumbiafest, New Orleans Jazz Museum (400 Esplanade Ave.), 6:00–9:00 PM (~500). Rough estimates (no counts published). Listed under your rule for music near the market during the business day or just after 5 PM.",
+      "sources": [
+        "https://www.frenchmarket.org/events/month/2026-10/",
+        "https://nolajazzmuseum.org/events"
+      ]
+    },
+    {
+      "id": "ev-e678li43",
+      "title": "My Hero Academia in Concert",
+      "category": "Concerts",
+      "startDate": "2026-10-10",
+      "totalAttendance": 2100,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "Mahalia Jackson Theater (1419 Basin St.), Armstrong Park",
+      "proximity": "Armstrong Park / Tremé",
+      "notes": "Saturday. Touring anime concert; draws fans from around the region. Evening only; little overlap with market business hours. Attendance = venue capacity (an upper bound).",
+      "sources": [
+        "https://us.atgtickets.com/venues/mahalia-jackson-theater/"
+      ]
+    },
+    {
+      "id": "ev-dawhpsya",
+      "title": "Parcels – Loved Tour 2026",
+      "category": "Concerts",
+      "startDate": "2026-10-10",
+      "totalAttendance": 2600,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "Saenger Theatre (1111 Canal St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Saturday; nearly sold out on Sept 30. Evening only; little overlap with market business hours. Attendance = venue capacity (an upper bound).",
+      "sources": [
+        "https://us.atgtickets.com/venues/saenger-theatre/",
+        "https://concertfix.com/concerts/new-orleans-la+saenger-theatre-new-orleans"
+      ]
+    },
+    {
+      "id": "ev-465ookzj",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-10",
@@ -380,7 +580,7 @@
       ]
     },
     {
-      "id": "ev-t9o55toa",
+      "id": "ev-7659gvs7",
       "title": "Wedding second line (Beauregard-Keyes House → Gold Mine Saloon)",
       "category": "Parades",
       "startDate": "2026-10-10",
@@ -393,7 +593,7 @@
       ]
     },
     {
-      "id": "ev-8i4neeu3",
+      "id": "ev-4w4vfoxx",
       "title": "WWE Money in the Bank",
       "category": "Sports",
       "startDate": "2026-10-10",
@@ -407,7 +607,7 @@
       ]
     },
     {
-      "id": "ev-0ksi5q0h",
+      "id": "ev-av157y2b",
       "title": "Blackberry Smoke",
       "category": "Concerts",
       "startDate": "2026-10-11",
@@ -421,7 +621,7 @@
       ]
     },
     {
-      "id": "ev-0oa7ku6g",
+      "id": "ev-c1h4w466",
       "title": "Carnival Liberty turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-10-11",
@@ -435,7 +635,7 @@
       ]
     },
     {
-      "id": "ev-l1htbcgu",
+      "id": "ev-t4zeoo4o",
       "title": "Saints vs. Minnesota Vikings",
       "category": "Sports",
       "startDate": "2026-10-11",
@@ -450,7 +650,7 @@
       ]
     },
     {
-      "id": "ev-4vk8hg4y",
+      "id": "ev-aof8h2vz",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-11",
@@ -464,7 +664,7 @@
       ]
     },
     {
-      "id": "ev-66ule0oz",
+      "id": "ev-zzgtjsc6",
       "title": "American Cruise Lines – Highlights of the Mississippi (embarkation)",
       "category": "Cruise Ships",
       "startDate": "2026-10-12",
@@ -477,7 +677,7 @@
       ]
     },
     {
-      "id": "ev-xdff7vlz",
+      "id": "ev-9dt0s0as",
       "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-10-12",
@@ -491,7 +691,7 @@
       ]
     },
     {
-      "id": "ev-23afov59",
+      "id": "ev-q0dyy4sa",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-12",
@@ -505,7 +705,36 @@
       ]
     },
     {
-      "id": "ev-19jovoe6",
+      "id": "ev-t9whpmz6",
+      "title": "Tom Jones – Come Gather Round Tour",
+      "category": "Concerts",
+      "startDate": "2026-10-12",
+      "totalAttendance": 2600,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "Saenger Theatre (1111 Canal St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Monday. A legend with a devoted, older fan base that travels for his shows; ticket listings were close to sold out on Sept 30. Evening only; little overlap with market business hours. Attendance = venue capacity (an upper bound).",
+      "sources": [
+        "https://us.atgtickets.com/venues/saenger-theatre/",
+        "https://concertfix.com/concerts/new-orleans-la+saenger-theatre-new-orleans"
+      ]
+    },
+    {
+      "id": "ev-md2s1qo5",
+      "title": "Live music near the market (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-10-13",
+      "totalAttendance": 300,
+      "impactWindow": "5:00 PM – 7:30 PM",
+      "location": "New Orleans Jazz Museum (400 Esplanade Ave.)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free or small shows within a few blocks of the sheds: Hispanic Heritage Month: NolaGaita, New Orleans Jazz Museum (400 Esplanade Ave.), 5:00–6:00 PM (~150); The Ella Project, New Orleans Jazz Museum (400 Esplanade Ave.), 5:30–7:30 PM (~150). Rough estimates (no counts published). Listed under your rule for music near the market during the business day or just after 5 PM.",
+      "sources": [
+        "https://nolajazzmuseum.org/events"
+      ]
+    },
+    {
+      "id": "ev-epm0z6kg",
       "title": "Modest Mouse",
       "category": "Concerts",
       "startDate": "2026-10-13",
@@ -519,7 +748,7 @@
       ]
     },
     {
-      "id": "ev-yg1kwp3d",
+      "id": "ev-i0dgx97d",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-13",
@@ -534,7 +763,7 @@
       ]
     },
     {
-      "id": "ev-eghbxl4p",
+      "id": "ev-y574w5qw",
       "title": "$uicideboy$ – Grey Day Tour 2026",
       "category": "Concerts",
       "startDate": "2026-10-14",
@@ -548,7 +777,21 @@
       ]
     },
     {
-      "id": "ev-xkrgund6",
+      "id": "ev-oaydzycp",
+      "title": "Chad Gray",
+      "category": "Concerts",
+      "startDate": "2026-10-14",
+      "totalAttendance": 800,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "House of Blues (225 Decatur St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Wednesday. Evening only; little overlap with market business hours. Attendance = venue capacity (an upper bound).",
+      "sources": [
+        "https://www.setlist.fm/venue/house-of-blues-new-orleans-la-usa-23d61c9f.html"
+      ]
+    },
+    {
+      "id": "ev-foujkvjr",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-14",
@@ -563,7 +806,7 @@
       ]
     },
     {
-      "id": "ev-zu8wzs64",
+      "id": "ev-4nztn6ib",
       "title": "Wedding second line (Old Ursuline Convent → Landry's)",
       "category": "Parades",
       "startDate": "2026-10-14",
@@ -577,7 +820,7 @@
       ]
     },
     {
-      "id": "ev-7pm23s7e",
+      "id": "ev-bfxz0dgh",
       "title": "Marilyn Manson",
       "category": "Concerts",
       "startDate": "2026-10-15",
@@ -591,7 +834,7 @@
       ]
     },
     {
-      "id": "ev-9e4tyytz",
+      "id": "ev-j2kui30u",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-15",
@@ -606,7 +849,7 @@
       ]
     },
     {
-      "id": "ev-hqhy34ee",
+      "id": "ev-j91pltyt",
       "title": "K. Michelle",
       "category": "Concerts",
       "startDate": "2026-10-16",
@@ -619,7 +862,21 @@
       ]
     },
     {
-      "id": "ev-rdpzaaji",
+      "id": "ev-kk2iyqpw",
+      "title": "Live music near the market (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-10-16",
+      "totalAttendance": 150,
+      "impactWindow": "2:00 PM – 3:00 PM",
+      "location": "New Orleans Jazz Museum (400 Esplanade Ave.)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free or small shows within a few blocks of the sheds: Hispanic Heritage Month: Arco Latino, New Orleans Jazz Museum (400 Esplanade Ave.), 2:00–3:00 PM (~150). Rough estimates (no counts published). Listed under your rule for music near the market during the business day or just after 5 PM.",
+      "sources": [
+        "https://nolajazzmuseum.org/events"
+      ]
+    },
+    {
+      "id": "ev-4qxjv5ts",
       "title": "New Orleans Tattoo Arts Festival",
       "category": "Miscellaneous",
       "startDate": "2026-10-16",
@@ -640,7 +897,7 @@
       ]
     },
     {
-      "id": "ev-1lhjqup4",
+      "id": "ev-7kklfb0h",
       "title": "NOLA Funk Fest",
       "category": "Festivals",
       "startDate": "2026-10-16",
@@ -662,7 +919,7 @@
       ]
     },
     {
-      "id": "ev-1q22j7wn",
+      "id": "ev-xyp0qj8a",
       "title": "Pelicans vs. Washington Wizards (preseason)",
       "category": "Sports",
       "startDate": "2026-10-16",
@@ -676,7 +933,7 @@
       ]
     },
     {
-      "id": "ev-ns6a0pnt",
+      "id": "ev-v3k1fm2v",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-16",
@@ -691,7 +948,7 @@
       ]
     },
     {
-      "id": "ev-adtyyuvb",
+      "id": "ev-wwfttx2s",
       "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-10-17",
@@ -705,7 +962,7 @@
       ]
     },
     {
-      "id": "ev-iaft2a4h",
+      "id": "ev-6cvjkmn3",
       "title": "Dominican NOLA Fest",
       "category": "Festivals",
       "startDate": "2026-10-17",
@@ -720,7 +977,21 @@
       ]
     },
     {
-      "id": "ev-hlcfpnm5",
+      "id": "ev-w0aew47i",
+      "title": "Live music near the market (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-10-17",
+      "totalAttendance": 150,
+      "impactWindow": "12:00 PM – 1:00 PM",
+      "location": "French Market (Farmers Market stage, Dutch Alley)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free or small shows within a few blocks of the sheds: Culture & Cuisine: New Orleans Black Masking Indians and a cooking demo, Farmers Market stage, 12:00–1:00 PM (~150). Rough estimates (no counts published). Listed under your rule for music near the market during the business day or just after 5 PM.",
+      "sources": [
+        "https://www.frenchmarket.org/events/month/2026-10/"
+      ]
+    },
+    {
+      "id": "ev-gvyb312n",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-17",
@@ -735,7 +1006,7 @@
       ]
     },
     {
-      "id": "ev-h5o2e7nl",
+      "id": "ev-l1odp631",
       "title": "Viking Mississippi turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-10-17",
@@ -748,7 +1019,7 @@
       ]
     },
     {
-      "id": "ev-s759awst",
+      "id": "ev-9wz0082r",
       "title": "Carnival Liberty turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-10-18",
@@ -762,7 +1033,7 @@
       ]
     },
     {
-      "id": "ev-b91f8ac7",
+      "id": "ev-hknvj3dy",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-18",
@@ -777,7 +1048,7 @@
       ]
     },
     {
-      "id": "ev-vf2x9oly",
+      "id": "ev-avw1wh7w",
       "title": "American Cruise Lines – Highlights of the Mississippi (return)",
       "category": "Cruise Ships",
       "startDate": "2026-10-19",
@@ -790,7 +1061,7 @@
       ]
     },
     {
-      "id": "ev-airmaiup",
+      "id": "ev-laf9fb1g",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-19",
@@ -805,7 +1076,21 @@
       ]
     },
     {
-      "id": "ev-w4ijx003",
+      "id": "ev-c1t534op",
+      "title": "Live music near the market (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-10-20",
+      "totalAttendance": 150,
+      "impactWindow": "5:30 PM – 7:30 PM",
+      "location": "New Orleans Jazz Museum (400 Esplanade Ave.)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free or small shows within a few blocks of the sheds: The Ella Project, New Orleans Jazz Museum (400 Esplanade Ave.), 5:30–7:30 PM (~150). Rough estimates (no counts published). Listed under your rule for music near the market during the business day or just after 5 PM.",
+      "sources": [
+        "https://nolajazzmuseum.org/events"
+      ]
+    },
+    {
+      "id": "ev-62tc3tj3",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-20",
@@ -820,7 +1105,21 @@
       ]
     },
     {
-      "id": "ev-u6mg75rd",
+      "id": "ev-df7bw1pv",
+      "title": "Soccer Mommy & Snail Mail",
+      "category": "Concerts",
+      "startDate": "2026-10-20",
+      "totalAttendance": 1200,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "Joy Theater (1200 Canal St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Tuesday. Evening only; little overlap with market business hours. Attendance = venue capacity (an upper bound).",
+      "sources": [
+        "https://www.songkick.com/venues/1587063-joy-theater"
+      ]
+    },
+    {
+      "id": "ev-px0ejq04",
       "title": "Disney's The Lion King",
       "category": "Concerts",
       "startDate": "2026-10-21",
@@ -849,7 +1148,7 @@
       ]
     },
     {
-      "id": "ev-tju4h2fo",
+      "id": "ev-qb6rdcwz",
       "title": "Pelicans vs. Indiana Pacers (home opener)",
       "category": "Sports",
       "startDate": "2026-10-21",
@@ -865,7 +1164,7 @@
       ]
     },
     {
-      "id": "ev-wtj9qp27",
+      "id": "ev-vq6lx5eu",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-21",
@@ -880,7 +1179,7 @@
       ]
     },
     {
-      "id": "ev-a3phqcis",
+      "id": "ev-p1mofrq5",
       "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-10-22",
@@ -894,7 +1193,21 @@
       ]
     },
     {
-      "id": "ev-bnt2bkqw",
+      "id": "ev-matdtp11",
+      "title": "Clutch (with Blood Vulture and Slomosa)",
+      "category": "Concerts",
+      "startDate": "2026-10-22",
+      "totalAttendance": 800,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "House of Blues (225 Decatur St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Thursday. Evening only; little overlap with market business hours. Attendance = venue capacity (an upper bound).",
+      "sources": [
+        "https://www.setlist.fm/venue/house-of-blues-new-orleans-la-usa-23d61c9f.html"
+      ]
+    },
+    {
+      "id": "ev-p391js8j",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-22",
@@ -909,7 +1222,21 @@
       ]
     },
     {
-      "id": "ev-2i38xyg8",
+      "id": "ev-72wxbv6e",
+      "title": "Live music near the market (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-10-23",
+      "totalAttendance": 150,
+      "impactWindow": "2:00 PM – 3:00 PM",
+      "location": "New Orleans Jazz Museum (400 Esplanade Ave.)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free or small shows within a few blocks of the sheds: Gallatin Street Fridays: Barakat!, New Orleans Jazz Museum (400 Esplanade Ave.), 2:00–3:00 PM (~150). Rough estimates (no counts published). Listed under your rule for music near the market during the business day or just after 5 PM.",
+      "sources": [
+        "https://nolajazzmuseum.org/events"
+      ]
+    },
+    {
+      "id": "ev-zfwk5u1b",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-23",
@@ -924,7 +1251,7 @@
       ]
     },
     {
-      "id": "ev-5req03sx",
+      "id": "ev-qdglbw8c",
       "title": "Boo Carré Halloween Haunt",
       "category": "Festivals",
       "startDate": "2026-10-24",
@@ -940,7 +1267,7 @@
       ]
     },
     {
-      "id": "ev-hce3f9c9",
+      "id": "ev-7wkftvsp",
       "title": "CeCe Winans – Come Worship! Tour",
       "category": "Concerts",
       "startDate": "2026-10-24",
@@ -954,7 +1281,7 @@
       ]
     },
     {
-      "id": "ev-ept3s31n",
+      "id": "ev-rvs8zeql",
       "title": "IFEBP 72nd Annual Employee Benefits Conference",
       "category": "Conventions",
       "startDate": "2026-10-24",
@@ -978,7 +1305,7 @@
       ]
     },
     {
-      "id": "ev-cxmqm2pr",
+      "id": "ev-yvxuavgz",
       "title": "Krewe of BOO! Halloween Parade",
       "category": "Parades",
       "startDate": "2026-10-24",
@@ -994,7 +1321,21 @@
       ]
     },
     {
-      "id": "ev-6v9kk8f0",
+      "id": "ev-1x2py75c",
+      "title": "Live music near the market (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-10-24",
+      "totalAttendance": 150,
+      "impactWindow": "12:00 PM – 1:00 PM",
+      "location": "French Market (Farmers Market stage, Dutch Alley)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free or small shows within a few blocks of the sheds: Culture & Cuisine: New Orleans Black Masking Indians and a cooking demo, Farmers Market stage, 12:00–1:00 PM (~150). Rough estimates (no counts published). Listed under your rule for music near the market during the business day or just after 5 PM.",
+      "sources": [
+        "https://www.frenchmarket.org/events/month/2026-10/"
+      ]
+    },
+    {
+      "id": "ev-fhfob9fa",
       "title": "Matt Fraser (live show)",
       "category": "Concerts",
       "startDate": "2026-10-24",
@@ -1007,7 +1348,7 @@
       ]
     },
     {
-      "id": "ev-cnlauocb",
+      "id": "ev-vlwb2wqj",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-24",
@@ -1022,7 +1363,7 @@
       ]
     },
     {
-      "id": "ev-xfmm12jq",
+      "id": "ev-6evny58j",
       "title": "Carnival Liberty turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-10-25",
@@ -1036,7 +1377,7 @@
       ]
     },
     {
-      "id": "ev-7vuyxbxs",
+      "id": "ev-upqzvt9d",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-25",
@@ -1051,7 +1392,7 @@
       ]
     },
     {
-      "id": "ev-1p27wt1q",
+      "id": "ev-214az9j2",
       "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-10-26",
@@ -1065,7 +1406,7 @@
       ]
     },
     {
-      "id": "ev-jug9gft2",
+      "id": "ev-bcq3zdfo",
       "title": "Diamond Tours group (Peoria Charter) in town",
       "category": "Tours/Charters",
       "startDate": "2026-10-26",
@@ -1085,7 +1426,7 @@
       ]
     },
     {
-      "id": "ev-qbfvurlv",
+      "id": "ev-b6p8pc6w",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-26",
@@ -1100,7 +1441,21 @@
       ]
     },
     {
-      "id": "ev-4a8slvpk",
+      "id": "ev-rn1057s0",
+      "title": "Live music near the market (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-10-27",
+      "totalAttendance": 150,
+      "impactWindow": "5:30 PM – 7:30 PM",
+      "location": "New Orleans Jazz Museum (400 Esplanade Ave.)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free or small shows within a few blocks of the sheds: The Ella Project, New Orleans Jazz Museum (400 Esplanade Ave.), 5:30–7:30 PM (~150). Rough estimates (no counts published). Listed under your rule for music near the market during the business day or just after 5 PM.",
+      "sources": [
+        "https://nolajazzmuseum.org/events"
+      ]
+    },
+    {
+      "id": "ev-e2c2wov7",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-27",
@@ -1115,7 +1470,7 @@
       ]
     },
     {
-      "id": "ev-hroa25vk",
+      "id": "ev-u0enlxik",
       "title": "Pelicans vs. Denver Nuggets",
       "category": "Sports",
       "startDate": "2026-10-28",
@@ -1131,7 +1486,7 @@
       ]
     },
     {
-      "id": "ev-7kgd5vr0",
+      "id": "ev-1m31d3gz",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-28",
@@ -1147,7 +1502,7 @@
       ]
     },
     {
-      "id": "ev-lapsqjk8",
+      "id": "ev-usga0lzx",
       "title": "American Cruise Lines – Mississippi River Explorer (embarkation)",
       "category": "Cruise Ships",
       "startDate": "2026-10-29",
@@ -1160,7 +1515,7 @@
       ]
     },
     {
-      "id": "ev-th8avxcp",
+      "id": "ev-2xlroec3",
       "title": "Daniel Sloss (comedy)",
       "category": "Concerts",
       "startDate": "2026-10-29",
@@ -1173,7 +1528,21 @@
       ]
     },
     {
-      "id": "ev-sqdzwkny",
+      "id": "ev-hgtxoin9",
+      "title": "Live music near the market (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-10-29",
+      "totalAttendance": 150,
+      "impactWindow": "2:00 PM – 3:00 PM",
+      "location": "New Orleans Jazz Museum (400 Esplanade Ave.)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free or small shows within a few blocks of the sheds: Imox Jazz from Guatemala, New Orleans Jazz Museum (400 Esplanade Ave.), 2:00–3:00 PM (~150). Rough estimates (no counts published). Listed under your rule for music near the market during the business day or just after 5 PM.",
+      "sources": [
+        "https://nolajazzmuseum.org/events"
+      ]
+    },
+    {
+      "id": "ev-7n7puhb9",
       "title": "Pelicans vs. Sacramento Kings",
       "category": "Sports",
       "startDate": "2026-10-29",
@@ -1188,7 +1557,7 @@
       ]
     },
     {
-      "id": "ev-oxvxy7pi",
+      "id": "ev-ub5sf569",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-29",
@@ -1203,7 +1572,7 @@
       ]
     },
     {
-      "id": "ev-dyuwqay9",
+      "id": "ev-b0uvo0j0",
       "title": "Freaky Deaky NOLA (Halloween music festival)",
       "category": "Festivals",
       "startDate": "2026-10-30",
@@ -1223,7 +1592,7 @@
       ]
     },
     {
-      "id": "ev-hif8ay7b",
+      "id": "ev-vl8yn6h7",
       "title": "Halloween weekend in the French Quarter",
       "category": "Festivals",
       "startDate": "2026-10-30",
@@ -1244,7 +1613,35 @@
       ]
     },
     {
-      "id": "ev-6hjm9f4w",
+      "id": "ev-jbl6yuuv",
+      "title": "Live music near the market (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-10-30",
+      "totalAttendance": 150,
+      "impactWindow": "2:00 PM – 3:00 PM",
+      "location": "New Orleans Jazz Museum (400 Esplanade Ave.)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free or small shows within a few blocks of the sheds: Gallatin Street Fridays: The Noah Young Trio, New Orleans Jazz Museum (400 Esplanade Ave.), 2:00–3:00 PM (~150). Rough estimates (no counts published). Listed under your rule for music near the market during the business day or just after 5 PM.",
+      "sources": [
+        "https://nolajazzmuseum.org/events"
+      ]
+    },
+    {
+      "id": "ev-jsqmooyf",
+      "title": "Saosin, Silent Planet & Like Moths to Flames",
+      "category": "Concerts",
+      "startDate": "2026-10-30",
+      "totalAttendance": 800,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "House of Blues (225 Decatur St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Friday. Evening only; little overlap with market business hours. Attendance = venue capacity (an upper bound).",
+      "sources": [
+        "https://www.setlist.fm/venue/house-of-blues-new-orleans-la-usa-23d61c9f.html"
+      ]
+    },
+    {
+      "id": "ev-6oft3y3a",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-30",
@@ -1259,7 +1656,7 @@
       ]
     },
     {
-      "id": "ev-6itbumhk",
+      "id": "ev-zdjt2bqv",
       "title": "Victoria Monét",
       "category": "Concerts",
       "startDate": "2026-10-30",
@@ -1272,7 +1669,7 @@
       ]
     },
     {
-      "id": "ev-5njly3in",
+      "id": "ev-f5j8lh7w",
       "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-10-31",
@@ -1286,7 +1683,21 @@
       ]
     },
     {
-      "id": "ev-5i2utlhk",
+      "id": "ev-h6jj7234",
+      "title": "Live music near the market (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-10-31",
+      "totalAttendance": 150,
+      "impactWindow": "12:00 PM – 1:00 PM",
+      "location": "French Market (Farmers Market stage, Dutch Alley)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free or small shows within a few blocks of the sheds: Culture & Cuisine: New Orleans Black Masking Indians and a cooking demo, Farmers Market stage, 12:00–1:00 PM (~150). Rough estimates (no counts published). Listed under your rule for music near the market during the business day or just after 5 PM.",
+      "sources": [
+        "https://www.frenchmarket.org/events/month/2026-10/"
+      ]
+    },
+    {
+      "id": "ev-itfhu1e8",
       "title": "Pelicans vs. Atlanta Hawks",
       "category": "Sports",
       "startDate": "2026-10-31",
@@ -1301,7 +1712,7 @@
       ]
     },
     {
-      "id": "ev-nqpmord8",
+      "id": "ev-3wu32spv",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-10-31",
