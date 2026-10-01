@@ -1,831 +1,1518 @@
 {
   "month": "2026-11",
-  "lastUpdated": "2026-09-29",
+  "lastUpdated": "2026-10-01",
+  "hotelOccupancy": {
+    "2026-11-01": 71,
+    "2026-11-02": 40,
+    "2026-11-03": 47,
+    "2026-11-04": 58,
+    "2026-11-05": 72,
+    "2026-11-06": 84,
+    "2026-11-07": 91,
+    "2026-11-08": 80,
+    "2026-11-09": 59,
+    "2026-11-10": 52,
+    "2026-11-11": 55,
+    "2026-11-12": 67,
+    "2026-11-13": 82,
+    "2026-11-14": 92,
+    "2026-11-15": 78,
+    "2026-11-16": 54,
+    "2026-11-17": 52,
+    "2026-11-18": 55,
+    "2026-11-19": 58,
+    "2026-11-20": 71,
+    "2026-11-21": 86,
+    "2026-11-22": 67,
+    "2026-11-23": 36,
+    "2026-11-24": 33,
+    "2026-11-25": 36,
+    "2026-11-26": 48,
+    "2026-11-27": 77,
+    "2026-11-28": 96,
+    "2026-11-29": 84,
+    "2026-11-30": 56
+  },
+  "hotelOccupancyNotes": "Rough estimate of how full downtown hotels will be, as it bears on each day (within about 10 points). Each day blends 60% of the night before with 40% of that night. Nights are built from the day of the week, the season (November's default; no published figure yet), meetings on the city calendar, the night before ocean-cruise departures (counted per ship), and visitor-heavy nights (Saints weekends, Tulane homecoming, Usher & Chris Brown). The Bayou Classic counts half of the calendar's 50,000, since many fans drive in for the day. The total is the month's average.",
+  "hotelOccupancySources": [
+    "https://www.neworleans.com/meeting-planners/convention-calendar/",
+    "https://www.hotel-online.com/news/whats-changed-in-new-orleans-tourism-industry-rising-visitors-but-a-steeper-summer-slump"
+  ],
   "events": [
     {
-      "id": "ev-8jfurcno",
-      "title": "Carnival Cruise Turn-Day",
+      "id": "ev-ikkypjj2",
+      "title": "Carnival Liberty turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-11-01",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 2978,
+      "impactWindow": "8:00 AM – 3:30 PM",
+      "location": "Erato St. Cruise Terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "Ship returns from its Oct 25 sailing and leaves on a 7-night cruise. About 2,978 guests off in the morning and 2,978 on for the afternoon departure (double-occupancy capacity). Dates from the ship's own itinerary.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://www.cruisemapper.com/ships/Carnival-Liberty-568"
       ]
     },
     {
-      "id": "ev-5ahm3xz2",
-      "title": "Disney's The Lion King Broadway Run Finale",
+      "id": "ev-hank5194",
+      "title": "Disney's The Lion King (final week)",
       "category": "Concerts",
       "startDate": "2026-11-01",
       "endDate": "2026-11-08",
-      "totalAttendance": 19200,
+      "totalAttendance": 26000,
       "dailyAttendance": {
-        "2026-11-01": 2400,
-        "2026-11-03": 2400,
-        "2026-11-04": 2400,
-        "2026-11-05": 2400,
-        "2026-11-06": 2400,
-        "2026-11-07": 2400,
-        "2026-11-08": 2400
+        "2026-11-01": 5200,
+        "2026-11-03": 2600,
+        "2026-11-04": 2600,
+        "2026-11-05": 2600,
+        "2026-11-06": 2600,
+        "2026-11-07": 5200,
+        "2026-11-08": 5200
       },
-      "impactWindow": "6:00 PM – 8:30 PM",
-      "location": "Saenger Theatre",
-      "proximity": "Canal St Corridor",
-      "notes": "Final week of Broadway musical run driving evening theater & dining traffic.",
+      "impactWindow": "1:00 PM – 10:00 PM",
+      "location": "Saenger Theatre (1111 Canal St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Touring Broadway run, Oct 21 – Nov 8 (October's list has the first part). Estimate 2,600 a show, with matinees on the weekends and no Monday show, following October's published pattern; November show times weren't listed online yet. Each show is a different audience, so the days are summed.",
       "sources": [
-        "Saenger NOLA"
+        "https://us.atgtickets.com/events/disneys-the-lion-king/saenger-theatre/",
+        "https://us.atgtickets.com/venues/saenger-theatre/"
       ]
     },
     {
-      "id": "ev-8kbdqt8l",
-      "title": "Hotel & Mid-Sized Registered Conventions",
-      "category": "Conventions",
-      "startDate": "2026-11-01",
-      "totalAttendance": 2000,
-      "impactWindow": "10:00 AM – 4:00 PM",
-      "location": "French Quarter & CBD Hotels",
-      "proximity": "Convention Center Corridor",
-      "notes": "Daily total of registered hotel meetings and small conferences.",
-      "sources": [
-        "New Orleans & Company Calendar"
-      ]
-    },
-    {
-      "id": "ev-g1xdha6m",
-      "title": "Oak Street Po-Boy Festival",
+      "id": "ev-q8chrca3",
+      "title": "Halloween New Orleans – closing Tea Dance & second line",
       "category": "Festivals",
       "startDate": "2026-11-01",
-      "totalAttendance": 18000,
-      "impactWindow": "11:00 AM – 6:00 PM",
-      "location": "Oak St Commercial District / Carrollton",
-      "proximity": "Outer French Quarter Radius",
-      "notes": "Popular local food and music festival in Uptown New Orleans.",
+      "totalAttendance": 300,
+      "impactWindow": "1:00 PM – 5:00 PM",
+      "location": "Woldenberg Riverfront Park great lawn; second line to Lafitte's in Exile (901 Bourbon St.)",
+      "proximity": "French Quarter Riverfront",
+      "notes": "Sunday close of Halloween New Orleans weekend (an LGBTQ+ fundraiser that draws out-of-town visitors): ticketed Tea Dance 1:00–4:30 PM, with a second line leaving at 4:15 PM for Lafitte's in Exile (300 people on the permit).",
       "sources": [
-        "New Orleans Events & Festivals"
+        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-27264-SPMA",
+        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-23148-SPMA"
       ]
     },
     {
-      "id": "ev-g3ih3xj1",
-      "title": "Tours of Distinction Cajun & NOLA Charter",
-      "category": "Tours/Charters",
-      "startDate": "2026-11-01",
-      "endDate": "2026-11-07",
-      "totalAttendance": 350,
-      "dailyAttendance": {
-        "2026-11-01": 100,
-        "2026-11-02": 250,
-        "2026-11-03": 250
-      },
-      "impactWindow": "9:00 AM – 3:00 PM",
-      "location": "French Market & Decatur Corridor",
-      "proximity": "Direct Market Proximity",
-      "notes": "Multi-day guided charter bus tour featuring direct drop-offs at Jackson Square",
-      "sources": [
-        "Cafe du Monde"
-      ]
-    },
-    {
-      "id": "ev-comrwwaq",
-      "title": "Viking Mississippi Southern Charms Cruise",
+      "id": "ev-m2pktoaa",
+      "title": "Mariner of the Seas – first New Orleans departure",
       "category": "Cruise Ships",
       "startDate": "2026-11-01",
-      "totalAttendance": 380,
-      "impactWindow": "8:00 AM – 1:00 PM",
-      "location": "Poydras St Wharf / Canal St Riverfront",
-      "proximity": "Direct Market Proximity",
-      "notes": "Small-ship river cruise turn day bringing disembarking passengers into the lower Quarter.",
+      "totalAttendance": 3334,
+      "impactWindow": "8:00 AM – 4:00 PM",
+      "location": "Julia St. Cruise Terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "Royal Caribbean's ship starts its New Orleans season with a 6-night cruise. It sailed from Galveston through Oct 30 and no cruise into New Orleans is listed, so today is mainly a boarding day: about 3,334 guests board for the 4:00 PM departure (double-occupancy capacity). Dates from the ship's own itinerary.",
       "sources": [
-        "Viking River Cruises"
+        "https://www.cruisemapper.com/ships/Mariner-Of-The-Seas-609",
+        "https://cruisedayguide.com/guide/new-orleans/sailings/november-2026",
+        "https://crew-center.com/new-orleans-louisiana-cruise-ship-schedule"
       ]
     },
     {
-      "id": "ev-5vog7t64",
-      "title": "Hotel & Mid-Sized Registered Conventions",
+      "id": "ev-28loknwp",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-11-01",
+      "totalAttendance": 1570,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "7 smaller meetings in session on the city calendar. Large conventions listed separately are left out of this total. Counted once per day.",
+      "sources": [
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
+      ]
+    },
+    {
+      "id": "ev-tmb4a6go",
+      "title": "Tours of Distinction – New Orleans & Louisiana Cajun Country",
+      "category": "Tours/Charters",
+      "startDate": "2026-11-01",
+      "endDate": "2026-11-03",
+      "totalAttendance": 34,
+      "dailyAttendance": {
+        "2026-11-01": 34,
+        "2026-11-02": 34,
+        "2026-11-03": 34
+      },
+      "impactWindow": "9:00 AM – 3:00 PM",
+      "location": "French Quarter; Mon Nov 2 guided walking tour includes the French Market",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Escorted tour Nov 1–7 for 24–34 guests, in New Orleans days 1–3 (day 7 is only the airport transfer). Monday Nov 2 is a guided French Quarter walking tour that includes the French Market and Café du Monde, then a Steamboat Natchez cruise. The figure is the group's maximum. Counted once.",
+      "sources": [
+        "https://www.toursofdistinction.net/escorted-tour-calendar-2026/",
+        "https://tourhub.co/tour/tours-of-distinction/new-orleans-and-louisiana-cajun-country/nocc"
+      ]
+    },
+    {
+      "id": "ev-greqz1y2",
+      "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-11-02",
-      "totalAttendance": 3000,
+      "totalAttendance": 1820,
       "impactWindow": "10:00 AM – 4:00 PM",
-      "location": "French Quarter & CBD Hotels",
-      "proximity": "Convention Center Corridor",
-      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "11 smaller meetings in session on the city calendar. Large conventions listed separately are left out of this total. Counted once per day.",
       "sources": [
-        "New Orleans & Company Calendar"
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-qokg64zr",
-      "title": "Vision 2026 - Vantaca Conference",
+      "id": "ev-jafiri7h",
+      "title": "DEMA Show 2026 (Diving Equipment & Marketing Association)",
       "category": "Conventions",
       "startDate": "2026-11-03",
-      "endDate": "2026-11-05",
-      "totalAttendance": 1500,
+      "endDate": "2026-11-06",
+      "totalAttendance": 10000,
       "dailyAttendance": {
-        "2026-11-03": 1500,
-        "2026-11-04": 1500,
-        "2026-11-05": 1500
+        "2026-11-03": 10000,
+        "2026-11-04": 10000,
+        "2026-11-05": 10000,
+        "2026-11-06": 10000
       },
       "impactWindow": "10:00 AM – 4:00 PM",
-      "location": "Hyatt Regency New Orleans",
-      "proximity": "Convention Center Corridor",
-      "notes": "Corporate software and industry conference.",
+      "location": "Ernest N. Morial Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "Dive and water-sports industry trade show, about 10,000 (New Orleans & Company; city calendar 'Trade Shows & Expositions'). Counted once per day.",
       "sources": [
-        "Hyatt Regency Events / Tradefest"
+        "https://www.neworleans.com/articles/post/major-conventions-and-meetings-position-new-orleans-for-a-strong-finish-to-2026/",
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-kei9vs93",
+      "id": "ev-be6cx397",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-11-03",
+      "totalAttendance": 1840,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "12 smaller meetings in session on the city calendar. Large conventions listed separately are left out of this total. Counted once per day.",
+      "sources": [
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
+      ]
+    },
+    {
+      "id": "ev-trbex6mj",
       "title": "Pelicans vs. Utah Jazz",
       "category": "Sports",
       "startDate": "2026-11-04",
-      "totalAttendance": 17000,
-      "impactWindow": "5:00 PM – 7:00 PM",
+      "totalAttendance": 16867,
+      "impactWindow": "6:00 PM – 9:30 PM",
       "location": "Smoothie King Center",
-      "proximity": "Superdome / CBD Corridor",
-      "notes": "NBA Regular Season Home Game.",
+      "proximity": "Superdome",
+      "notes": "Tip-off 7:00 PM Central. Evening only; little overlap with market business hours. Attendance = arena capacity (an upper bound).",
       "sources": [
-        "NBA Schedule"
+        "https://www.basketball-reference.com/teams/NOP/2027_games.html",
+        "https://en.wikipedia.org/wiki/Smoothie_King_Center"
       ]
     },
     {
-      "id": "ev-6412dmgp",
-      "title": "Carnival Cruise Turn-Day",
+      "id": "ev-qskex6nl",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-11-04",
+      "totalAttendance": 2020,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "13 smaller meetings in session on the city calendar. Large conventions listed separately are left out of this total. Counted once per day.",
+      "sources": [
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
+      ]
+    },
+    {
+      "id": "ev-bbt3btne",
+      "title": "Smaller evening shows (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-11-04",
+      "totalAttendance": 700,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "House of Blues",
+      "proximity": "Canal St. / CBD",
+      "notes": "Touring acts likely to draw fans from out of town: The Living Tombstone, House of Blues (~700). Estimates at about 85% of each venue's size (no counts published). Evening only; little overlap with market business hours.",
+      "sources": [
+        "https://www.songkick.com/metro-areas/11772-us-new-orleans?filters%5BminDate%5D=11%2F01%2F2026&filters%5BmaxDate%5D=11%2F30%2F2026",
+        "https://www.setlist.fm/venue/house-of-blues-new-orleans-la-usa-23d61c9f.html"
+      ]
+    },
+    {
+      "id": "ev-lsqkuigi",
+      "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-11-05",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 2984,
+      "impactWindow": "8:00 AM – 3:30 PM",
+      "location": "Erato St. Cruise Terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "Ship returns from its Oct 31 sailing and leaves on a 4-night cruise. About 2,984 guests off in the morning and 2,984 on for the afternoon departure (double-occupancy capacity). Dates from the ship's own itinerary.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://www.cruisemapper.com/ships/Carnival-Valor-604"
       ]
     },
     {
-      "id": "ev-33zeug9g",
-      "title": "Pelicans vs. Minnesota Timberwolves (NBA Cup)",
+      "id": "ev-jztr1gfd",
+      "title": "NAR NXT (National Association of REALTORS)",
+      "category": "Conventions",
+      "startDate": "2026-11-05",
+      "endDate": "2026-11-09",
+      "totalAttendance": 11000,
+      "dailyAttendance": {
+        "2026-11-05": 11000,
+        "2026-11-06": 11000,
+        "2026-11-07": 11000,
+        "2026-11-08": 11000,
+        "2026-11-09": 11000
+      },
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Ernest N. Morial Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "The Realtors' annual conference and expo, about 11,000 (New Orleans & Company; city calendar). Counted once per day.",
+      "sources": [
+        "https://www.neworleans.com/articles/post/major-conventions-and-meetings-position-new-orleans-for-a-strong-finish-to-2026/",
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
+      ]
+    },
+    {
+      "id": "ev-eixjeihw",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-11-05",
+      "totalAttendance": 1765,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "10 smaller meetings in session on the city calendar. Large conventions listed separately are left out of this total. Counted once per day.",
+      "sources": [
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
+      ]
+    },
+    {
+      "id": "ev-5cv9bksj",
+      "title": "Smaller evening shows (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-11-05",
+      "totalAttendance": 3700,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "Mahalia Jackson Theater; The Fillmore",
+      "proximity": "Canal St. / CBD",
+      "notes": "Touring acts likely to draw fans from out of town: Thundercat & Channel Tres, The Fillmore (~1,900); Anthony Jeselnik, Mahalia Jackson Theater (~1,800). Estimates at about 85% of each venue's size (no counts published). Evening only; little overlap with market business hours.",
+      "sources": [
+        "https://www.songkick.com/metro-areas/11772-us-new-orleans?filters%5BminDate%5D=11%2F01%2F2026&filters%5BmaxDate%5D=11%2F30%2F2026",
+        "https://us.atgtickets.com/venues/mahalia-jackson-theater/"
+      ]
+    },
+    {
+      "id": "ev-akqxssoe",
+      "title": "Live music near the market (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-11-06",
+      "totalAttendance": 75,
+      "impactWindow": "11:00 AM – 11:45 AM",
+      "location": "French Market (Dutch Alley)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free or small shows within a few blocks of the sheds: Johnette Downing's Family Music Series, Dutch Alley (916 N. Peters), 11:00–11:45 AM (~75). Rough estimates (no counts published). The Jazz Museum has posted its calendar only through Nov 13 and the French Market only Nov 6 so far; recheck mid-month.",
+      "sources": [
+        "https://www.frenchmarket.org/events/month/2026-11/"
+      ]
+    },
+    {
+      "id": "ev-rmmavp8y",
+      "title": "Pelicans vs. Minnesota Timberwolves",
       "category": "Sports",
       "startDate": "2026-11-06",
-      "totalAttendance": 17000,
-      "impactWindow": "5:00 PM – 7:00 PM",
+      "totalAttendance": 16867,
+      "impactWindow": "6:00 PM – 9:30 PM",
       "location": "Smoothie King Center",
-      "proximity": "Superdome / CBD Corridor",
-      "notes": "NBA Cup Group Stage Home Game.",
+      "proximity": "Superdome",
+      "notes": "Tip-off 7:00 PM Central. Evening only; little overlap with market business hours. Attendance = arena capacity (an upper bound).",
       "sources": [
-        "NBA Schedule"
+        "https://www.basketball-reference.com/teams/NOP/2027_games.html",
+        "https://en.wikipedia.org/wiki/Smoothie_King_Center"
       ]
     },
     {
-      "id": "ev-yvp1ud6s",
-      "title": "Tremé Creole Gumbo & Congo Square Rhythms Festival",
-      "category": "Festivals",
+      "id": "ev-9iyajbrt",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
       "startDate": "2026-11-06",
-      "endDate": "2026-11-08",
-      "totalAttendance": 15000,
-      "dailyAttendance": {
-        "2026-11-06": 3000,
-        "2026-11-07": 7000,
-        "2026-11-08": 5000
-      },
-      "impactWindow": "11:00 AM – 7:00 PM",
-      "location": "Louis Armstrong Park",
-      "proximity": "Direct Market Proximity",
-      "notes": "Free heritage music festival adjacent to upper French Quarter.",
+      "totalAttendance": 3140,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "9 smaller meetings in session on the city calendar, including a 1,600-person veterans reunion (name not published). Large conventions listed separately are left out of this total. Counted once per day.",
       "sources": [
-        "Jazz & Heritage Foundation"
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-m2nkcc8x",
-      "title": "American Cruise Lines - Round Trip NOLA",
+      "id": "ev-axs45x7c",
+      "title": "Smaller evening shows (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-11-06",
+      "totalAttendance": 2600,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "House of Blues; The Fillmore",
+      "proximity": "Canal St. / CBD",
+      "notes": "Touring acts likely to draw fans from out of town: Pretty Lights (night 1 of 3), The Fillmore (~1,900); Jon B, House of Blues (~700). Estimates at about 85% of each venue's size (no counts published). Evening only; little overlap with market business hours.",
+      "sources": [
+        "https://www.songkick.com/metro-areas/11772-us-new-orleans?filters%5BminDate%5D=11%2F01%2F2026&filters%5BmaxDate%5D=11%2F30%2F2026"
+      ]
+    },
+    {
+      "id": "ev-6dt62o43",
+      "title": "Mariner of the Seas turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-11-07",
-      "endDate": "2026-11-08",
-      "totalAttendance": 200,
-      "dailyAttendance": {
-        "2026-11-07": 200,
-        "2026-11-08": 200
-      },
-      "impactWindow": "9:00 AM – 2:00 PM",
-      "location": "Toulouse St Wharf / French Quarter Riverfront",
-      "proximity": "Direct Market Proximity",
-      "notes": "Overnight riverboat stay bringing high-spending passengers into French Quarter shops and dining.",
+      "totalAttendance": 3334,
+      "impactWindow": "8:00 AM – 4:00 PM",
+      "location": "Julia St. Cruise Terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "Royal Caribbean's ship returns from its 6-night Nov 1 sailing and leaves on a 7-night cruise at 4:00 PM. About 3,334 guests off in the morning and 3,334 on in the afternoon (double-occupancy capacity). Dates from the ship's own itinerary.",
       "sources": [
-        "American Cruise Lines Schedule"
+        "https://www.cruisemapper.com/ships/Mariner-Of-The-Seas-609",
+        "https://cruisedayguide.com/guide/new-orleans/sailings/november-2026"
       ]
     },
     {
-      "id": "ev-5qkcmi1n",
-      "title": "Carnival Cruise Turn-Day",
-      "category": "Cruise Ships",
+      "id": "ev-oun18bss",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
       "startDate": "2026-11-07",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 2850,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "7 smaller meetings in session on the city calendar, including a 1,600-person veterans reunion (name not published). Large conventions listed separately are left out of this total. Counted once per day.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-f7a7hrli",
-      "title": "Carnival Cruise Turn-Day",
+      "id": "ev-f3qzlw8f",
+      "title": "Smaller evening shows (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-11-07",
+      "totalAttendance": 3200,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "Orpheum Theater; The Fillmore",
+      "proximity": "Canal St. / CBD",
+      "notes": "Touring acts likely to draw fans from out of town: Pretty Lights (night 2 of 3), The Fillmore (~1,900); D.L. Hughley, Orpheum Theater (~1,300). Estimates at about 85% of each venue's size (no counts published). Evening only; little overlap with market business hours.",
+      "sources": [
+        "https://www.songkick.com/metro-areas/11772-us-new-orleans?filters%5BminDate%5D=11%2F01%2F2026&filters%5BmaxDate%5D=11%2F30%2F2026",
+        "https://www.songkick.com/venues/115639-orpheum-theater"
+      ]
+    },
+    {
+      "id": "ev-1f5vbspc",
+      "title": "Tulane homecoming vs. Tulsa (Wave '26 Weekend)",
+      "category": "Sports",
+      "startDate": "2026-11-07",
+      "totalAttendance": 6000,
+      "impactWindow": "9:00 AM – 3:00 PM",
+      "location": "Yulman Stadium, Uptown",
+      "proximity": "Uptown (outside the zone)",
+      "notes": "Family weekend, homecoming and reunions together (Nov 5–8). Last year's homecoming was a 30,000 sellout. Listed under the visitors rule: 6,000 is a rough estimate of out-of-town parents and alumni, many of whom visit the Quarter over the weekend. Miles from the market.",
+      "sources": [
+        "https://tulanegreenwave.com/sports/football/schedule/text",
+        "https://families.tulane.edu/family-weekend"
+      ]
+    },
+    {
+      "id": "ev-wt9yqt90",
+      "title": "Carnival Liberty turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-11-08",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 2978,
+      "impactWindow": "8:00 AM – 3:30 PM",
+      "location": "Erato St. Cruise Terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "Ship returns from its Nov 1 sailing and leaves on a 7-night cruise. About 2,978 guests off in the morning and 2,978 on for the afternoon departure (double-occupancy capacity). Dates from the ship's own itinerary.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://www.cruisemapper.com/ships/Carnival-Liberty-568"
       ]
     },
     {
-      "id": "ev-z8jrm34c",
+      "id": "ev-k02yki5f",
       "title": "Saints vs. Cleveland Browns",
       "category": "Sports",
       "startDate": "2026-11-08",
-      "totalAttendance": 70000,
-      "impactWindow": "10:00 AM – 12:00 PM",
+      "totalAttendance": 73208,
+      "impactWindow": "9:00 AM – 12:00 PM",
       "location": "Caesars Superdome",
-      "proximity": "Superdome / CBD Corridor",
-      "notes": "NFL Regular Season Home Game (12:00 PM Kickoff).",
+      "proximity": "Superdome",
+      "notes": "Sunday, kickoff 12:00 PM. Attendance = stadium capacity (an upper bound).",
       "sources": [
-        "NFL Schedule"
+        "https://www.caesarssuperdome.com/events-tickets/pdf/",
+        "https://www.neworleanssaints.com/schedule/",
+        "https://en.wikipedia.org/wiki/Caesars_Superdome"
       ]
     },
     {
-      "id": "ev-7s42t09o",
-      "title": "Hotel & Mid-Sized Registered Conventions",
+      "id": "ev-ch5tr20c",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-11-08",
+      "totalAttendance": 4475,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "8 smaller meetings in session on the city calendar, including a 1,600-person veterans reunion (name not published). Large conventions listed separately are left out of this total. Counted once per day.",
+      "sources": [
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
+      ]
+    },
+    {
+      "id": "ev-5kegocsy",
+      "title": "Smaller evening shows (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-11-08",
+      "totalAttendance": 2600,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "House of Blues; The Fillmore",
+      "proximity": "Canal St. / CBD",
+      "notes": "Touring acts likely to draw fans from out of town: Pretty Lights (night 3 of 3), The Fillmore (~1,900); Hawthorne Heights, House of Blues (~700). Estimates at about 85% of each venue's size (no counts published). Evening only; little overlap with market business hours.",
+      "sources": [
+        "https://www.songkick.com/metro-areas/11772-us-new-orleans?filters%5BminDate%5D=11%2F01%2F2026&filters%5BmaxDate%5D=11%2F30%2F2026",
+        "https://www.setlist.fm/venue/house-of-blues-new-orleans-la-usa-23d61c9f.html"
+      ]
+    },
+    {
+      "id": "ev-a24t8hf0",
+      "title": "Carnival Valor turnaround",
+      "category": "Cruise Ships",
+      "startDate": "2026-11-09",
+      "totalAttendance": 2984,
+      "impactWindow": "8:00 AM – 3:30 PM",
+      "location": "Erato St. Cruise Terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "Ship returns from its Nov 5 sailing and leaves on a 5-night cruise. About 2,984 guests off in the morning and 2,984 on for the afternoon departure (double-occupancy capacity). Dates from the ship's own itinerary.",
+      "sources": [
+        "https://www.cruisemapper.com/ships/Carnival-Valor-604"
+      ]
+    },
+    {
+      "id": "ev-tr2bizcm",
+      "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-11-09",
-      "totalAttendance": 2000,
+      "totalAttendance": 5452,
       "impactWindow": "10:00 AM – 4:00 PM",
-      "location": "French Quarter & CBD Hotels",
-      "proximity": "Convention Center Corridor",
-      "notes": "Daily sum of registered hotel meetings.",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "17 smaller meetings in session on the city calendar, including a 1,600-person veterans reunion (name not published). Large conventions listed separately are left out of this total. Counted once per day.",
       "sources": [
-        "New Orleans & Company"
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-d5x40a9k",
-      "title": "Hotel & Mid-Sized Registered Conventions",
+      "id": "ev-yta8ox56",
+      "title": "AARC Congress 2026 (American Association for Respiratory Care)",
       "category": "Conventions",
       "startDate": "2026-11-10",
-      "totalAttendance": 2500,
+      "endDate": "2026-11-17",
+      "totalAttendance": 5500,
+      "dailyAttendance": {
+        "2026-11-10": 5500,
+        "2026-11-11": 5500,
+        "2026-11-12": 5500,
+        "2026-11-13": 5500,
+        "2026-11-14": 5500,
+        "2026-11-15": 5500,
+        "2026-11-16": 5500,
+        "2026-11-17": 5500
+      },
       "impactWindow": "10:00 AM – 4:00 PM",
-      "location": "French Quarter & CBD Hotels",
-      "proximity": "Convention Center Corridor",
-      "notes": "Daily sum of registered hotel meetings.",
+      "location": "Ernest N. Morial Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "About 5,500 at the Convention Center (New Orleans & Company; city calendar 'Health & Medical', Nov 10–17). Counted once per day.",
       "sources": [
-        "New Orleans & Company"
+        "https://www.neworleans.com/articles/post/major-conventions-and-meetings-position-new-orleans-for-a-strong-finish-to-2026/",
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-og1edslm",
-      "title": "Hotel & Mid-Sized Registered Conventions",
+      "id": "ev-9pyk6zmo",
+      "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
-      "startDate": "2026-11-11",
-      "totalAttendance": 2000,
+      "startDate": "2026-11-10",
+      "totalAttendance": 4312,
       "impactWindow": "10:00 AM – 4:00 PM",
-      "location": "French Quarter & CBD Hotels",
-      "proximity": "Convention Center Corridor",
-      "notes": "Daily sum of registered hotel meetings.",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "18 smaller meetings in session on the city calendar. Large conventions listed separately are left out of this total. Counted once per day.",
       "sources": [
-        "New Orleans & Company"
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-4b0ytocs",
+      "id": "ev-wmqrr1h3",
+      "title": "Smaller evening shows (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-11-10",
+      "totalAttendance": 1000,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "Civic Theatre",
+      "proximity": "Canal St. / CBD",
+      "notes": "Touring acts likely to draw fans from out of town: Mannequin Pussy & Wednesday, Civic Theatre (~1,000). Estimates at about 85% of each venue's size (no counts published). Evening only; little overlap with market business hours.",
+      "sources": [
+        "https://www.songkick.com/metro-areas/11772-us-new-orleans?filters%5BminDate%5D=11%2F01%2F2026&filters%5BmaxDate%5D=11%2F30%2F2026"
+      ]
+    },
+    {
+      "id": "ev-pby99xe1",
+      "title": "New Orleans Arts & Ideas Festival (NOAI)",
+      "category": "Festivals",
+      "startDate": "2026-11-11",
+      "endDate": "2026-11-13",
+      "totalAttendance": 300,
+      "dailyAttendance": {
+        "2026-11-11": 300,
+        "2026-11-12": 300,
+        "2026-11-13": 300
+      },
+      "impactWindow": "4:00 PM – 10:00 PM",
+      "location": "New Orleans Jazz Museum (400 Esplanade Ave.)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Ticketed ($55) festival of talks, panels and workshops, with music; each evening ends with a second line parade (route not published), and Friday the 13th has an afterparty. Nov 11 runs 4–10 PM; later days' times aren't posted yet. Rough estimate of ~300 a day (no count published), counted once.",
+      "sources": [
+        "https://nolajazzmuseum.org/events"
+      ]
+    },
+    {
+      "id": "ev-vqetqd4n",
       "title": "Pelicans vs. Brooklyn Nets",
       "category": "Sports",
       "startDate": "2026-11-11",
-      "totalAttendance": 17000,
-      "impactWindow": "5:00 PM – 7:00 PM",
+      "totalAttendance": 16867,
+      "impactWindow": "6:00 PM – 9:30 PM",
       "location": "Smoothie King Center",
-      "proximity": "Superdome / CBD Corridor",
-      "notes": "NBA Regular Season Home Game.",
+      "proximity": "Superdome",
+      "notes": "Tip-off 7:00 PM Central. Evening only; little overlap with market business hours. Attendance = arena capacity (an upper bound).",
       "sources": [
-        "NBA Schedule"
+        "https://www.basketball-reference.com/teams/NOP/2027_games.html",
+        "https://en.wikipedia.org/wiki/Smoothie_King_Center"
       ]
     },
     {
-      "id": "ev-kzfdk16f",
-      "title": "Carnival Cruise Turn-Day",
-      "category": "Cruise Ships",
-      "startDate": "2026-11-12",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "id": "ev-7f0bgmhx",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-11-11",
+      "totalAttendance": 6636,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "20 smaller meetings in session on the city calendar. Large conventions listed separately are left out of this total. Counted once per day.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-xjf4c0sk",
-      "title": "Hotel & Mid-Sized Registered Conventions",
+      "id": "ev-ewuvg6v6",
+      "title": "Large corporate meeting (name not published)",
       "category": "Conventions",
       "startDate": "2026-11-12",
-      "totalAttendance": 3000,
-      "impactWindow": "10:00 AM – 4:00 PM",
-      "location": "French Quarter & CBD Hotels",
-      "proximity": "Convention Center Corridor",
-      "notes": "Daily sum of registered hotel meetings.",
-      "sources": [
-        "New Orleans & Company"
-      ]
-    },
-    {
-      "id": "ev-k0o4tvmz",
-      "title": "American Cruise Lines - Highlights of the Mississippi",
-      "category": "Cruise Ships",
-      "startDate": "2026-11-13",
       "endDate": "2026-11-14",
-      "totalAttendance": 200,
+      "totalAttendance": 8500,
       "dailyAttendance": {
-        "2026-11-13": 200,
-        "2026-11-14": 200
+        "2026-11-12": 8500,
+        "2026-11-13": 8500,
+        "2026-11-14": 8500
       },
-      "impactWindow": "8:30 AM – 1:00 PM",
-      "location": "Toulouse St Wharf / French Quarter Riverfront",
-      "proximity": "Direct Market Proximity",
-      "notes": "Riverboat return disembarkation and new passenger boarding at Toulouse St Wharf.",
-      "sources": [
-        "American Cruise Lines Schedule"
-      ]
-    },
-    {
-      "id": "ev-3a5dh8up",
-      "title": "Hotel & Mid-Sized Registered Conventions",
-      "category": "Conventions",
-      "startDate": "2026-11-13",
-      "totalAttendance": 3000,
       "impactWindow": "10:00 AM – 4:00 PM",
-      "location": "French Quarter & CBD Hotels",
-      "proximity": "Convention Center Corridor",
-      "notes": "Daily sum of registered hotel meetings.",
+      "location": "Downtown (venue not published)",
+      "proximity": "MCCNO Corridor",
+      "notes": "The city convention calendar lists an 8,500-person 'Corp General' meeting Nov 12–14 without a name; New Orleans & Company's release doesn't name it. Counted once per day.",
       "sources": [
-        "New Orleans & Company"
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-pdua7h6u",
-      "title": "Pelicans vs. Memphis Grizzlies (NBA Cup)",
+      "id": "ev-h1fpn6ti",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-11-12",
+      "totalAttendance": 6150,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "19 smaller meetings in session on the city calendar. Large conventions listed separately are left out of this total. Counted once per day.",
+      "sources": [
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
+      ]
+    },
+    {
+      "id": "ev-5680ahd8",
+      "title": "American Cruise Lines – Highlights of the Mississippi (embarkation)",
+      "category": "Cruise Ships",
+      "startDate": "2026-11-13",
+      "totalAttendance": 180,
+      "location": "New Orleans riverfront (dock not published)",
+      "proximity": "Riverfront (dock not published)",
+      "notes": "8-day round trip from New Orleans departs today; up to about 180 guests. Ship not named on the cruise line's page; times not published.",
+      "sources": [
+        "https://www.americancruiselines.com/cruises/mississippi-river-cruises/highlights-of-the-mississippi-cruise"
+      ]
+    },
+    {
+      "id": "ev-9st29arm",
+      "title": "Pelicans vs. Memphis Grizzlies",
       "category": "Sports",
       "startDate": "2026-11-13",
-      "totalAttendance": 17000,
-      "impactWindow": "5:00 PM – 7:00 PM",
+      "totalAttendance": 16867,
+      "impactWindow": "6:00 PM – 9:30 PM",
       "location": "Smoothie King Center",
-      "proximity": "Superdome / CBD Corridor",
-      "notes": "NBA Cup Group Stage Home Game.",
+      "proximity": "Superdome",
+      "notes": "Tip-off 7:00 PM Central. Evening only; little overlap with market business hours. Attendance = arena capacity (an upper bound).",
       "sources": [
-        "NBA Schedule"
+        "https://www.basketball-reference.com/teams/NOP/2027_games.html",
+        "https://en.wikipedia.org/wiki/Smoothie_King_Center"
       ]
     },
     {
-      "id": "ev-py49q0ub",
-      "title": "Victory Ball",
-      "category": "Miscellaneous",
-      "startDate": "2026-11-13",
-      "totalAttendance": 1200,
-      "impactWindow": "6:00 PM – 10:00 PM",
-      "location": "National WWII Museum (US Freedom Pavilion)",
-      "proximity": "CBD / Outer French Quarter Radius",
-      "notes": "Annual Veterans Day weekend military appreciation gala drawing active-duty service members",
-      "sources": [
-        "veterans"
-      ]
-    },
-    {
-      "id": "ev-zei9th5y",
-      "title": "AARC International Congress 2026",
+      "id": "ev-hdudcj8w",
+      "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
-      "startDate": "2026-11-14",
-      "endDate": "2026-11-17",
+      "startDate": "2026-11-13",
+      "totalAttendance": 5475,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "13 smaller meetings in session on the city calendar. Large conventions listed separately are left out of this total. Counted once per day.",
+      "sources": [
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
+      ]
+    },
+    {
+      "id": "ev-kvlazysu",
+      "title": "We Belong Here (electronic music festival)",
+      "category": "Festivals",
+      "startDate": "2026-11-13",
+      "endDate": "2026-11-15",
       "totalAttendance": 6000,
       "dailyAttendance": {
+        "2026-11-13": 6000,
         "2026-11-14": 6000,
-        "2026-11-15": 6000,
-        "2026-11-16": 6000,
-        "2026-11-17": 6000
+        "2026-11-15": 6000
       },
-      "impactWindow": "10:30 AM – 2:30 PM",
-      "location": "Ernest N. Morial Convention Center",
-      "proximity": "Convention Center Corridor",
-      "notes": "National medical congress driving Quarter hotel and dining crowds.",
+      "impactWindow": "2:00 PM – 10:00 PM",
+      "location": "Woldenberg Riverfront Park (1 Canal St.), fenced section",
+      "proximity": "French Quarter Riverfront",
+      "notes": "Ticketed, 21+ boutique EDM festival, 2–10 PM each day, capped at 6,000 a day (organizer's permit, applied Sept 10; still under review on Sept 30). Ticket listings for all three days turned up in searches. Counted once, like a multi-day-pass festival; the daily figure is the cap (an upper bound).",
       "sources": [
-        "MCCNO Schedule"
+        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-23244-SPMA"
       ]
     },
     {
-      "id": "ev-s2v8qcl7",
-      "title": "Carnival Cruise Turn-Day",
+      "id": "ev-qctdpup9",
+      "title": "Wedding second line (Marché → Pat O'Brien's)",
+      "category": "Parades",
+      "startDate": "2026-11-13",
+      "totalAttendance": 100,
+      "impactWindow": "9:30 PM – 10:00 PM",
+      "location": "Marché (914 N. Peters St.) to Pat O'Brien's",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Private second line with a 6-piece band and grand marshal; starts next to the Farmers Market. Evening only; little overlap with market business hours. Guest count isn't on the permit; 100 is typical of this year's private second-line permits.",
+      "sources": [
+        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-24552-SPMA"
+      ]
+    },
+    {
+      "id": "ev-f5mv6rrx",
+      "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-11-14",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 2984,
+      "impactWindow": "8:00 AM – 3:30 PM",
+      "location": "Erato St. Cruise Terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "Ship returns from its Nov 9 sailing and leaves on a 5-night cruise. About 2,984 guests off in the morning and 2,984 on for the afternoon departure (double-occupancy capacity). Dates from the ship's own itinerary.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://www.cruisemapper.com/ships/Carnival-Valor-604"
       ]
     },
     {
-      "id": "ev-8xbv2evq",
+      "id": "ev-1y2d3xq6",
       "title": "Family and Military Appreciation Block Party",
+      "category": "Festivals",
+      "startDate": "2026-11-14",
+      "totalAttendance": 2000,
+      "impactWindow": "9:00 AM – 3:00 PM",
+      "location": "The National WWII Museum (945 Magazine St.)",
+      "proximity": "MCCNO Corridor",
+      "notes": "Free family block party at the WWII Museum, Saturday 9 AM–3 PM. Rough estimate (no count published).",
+      "sources": [
+        "https://www.nationalww2museum.org/events-programs/events/family-and-military-appreciation-block-party"
+      ]
+    },
+    {
+      "id": "ev-fkq21r7x",
+      "title": "Mariner of the Seas turnaround",
+      "category": "Cruise Ships",
+      "startDate": "2026-11-14",
+      "totalAttendance": 3334,
+      "impactWindow": "8:00 AM – 4:00 PM",
+      "location": "Julia St. Cruise Terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "Royal Caribbean's ship returns from its Nov 7 sailing and leaves on a 7-night cruise at 4:00 PM. About 3,334 guests off in the morning and 3,334 on in the afternoon (double-occupancy capacity). Dates from the ship's own itinerary.",
+      "sources": [
+        "https://www.cruisemapper.com/ships/Mariner-Of-The-Seas-609",
+        "https://cruisedayguide.com/guide/new-orleans/sailings/november-2026"
+      ]
+    },
+    {
+      "id": "ev-zowgclbv",
+      "title": "New Orleans Marathon (marathon, half, 5K)",
       "category": "Miscellaneous",
       "startDate": "2026-11-14",
-      "totalAttendance": 3500,
-      "impactWindow": "9:00 AM – 3:00 PM",
-      "location": "National WWII Museum (Magazine & Andrew Higgins)",
-      "proximity": "CBD / Outer French Quarter Radius",
-      "notes": "Annual Veterans Day weekend military block party with live entertainment driving veteran motorcoach groups and families into the CBD and adjacent Quarter.",
+      "totalAttendance": 1500,
+      "impactWindow": "6:30 AM – 1:00 PM",
+      "location": "City Park: starts at the New Orleans Museum of Art, finishes on Roosevelt Mall",
+      "proximity": "City Park (outside the zone)",
+      "notes": "Saturday race weekend; 5K at 6:30 AM, marathon and half at 7:30 AM, through City Park, Bayou St. John and the Lakefront. Listed under the visitors rule: destination-race runners stay downtown and visit the Quarter. 1,500 is a rough estimate of out-of-town runners and companions (no field size published). Miles from the market.",
       "sources": [
-        "National WWII Museum / New Orleans & Company"
+        "https://runsignup.com/neworleansmarathon",
+        "https://www.runguides.com/new-orleans/runs"
       ]
     },
     {
-      "id": "ev-yy15xlzg",
-      "title": "International Pool | Spa | Patio Expo",
-      "category": "Conventions",
-      "startDate": "2026-11-14",
-      "endDate": "2026-11-19",
-      "totalAttendance": 11000,
-      "dailyAttendance": {
-        "2026-11-14": 2000,
-        "2026-11-15": 2000,
-        "2026-11-16": 2500,
-        "2026-11-17": 2000,
-        "2026-11-18": 1500,
-        "2026-11-19": 1000
-      },
-      "impactWindow": "10:30 AM – 2:30 PM",
-      "location": "Ernest N. Morial Convention Center",
-      "proximity": "Convention Center Corridor",
-      "notes": "Major national trade exhibition driving lunch & dining traffic.",
-      "sources": [
-        "MCCNO Official Schedule"
-      ]
-    },
-    {
-      "id": "ev-wy7s7mf6",
-      "title": "NOLA November Youth Soccer Classic",
-      "category": "Youth Events",
-      "startDate": "2026-11-14",
-      "endDate": "2026-11-15",
-      "totalAttendance": 3500,
-      "dailyAttendance": {
-        "2026-11-14": 1750,
-        "2026-11-15": 1750
-      },
-      "impactWindow": "8:00 AM – 4:00 PM",
-      "location": "Pan American Stadium / Regional Grounds",
-      "proximity": "Greater New Orleans Area",
-      "notes": "Youth sports tournament bringing visiting families to Quarter restaurants.",
-      "sources": [
-        "Tourneyboard"
-      ]
-    },
-    {
-      "id": "ev-uossrvkp",
+      "id": "ev-cj6eays1",
       "title": "Pelicans vs. Denver Nuggets",
       "category": "Sports",
       "startDate": "2026-11-14",
-      "totalAttendance": 17000,
-      "impactWindow": "4:00 PM – 6:00 PM",
+      "totalAttendance": 16867,
+      "impactWindow": "5:00 PM – 9:30 PM",
       "location": "Smoothie King Center",
-      "proximity": "Superdome / CBD Corridor",
-      "notes": "NBA Regular Season Home Game.",
+      "proximity": "Superdome",
+      "notes": "Tip-off 6:00 PM Central. Evening only; little overlap with market business hours. Attendance = arena capacity (an upper bound).",
       "sources": [
-        "NBA Schedule"
+        "https://www.basketball-reference.com/teams/NOP/2027_games.html",
+        "https://en.wikipedia.org/wiki/Smoothie_King_Center"
       ]
     },
     {
-      "id": "ev-dwt746wy",
-      "title": "Carnival Cruise Turn-Day",
+      "id": "ev-7bdd3ql4",
+      "title": "Second line (Jackson Square → Frenchmen St.)",
+      "category": "Parades",
+      "startDate": "2026-11-14",
+      "totalAttendance": 50,
+      "impactWindow": "7:00 PM – 8:00 PM",
+      "location": "Jackson Square to Frenchmen St. (route not given; the direct way runs along Decatur past the market)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Private second line, 50 people including the band (permit). Evening only; little overlap with market business hours.",
+      "sources": [
+        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-27994-SPMA"
+      ]
+    },
+    {
+      "id": "ev-xzxhg6br",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-11-14",
+      "totalAttendance": 6965,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "13 smaller meetings in session on the city calendar. Large conventions listed separately are left out of this total. Counted once per day.",
+      "sources": [
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
+      ]
+    },
+    {
+      "id": "ev-ir4u3utq",
+      "title": "Tremé Creole Gumbo Festival",
+      "category": "Festivals",
+      "startDate": "2026-11-14",
+      "endDate": "2026-11-15",
+      "totalAttendance": 10000,
+      "dailyAttendance": {
+        "2026-11-14": 6000,
+        "2026-11-15": 4000
+      },
+      "impactWindow": "11:00 AM – 8:00 PM",
+      "location": "Louis Armstrong Park (701 N. Rampart St.)",
+      "proximity": "Armstrong Park / Tremé",
+      "notes": "Free Jazz & Heritage Foundation festival with brass bands and gumbo, Sat–Sun 11 AM–8 PM (Gemini had Nov 6–8). Rough estimate (no count published).",
+      "sources": [
+        "https://www.jazzandheritage.org/2026-treme-food-vendor-application/",
+        "https://www.blackevents.us/event/new-orleans-treme-creole-gumbo-festival-2026-11-14"
+      ]
+    },
+    {
+      "id": "ev-fuhmwp63",
+      "title": "Carnival Liberty turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-11-15",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 2978,
+      "impactWindow": "8:00 AM – 3:30 PM",
+      "location": "Erato St. Cruise Terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "Ship returns from its Nov 8 sailing and leaves on a 6-night cruise. About 2,978 guests off in the morning and 2,978 on for the afternoon departure (double-occupancy capacity). Dates from the ship's own itinerary.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://www.cruisemapper.com/ships/Carnival-Liberty-568"
       ]
     },
     {
-      "id": "ev-r64bea0v",
+      "id": "ev-n71a693f",
+      "title": "Road Scholar – Signature City New Orleans",
+      "category": "Tours/Charters",
+      "startDate": "2026-11-15",
+      "endDate": "2026-11-20",
+      "totalAttendance": 30,
+      "dailyAttendance": {
+        "2026-11-15": 30,
+        "2026-11-16": 30,
+        "2026-11-17": 30,
+        "2026-11-18": 30,
+        "2026-11-19": 30,
+        "2026-11-20": 30
+      },
+      "impactWindow": "9:00 AM – 4:00 PM",
+      "location": "French Quarter and other neighborhoods (field trips)",
+      "proximity": "French Quarter (interior)",
+      "notes": "Educational program Nov 15–20 with field trips inside and outside the French Quarter. Group size not published; estimate ~30. Counted once.",
+      "sources": [
+        "https://www.roadscholar.org/find-an-adventure/2856/Signature-City-New-Orleans"
+      ]
+    },
+    {
+      "id": "ev-d10jkncs",
       "title": "Saints vs. Carolina Panthers",
       "category": "Sports",
       "startDate": "2026-11-15",
-      "totalAttendance": 70000,
-      "impactWindow": "10:00 AM – 12:00 PM",
+      "totalAttendance": 73208,
+      "impactWindow": "9:00 AM – 12:00 PM",
       "location": "Caesars Superdome",
-      "proximity": "Superdome / CBD Corridor",
-      "notes": "NFL Regular Season Home Game (12:00 PM Kickoff).",
+      "proximity": "Superdome",
+      "notes": "Sunday, kickoff 12:00 PM. Attendance = stadium capacity (an upper bound).",
       "sources": [
-        "NFL Schedule"
+        "https://www.caesarssuperdome.com/events-tickets/pdf/",
+        "https://www.neworleanssaints.com/schedule/",
+        "https://en.wikipedia.org/wiki/Caesars_Superdome"
       ]
     },
     {
-      "id": "ev-vuk0a6yz",
+      "id": "ev-tmti93fz",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-11-15",
+      "totalAttendance": 7489,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "17 smaller meetings in session on the city calendar. Large conventions listed separately are left out of this total. Counted once per day.",
+      "sources": [
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
+      ]
+    },
+    {
+      "id": "ev-97lmd0vw",
       "title": "Pelicans vs. Golden State Warriors",
       "category": "Sports",
       "startDate": "2026-11-16",
-      "totalAttendance": 17000,
-      "impactWindow": "5:00 PM – 7:00 PM",
+      "totalAttendance": 16867,
+      "impactWindow": "6:00 PM – 9:30 PM",
       "location": "Smoothie King Center",
-      "proximity": "Superdome / CBD Corridor",
-      "notes": "NBA Regular Season Home Game.",
+      "proximity": "Superdome",
+      "notes": "Tip-off 7:00 PM Central. Evening only; little overlap with market business hours. Attendance = arena capacity (an upper bound).",
       "sources": [
-        "NBA Schedule"
+        "https://www.basketball-reference.com/teams/NOP/2027_games.html",
+        "https://en.wikipedia.org/wiki/Smoothie_King_Center"
       ]
     },
     {
-      "id": "ev-ygu6zgq1",
+      "id": "ev-aaf5t14m",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-11-16",
+      "totalAttendance": 6280,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "18 smaller meetings in session on the city calendar. Large conventions listed separately are left out of this total. Counted once per day.",
+      "sources": [
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
+      ]
+    },
+    {
+      "id": "ev-pomkbuh8",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-11-17",
+      "totalAttendance": 6919,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "18 smaller meetings in session on the city calendar, including probably the International Pool | Spa | Patio Expo (show floor Nov 17–19, Convention Center). Large conventions listed separately are left out of this total. Counted once per day.",
+      "sources": [
+        "https://www.neworleans.com/meeting-planners/convention-calendar/",
+        "https://www.serviceindustrynews.net/2025/11/17/international-pool-spa-patio-expo/"
+      ]
+    },
+    {
+      "id": "ev-mqs81jvo",
+      "title": "National Communication Association 112th Annual Convention",
+      "category": "Conventions",
+      "startDate": "2026-11-18",
+      "endDate": "2026-11-21",
+      "totalAttendance": 5500,
+      "dailyAttendance": {
+        "2026-11-18": 5500,
+        "2026-11-19": 5500,
+        "2026-11-20": 5500,
+        "2026-11-21": 5500
+      },
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "New Orleans Marriott and Sheraton New Orleans (Canal St.)",
+      "proximity": "Canal St. / CBD",
+      "notes": "About 5,500 (New Orleans & Company; city calendar 'Educational'). Counted once per day.",
+      "sources": [
+        "https://www.neworleans.com/articles/post/major-conventions-and-meetings-position-new-orleans-for-a-strong-finish-to-2026/",
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
+      ]
+    },
+    {
+      "id": "ev-9ri9wcjj",
       "title": "Pelicans vs. Detroit Pistons",
       "category": "Sports",
       "startDate": "2026-11-18",
-      "totalAttendance": 17000,
-      "impactWindow": "5:00 PM – 7:00 PM",
+      "totalAttendance": 16867,
+      "impactWindow": "6:00 PM – 9:30 PM",
       "location": "Smoothie King Center",
-      "proximity": "Superdome / CBD Corridor",
-      "notes": "NBA Regular Season Home Game.",
+      "proximity": "Superdome",
+      "notes": "Tip-off 7:00 PM Central. Evening only; little overlap with market business hours. Attendance = arena capacity (an upper bound).",
       "sources": [
-        "NBA Schedule"
+        "https://www.basketball-reference.com/teams/NOP/2027_games.html",
+        "https://en.wikipedia.org/wiki/Smoothie_King_Center"
       ]
     },
     {
-      "id": "ev-pb1088ys",
-      "title": "Carnival Cruise Turn-Day",
+      "id": "ev-y89kutfz",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-11-18",
+      "totalAttendance": 6924,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "19 smaller meetings in session on the city calendar, including probably the International Pool | Spa | Patio Expo (show floor Nov 17–19, Convention Center). Large conventions listed separately are left out of this total. Counted once per day.",
+      "sources": [
+        "https://www.neworleans.com/meeting-planners/convention-calendar/",
+        "https://www.serviceindustrynews.net/2025/11/17/international-pool-spa-patio-expo/"
+      ]
+    },
+    {
+      "id": "ev-ptb88p7y",
+      "title": "Smaller evening shows (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-11-18",
+      "totalAttendance": 1000,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "Joy Theater",
+      "proximity": "Canal St. / CBD",
+      "notes": "Touring acts likely to draw fans from out of town: Kurt Vile, Joy Theater (~1,000). Estimates at about 85% of each venue's size (no counts published). Evening only; little overlap with market business hours.",
+      "sources": [
+        "https://www.songkick.com/metro-areas/11772-us-new-orleans?filters%5BminDate%5D=11%2F01%2F2026&filters%5BmaxDate%5D=11%2F30%2F2026&page=2"
+      ]
+    },
+    {
+      "id": "ev-lc6m8bmg",
+      "title": "American Cruise Lines – Highlights of the Mississippi (embarkation)",
       "category": "Cruise Ships",
       "startDate": "2026-11-19",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 180,
+      "location": "New Orleans riverfront (dock not published)",
+      "proximity": "Riverfront (dock not published)",
+      "notes": "8-day round trip from New Orleans departs today (a second ship); up to about 180 guests. Ship not named on the cruise line's page; times not published.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://www.americancruiselines.com/cruises/mississippi-river-cruises/highlights-of-the-mississippi-cruise"
       ]
     },
     {
-      "id": "ev-22a55kcl",
-      "title": "Viking Mississippi Holiday Turn-Day",
+      "id": "ev-y0robhx4",
+      "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-11-19",
-      "totalAttendance": 380,
-      "impactWindow": "8:00 AM – 1:00 PM",
-      "location": "Poydras St Wharf / Canal St Riverfront",
-      "proximity": "Direct Market Proximity",
-      "notes": "Pre-Thanksgiving riverboat departure bringing disembarking/embarking passengers into the Quarter.",
+      "totalAttendance": 2984,
+      "impactWindow": "8:00 AM – 3:30 PM",
+      "location": "Erato St. Cruise Terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "Ship returns from its Nov 14 sailing and leaves on a 4-night cruise. About 2,984 guests off in the morning and 2,984 on for the afternoon departure (double-occupancy capacity). Dates from the ship's own itinerary.",
       "sources": [
-        "Viking River Cruises"
+        "https://www.cruisemapper.com/ships/Carnival-Valor-604"
       ]
     },
     {
-      "id": "ev-tlb6n2bs",
-      "title": "Hotel & Mid-Sized Registered Conventions",
+      "id": "ev-ewyq1zft",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-11-19",
+      "totalAttendance": 5225,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "11 smaller meetings in session on the city calendar, including probably the International Pool | Spa | Patio Expo (show floor Nov 17–19, Convention Center). Large conventions listed separately are left out of this total. Counted once per day.",
+      "sources": [
+        "https://www.neworleans.com/meeting-planners/convention-calendar/",
+        "https://www.serviceindustrynews.net/2025/11/17/international-pool-spa-patio-expo/"
+      ]
+    },
+    {
+      "id": "ev-es8tjxhm",
+      "title": "American Cruise Lines – Highlights of the Mississippi (return)",
+      "category": "Cruise Ships",
+      "startDate": "2026-11-20",
+      "totalAttendance": 180,
+      "location": "New Orleans riverfront (dock not published)",
+      "proximity": "Riverfront (dock not published)",
+      "notes": "The Nov 13 round trip returns today; up to about 180 guests. Ship not named on the cruise line's page; times not published.",
+      "sources": [
+        "https://www.americancruiselines.com/cruises/mississippi-river-cruises/highlights-of-the-mississippi-cruise"
+      ]
+    },
+    {
+      "id": "ev-7zj7zql7",
+      "title": "Second line (Beauregard-Keyes House → the Rambler on Frenchmen)",
+      "category": "Parades",
+      "startDate": "2026-11-20",
+      "totalAttendance": 100,
+      "impactWindow": "10:00 PM – 10:30 PM",
+      "location": "Starts at 1113 Chartres St., about two blocks from the sheds",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Private second line. Evening only; little overlap with market business hours. Guest count isn't on the permit; 100 is typical.",
+      "sources": [
+        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-22135-SPMA"
+      ]
+    },
+    {
+      "id": "ev-ahg4d5l0",
+      "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-11-20",
-      "totalAttendance": 3000,
+      "totalAttendance": 4015,
       "impactWindow": "10:00 AM – 4:00 PM",
-      "location": "French Quarter & CBD Hotels",
-      "proximity": "Convention Center Corridor",
-      "notes": "Daily sum of registered hotel meetings.",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "6 smaller meetings in session on the city calendar. Large conventions listed separately are left out of this total. Counted once per day.",
       "sources": [
-        "New Orleans & Company"
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-waqxbf47",
-      "title": "Carnival Cruise Turn-Day",
+      "id": "ev-fpfw7e6x",
+      "title": "Usher & Chris Brown",
+      "category": "Concerts",
+      "startDate": "2026-11-20",
+      "totalAttendance": 73208,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "Caesars Superdome",
+      "proximity": "Superdome",
+      "notes": "Friday (two-night stadium run), 7:00 PM. Evening only; little overlap with market business hours. Attendance = stadium capacity (an upper bound); a concert stage takes some seats.",
+      "sources": [
+        "https://www.caesarssuperdome.com/events-tickets/pdf/",
+        "https://www.songkick.com/metro-areas/11772-us-new-orleans?filters%5BminDate%5D=11%2F01%2F2026&filters%5BmaxDate%5D=11%2F30%2F2026&page=2",
+        "https://en.wikipedia.org/wiki/Caesars_Superdome"
+      ]
+    },
+    {
+      "id": "ev-8wzkmyhz",
+      "title": "Carnival Liberty turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-11-21",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 2978,
+      "impactWindow": "8:00 AM – 3:30 PM",
+      "location": "Erato St. Cruise Terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "Ship returns from its Nov 15 sailing and leaves on an 8-night cruise. About 2,978 guests off in the morning and 2,978 on for the afternoon departure (double-occupancy capacity). Dates from the ship's own itinerary.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://www.cruisemapper.com/ships/Carnival-Liberty-568"
       ]
     },
     {
-      "id": "ev-vvsm6h09",
-      "title": "NOLA November Youth Basketball Classic",
-      "category": "Youth Events",
+      "id": "ev-35qjxaoz",
+      "title": "Mariner of the Seas turnaround",
+      "category": "Cruise Ships",
       "startDate": "2026-11-21",
-      "endDate": "2026-11-22",
-      "totalAttendance": 3000,
-      "dailyAttendance": {
-        "2026-11-21": 1500,
-        "2026-11-22": 1500
-      },
-      "impactWindow": "8:30 AM – 4:00 PM",
-      "location": "Regional Sports Complex",
-      "proximity": "Greater New Orleans Area",
-      "notes": "Youth sports tournament bringing visiting families downtown.",
+      "totalAttendance": 3334,
+      "impactWindow": "8:00 AM – 4:00 PM",
+      "location": "Julia St. Cruise Terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "Royal Caribbean's ship returns from its Nov 14 sailing and leaves on a 7-night cruise at 4:00 PM. About 3,334 guests off in the morning and 3,334 on in the afternoon (double-occupancy capacity). Dates from the ship's own itinerary.",
       "sources": [
-        "Tourneyboard"
+        "https://www.cruisemapper.com/ships/Mariner-Of-The-Seas-609",
+        "https://cruisedayguide.com/guide/new-orleans/sailings/november-2026"
       ]
     },
     {
-      "id": "ev-ojyr3hnx",
-      "title": "Carnival Cruise Turn-Day",
+      "id": "ev-670mseeu",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-11-21",
+      "totalAttendance": 3540,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "4 smaller meetings in session on the city calendar. Large conventions listed separately are left out of this total. Counted once per day.",
+      "sources": [
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
+      ]
+    },
+    {
+      "id": "ev-l3g138u9",
+      "title": "Smaller evening shows (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-11-21",
+      "totalAttendance": 1500,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "The Fillmore",
+      "proximity": "Canal St. / CBD",
+      "notes": "Touring acts likely to draw fans from out of town: Chris Fleming (comedy, seated layout), The Fillmore (~1,500). Estimates at about 85% of each venue's size (no counts published). Evening only; little overlap with market business hours.",
+      "sources": [
+        "https://www.songkick.com/metro-areas/11772-us-new-orleans?filters%5BminDate%5D=11%2F01%2F2026&filters%5BmaxDate%5D=11%2F30%2F2026&page=2"
+      ]
+    },
+    {
+      "id": "ev-tj26bqy9",
+      "title": "Usher & Chris Brown",
+      "category": "Concerts",
+      "startDate": "2026-11-21",
+      "totalAttendance": 73208,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "Caesars Superdome",
+      "proximity": "Superdome",
+      "notes": "Saturday (two-night stadium run), 7:00 PM. Evening only; little overlap with market business hours. Attendance = stadium capacity (an upper bound); a concert stage takes some seats.",
+      "sources": [
+        "https://www.caesarssuperdome.com/events-tickets/pdf/",
+        "https://www.songkick.com/metro-areas/11772-us-new-orleans?filters%5BminDate%5D=11%2F01%2F2026&filters%5BmaxDate%5D=11%2F30%2F2026&page=2",
+        "https://en.wikipedia.org/wiki/Caesars_Superdome"
+      ]
+    },
+    {
+      "id": "ev-icwh3w8v",
+      "title": "Wedding second line (Marché and back)",
+      "category": "Parades",
+      "startDate": "2026-11-21",
+      "totalAttendance": 100,
+      "impactWindow": "4:30 PM – 5:00 PM",
+      "location": "Marché (914 N. Peters St.), next to the Farmers Market",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Private second line with an 8-piece brass band and grand marshal, starting and ending next to the Farmers Market. Guest count isn't on the permit; 100 is typical. The permit (applied Aug 28) was still under review on Sept 30.",
+      "sources": [
+        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-25370-SPMA"
+      ]
+    },
+    {
+      "id": "ev-5k3ys5p0",
+      "title": "Norwegian Breakaway turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-11-22",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 3963,
+      "impactWindow": "8:00 AM – 4:00 PM",
+      "location": "Julia St. Cruise Terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "Norwegian's ship ends a 14-night repositioning cruise from Boston (left Nov 8) and starts its New Orleans season with a 7-night cruise. About 3,963 guests off in the morning and 3,963 on in the afternoon (double-occupancy capacity). Times not published.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://cruisedayguide.com/guide/new-orleans/sailings/november-2026",
+        "https://cruisesheet.com/norwegian-breakaway-14-night-boston-to-new-orleans-november-8-2026",
+        "https://cruisesheet.com/norwegian-breakaway-7-night-new-orleans-roundtrip-november-22-2026",
+        "https://en.wikipedia.org/wiki/Norwegian_Breakaway"
       ]
     },
     {
-      "id": "ev-aqlxutde",
+      "id": "ev-w9t3lmmp",
+      "title": "Carnival Valor turnaround",
+      "category": "Cruise Ships",
+      "startDate": "2026-11-23",
+      "totalAttendance": 2984,
+      "impactWindow": "8:00 AM – 3:30 PM",
+      "location": "Erato St. Cruise Terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "Ship returns from its Nov 19 sailing and leaves on a 5-night cruise. About 2,984 guests off in the morning and 2,984 on for the afternoon departure (double-occupancy capacity). Dates from the ship's own itinerary.",
+      "sources": [
+        "https://www.cruisemapper.com/ships/Carnival-Valor-604"
+      ]
+    },
+    {
+      "id": "ev-2ay8jp7s",
       "title": "Pelicans vs. Phoenix Suns",
       "category": "Sports",
       "startDate": "2026-11-23",
-      "totalAttendance": 17000,
-      "impactWindow": "5:00 PM – 7:00 PM",
+      "totalAttendance": 16867,
+      "impactWindow": "6:00 PM – 9:30 PM",
       "location": "Smoothie King Center",
-      "proximity": "Superdome / CBD Corridor",
-      "notes": "NBA Regular Season Home Game.",
+      "proximity": "Superdome",
+      "notes": "Tip-off 7:00 PM Central. Evening only; little overlap with market business hours. Attendance = arena capacity (an upper bound).",
       "sources": [
-        "NBA Schedule"
+        "https://www.basketball-reference.com/teams/NOP/2027_games.html",
+        "https://en.wikipedia.org/wiki/Smoothie_King_Center"
       ]
     },
     {
-      "id": "ev-8wz8lkvw",
-      "title": "Diamond Tours Thanksgiving Excursion",
-      "category": "Tours/Charters",
-      "startDate": "2026-11-24",
-      "totalAttendance": 350,
-      "impactWindow": "10:30 AM – 2:30 PM",
-      "location": "Lower Decatur St & French Market",
-      "proximity": "Direct Market Proximity",
-      "notes": "Wholesale senior motorcoach holiday excursion.",
-      "sources": [
-        "Diamond Tours Schedule"
-      ]
-    },
-    {
-      "id": "ev-rg30mln2",
-      "title": "Hotel & Mid-Sized Registered Conventions",
+      "id": "ev-0x5aiwpp",
+      "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-11-24",
-      "totalAttendance": 2000,
+      "totalAttendance": 120,
       "impactWindow": "10:00 AM – 4:00 PM",
-      "location": "French Quarter & CBD Hotels",
-      "proximity": "Convention Center Corridor",
-      "notes": "Daily sum of registered hotel meetings.",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "1 smaller meeting in session on the city calendar. Large conventions listed separately are left out of this total. Counted once per day.",
       "sources": [
-        "New Orleans & Company"
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-wknc1o71",
-      "title": "Hotel & Mid-Sized Registered Conventions",
+      "id": "ev-sq478sqm",
+      "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-11-25",
-      "totalAttendance": 1500,
+      "totalAttendance": 120,
       "impactWindow": "10:00 AM – 4:00 PM",
-      "location": "French Quarter & CBD Hotels",
-      "proximity": "Convention Center Corridor",
-      "notes": "Pre-holiday registered hotel meetings.",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "1 smaller meeting in session on the city calendar. Large conventions listed separately are left out of this total. Counted once per day.",
       "sources": [
-        "New Orleans & Company"
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-ql8y3enm",
-      "title": "Carnival Cruise Turn-Day",
+      "id": "ev-fs2a1s1w",
+      "title": "Smaller evening shows (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-11-25",
+      "totalAttendance": 700,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "House of Blues",
+      "proximity": "Canal St. / CBD",
+      "notes": "Touring acts likely to draw fans from out of town: Miss May I, House of Blues (~700). Estimates at about 85% of each venue's size (no counts published). Evening only; little overlap with market business hours.",
+      "sources": [
+        "https://www.songkick.com/metro-areas/11772-us-new-orleans?filters%5BminDate%5D=11%2F01%2F2026&filters%5BmaxDate%5D=11%2F30%2F2026&page=2"
+      ]
+    },
+    {
+      "id": "ev-tjpcuo5d",
+      "title": "American Cruise Lines – Highlights of the Mississippi (return)",
       "category": "Cruise Ships",
       "startDate": "2026-11-26",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 180,
+      "location": "New Orleans riverfront (dock not published)",
+      "proximity": "Riverfront (dock not published)",
+      "notes": "The Nov 19 round trip returns today (Thanksgiving); up to about 180 guests. Ship not named on the cruise line's page; times not published.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://www.americancruiselines.com/cruises/mississippi-river-cruises/highlights-of-the-mississippi-cruise"
       ]
     },
     {
-      "id": "ev-ldp0z9k0",
-      "title": "American Cruise Lines - Thanksgiving River Cruise",
-      "category": "Cruise Ships",
-      "startDate": "2026-11-27",
-      "totalAttendance": 200,
-      "impactWindow": "8:30 AM – 1:00 PM",
-      "location": "Toulouse St Wharf / French Quarter Riverfront",
-      "proximity": "Direct Market Proximity",
-      "notes": "Holiday riverboat arrival directly adjacent to Jackson Square and the French Market.",
-      "sources": [
-        "American Cruise Lines Schedule"
-      ]
-    },
-    {
-      "id": "ev-2i2lgnwr",
-      "title": "Bayou Classic Parade & Fan Fest",
+      "id": "ev-v5dljvaw",
+      "title": "Bayou Classic Thanksgiving Day Parade",
       "category": "Parades",
-      "startDate": "2026-11-27",
-      "totalAttendance": 35000,
-      "impactWindow": "2:00 PM – 8:00 PM",
-      "location": "Downtown / French Quarter Radius",
-      "proximity": "Direct Market Proximity",
-      "notes": "Annual Thanksgiving weekend parade",
+      "startDate": "2026-11-26",
+      "totalAttendance": 15000,
+      "impactWindow": "1:00 PM – 5:00 PM",
+      "location": "CBD: from the Superdome along Poydras, S. Peters, Canal and St. Charles (2025 route)",
+      "proximity": "Canal St. / CBD",
+      "notes": "Thursday (Thanksgiving). The 2026 time and route aren't published yet; in 2025 it started at 3 PM from the Superdome and looped through the CBD (Poydras, S. Peters, Canal, St. Charles). Rough estimate of spectators (no count published).",
       "sources": [
-        "marching bands"
+        "https://www.myneworleans.com/tickets-on-sale-now-for-53rd-annual-bayou-classic/",
+        "https://nola.gov/next/mayors-office/news/articles/2025/november-2025/2025-11-24-bayou-classic-thanksgiving/"
       ]
     },
     {
-      "id": "ev-vbr0jzmf",
-      "title": "Annual 53rd Bayou Classic (Southern U vs. Grambling State)",
+      "id": "ev-vv71vhoh",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-11-26",
+      "totalAttendance": 147,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "2 smaller meetings in session on the city calendar. Large conventions listed separately are left out of this total. Counted once per day.",
+      "sources": [
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
+      ]
+    },
+    {
+      "id": "ev-09hf7pht",
+      "title": "Bayou Classic Battle of the Bands & Greek Show",
+      "category": "Concerts",
+      "startDate": "2026-11-27",
+      "totalAttendance": 73208,
+      "impactWindow": "5:00 PM – 11:00 PM",
+      "location": "Caesars Superdome",
+      "proximity": "Superdome",
+      "notes": "Friday after Thanksgiving: Southern's and Grambling's marching bands plus the Greek show. Time not yet announced. Attendance = stadium capacity (an upper bound).",
+      "sources": [
+        "https://www.caesarssuperdome.com/events-tickets/pdf/",
+        "https://www.livenation.com/event/G5viZ_aQ5HI8g/2026-bayou-classic-battle-of-the-bands-greek-show",
+        "https://www.myneworleans.com/tickets-on-sale-now-for-53rd-annual-bayou-classic/",
+        "https://en.wikipedia.org/wiki/Caesars_Superdome"
+      ]
+    },
+    {
+      "id": "ev-bnnjmglt",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-11-27",
+      "totalAttendance": 147,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "2 smaller meetings in session on the city calendar. Large conventions listed separately are left out of this total. Counted once per day.",
+      "sources": [
+        "https://www.neworleans.com/meeting-planners/convention-calendar/"
+      ]
+    },
+    {
+      "id": "ev-2zjdb5lt",
+      "title": "Smaller evening shows (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-11-27",
+      "totalAttendance": 1300,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "Orpheum Theater",
+      "proximity": "Canal St. / CBD",
+      "notes": "Touring acts likely to draw fans from out of town: PJ Morton's annual Black Friday show, Orpheum Theater (~1,300). Estimates at about 85% of each venue's size (no counts published). Evening only; little overlap with market business hours.",
+      "sources": [
+        "https://www.songkick.com/venues/115639-orpheum-theater"
+      ]
+    },
+    {
+      "id": "ev-6o37rl4s",
+      "title": "Bayou Classic: Southern vs. Grambling State",
       "category": "Sports",
       "startDate": "2026-11-28",
-      "totalAttendance": 65000,
-      "impactWindow": "11:00 AM – 5:00 PM",
+      "totalAttendance": 73208,
+      "impactWindow": "9:00 AM – 1:00 PM",
       "location": "Caesars Superdome",
-      "proximity": "Superdome / CBD Corridor",
-      "notes": "Historic HBCU rivalry game driving massive hotel occupancy and French Quarter walking traffic.",
+      "proximity": "Superdome",
+      "notes": "53rd Bayou Classic, Saturday 1:00 PM. Thanksgiving weekend's biggest draw; the city calendar counts about 50,000 visitors for the weekend. In 2025 the city closed French Quarter streets 5 PM–5 AM Friday and Saturday for the crowds. Attendance = stadium capacity (an upper bound).",
       "sources": [
-        "Bayou Classic Official / Superdome Schedule"
+        "https://www.caesarssuperdome.com/events-tickets/pdf/",
+        "https://www.myneworleans.com/tickets-on-sale-now-for-53rd-annual-bayou-classic/",
+        "https://www.neworleans.com/meeting-planners/convention-calendar/",
+        "https://nola.gov/next/mayors-office/news/articles/2025/november-2025/2025-11-24-bayou-classic-thanksgiving/",
+        "https://en.wikipedia.org/wiki/Caesars_Superdome"
       ]
     },
     {
-      "id": "ev-dx3jfspl",
-      "title": "Carnival Cruise Turn-Day",
+      "id": "ev-51eg4nit",
+      "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-11-28",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 2984,
+      "impactWindow": "8:00 AM – 3:30 PM",
+      "location": "Erato St. Cruise Terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "Ship returns from its Nov 23 sailing and leaves on a 5-night cruise. About 2,984 guests off in the morning and 2,984 on for the afternoon departure (double-occupancy capacity). Dates from the ship's own itinerary.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://www.cruisemapper.com/ships/Carnival-Valor-604"
       ]
     },
     {
-      "id": "ev-rwho1yx9",
-      "title": "Celebration in the Oaks Opening",
-      "category": "Festivals",
+      "id": "ev-1gv81p8n",
+      "title": "Mariner of the Seas turnaround",
+      "category": "Cruise Ships",
       "startDate": "2026-11-28",
-      "endDate": "2026-11-30",
-      "totalAttendance": 12000,
-      "dailyAttendance": {
-        "2026-11-28": 4000,
-        "2026-11-29": 4000,
-        "2026-11-30": 4000
-      },
-      "impactWindow": "5:00 PM – 9:00 PM",
-      "location": "City Park",
-      "proximity": "Mid-City / Greater NOLA Area",
-      "notes": "Annual holiday light festival opening weekend.",
+      "totalAttendance": 3334,
+      "impactWindow": "8:00 AM – 4:00 PM",
+      "location": "Julia St. Cruise Terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "Royal Caribbean's ship returns from its Nov 21 sailing and leaves on a 7-night cruise at 4:00 PM. About 3,334 guests off in the morning and 3,334 on in the afternoon (double-occupancy capacity). Dates from the ship's own itinerary.",
       "sources": [
-        "New Orleans City Park"
+        "https://www.cruisemapper.com/ships/Mariner-Of-The-Seas-609",
+        "https://cruisedayguide.com/guide/new-orleans/sailings/november-2026"
       ]
     },
     {
-      "id": "ev-akf0nhsm",
-      "title": "Carnival Cruise Turn-Day",
+      "id": "ev-gw1noaao",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-11-28",
+      "totalAttendance": 4182,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "4 smaller meetings in session on the city calendar, including CareerTech VISION (~4,000, Nov 28 – Dec 5). Large conventions listed separately are left out of this total. Counted once per day.",
+      "sources": [
+        "https://www.neworleans.com/meeting-planners/convention-calendar/",
+        "https://www.neworleans.com/articles/post/major-conventions-and-meetings-position-new-orleans-for-a-strong-finish-to-2026/"
+      ]
+    },
+    {
+      "id": "ev-taaisij7",
+      "title": "Smaller evening shows (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-11-28",
+      "totalAttendance": 3500,
+      "impactWindow": "7:00 PM – 11:00 PM",
+      "location": "Orpheum Theater; Saenger Theatre",
+      "proximity": "Canal St. / CBD",
+      "notes": "Touring acts likely to draw fans from out of town: Ali Siddiq (comedy), Saenger Theatre (~2,200); Orchestra Noir, Orpheum Theater (~1,300). Estimates at about 85% of each venue's size (no counts published). Evening only; little overlap with market business hours.",
+      "sources": [
+        "https://us.atgtickets.com/venues/saenger-theatre/",
+        "https://www.songkick.com/venues/115639-orpheum-theater"
+      ]
+    },
+    {
+      "id": "ev-cmhktxc6",
+      "title": "Carnival Liberty turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-11-29",
-      "totalAttendance": 4000,
-      "impactWindow": "9:00 AM – 1:00 PM",
-      "location": "Port NOLA Cruise Terminal",
-      "proximity": "Convention Center Corridor",
-      "notes": "Ocean cruise turn day shuttle traffic.",
+      "totalAttendance": 2978,
+      "impactWindow": "8:00 AM – 3:30 PM",
+      "location": "Erato St. Cruise Terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "Ship returns from its Nov 21 sailing and leaves on a 14-night cruise. About 2,978 guests off in the morning and 2,978 on for the afternoon departure (double-occupancy capacity). Dates from the ship's own itinerary.",
       "sources": [
-        "Port NOLA Schedule"
+        "https://www.cruisemapper.com/ships/Carnival-Liberty-568"
       ]
     },
     {
-      "id": "ev-02rc2xzd",
-      "title": "Hotel & Mid-Sized Registered Conventions",
+      "id": "ev-kts5jkht",
+      "title": "Norwegian Breakaway turnaround",
+      "category": "Cruise Ships",
+      "startDate": "2026-11-29",
+      "totalAttendance": 3963,
+      "impactWindow": "8:00 AM – 4:00 PM",
+      "location": "Julia St. Cruise Terminal",
+      "proximity": "MCCNO Corridor",
+      "notes": "Ship returns from its Nov 22 sailing and leaves on its next cruise. About 3,963 guests off in the morning and 3,963 on in the afternoon (double-occupancy capacity). Times not published.",
+      "sources": [
+        "https://cruisedayguide.com/guide/new-orleans/sailings/november-2026",
+        "https://en.wikipedia.org/wiki/Norwegian_Breakaway"
+      ]
+    },
+    {
+      "id": "ev-f6c1p49v",
+      "title": "Smaller conventions & meetings (grouped)",
+      "category": "Conventions",
+      "startDate": "2026-11-29",
+      "totalAttendance": 5310,
+      "impactWindow": "10:00 AM – 4:00 PM",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "5 smaller meetings in session on the city calendar, including CareerTech VISION (~4,000, Nov 28 – Dec 5). Large conventions listed separately are left out of this total. Counted once per day.",
+      "sources": [
+        "https://www.neworleans.com/meeting-planners/convention-calendar/",
+        "https://www.neworleans.com/articles/post/major-conventions-and-meetings-position-new-orleans-for-a-strong-finish-to-2026/"
+      ]
+    },
+    {
+      "id": "ev-p8s1wd5v",
+      "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-11-30",
-      "totalAttendance": 2000,
+      "totalAttendance": 7040,
       "impactWindow": "10:00 AM – 4:00 PM",
-      "location": "French Quarter & CBD Hotels",
-      "proximity": "Convention Center Corridor",
-      "notes": "Daily total of registered hotel meetings and small conferences.",
+      "location": "Downtown hotels & Convention Center",
+      "proximity": "MCCNO Corridor",
+      "notes": "8 smaller meetings in session on the city calendar, including CareerTech VISION (~4,000, Nov 28 – Dec 5). Large conventions listed separately are left out of this total. Counted once per day.",
       "sources": [
-        "New Orleans & Company Calendar"
+        "https://www.neworleans.com/meeting-planners/convention-calendar/",
+        "https://www.neworleans.com/articles/post/major-conventions-and-meetings-position-new-orleans-for-a-strong-finish-to-2026/"
       ]
     }
   ]
