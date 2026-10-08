@@ -92,10 +92,10 @@ Until the steps below are done, answers stay on each vendor's phone and the dail
    - Add 7 **Short answer** questions, in this order: `Vendor ID`, `Date rated`, `Answer`, `Weekday`, `Month`, `Same day or looking back`, `App version`.
 2. **Link a Sheet.** On the **Responses** tab, click **Link to Sheets** → **Create a new spreadsheet**.
 3. **Get the pre-filled link.** In the form's **⋮** menu, choose **Get pre-filled link**. Type `x` in every box, click **Get link**, and copy it. Send that link to Claude Code, which will fill in the settings block at the top of `assets/checkin.js`.
-4. **Add the Summary tab.** In the Sheet, add a tab named **Summary**. In cell **A1**, paste this formula. It keeps each vendor's latest answer per date, then counts answers per date:
+4. **Add the Summary tab.** In the Sheet, add a tab named **Summary**. In cell **A1**, paste this formula. It keeps each vendor's latest answer per date, then counts answers per date. Dates and answers are read as text, so Sheets' automatic formatting can't hide any:
 
    ```
-   =QUERY(SORTN(SORT(FILTER('Form Responses 1'!A2:H, 'Form Responses 1'!B2:B<>""), 1, FALSE), 9^9, 2, 2, TRUE, 3, TRUE), "select Col3, Col4, count(Col2) group by Col3, Col4 label Col3 'Date', Col4 'Answer', count(Col2) 'Count'", 0)
+   =QUERY(SORTN(SORT(FILTER({'Form Responses 1'!A2:B, ARRAYFORMULA(TO_TEXT('Form Responses 1'!C2:D))}, 'Form Responses 1'!B2:B<>""), 1, FALSE), 9^9, 2, 2, TRUE, 3, TRUE), "select Col3, Col4, count(Col2) group by Col3, Col4 label Col3 'Date', Col4 'Answer', count(Col2) 'Count'", 0)
    ```
 
    If your responses tab has a different name, change `Form Responses 1` to match.
