@@ -172,33 +172,64 @@ const Checkin = (() => {
   const btn = (attrs, text, primary) => `<button type="button" ${attrs}
     class="w-full min-h-11 rounded-xl px-4 py-2.5 text-left text-base font-semibold ${primary ? "bg-emerald-800 text-white hover:bg-emerald-700" : "bg-stone-100 hover:bg-stone-200 text-stone-900"}">${text}</button>`;
 
-  function answerButtons(key) {
-    const d = parseDate(key);
-    const sameDay = key === todayKey();
-    return `<div class="mt-4 space-y-2">${ANSWERS.map((a) => {
-      const label = a.code === "3" ? `It was an average ${WEEKDAY[d.getDay()]} in ${MONTHS_LONG[d.getMonth()]}`
-        : a.code === "didn't work" ? (sameDay ? "I didn't work today" : "I didn't work that day") : a.label;
-      return btn(`data-answer="${escapeHtml(a.code)}" data-date="${key}"`, escapeHtml(label));
-    }).join("")}</div>`;
+  function answerButtons(key, current) {
+    return `<div class="mt-4 space-y-2">${ANSWERS.map((a) =>
+      btn(`data-answer="${escapeHtml(a.code)}" data-date="${key}"${a.code === current ? ' aria-current="true"' : ""}`,
+        escapeHtml(answerText(key, a.code)) + (a.code === current ? ' <span class="font-normal text-sm">(your answer)</span>' : ""), a.code === current)
+    ).join("")}</div>`;
   }
 
-  // After 4 PM: rate today. Before: offer to rate the last day they worked.
+  // Days a vendor can still report: today and the past 14 days, minus those already reported on this device.
+  function availableDays() {
+    const done = ls.get(K.answers, {});
+    const out = [];
+    for (let n = 0; n <= PICK_DAYS; n++) { const k = keyOffset(-n); if (!done[k]) out.push(k); }
+    return out; // most recent first
+  }
+
+  // After 4 PM: rate today. Before (or if today is already reported): offer to rate the last day they worked.
+  // Returns false when there's nothing left to report.
   function showFirstQuestion() {
-    if (new Date().getHours() >= EVENING_HOUR) {
+    const open = availableDays();
+    if (!open.length) return false;
+    if (new Date().getHours() >= EVENING_HOUR && open[0] === todayKey()) {
       showWindow(`<h2 class="text-lg font-bold leading-snug pr-10">Did you work at the market today?</h2>${answerButtons(todayKey())}`);
     } else {
       showWindow(`<h2 class="text-lg font-bold leading-snug pr-10">How was your last day at the market?</h2>
         <p class="mt-2 text-sm text-stone-700">Would you like to share how your day was on the last day you worked? All submissions are anonymous, and no specific details are required. Sales patterns could help us to identify crowds that are more receptive to your merchandise, and we may be able to alert you to days with relevant events taking place downtown.</p>
         <div class="mt-4 grid grid-cols-2 gap-2">${btn('data-go="pick"', "Yes", true)}${btn('data-go="close"', "No")}</div>`);
     }
+    return true;
   }
 
   function showRateDay(key) {
-    showWindow(`<h2 class="text-lg font-bold leading-snug pr-10">How was business on ${escapeHtml(fmtLong(key))}?</h2>${answerButtons(key)}`);
+    const prev = ls.get(K.answers, {})[key];
+    showWindow(`<h2 class="text-lg font-bold leading-snug pr-10">How was business on ${escapeHtml(fmtLong(key))}?</h2>
+      ${prev ? `<p class="mt-2 text-sm text-stone-700">You answered: <strong>${escapeHtml(answerText(key, prev.answer))}</strong>. Pick a new answer to change it; it will replace your earlier one.</p>` : ""}
+      ${answerButtons(key, prev && prev.answer)}`);
+  }
+  // Button wording for an answer code on a given day
+  function answerText(key, code) {
+    const d = parseDate(key), a = ANSWERS.find((x) => x.code === code);
+    if (!a) return code;
+    if (a.code === "3") return `It was an average ${WEEKDAY[d.getDay()]} in ${MONTHS_LONG[d.getMonth()]}`;
+    if (a.code === "didn't work") return key === todayKey() ? "I didn't work today" : "I didn't work that day";
+    return a.label;
   }
 
+  // After every report: "Thanks!", then offer another day. If every recent day is reported,
+  // say so and go back to the calendar.
   function showThanks() {
     const rated = ratedDays().length;
+    if (!availableDays().length) {
+      showWindow(`<div data-all-done><p class="text-2xl font-bold text-emerald-800">Thanks!</p>
+        <p class="mt-2 text-base">You've reported every day from the past two weeks.</p>
+        ${rated >= NOTE_AFTER ? `<p class="mt-2 text-sm text-stone-600">See <strong>Your days</strong> under the calendar for how your days lined up.</p>` : ""}</div>`);
+      updateYourDaysLink();
+      // Nothing left to report: back to the calendar
+      setTimeout(() => { if (box().querySelector("[data-all-done]") && !box().classList.contains("hidden")) closeWindow(); }, 2500);
+      return;
+    }
     showWindow(`<p class="text-2xl font-bold text-emerald-800">Thanks!</p>
       <div data-later class="opacity-0 transition-opacity duration-500">
         ${rated >= NOTE_AFTER ? `<div class="mt-3 rounded-xl bg-stone-50 p-3 text-sm">${yourDaysHtml(true)}</div>` : ""}
@@ -213,14 +244,18 @@ const Checkin = (() => {
 
   async function startPicking() {
     closeWindow();
-    state.pick = { from: keyOffset(-PICK_DAYS), to: todayKey() };
+    const open = availableDays();
+    if (!open.length) return; // nothing left to report: stay on the calendar
+    state.pick = { from: keyOffset(-PICK_DAYS), to: todayKey(), done: new Set(Object.keys(ls.get(K.answers, {}))) };
     document.getElementById("pick-banner").classList.remove("hidden");
     if (state.offset !== 0) await showMonth(0); else renderCalendar();
     const caption = "Tap the most recent day you worked.";
     Tour.run(async (signal) => {
       if (Tour.reducedMotion()) { Tour.showCaption(caption); await Tour.sleep(3000, signal); return; }
       await Tour.sleep(300, signal);
-      await Tour.pointTo(`[data-date="${todayKey()}"]`, signal);
+      // Point at the most recent day not yet reported (it may be in last month)
+      if (!document.querySelector(`[data-date="${open[0]}"]`)) await showMonth(-1);
+      await Tour.pointTo(`[data-date="${open[0]}"]`, signal);
       Tour.showCaption(caption);
       await Tour.sleep(2500, signal);
     });
@@ -231,6 +266,7 @@ const Checkin = (() => {
     document.getElementById("pick-banner").classList.add("hidden");
     renderCalendar();
   }
+  // Any day in the window can be picked; picking a reported day amends that answer.
   const canPick = (key) => !!state.pick && key >= state.pick.from && key <= state.pick.to;
   function pickDay(key) {
     if (!canPick(key)) return;
@@ -326,6 +362,19 @@ const Checkin = (() => {
       <p class="mt-2 text-xs text-stone-500">Worked out on this phone from your own answers; nothing here is sent anywhere.</p>`;
   }
 
+  // In a day's details (today and the past 14 days): report that day, or change the earlier answer.
+  function dayActionHtml(key) {
+    if (key < keyOffset(-PICK_DAYS) || key > todayKey()) return "";
+    const prev = ls.get(K.answers, {})[key];
+    return `<button type="button" data-report="${key}" class="w-full min-h-11 rounded-xl border border-emerald-300 bg-emerald-50 hover:bg-emerald-100 px-3 py-2 text-left text-sm text-emerald-900">
+      ${prev ? `✓ You reported: <strong>${escapeHtml(answerText(key, prev.answer))}</strong> · <span class="underline">Change</span>`
+        : `<strong>Did you work this day?</strong> <span class="underline">Report how business was</span>`}</button>`;
+  }
+  function reportFromDetails(key) {
+    closeModal();
+    showRateDay(key);
+  }
+
   function showYourDays() {
     showWindow(`<h2 class="text-lg font-bold pr-10">Your days</h2><div class="mt-2 text-sm">${yourDaysHtml(false)}</div>`);
   }
@@ -359,13 +408,12 @@ const Checkin = (() => {
   // Returning visitors: at most once a day per device, and not again that day once shown.
   function maybeShow() {
     if (ls.get(K.day) === todayKey()) return;
-    ls.set(K.day, todayKey());
-    showFirstQuestion();
+    if (showFirstQuestion()) ls.set(K.day, todayKey());
   }
 
   wire();
   flush();
   loadSummary();
 
-  return { maybeShow, pickDay, canPick, stopPicking, summaryHtml, showYourDays, _yourDaysHtml: yourDaysHtml, _record: record };
+  return { maybeShow, pickDay, canPick, stopPicking, summaryHtml, dayActionHtml, reportFromDetails, showYourDays, _yourDaysHtml: yourDaysHtml, _record: record };
 })();

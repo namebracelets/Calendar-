@@ -101,6 +101,12 @@ Until the steps below are done, answers stay on each vendor's phone and the dail
    If your responses tab has a different name, change `Form Responses 1` to match.
 5. **Publish only the Summary tab.** Choose **File → Share → Publish to web**. Pick **Summary** (not the whole document) and **Comma-separated values (.csv)**, then click **Publish**. Copy the link and send it to Claude Code. The tab with individual answers is never published.
 
+How a check-in goes:
+- After every report, the vendor sees "Thanks!" and is asked whether they'd like to report another recent day.
+- **No**, the **✕** or running out of unreported days (today plus the past 14) returns them to the calendar.
+- Days already reported show a ✓. Tapping one lets the vendor change their answer. The new answer replaces the old one on the phone, and the Summary formula keeps only each vendor's latest answer per day, so a change is never counted as an extra response.
+- For today and the past 14 days, a day's details also have a **Report how business was** (or **Change**) button.
+
 A day's details show something like "8 vendors answered: 3 very busy, 2 somewhat busy, 3 average" once at least 3 vendors who worked that day have answered. Answers that couldn't be sent (for example, while offline) are kept on the phone and retried on the next visit.
 
 ## Weather

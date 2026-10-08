@@ -222,7 +222,9 @@ function renderCalendar() {
     const occ = occupancyFor(key);
     const issues = issuesFor(key);
     const wx = weatherFor(key);
-    const pickable = state.pick ? key >= state.pick.from && key <= state.pick.to : null;
+    const inWindow = !!state.pick && key >= state.pick.from && key <= state.pick.to;
+    const reported = inWindow && state.pick.done && state.pick.done.has(key); // already reported: shown with ✓, not pickable
+    const pickable = state.pick ? inWindow : null; // reported days can be picked again to change the answer
     const opens = pickable ?? (!!day || occ !== null || issues.length > 0 || !!wx); // occupancy, flags or weather still open a day
     const pickCls = pickable === null ? "" : pickable ? " ring-2 ring-inset ring-emerald-600" : " opacity-30";
     const isToday = key === todayKey;
@@ -233,7 +235,7 @@ function renderCalendar() {
         class="day-cell relative flex flex-col items-stretch gap-0.5 p-0.5 sm:p-1.5 min-h-20 sm:min-h-28 min-w-0 text-left border-b border-r border-stone-100 ${day ? (state.market ? marketHeatClass : heatClass)(day.total) + (opens ? " hover:brightness-95 cursor-pointer" : " cursor-default") : opens ? "bg-white cursor-pointer" : "bg-white cursor-default"}${pickCls}"
         ${opens ? "" : 'tabindex="-1"'}${pickable === false ? ' aria-disabled="true"' : ""} aria-label="${MONTHS_LONG[m]} ${d}${day ? state.market ? `, about ${formatAttendance(day.total)} market visitors` : `, about ${formatAttendance(day.total)} expected` : ", no tracked events"}${occ !== null ? `, estimated hotel occupancy ${occ}%` : ""}${issues.length ? ", hotel occupancy data problem" : ""}">
       <div class="flex items-center justify-between gap-0.5 px-0.5">
-        ${issues.length || wx ? `<span class="flex items-center gap-0.5 min-w-0">` : ""}<span class="text-[11px] sm:text-sm font-semibold ${isToday ? "bg-emerald-800 text-white rounded-full w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center" : "text-stone-700"}">${d}</span>${issues.length ? issueIcon("w-4 h-4 sm:w-5 sm:h-5 text-[10px] sm:text-xs") : ""}${weatherIconHtml(wx, "text-[10px] sm:text-sm")}${issues.length || wx ? `</span>` : ""}
+        ${issues.length || wx || reported ? `<span class="flex items-center gap-0.5 min-w-0">` : ""}<span class="text-[11px] sm:text-sm font-semibold ${isToday ? "bg-emerald-800 text-white rounded-full w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center" : "text-stone-700"}">${d}</span>${issues.length ? issueIcon("w-4 h-4 sm:w-5 sm:h-5 text-[10px] sm:text-xs") : ""}${weatherIconHtml(wx, "text-[10px] sm:text-sm")}${reported ? `<span class="text-[11px] sm:text-sm font-black text-emerald-700" title="Already reported">✓</span>` : ""}${issues.length || wx || reported ? `</span>` : ""}
         ${day && day.total > 0 ? `<span class="hidden sm:inline text-[10px] font-semibold text-stone-500">~${formatAttendance(day.total)}</span>` : ""}
       </div>
       ${cats.map(([name, att], i) => badgeHtml(name, att, i)).join("")}
@@ -364,6 +366,8 @@ function openModal(key, focusCat) {
   }).join("") || `<p class="py-6 text-center text-sm text-stone-500">No tracked events</p>`;
   const vendors = typeof Checkin !== "undefined" ? Checkin.summaryHtml(key) : "";
   if (vendors) $("modal-body").insertAdjacentHTML("afterbegin", vendors);
+  const report = typeof Checkin !== "undefined" ? Checkin.dayActionHtml(key) : "";
+  if (report) $("modal-body").insertAdjacentHTML("afterbegin", report);
   if (issues.length) {
     $("modal-body").insertAdjacentHTML("afterbegin",
       issuesBoxHtml(issues, `Hotel occupancy entry problem${issues.length === 1 ? "" : "s"} for this day`));
@@ -398,6 +402,10 @@ $("modal-close").addEventListener("click", closeModal);
 $("modal-backdrop").addEventListener("click", closeModal);
 $("modal").addEventListener("click", (e) => { if (e.target === e.currentTarget || e.target.parentElement === e.currentTarget) closeModal(); });
 document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !closeWeather()) closeModal(); });
+$("modal-body").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-report]");
+  if (b && typeof Checkin !== "undefined") Checkin.reportFromDetails(b.dataset.report);
+});
 $("modal-weather").addEventListener("click", (e) => { const b = e.target.closest("[data-weather]"); if (b) openWeather(b.dataset.weather); });
 $("weather-close").addEventListener("click", closeWeather);
 $("weather-modal").addEventListener("click", (e) => { if (e.target.hasAttribute("data-weather-close")) closeWeather(); });
