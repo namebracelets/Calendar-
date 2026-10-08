@@ -79,12 +79,49 @@ title,category,start_date,end_date,total_attendance,daily_attendance,market_visi
 
 In each month file, the admin page stores the figures as `"hotelOccupancy": { "2026-10-01": 51, … }`, with `hotelOccupancyNotes`, `hotelOccupancySources`, and any flagged entries in `hotelOccupancyIssues`. A month with figures but no events still gets a file.
 
+## Vendor check-ins (Google Form setup)
+
+Returning visitors get a short "how was business?" question at most once a day. Answers are anonymous. Each one holds a random ID made once per phone, the date rated, the answer, the weekday and month, whether it was answered the same day or looking back, and the app version. There's no name, email, IP address or sales amount.
+
+Answer codes: `1` very busy, `2` somewhat busy, `3` average, `4` somewhat slow, `5` very slow, `didn't work`.
+
+Until the steps below are done, answers stay on each vendor's phone and the daily vendor summary stays hidden.
+
+1. **Create the form.** Go to <https://forms.google.com> and start a blank form.
+   - In **Settings → Responses**, turn off **Collect email addresses** and **Limit to 1 response**, so no sign-in is needed.
+   - Add 7 **Short answer** questions, in this order: `Vendor ID`, `Date rated`, `Answer`, `Weekday`, `Month`, `Same day or looking back`, `App version`.
+2. **Link a Sheet.** On the **Responses** tab, click **Link to Sheets** → **Create a new spreadsheet**.
+3. **Get the pre-filled link.** In the form's **⋮** menu, choose **Get pre-filled link**. Type `x` in every box, click **Get link**, and copy it. Send that link to Claude Code, which will fill in the settings block at the top of `assets/checkin.js`.
+4. **Add the Summary tab.** In the Sheet, add a tab named **Summary**. In cell **A1**, paste this formula. It keeps each vendor's latest answer per date, then counts answers per date:
+
+   ```
+   =QUERY(SORTN(SORT(FILTER('Form Responses 1'!A2:H, 'Form Responses 1'!B2:B<>""), 1, FALSE), 9^9, 2, 2, TRUE, 3, TRUE), "select Col3, Col4, count(Col2) group by Col3, Col4 label Col3 'Date', Col4 'Answer', count(Col2) 'Count'", 0)
+   ```
+
+   If your responses tab has a different name, change `Form Responses 1` to match.
+5. **Publish only the Summary tab.** Choose **File → Share → Publish to web**. Pick **Summary** (not the whole document) and **Comma-separated values (.csv)**, then click **Publish**. Copy the link and send it to Claude Code. The tab with individual answers is never published.
+
+A day's details show something like "8 vendors answered: 3 very busy, 2 somewhat busy, 3 average" once at least 3 vendors who worked that day have answered. Answers that couldn't be sent (for example, while offline) are kept on the phone and retried on the next visit.
+
+## Weather
+
+Each day shows a weather icon:
+- **Past days:** observed conditions.
+- **Today through 13 days ahead:** the forecast. Days 8–14 are marked "extended forecast, less certain."
+- **Later days:** typical conditions, in a lighter shade.
+
+The day window has a link to a small weather window with morning and afternoon conditions, rain, high and low, wind, humidity and any National Weather Service alerts.
+
+Sources are free and need no keys: Open-Meteo (forecast and archive) and the National Weather Service. Typical conditions come from `weather-normals.json`, built once from 30 years of Open-Meteo archive data with `node scripts/build-weather-normals.mjs`. Weather is cached on the phone for about an hour. If a service is down, the calendar works without it.
+
 ## How the app behaves
 
 - It opens on the device's current month. **◄ Last Month / This Month / Next Month ►** switch between the three months around today without reloading the page.
 - Each day shows one colored badge per category that has events, labeled `[rounded attendance] [category]`. Phones show at most 3 badges plus "+X more". Day shading gets darker as the total crowd grows.
 - Rounding: under 1,000 goes to the nearest 100 (250 → 300). At 1,000 and up it goes to the nearest thousand (12,800 → 13K).
 - Tap a day or badge to see the full date, the daily total, and a card for each event with its daily attendance, span and total, French Market impact window, location, and proximity tag. Close with ×, a tap outside the card, or Esc.
+- **First visit:** a short tutorial (about 8 seconds) taps today's square and opens its details. Any tap or key ends it, and **How it works** by the legend replays it. Returning visitors get the vendor check-in instead, at most once a day.
+- Vendors who have rated about 10 days get a **Your days** note, worked out on their phone only. It shows how their busy and slow days lined up with market visitors, weekdays, kinds of events and rain, plus upcoming days that look like their best ones.
 - If a day has an estimated hotel occupancy figure, its window shows *Estimated Hotel Occupancy: 51%* under the foot-traffic line. A day with a figure but no events still opens, showing the figure and "No tracked events".
 - If a month's file hasn't been uploaded yet, the page says: *"Data for [Month Year] is currently being audited and will be available shortly."*
 

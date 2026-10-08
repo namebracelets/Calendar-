@@ -44,6 +44,11 @@
 
     <div id="issue-banner" class="hidden mb-2"></div>
 
+    <div id="pick-banner" class="hidden sticky top-[7.5rem] sm:top-32 z-30 mb-2 flex items-center justify-between gap-3 rounded-xl bg-emerald-900 text-white px-3 py-2 shadow-lg">
+      <p class="text-sm font-semibold">Tap the most recent day you worked. <span class="font-normal text-emerald-200">(Today or the past 14 days)</span></p>
+      <button id="pick-cancel" type="button" class="shrink-0 min-h-10 rounded-lg bg-white/15 hover:bg-white/25 px-3 text-sm font-semibold">Cancel</button>
+    </div>
+
     <div id="calendar" class="bg-white rounded-xl shadow-sm overflow-hidden"></div>
 
     <section class="mt-4 bg-white rounded-xl shadow-sm p-3" aria-label="Legend">
@@ -55,6 +60,7 @@
       </p>
       <div class="mt-1 flex flex-wrap gap-x-5">
         <button id="how-it-works" type="button" class="min-h-10 text-sm font-semibold text-emerald-800 underline underline-offset-2">How it works</button>
+        <button id="your-days-link" type="button" class="hidden min-h-10 text-sm font-semibold text-emerald-800 underline underline-offset-2">Your days</button>
       </div>
     </section>
   </main>
@@ -91,9 +97,22 @@
     </div>
   </div>
 
+  <!-- Vendor check-in window -->
+  <div id="checkin-modal" class="hidden fixed inset-0 z-[65] overflow-y-auto" role="dialog" aria-modal="true" aria-label="Vendor check-in">
+    <div class="fixed inset-0 bg-black/50" data-checkin-backdrop></div>
+    <div class="relative min-h-full flex items-end sm:items-center justify-center p-2 sm:p-6 pointer-events-none">
+      <div class="relative w-full max-w-md bg-white rounded-2xl shadow-xl p-4 pointer-events-auto">
+        <button type="button" data-checkin-close aria-label="Close"
+          class="absolute top-2 right-2 h-10 w-10 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-800 text-2xl leading-none font-bold flex items-center justify-center">×</button>
+        <div data-checkin-body></div>
+      </div>
+    </div>
+  </div>
+
   <script src="assets/shared.js"></script>
   <script src="assets/weather.js"></script>
   <script src="assets/app.js"></script>
   <script src="assets/tour.js"></script>
+  <script src="assets/checkin.js"></script>
 </body>
 </html>

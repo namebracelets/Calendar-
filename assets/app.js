@@ -6,7 +6,8 @@ const MAX_MOBILE_BADGES = 3;
 
 const today = new Date();
 // market: true when the loaded month has estimated market visitors (the newer view).
-const state = { offset: 0, data: null, days: {}, market: false };
+// pick: { from, to } while a vendor is choosing a day to rate (check-in), else null.
+const state = { offset: 0, data: null, days: {}, market: false, pick: null };
 const cache = new Map();
 
 // Bad hotel occupancy entries flagged by the admin import. date === null → shown above the month.
@@ -175,7 +176,7 @@ function renderCalendar() {
   $("issue-banner").classList.add("hidden");
   $("legend-note").textContent = state.market ? LEGEND_NOTE_MARKET : LEGEND_NOTE_ATTENDANCE;
 
-  if (!state.data) {
+  if (!state.data && !state.pick) {
     cal.innerHTML = `
       <div class="px-6 py-16 text-center">
         <div class="text-4xl mb-3">🗓️</div>
@@ -185,7 +186,7 @@ function renderCalendar() {
     return;
   }
 
-  const json = state.data;
+  const json = state.data || { events: [] }; // while picking a day, a month without a file still shows its days
   if (json.sample) $("sample-banner").classList.remove("hidden");
   const undated = occupancyIssues().filter((i) => !i.date);
   if (undated.length) {
@@ -221,14 +222,16 @@ function renderCalendar() {
     const occ = occupancyFor(key);
     const issues = issuesFor(key);
     const wx = weatherFor(key);
-    const opens = !!day || occ !== null || issues.length > 0 || !!wx; // occupancy, flags or weather still open a day
+    const pickable = state.pick ? key >= state.pick.from && key <= state.pick.to : null;
+    const opens = pickable ?? (!!day || occ !== null || issues.length > 0 || !!wx); // occupancy, flags or weather still open a day
+    const pickCls = pickable === null ? "" : pickable ? " ring-2 ring-inset ring-emerald-600" : " opacity-30";
     const isToday = key === todayKey;
     const cats = day ? Object.entries(day.cats).sort((a, b) => b[1] - a[1]) : [];
     const extra = cats.length - MAX_MOBILE_BADGES;
 
     html += `<button type="button" data-date="${key}"
-        class="day-cell relative flex flex-col items-stretch gap-0.5 p-0.5 sm:p-1.5 min-h-20 sm:min-h-28 min-w-0 text-left border-b border-r border-stone-100 ${day ? (state.market ? marketHeatClass : heatClass)(day.total) + " hover:brightness-95 cursor-pointer" : opens ? "bg-white cursor-pointer" : "bg-white cursor-default"}"
-        ${opens ? "" : 'tabindex="-1"'} aria-label="${MONTHS_LONG[m]} ${d}${day ? state.market ? `, about ${formatAttendance(day.total)} market visitors` : `, about ${formatAttendance(day.total)} expected` : ", no tracked events"}${occ !== null ? `, estimated hotel occupancy ${occ}%` : ""}${issues.length ? ", hotel occupancy data problem" : ""}">
+        class="day-cell relative flex flex-col items-stretch gap-0.5 p-0.5 sm:p-1.5 min-h-20 sm:min-h-28 min-w-0 text-left border-b border-r border-stone-100 ${day ? (state.market ? marketHeatClass : heatClass)(day.total) + (opens ? " hover:brightness-95 cursor-pointer" : " cursor-default") : opens ? "bg-white cursor-pointer" : "bg-white cursor-default"}${pickCls}"
+        ${opens ? "" : 'tabindex="-1"'}${pickable === false ? ' aria-disabled="true"' : ""} aria-label="${MONTHS_LONG[m]} ${d}${day ? state.market ? `, about ${formatAttendance(day.total)} market visitors` : `, about ${formatAttendance(day.total)} expected` : ", no tracked events"}${occ !== null ? `, estimated hotel occupancy ${occ}%` : ""}${issues.length ? ", hotel occupancy data problem" : ""}">
       <div class="flex items-center justify-between gap-0.5 px-0.5">
         ${issues.length || wx ? `<span class="flex items-center gap-0.5 min-w-0">` : ""}<span class="text-[11px] sm:text-sm font-semibold ${isToday ? "bg-emerald-800 text-white rounded-full w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center" : "text-stone-700"}">${d}</span>${issues.length ? issueIcon("w-4 h-4 sm:w-5 sm:h-5 text-[10px] sm:text-xs") : ""}${weatherIconHtml(wx, "text-[10px] sm:text-sm")}${issues.length || wx ? `</span>` : ""}
         ${day && day.total > 0 ? `<span class="hidden sm:inline text-[10px] font-semibold text-stone-500">~${formatAttendance(day.total)}</span>` : ""}
@@ -359,6 +362,8 @@ function openModal(key, focusCat) {
           : escapeHtml(s)).join(", ")}</p>` : ""}
     </article>`;
   }).join("") || `<p class="py-6 text-center text-sm text-stone-500">No tracked events</p>`;
+  const vendors = typeof Checkin !== "undefined" ? Checkin.summaryHtml(key) : "";
+  if (vendors) $("modal-body").insertAdjacentHTML("afterbegin", vendors);
   if (issues.length) {
     $("modal-body").insertAdjacentHTML("afterbegin",
       issuesBoxHtml(issues, `Hotel occupancy entry problem${issues.length === 1 ? "" : "s"} for this day`));
@@ -385,6 +390,7 @@ document.querySelectorAll(".month-btn").forEach((btn) =>
 $("calendar").addEventListener("click", (e) => {
   const cell = e.target.closest("[data-date]");
   if (!cell) return;
+  if (state.pick) { if (typeof Checkin !== "undefined") Checkin.pickDay(cell.dataset.date); return; }
   const badge = e.target.closest("[data-cat]");
   openModal(cell.dataset.date, badge ? badge.dataset.cat : null);
 });
