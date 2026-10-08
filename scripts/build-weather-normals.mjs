@@ -11,31 +11,43 @@ const SMOOTH = 3; // days on each side
 const OUT = process.env.OUT || new URL("../weather-normals.json", import.meta.url);
 
 const HOURLY = "temperature_2m,relative_humidity_2m,precipitation,cloud_cover,wind_speed_10m";
-const DAILY = "temperature_2m_max,temperature_2m_min,precipitation_sum";
 const WET = 0.01; // inches: counts as a day (or part of day) with rain
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 async function fetchYear(year) {
   const url = `https://archive-api.open-meteo.com/v1/archive?latitude=${LAT}&longitude=${LON}&timezone=${encodeURIComponent(TZ)}` +
-    `&start_date=${year}-01-01&end_date=${year}-12-31&hourly=${HOURLY}&daily=${DAILY}` +
+    `&start_date=${year}-01-01&end_date=${year}-12-31&hourly=${HOURLY}` +
     `&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch`;
+  // Open-Meteo's free plan has per-minute and per-hour limits; on HTTP 429 wait and try again.
   for (let attempt = 1; ; attempt++) {
-    const res = await fetch(url);
-    if (res.ok) return res.json();
-    if (attempt >= 4) throw new Error(`Archive ${year}: HTTP ${res.status} ${await res.text()}`);
-    await sleep(5000 * attempt);
+    let res, err;
+    try { res = await fetch(url); } catch (e) { err = e; }
+    if (res && res.ok) return res.json();
+    const why = res ? `HTTP ${res.status} ${(await res.text()).slice(0, 200)}` : String(err);
+    if (attempt >= 12) throw new Error(`Archive ${year}: ${why}`);
+    const wait = res && res.status === 429 ? Math.min(60 * attempt, 300) : 10 * attempt;
+    console.log(`  ${why} — waiting ${wait}s (try ${attempt})`);
+    await sleep(wait * 1000);
   }
 }
 
-// One record per real day: daily hi/lo/rain plus morning/afternoon summaries from the hours.
+// One record per real day, built from the hours: high/low/rain total plus the hourly detail.
 function daysOf(json) {
   const out = new Map();
-  const d = json.daily, h = json.hourly;
-  d.time.forEach((date, i) => out.set(date, { hi: d.temperature_2m_max[i], lo: d.temperature_2m_min[i], rain: d.precipitation_sum[i], hours: [] }));
+  const h = json.hourly;
   h.time.forEach((t, i) => {
-    const rec = out.get(t.slice(0, 10));
-    if (rec) rec.hours[Number(t.slice(11, 13))] = { temp: h.temperature_2m[i], rh: h.relative_humidity_2m[i], rain: h.precipitation[i], cloud: h.cloud_cover[i], wind: h.wind_speed_10m[i] };
+    const date = t.slice(0, 10);
+    if (!out.has(date)) out.set(date, { hours: [] });
+    out.get(date).hours[Number(t.slice(11, 13))] = { temp: h.temperature_2m[i], rh: h.relative_humidity_2m[i], rain: h.precipitation[i], cloud: h.cloud_cover[i], wind: h.wind_speed_10m[i] };
   });
+  for (const rec of out.values()) {
+    const hs = rec.hours.filter(Boolean);
+    const temps = hs.map((x) => x.temp).filter((v) => v !== null);
+    const rains = hs.map((x) => x.rain).filter((v) => v !== null);
+    rec.hi = temps.length ? Math.max(...temps) : null;
+    rec.lo = temps.length ? Math.min(...temps) : null;
+    rec.rain = rains.length ? rains.reduce((a, b) => a + b, 0) : null;
+  }
   return out;
 }
 
@@ -105,7 +117,7 @@ async function main() {
     process.stdout.write(`Fetching ${y}… `);
     years.push(daysOf(await fetchYear(y)));
     console.log("ok");
-    await sleep(1200); // be gentle with the free service
+    await sleep(4000); // be gentle with the free service
   }
   const days = buildNormals(years);
   const out = {
