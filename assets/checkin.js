@@ -19,7 +19,7 @@ const CHECKIN_CONFIG = {
     version: "entry.1952108551",  // App version
   },
   // File → Share → Publish to web → the Summary tab as CSV
-  summaryCsvUrl: "",
+  summaryCsvUrl: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRAriH_3oHykAi0JH0mqG0zOO5DuO2Z8vaYmJHndSGsgjDRCGi50sF_OdKkdLX7bc4wHqUiUXC2vToO/pub?gid=860494762&single=true&output=csv",
 };
 const APP_VERSION = "2026.10";
 // ===================================================================================================
