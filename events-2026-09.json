@@ -43,11 +43,12 @@
   ],
   "events": [
     {
-      "id": "ev-tvyeeqo2",
+      "id": "ev-ofg6x9v7",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-01",
       "totalAttendance": 15700,
+      "marketVisitors": 1570,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 1,570 expected through the sheds: 1 in 10 of the roughly 15,700 visitors staying in or near downtown who are free during market hours. About 15,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), and about 80 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (32%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -57,11 +58,12 @@
       ]
     },
     {
-      "id": "ev-n9n15pwx",
+      "id": "ev-jqews5q0",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-01",
       "totalAttendance": 800,
+      "marketVisitors": 24,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -73,11 +75,12 @@
       ]
     },
     {
-      "id": "ev-ls4fpcbm",
+      "id": "ev-yftl9wdb",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-02",
       "totalAttendance": 17000,
+      "marketVisitors": 1700,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 1,700 expected through the sheds: 1 in 10 of the roughly 17,000 visitors staying in or near downtown who are free during market hours. About 16,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 250 are in town for events or cruises (), and about 80 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (34%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -87,11 +90,12 @@
       ]
     },
     {
-      "id": "ev-8rwpgzyc",
+      "id": "ev-nrx8ghde",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-02",
       "totalAttendance": 825,
+      "marketVisitors": 25,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -103,11 +107,12 @@
       ]
     },
     {
-      "id": "ev-a3ka8fqb",
+      "id": "ev-t10583zj",
       "title": "Vow-renewal second line (Exchange Place → Café du Monde)",
       "category": "Parades",
       "startDate": "2026-09-02",
       "totalAttendance": 100,
+      "marketVisitors": 35,
       "impactWindow": "12:00 PM – 12:30 PM",
       "location": "Exchange Place → Café du Monde (800 Decatur St.)",
       "proximity": "French Quarter Riverfront",
@@ -117,11 +122,12 @@
       ]
     },
     {
-      "id": "ev-jere1phj",
+      "id": "ev-k22k6n6a",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-03",
       "totalAttendance": 20700,
+      "marketVisitors": 2070,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 2,070 expected through the sheds: 1 in 10 of the roughly 20,700 visitors staying in or near downtown who are free during market hours. About 18,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 1,900 are in town for events or cruises (Southern Decadence), and about 80 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (41%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -131,11 +137,12 @@
       ]
     },
     {
-      "id": "ev-9u2c9cm3",
+      "id": "ev-77kaemo6",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-03",
       "totalAttendance": 825,
+      "marketVisitors": 25,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -147,7 +154,7 @@
       ]
     },
     {
-      "id": "ev-z7ylkl0e",
+      "id": "ev-7kvekm7o",
       "title": "Southern Decadence",
       "category": "Festivals",
       "startDate": "2026-09-03",
@@ -159,6 +166,14 @@
         "2026-09-05": 75000,
         "2026-09-06": 85000,
         "2026-09-07": 25000
+      },
+      "marketVisitors": 20000,
+      "dailyMarketVisitors": {
+        "2026-09-03": 1600,
+        "2026-09-04": 3600,
+        "2026-09-05": 6000,
+        "2026-09-06": 6800,
+        "2026-09-07": 2000
       },
       "impactWindow": "11:00 AM – 11:00 PM",
       "location": "French Quarter, centered at Bourbon & St. Ann; parade from Royal & Barracks",
@@ -173,11 +188,12 @@
       ]
     },
     {
-      "id": "ev-575tn7hu",
+      "id": "ev-m3fyyts0",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-04",
       "totalAttendance": 27300,
+      "marketVisitors": 2730,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 2,730 expected through the sheds: 1 in 10 of the roughly 27,300 visitors staying in or near downtown who are free during market hours. About 24,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 2,500 are in town for events or cruises (Southern Decadence; cruise guests staying the night before sailing), and about 80 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (54%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -187,11 +203,12 @@
       ]
     },
     {
-      "id": "ev-vpl0qs6c",
+      "id": "ev-vlmwqabd",
       "title": "Live music near the market (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-04",
       "totalAttendance": 75,
+      "marketVisitors": 38,
       "impactWindow": "11:00 AM – 11:45 AM",
       "location": "French Market (Farmers Market stage, Dutch Alley)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
@@ -201,11 +218,12 @@
       ]
     },
     {
-      "id": "ev-5o0z33pt",
+      "id": "ev-1xkijju2",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-04",
       "totalAttendance": 814,
+      "marketVisitors": 24,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -217,11 +235,12 @@
       ]
     },
     {
-      "id": "ev-v7zqbfi3",
+      "id": "ev-oktvrazz",
       "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-09-05",
       "totalAttendance": 2984,
+      "marketVisitors": 149,
       "impactWindow": "8:00 AM – 3:30 PM",
       "location": "Erato St. Cruise Terminal",
       "proximity": "MCCNO Corridor",
@@ -232,11 +251,12 @@
       ]
     },
     {
-      "id": "ev-m5ar5u4k",
+      "id": "ev-znt9u3xv",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-05",
       "totalAttendance": 41300,
+      "marketVisitors": 4130,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 4,130 expected through the sheds: 1 in 10 of the roughly 41,300 visitors staying in or near downtown who are free during market hours. About 37,900 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 3,000 are in town for events or cruises (cruise guests staying the night before sailing; Southern Decadence), about 210 are fans in town around an evening event or big game (fans in town for Sunday's Tyrese, Jaheim, Dru Hill & Ginuwine show), and about 160 are convention attendees with a free day before or after their meeting (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (68%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -246,11 +266,12 @@
       ]
     },
     {
-      "id": "ev-e63oihnz",
+      "id": "ev-xw26yqau",
       "title": "Live music near the market (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-05",
       "totalAttendance": 150,
+      "marketVisitors": 150,
       "impactWindow": "12:00 PM – 1:00 PM",
       "location": "French Market (Farmers Market stage, Dutch Alley)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
@@ -260,11 +281,12 @@
       ]
     },
     {
-      "id": "ev-ipr64qfb",
+      "id": "ev-nbqn30jx",
       "title": "Carnival Liberty turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-09-06",
       "totalAttendance": 2978,
+      "marketVisitors": 149,
       "impactWindow": "8:00 AM – 3:30 PM",
       "location": "Erato St. Cruise Terminal",
       "proximity": "MCCNO Corridor",
@@ -276,11 +298,12 @@
       ]
     },
     {
-      "id": "ev-kfcoilgm",
+      "id": "ev-dyth0e2o",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-06",
       "totalAttendance": 42300,
+      "marketVisitors": 4230,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 4,230 expected through the sheds: 1 in 10 of the roughly 42,300 visitors staying in or near downtown who are free during market hours. About 32,200 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), and about 10,100 are in town for events or cruises (cruise guests staying the night before sailing; Southern Decadence). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (71%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -290,11 +313,12 @@
       ]
     },
     {
-      "id": "ev-3xu67vk4",
+      "id": "ev-e5cije84",
       "title": "Live music near the market (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-06",
       "totalAttendance": 100,
+      "marketVisitors": 100,
       "impactWindow": "2:00 PM – 3:00 PM",
       "location": "French Market (Farmers Market stage, Dutch Alley)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
@@ -304,11 +328,12 @@
       ]
     },
     {
-      "id": "ev-vs8bfrme",
+      "id": "ev-fgxn1i3a",
       "title": "Tyrese, Jaheim, Dru Hill & Ginuwine",
       "category": "Concerts",
       "startDate": "2026-09-06",
       "totalAttendance": 17221,
+      "marketVisitors": 792,
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "Smoothie King Center",
       "proximity": "Superdome",
@@ -319,11 +344,12 @@
       ]
     },
     {
-      "id": "ev-37o3x94q",
+      "id": "ev-mfnird1m",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-07",
       "totalAttendance": 27200,
+      "marketVisitors": 2720,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 2,720 expected through the sheds: 1 in 10 of the roughly 27,200 visitors staying in or near downtown who are free during market hours. About 16,200 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 10,000 are in town for events or cruises (Southern Decadence; Labor Day weekend), and about 1,000 are fans in town around an evening event or big game (fans in town for Sunday's Tyrese, Jaheim, Dru Hill & Ginuwine show). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (49%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -333,11 +359,12 @@
       ]
     },
     {
-      "id": "ev-lqw5ib3n",
+      "id": "ev-x3x5djvy",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-07",
       "totalAttendance": 264,
+      "marketVisitors": 8,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -347,11 +374,12 @@
       ]
     },
     {
-      "id": "ev-qti5nhik",
+      "id": "ev-gzlzbokw",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-08",
       "totalAttendance": 16900,
+      "marketVisitors": 1690,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 1,690 expected through the sheds: 1 in 10 of the roughly 16,900 visitors staying in or near downtown who are free during market hours. About 15,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 1,100 are in town for events or cruises (Labor Day weekend), and about 100 are convention attendees with a free day before or after their meeting (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (33%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -361,11 +389,12 @@
       ]
     },
     {
-      "id": "ev-h1y6p4r0",
+      "id": "ev-zj8vwd6m",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-08",
       "totalAttendance": 264,
+      "marketVisitors": 8,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -375,11 +404,12 @@
       ]
     },
     {
-      "id": "ev-yqquufz2",
+      "id": "ev-we1noebq",
       "title": "Smaller evening shows (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-08",
       "totalAttendance": 2500,
+      "marketVisitors": 26,
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "House of Blues; The Fillmore",
       "proximity": "Canal St. / CBD",
@@ -391,11 +421,12 @@
       ]
     },
     {
-      "id": "ev-2qpwu1wm",
+      "id": "ev-3iw2ndnq",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-09",
       "totalAttendance": 17300,
+      "marketVisitors": 1730,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 1,730 expected through the sheds: 1 in 10 of the roughly 17,300 visitors staying in or near downtown who are free during market hours. About 16,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 510 are in town for events or cruises (cruise guests staying the night before sailing), and about 130 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (35%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -405,11 +436,12 @@
       ]
     },
     {
-      "id": "ev-2pfo48jn",
+      "id": "ev-7v5kdywh",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-09",
       "totalAttendance": 1260,
+      "marketVisitors": 38,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -419,11 +451,12 @@
       ]
     },
     {
-      "id": "ev-9neik0re",
+      "id": "ev-pol953x4",
       "title": "Smaller evening shows (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-09",
       "totalAttendance": 2900,
+      "marketVisitors": 37,
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "Civic Theatre; The Fillmore",
       "proximity": "Canal St. / CBD",
@@ -435,11 +468,12 @@
       ]
     },
     {
-      "id": "ev-4ipxwz2c",
+      "id": "ev-zavrqh41",
       "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-09-10",
       "totalAttendance": 2984,
+      "marketVisitors": 149,
       "impactWindow": "8:00 AM – 3:30 PM",
       "location": "Erato St. Cruise Terminal",
       "proximity": "MCCNO Corridor",
@@ -451,11 +485,12 @@
       ]
     },
     {
-      "id": "ev-nrv3jsuq",
+      "id": "ev-zl18cb82",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-10",
       "totalAttendance": 19600,
+      "marketVisitors": 1960,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 1,960 expected through the sheds: 1 in 10 of the roughly 19,600 visitors staying in or near downtown who are free during market hours. About 18,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 760 are in town for events or cruises (cruise guests staying the night before sailing), and about 130 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (40%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -465,11 +500,12 @@
       ]
     },
     {
-      "id": "ev-63i2r2wk",
+      "id": "ev-txw2t8nf",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-10",
       "totalAttendance": 1295,
+      "marketVisitors": 39,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -479,11 +515,12 @@
       ]
     },
     {
-      "id": "ev-h9u7rie0",
+      "id": "ev-lugzyomv",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-11",
       "totalAttendance": 25000,
+      "marketVisitors": 2500,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 2,500 expected through the sheds: 1 in 10 of the roughly 25,000 visitors staying in or near downtown who are free during market hours. About 24,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 210 are fans in town around an evening event or big game (fans in town for Saturday's Cash Money & No Limit show), and about 130 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (51%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -493,11 +530,12 @@
       ]
     },
     {
-      "id": "ev-t6oexrb7",
+      "id": "ev-uq4mdbe4",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-11",
       "totalAttendance": 1300,
+      "marketVisitors": 39,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -507,11 +545,12 @@
       ]
     },
     {
-      "id": "ev-c9tz7819",
+      "id": "ev-181ug1r3",
       "title": "Cash Money & No Limit Tour (Master P, Juvenile, Birdman and more)",
       "category": "Concerts",
       "startDate": "2026-09-12",
       "totalAttendance": 17221,
+      "marketVisitors": 792,
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "Smoothie King Center",
       "proximity": "Superdome",
@@ -523,11 +562,12 @@
       ]
     },
     {
-      "id": "ev-fprb6345",
+      "id": "ev-ggqg07fg",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-12",
       "totalAttendance": 38600,
+      "marketVisitors": 3860,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 3,860 expected through the sheds: 1 in 10 of the roughly 38,600 visitors staying in or near downtown who are free during market hours. About 37,900 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 510 are in town for events or cruises (cruise guests staying the night before sailing), about 80 are convention attendees with a free day before or after their meeting (smaller meetings), and about 120 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (67%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -537,11 +577,12 @@
       ]
     },
     {
-      "id": "ev-1r1lh4wt",
+      "id": "ev-irwshyo8",
       "title": "Live music near the market (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-12",
       "totalAttendance": 150,
+      "marketVisitors": 150,
       "impactWindow": "12:00 PM – 1:00 PM",
       "location": "French Market (Farmers Market stage, Dutch Alley)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
@@ -551,11 +592,12 @@
       ]
     },
     {
-      "id": "ev-1jkfeufv",
+      "id": "ev-98bqc0uo",
       "title": "NOLA River Fest",
       "category": "Festivals",
       "startDate": "2026-09-12",
       "totalAttendance": 900,
+      "marketVisitors": 675,
       "impactWindow": "11:00 AM – 7:45 PM",
       "location": "New Orleans Jazz Museum (Old U.S. Mint, 400 Esplanade Ave.)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
@@ -566,11 +608,12 @@
       ]
     },
     {
-      "id": "ev-ewxn3dxm",
+      "id": "ev-8axxcagh",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-12",
       "totalAttendance": 1115,
+      "marketVisitors": 112,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -580,11 +623,12 @@
       ]
     },
     {
-      "id": "ev-uivhqate",
+      "id": "ev-s09nbgcd",
       "title": "Carnival Liberty turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-09-13",
       "totalAttendance": 2978,
+      "marketVisitors": 149,
       "impactWindow": "8:00 AM – 3:30 PM",
       "location": "Erato St. Cruise Terminal",
       "proximity": "MCCNO Corridor",
@@ -596,11 +640,12 @@
       ]
     },
     {
-      "id": "ev-fjenxtzi",
+      "id": "ev-5x87t645",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-13",
       "totalAttendance": 35100,
+      "marketVisitors": 3510,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 3,510 expected through the sheds: 1 in 10 of the roughly 35,100 visitors staying in or near downtown who are free during market hours. About 32,200 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 1,500 are in town for events or cruises (cruise guests staying the night before sailing), about 1,000 are fans in town around an evening event or big game (fans in town for Saturday's Cash Money & No Limit show), about 110 are convention attendees with a free day before or after their meeting (smaller meetings), and about 170 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (60%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -610,11 +655,12 @@
       ]
     },
     {
-      "id": "ev-m51kri7m",
+      "id": "ev-g3r1ip0j",
       "title": "Live music near the market (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-13",
       "totalAttendance": 400,
+      "marketVisitors": 325,
       "impactWindow": "2:00 PM – 3:00 PM",
       "location": "French Market and New Orleans Jazz Museum (400 Esplanade Ave.)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
@@ -625,11 +671,12 @@
       ]
     },
     {
-      "id": "ev-54dj08dm",
+      "id": "ev-a9j6hwp5",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-13",
       "totalAttendance": 1579,
+      "marketVisitors": 158,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -639,11 +686,12 @@
       ]
     },
     {
-      "id": "ev-1d14odrt",
+      "id": "ev-w9aut0gw",
       "title": "Smaller evening shows (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-13",
       "totalAttendance": 700,
+      "marketVisitors": 20,
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "House of Blues",
       "proximity": "Canal St. / CBD",
@@ -653,11 +701,12 @@
       ]
     },
     {
-      "id": "ev-8ukbdy6x",
+      "id": "ev-hjovfg53",
       "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-09-14",
       "totalAttendance": 2984,
+      "marketVisitors": 149,
       "impactWindow": "8:00 AM – 3:30 PM",
       "location": "Erato St. Cruise Terminal",
       "proximity": "MCCNO Corridor",
@@ -669,11 +718,12 @@
       ]
     },
     {
-      "id": "ev-edhdjf4v",
+      "id": "ev-vm7lrbya",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-14",
       "totalAttendance": 17800,
+      "marketVisitors": 1780,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 1,780 expected through the sheds: 1 in 10 of the roughly 17,800 visitors staying in or near downtown who are free during market hours. About 16,200 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 1,100 are in town for events or cruises (cruise guests staying the night before sailing), about 220 are convention attendees with a free day before or after their meeting (smaller meetings), and about 290 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (38%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -683,11 +733,12 @@
       ]
     },
     {
-      "id": "ev-88uc8mh2",
+      "id": "ev-mmbu3xnc",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-14",
       "totalAttendance": 2710,
+      "marketVisitors": 81,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -697,11 +748,12 @@
       ]
     },
     {
-      "id": "ev-u2b1xr4g",
+      "id": "ev-jnyph7k1",
       "title": "Smaller evening shows (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-14",
       "totalAttendance": 1500,
+      "marketVisitors": 16,
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "The Fillmore",
       "proximity": "Canal St. / CBD",
@@ -712,11 +764,12 @@
       ]
     },
     {
-      "id": "ev-a8omns8c",
+      "id": "ev-y4asavzc",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-15",
       "totalAttendance": 17000,
+      "marketVisitors": 1700,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 1,700 expected through the sheds: 1 in 10 of the roughly 17,000 visitors staying in or near downtown who are free during market hours. About 15,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 880 are fans in town around an evening event or big game (fans in town for Wednesday's Bruno Mars show), and about 490 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (39%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -726,11 +779,12 @@
       ]
     },
     {
-      "id": "ev-xuqn1ngl",
+      "id": "ev-9nt5bj6f",
       "title": "Live music near the market (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-15",
       "totalAttendance": 150,
+      "marketVisitors": 113,
       "impactWindow": "5:00 PM (end time not published)",
       "location": "New Orleans Jazz Museum (400 Esplanade Ave.)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
@@ -740,11 +794,12 @@
       ]
     },
     {
-      "id": "ev-xvelr47r",
+      "id": "ev-mpk2ae5u",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-15",
       "totalAttendance": 4930,
+      "marketVisitors": 148,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -756,11 +811,12 @@
       ]
     },
     {
-      "id": "ev-d6r8406m",
+      "id": "ev-rsja26k1",
       "title": "Bruno Mars – The Romantic Tour",
       "category": "Concerts",
       "startDate": "2026-09-16",
       "totalAttendance": 73208,
+      "marketVisitors": 1812,
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "Caesars Superdome",
       "proximity": "Superdome",
@@ -773,11 +829,12 @@
       ]
     },
     {
-      "id": "ev-yhm6ywbj",
+      "id": "ev-75gz5qlv",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-16",
       "totalAttendance": 18900,
+      "marketVisitors": 1890,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 1,890 expected through the sheds: 1 in 10 of the roughly 18,900 visitors staying in or near downtown who are free during market hours. About 16,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 1,500 are convention attendees with a free day before or after their meeting (YMCA General Assembly attendees arriving a day early), and about 690 are family members traveling with convention attendees (smaller meetings, YMCA General Assembly). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (52%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -787,11 +844,12 @@
       ]
     },
     {
-      "id": "ev-tguwbvw5",
+      "id": "ev-ctrw4fq3",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-16",
       "totalAttendance": 4661,
+      "marketVisitors": 140,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -803,11 +861,12 @@
       ]
     },
     {
-      "id": "ev-6nm5hsbx",
+      "id": "ev-u604p5ra",
       "title": "Smaller evening shows (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-16",
       "totalAttendance": 1800,
+      "marketVisitors": 19,
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "The Fillmore",
       "proximity": "Canal St. / CBD",
@@ -818,11 +877,12 @@
       ]
     },
     {
-      "id": "ev-isuva90p",
+      "id": "ev-l35bc84s",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-17",
       "totalAttendance": 27500,
+      "marketVisitors": 2750,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 2,750 expected through the sheds: 1 in 10 of the roughly 27,500 visitors staying in or near downtown who are free during market hours. About 18,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 250 are in town for events or cruises (), about 6,600 are fans in town around an evening event or big game (fans in town for Wednesday's Bruno Mars show), about 150 are convention attendees with a free day before or after their meeting (smaller meetings), and about 1,800 are family members traveling with convention attendees (YMCA General Assembly, smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (64%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -832,11 +892,12 @@
       ]
     },
     {
-      "id": "ev-ak384o7w",
+      "id": "ev-yry22pk5",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-17",
       "totalAttendance": 3225,
+      "marketVisitors": 97,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -848,7 +909,7 @@
       ]
     },
     {
-      "id": "ev-849qqagq",
+      "id": "ev-0qk6ro1q",
       "title": "YMCA of the USA General Assembly",
       "category": "Conventions",
       "startDate": "2026-09-17",
@@ -858,6 +919,12 @@
         "2026-09-17": 10000,
         "2026-09-18": 10000,
         "2026-09-19": 10000
+      },
+      "marketVisitors": 1600,
+      "dailyMarketVisitors": {
+        "2026-09-17": 300,
+        "2026-09-18": 300,
+        "2026-09-19": 1000
       },
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Ernest N. Morial Convention Center",
@@ -871,11 +938,12 @@
       ]
     },
     {
-      "id": "ev-pil3hqxf",
+      "id": "ev-nkiyqwjk",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-18",
       "totalAttendance": 27800,
+      "marketVisitors": 2780,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 2,780 expected through the sheds: 1 in 10 of the roughly 27,800 visitors staying in or near downtown who are free during market hours. About 24,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 1,000 are in town for events or cruises (cruise guests staying the night before sailing; Inspire the City football), about 210 are fans in town around an evening event or big game (fans in town for Saturday's Rod Wave show), and about 1,800 are family members traveling with convention attendees (YMCA General Assembly, smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (71%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -885,11 +953,12 @@
       ]
     },
     {
-      "id": "ev-w2f5ayo1",
+      "id": "ev-clev89c3",
       "title": "Live music near the market (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-18",
       "totalAttendance": 150,
+      "marketVisitors": 113,
       "impactWindow": "2:00 PM (end time not published)",
       "location": "New Orleans Jazz Museum (400 Esplanade Ave.)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
@@ -899,11 +968,12 @@
       ]
     },
     {
-      "id": "ev-is83qnwv",
+      "id": "ev-h34hse5d",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-18",
       "totalAttendance": 3245,
+      "marketVisitors": 97,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -915,11 +985,12 @@
       ]
     },
     {
-      "id": "ev-6rpv8q7t",
+      "id": "ev-hin5vufu",
       "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-09-19",
       "totalAttendance": 2984,
+      "marketVisitors": 149,
       "impactWindow": "8:00 AM – 3:30 PM",
       "location": "Erato St. Cruise Terminal",
       "proximity": "MCCNO Corridor",
@@ -930,11 +1001,12 @@
       ]
     },
     {
-      "id": "ev-djbmajti",
+      "id": "ev-t6snfbs1",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-19",
       "totalAttendance": 41200,
+      "marketVisitors": 4120,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 4,120 expected through the sheds: 1 in 10 of the roughly 41,200 visitors staying in or near downtown who are free during market hours. About 37,900 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 1,500 are in town for events or cruises (cruise guests staying the night before sailing; Inspire the City football), and about 1,800 are family members traveling with convention attendees (YMCA General Assembly, smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (83%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -944,11 +1016,12 @@
       ]
     },
     {
-      "id": "ev-n305kqmm",
+      "id": "ev-g1ib0dqi",
       "title": "Inspire the City Invitational (high school football)",
       "category": "Youth Events",
       "startDate": "2026-09-19",
       "totalAttendance": 10000,
+      "marketVisitors": 425,
       "impactWindow": "12:00 PM – 9:30 PM",
       "location": "Caesars Superdome",
       "proximity": "Superdome",
@@ -961,11 +1034,12 @@
       ]
     },
     {
-      "id": "ev-hplitofo",
+      "id": "ev-qh4cymgx",
       "title": "Live music near the market (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-19",
       "totalAttendance": 300,
+      "marketVisitors": 300,
       "impactWindow": "12:00 PM – 2:00 PM",
       "location": "French Market (Farmers Market stage, Dutch Alley)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
@@ -975,11 +1049,12 @@
       ]
     },
     {
-      "id": "ev-7tpxs79c",
+      "id": "ev-jek0qhj8",
       "title": "Rod Wave",
       "category": "Concerts",
       "startDate": "2026-09-19",
       "totalAttendance": 17221,
+      "marketVisitors": 792,
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "Smoothie King Center",
       "proximity": "Superdome",
@@ -990,11 +1065,12 @@
       ]
     },
     {
-      "id": "ev-w42jmz2d",
+      "id": "ev-ybab3kcj",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-19",
       "totalAttendance": 3161,
+      "marketVisitors": 316,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -1006,11 +1082,12 @@
       ]
     },
     {
-      "id": "ev-lf46jlun",
+      "id": "ev-3umuozrj",
       "title": "Smaller evening shows (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-19",
       "totalAttendance": 700,
+      "marketVisitors": 20,
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "House of Blues",
       "proximity": "Canal St. / CBD",
@@ -1020,11 +1097,12 @@
       ]
     },
     {
-      "id": "ev-ki0pxex9",
+      "id": "ev-iuyja6ej",
       "title": "Viking Mississippi turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-09-19",
       "totalAttendance": 386,
+      "marketVisitors": 39,
       "location": "New Orleans riverfront (dock not published)",
       "proximity": "Riverfront (dock not published)",
       "notes": "River ship arrives from St. Paul (14-night trip from Sept 5) and leaves for Memphis; 386 guests. Times not published. Market estimate: River ship day in port: about 1 in 10 guests walk through the sheds.",
@@ -1034,11 +1112,12 @@
       ]
     },
     {
-      "id": "ev-yeddhufj",
+      "id": "ev-7j1a0e5r",
       "title": "Wedding second line (St. Mary's Church)",
       "category": "Parades",
       "startDate": "2026-09-19",
       "totalAttendance": 100,
+      "marketVisitors": 2,
       "impactWindow": "5:05 PM – 5:35 PM",
       "location": "Starts at St. Mary's Church / Old Ursuline Convent (1116 Chartres St.)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
@@ -1048,11 +1127,12 @@
       ]
     },
     {
-      "id": "ev-s3n2bwr3",
+      "id": "ev-lawi531d",
       "title": "Carnival Liberty turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-09-20",
       "totalAttendance": 2978,
+      "marketVisitors": 149,
       "impactWindow": "8:00 AM – 3:30 PM",
       "location": "Erato St. Cruise Terminal",
       "proximity": "MCCNO Corridor",
@@ -1064,11 +1144,12 @@
       ]
     },
     {
-      "id": "ev-ny5tzs3x",
+      "id": "ev-bryonu48",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-20",
       "totalAttendance": 36200,
+      "marketVisitors": 3620,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 3,620 expected through the sheds: 1 in 10 of the roughly 36,200 visitors staying in or near downtown who are free during market hours. About 32,200 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 760 are in town for events or cruises (cruise guests staying the night before sailing; Inspire the City football), about 1,000 are fans in town around an evening event or big game (fans in town for Saturday's Rod Wave show), about 1,700 are convention attendees with a free day before or after their meeting (YMCA General Assembly attendees staying on; smaller meetings), and about 430 are family members traveling with convention attendees (YMCA General Assembly, smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (65%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -1078,11 +1159,12 @@
       ]
     },
     {
-      "id": "ev-vrr0j53d",
+      "id": "ev-hqht7223",
       "title": "Live music near the market (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-20",
       "totalAttendance": 100,
+      "marketVisitors": 100,
       "impactWindow": "2:00 PM – 3:00 PM",
       "location": "French Market (Farmers Market stage, Dutch Alley)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
@@ -1092,11 +1174,12 @@
       ]
     },
     {
-      "id": "ev-60vf6hcf",
+      "id": "ev-7ojgndrd",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-20",
       "totalAttendance": 1816,
+      "marketVisitors": 182,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -1106,11 +1189,12 @@
       ]
     },
     {
-      "id": "ev-ops3b5z0",
+      "id": "ev-ao7biabv",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-21",
       "totalAttendance": 16500,
+      "marketVisitors": 1650,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 1,650 expected through the sheds: 1 in 10 of the roughly 16,500 visitors staying in or near downtown who are free during market hours. About 16,200 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 50 are convention attendees with a free day before or after their meeting (smaller meetings), and about 290 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (36%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -1120,11 +1204,12 @@
       ]
     },
     {
-      "id": "ev-ekrjkkc1",
+      "id": "ev-yzi218jy",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-21",
       "totalAttendance": 2850,
+      "marketVisitors": 86,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -1134,11 +1219,12 @@
       ]
     },
     {
-      "id": "ev-6osfkui8",
+      "id": "ev-70c1cls7",
       "title": "Smaller evening shows (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-21",
       "totalAttendance": 2500,
+      "marketVisitors": 26,
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "House of Blues; The Fillmore",
       "proximity": "Canal St. / CBD",
@@ -1149,11 +1235,12 @@
       ]
     },
     {
-      "id": "ev-dql78766",
+      "id": "ev-5mzuww2s",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-22",
       "totalAttendance": 16100,
+      "marketVisitors": 1620,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 1,620 expected through the sheds: 1 in 10 of the roughly 16,100 visitors staying in or near downtown who are free during market hours. About 15,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 140 are convention attendees with a free day before or after their meeting (smaller meetings), and about 350 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (36%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -1163,7 +1250,7 @@
       ]
     },
     {
-      "id": "ev-5fv1p38h",
+      "id": "ev-hup5itaq",
       "title": "Jersey Boys (Broadway tour)",
       "category": "Concerts",
       "startDate": "2026-09-22",
@@ -1177,6 +1264,15 @@
         "2026-09-26": 4400,
         "2026-09-27": 4400
       },
+      "marketVisitors": 454,
+      "dailyMarketVisitors": {
+        "2026-09-22": 28,
+        "2026-09-23": 28,
+        "2026-09-24": 28,
+        "2026-09-25": 46,
+        "2026-09-26": 161,
+        "2026-09-27": 163
+      },
       "impactWindow": "7:00 PM – 10:30 PM",
       "location": "Saenger Theatre (1111 Canal St.)",
       "proximity": "Canal St. / CBD",
@@ -1188,11 +1284,12 @@
       ]
     },
     {
-      "id": "ev-n50wqa3x",
+      "id": "ev-enlfndlm",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-22",
       "totalAttendance": 3384,
+      "marketVisitors": 102,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -1202,11 +1299,12 @@
       ]
     },
     {
-      "id": "ev-humazlfd",
+      "id": "ev-awl5dy5j",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-23",
       "totalAttendance": 17900,
+      "marketVisitors": 1790,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 1,790 expected through the sheds: 1 in 10 of the roughly 17,900 visitors staying in or near downtown who are free during market hours. About 16,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 760 are in town for events or cruises (cruise guests staying the night before sailing), and about 470 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (40%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -1216,11 +1314,12 @@
       ]
     },
     {
-      "id": "ev-i18u10yx",
+      "id": "ev-50g4lig5",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-23",
       "totalAttendance": 4749,
+      "marketVisitors": 142,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -1230,11 +1329,12 @@
       ]
     },
     {
-      "id": "ev-s211209k",
+      "id": "ev-r9wlm83g",
       "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-09-24",
       "totalAttendance": 2984,
+      "marketVisitors": 149,
       "impactWindow": "8:00 AM – 3:30 PM",
       "location": "Erato St. Cruise Terminal",
       "proximity": "MCCNO Corridor",
@@ -1246,11 +1346,12 @@
       ]
     },
     {
-      "id": "ev-qpb008d5",
+      "id": "ev-ogxeap2b",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-24",
       "totalAttendance": 20300,
+      "marketVisitors": 2030,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 2,030 expected through the sheds: 1 in 10 of the roughly 20,300 visitors staying in or near downtown who are free during market hours. About 18,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 1,100 are in town for events or cruises (cruise guests staying the night before sailing), and about 480 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (46%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -1260,11 +1361,12 @@
       ]
     },
     {
-      "id": "ev-eh2d35kp",
+      "id": "ev-xixq32i9",
       "title": "Live music near the market (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-24",
       "totalAttendance": 150,
+      "marketVisitors": 113,
       "impactWindow": "2:00 PM (end time not published)",
       "location": "New Orleans Jazz Museum (400 Esplanade Ave.)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
@@ -1275,7 +1377,7 @@
       ]
     },
     {
-      "id": "ev-le62qu4j",
+      "id": "ev-m1h0np9y",
       "title": "NOLAxNOLA (opening days)",
       "category": "Festivals",
       "startDate": "2026-09-24",
@@ -1290,6 +1392,16 @@
         "2026-09-29": 2000,
         "2026-09-30": 2000
       },
+      "marketVisitors": 450,
+      "dailyMarketVisitors": {
+        "2026-09-24": 62,
+        "2026-09-25": 88,
+        "2026-09-26": 88,
+        "2026-09-27": 62,
+        "2026-09-28": 50,
+        "2026-09-29": 50,
+        "2026-09-30": 50
+      },
       "impactWindow": "4:00 PM – 11:00 PM",
       "location": "About 50 venues citywide, incl. Frenchmen St. and the French Quarter",
       "proximity": "Marigny",
@@ -1301,11 +1413,12 @@
       ]
     },
     {
-      "id": "ev-3ir95kbn",
+      "id": "ev-w6fvxl4w",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-24",
       "totalAttendance": 4786,
+      "marketVisitors": 144,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -1315,11 +1428,12 @@
       ]
     },
     {
-      "id": "ev-udq2432o",
+      "id": "ev-8iwkugm5",
       "title": "Smaller evening shows (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-24",
       "totalAttendance": 1500,
+      "marketVisitors": 16,
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "The Fillmore",
       "proximity": "Canal St. / CBD",
@@ -1329,11 +1443,12 @@
       ]
     },
     {
-      "id": "ev-2z9a5yyd",
+      "id": "ev-dfudp5uh",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-25",
       "totalAttendance": 27100,
+      "marketVisitors": 2710,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 2,710 expected through the sheds: 1 in 10 of the roughly 27,100 visitors staying in or near downtown who are free during market hours. About 24,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 250 are in town for events or cruises (Dolly Day), about 1,700 are fans in town around an evening event or big game (fans in town for Sunday's Saints–Raiders game), about 60 are convention attendees with a free day before or after their meeting (smaller meetings), and about 450 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (58%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -1343,11 +1458,12 @@
       ]
     },
     {
-      "id": "ev-g43fwnm6",
+      "id": "ev-7qlqshyo",
       "title": "Krewe of Dolly – Dolly Day Celebration of Life parade",
       "category": "Parades",
       "startDate": "2026-09-25",
       "totalAttendance": 3000,
+      "marketVisitors": 66,
       "impactWindow": "4:00 PM – 7:00 PM",
       "location": "Armstrong Park (line-up 4 PM, rolls 5 PM) through the Quarter to the New Orleans Jazz Museum (400 Esplanade Ave.)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
@@ -1361,11 +1477,12 @@
       ]
     },
     {
-      "id": "ev-sa2fs8pk",
+      "id": "ev-3h2oeaa9",
       "title": "Live music near the market (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-25",
       "totalAttendance": 150,
+      "marketVisitors": 113,
       "impactWindow": "2:00 PM (end time not published)",
       "location": "New Orleans Jazz Museum (400 Esplanade Ave.)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
@@ -1375,11 +1492,12 @@
       ]
     },
     {
-      "id": "ev-6zk2z4vq",
+      "id": "ev-kqqgfbzk",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-25",
       "totalAttendance": 4482,
+      "marketVisitors": 134,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -1389,11 +1507,12 @@
       ]
     },
     {
-      "id": "ev-63n27qyi",
+      "id": "ev-cbbmb7t9",
       "title": "Smaller evening shows (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-25",
       "totalAttendance": 1800,
+      "marketVisitors": 38,
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "Mahalia Jackson Theater",
       "proximity": "Armstrong Park / Tremé",
@@ -1403,11 +1522,12 @@
       ]
     },
     {
-      "id": "ev-h02ofyvc",
+      "id": "ev-xvtcvvj8",
       "title": "American Cruise Lines – American Heritage in port",
       "category": "Cruise Ships",
       "startDate": "2026-09-26",
       "totalAttendance": 170,
+      "marketVisitors": 17,
       "location": "New Orleans riverfront (dock not published)",
       "proximity": "Riverfront (dock not published)",
       "notes": "Listed on the port's September schedule; whether it started or ended a cruise here isn't published. About 170 guests (estimate). Times not published. Market estimate: River ship day in port: about 1 in 10 guests walk through the sheds.",
@@ -1417,11 +1537,12 @@
       ]
     },
     {
-      "id": "ev-togg5srn",
+      "id": "ev-8ur72en6",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-26",
       "totalAttendance": 47200,
+      "marketVisitors": 4720,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 4,720 expected through the sheds: 1 in 10 of the roughly 47,200 visitors staying in or near downtown who are free during market hours. About 36,300 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 1,600 are in town for events or cruises (Dolly Day; cruise guests staying the night before sailing; other visitors on the Saints opener weekend, when New Orleans & Company expected hotels above 95%), about 8,400 are fans in town around an evening event or big game (fans in town for Sunday's Saints–Raiders game), about 550 are convention attendees with a free day before or after their meeting (smaller meetings), and about 290 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (82%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -1431,11 +1552,12 @@
       ]
     },
     {
-      "id": "ev-uwf4j8qr",
+      "id": "ev-1dlzkrwl",
       "title": "Live music near the market (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-26",
       "totalAttendance": 300,
+      "marketVisitors": 300,
       "impactWindow": "12:00 PM – 2:00 PM",
       "location": "French Market (Farmers Market stage, Dutch Alley)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
@@ -1445,11 +1567,12 @@
       ]
     },
     {
-      "id": "ev-lmv2jkj6",
+      "id": "ev-aq9i5eb2",
       "title": "Saints Kickoff Run (5K)",
       "category": "Miscellaneous",
       "startDate": "2026-09-26",
       "totalAttendance": 5000,
+      "marketVisitors": 500,
       "impactWindow": "7:00 AM – 1:00 PM",
       "location": "Champions Square (Superdome) → Poydras → S. Peters → Canal → Decatur / N. Peters St., turning around past St. Louis St.",
       "proximity": "French Quarter Riverfront",
@@ -1461,11 +1584,12 @@
       ]
     },
     {
-      "id": "ev-2chia29s",
+      "id": "ev-zti4m78k",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-26",
       "totalAttendance": 2382,
+      "marketVisitors": 238,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -1475,11 +1599,12 @@
       ]
     },
     {
-      "id": "ev-89iwbxq7",
+      "id": "ev-c9e7wj25",
       "title": "Carnival Liberty turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-09-27",
       "totalAttendance": 2978,
+      "marketVisitors": 149,
       "impactWindow": "8:00 AM – 3:30 PM",
       "location": "Erato St. Cruise Terminal",
       "proximity": "MCCNO Corridor",
@@ -1491,11 +1616,12 @@
       ]
     },
     {
-      "id": "ev-mjkawcdk",
+      "id": "ev-0t0dbpfv",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-27",
       "totalAttendance": 40500,
+      "marketVisitors": 2840,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 2,840 expected through the sheds: 1 in 10 of the roughly 40,500 visitors staying in or near downtown who are free during market hours, less the game-day dip below. About 29,800 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 5,800 are in town for events or cruises (cruise guests staying the night before sailing; other visitors on the Saints opener weekend, when New Orleans & Company expected hotels above 95%), about 3,700 are convention attendees with a free day before or after their meeting (WEFTEC attendees arriving a day early; smaller meetings), and about 1,300 are family members traveling with convention attendees (WEFTEC, smaller meetings). Convention attendees on meeting days are counted in their own rows. Saints game day: about 1,200 fewer than usual come through (30% of the everyday visitors): many are at the Saints–Raiders game or watching it instead of wandering the Quarter, and some stayed away from a pricier game weekend. Built from the day's hotel estimate (95%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -1505,11 +1631,12 @@
       ]
     },
     {
-      "id": "ev-jhy3o5kx",
+      "id": "ev-y07lwb45",
       "title": "Live music near the market (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-27",
       "totalAttendance": 100,
+      "marketVisitors": 100,
       "impactWindow": "2:00 PM – 3:00 PM",
       "location": "French Market (Farmers Market stage, Dutch Alley)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
@@ -1519,11 +1646,12 @@
       ]
     },
     {
-      "id": "ev-38qoh73u",
+      "id": "ev-2hxk4ogk",
       "title": "Saints vs. Las Vegas Raiders",
       "category": "Sports",
       "startDate": "2026-09-27",
       "totalAttendance": 73208,
+      "marketVisitors": 1086,
       "impactWindow": "12:00 PM – 3:30 PM",
       "location": "Caesars Superdome",
       "proximity": "Superdome",
@@ -1536,11 +1664,12 @@
       ]
     },
     {
-      "id": "ev-6o8z6o7n",
+      "id": "ev-q6spr9tc",
       "title": "Second line (Chartres House → Marché, Dutch Alley)",
       "category": "Parades",
       "startDate": "2026-09-27",
       "totalAttendance": 100,
+      "marketVisitors": 0,
       "impactWindow": "6:00 PM – 6:45 PM",
       "location": "540 Chartres St. → Decatur St. → St. Philip St. → Dutch Alley → Marché (914 N. Peters St.)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
@@ -1550,11 +1679,12 @@
       ]
     },
     {
-      "id": "ev-az4xlhtt",
+      "id": "ev-9uvinsv6",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-27",
       "totalAttendance": 3667,
+      "marketVisitors": 367,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -1564,11 +1694,12 @@
       ]
     },
     {
-      "id": "ev-3741v0t1",
+      "id": "ev-rloc13f3",
       "title": "Wedding second line (547 Esplanade → Frenchmen)",
       "category": "Parades",
       "startDate": "2026-09-27",
       "totalAttendance": 30,
+      "marketVisitors": 11,
       "location": "547 Esplanade Ave. to Frenchmen St. via Esplanade",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
       "notes": "Private second line, about 30 people and a 7-piece brass band (permit); starts about two blocks from the Flea Market's downriver end. Time isn't on the permit. Market estimate: Second line that runs from 547 Esplanade Ave. to Frenchmen St.: in the 35% zone (Jackson Square to Café du Monde, Decatur toward the market, the first blocks of Frenchmen), so 35% of the guests (your rule). Its time isn't on the permit, so it counts until a source shows otherwise.",
@@ -1577,11 +1708,12 @@
       ]
     },
     {
-      "id": "ev-lnbekw57",
+      "id": "ev-do51xqhn",
       "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-09-28",
       "totalAttendance": 2984,
+      "marketVisitors": 149,
       "impactWindow": "8:00 AM – 3:30 PM",
       "location": "Erato St. Cruise Terminal",
       "proximity": "MCCNO Corridor",
@@ -1593,11 +1725,12 @@
       ]
     },
     {
-      "id": "ev-p4mcheng",
+      "id": "ev-vk3zp41q",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-28",
       "totalAttendance": 31900,
+      "marketVisitors": 3190,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 3,190 expected through the sheds: 1 in 10 of the roughly 31,900 visitors staying in or near downtown who are free during market hours. About 16,200 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 5,800 are in town for events or cruises (cruise guests staying the night before sailing; other visitors on the Saints opener weekend, when New Orleans & Company expected hotels above 95%), about 5,000 are fans in town around an evening event or big game (fans in town for Sunday's Saints–Raiders game), and about 4,900 are family members traveling with convention attendees (WEFTEC, smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (83%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -1607,11 +1740,12 @@
       ]
     },
     {
-      "id": "ev-rphxeu1o",
+      "id": "ev-6pgfozzb",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-28",
       "totalAttendance": 4226,
+      "marketVisitors": 127,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -1621,7 +1755,7 @@
       ]
     },
     {
-      "id": "ev-g97x0y4j",
+      "id": "ev-mlsjyks4",
       "title": "WEFTEC 2026 (Water Environment Federation)",
       "category": "Conventions",
       "startDate": "2026-09-28",
@@ -1631,6 +1765,12 @@
         "2026-09-28": 18000,
         "2026-09-29": 18000,
         "2026-09-30": 18000
+      },
+      "marketVisitors": 1620,
+      "dailyMarketVisitors": {
+        "2026-09-28": 540,
+        "2026-09-29": 540,
+        "2026-09-30": 540
       },
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Ernest N. Morial Convention Center",
@@ -1644,11 +1784,12 @@
       ]
     },
     {
-      "id": "ev-xlmbi5kj",
+      "id": "ev-6vg8ss4r",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-29",
       "totalAttendance": 20600,
+      "marketVisitors": 2060,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 2,060 expected through the sheds: 1 in 10 of the roughly 20,600 visitors staying in or near downtown who are free during market hours. About 15,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), and about 4,900 are family members traveling with convention attendees (WEFTEC, smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (65%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -1658,11 +1799,12 @@
       ]
     },
     {
-      "id": "ev-igxeoljq",
+      "id": "ev-n2i9svo0",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-29",
       "totalAttendance": 4357,
+      "marketVisitors": 131,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
@@ -1672,11 +1814,12 @@
       ]
     },
     {
-      "id": "ev-ogoieup8",
+      "id": "ev-rl0ulgw9",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-09-30",
       "totalAttendance": 21600,
+      "marketVisitors": 2160,
       "impactWindow": "Market hours",
       "location": "Visitors staying in or near downtown, free to explore the French Quarter",
       "notes": "About 2,160 expected through the sheds: 1 in 10 of the roughly 21,600 visitors staying in or near downtown who are free during market hours. About 16,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), and about 4,900 are family members traveling with convention attendees (WEFTEC, smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (61%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
@@ -1686,11 +1829,12 @@
       ]
     },
     {
-      "id": "ev-f98tun0u",
+      "id": "ev-hv2l76zc",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-30",
       "totalAttendance": 4282,
+      "marketVisitors": 128,
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
