@@ -1,47 +1,63 @@
 {
   "month": "2026-09",
-  "lastUpdated": "2026-09-30",
+  "lastUpdated": "2026-10-08",
   "hotelOccupancy": {
     "2026-09-01": 32,
     "2026-09-02": 34,
-    "2026-09-03": 40,
+    "2026-09-03": 41,
     "2026-09-04": 54,
-    "2026-09-05": 69,
+    "2026-09-05": 68,
     "2026-09-06": 71,
     "2026-09-07": 49,
     "2026-09-08": 33,
     "2026-09-09": 35,
     "2026-09-10": 40,
     "2026-09-11": 51,
-    "2026-09-12": 66,
-    "2026-09-13": 59,
+    "2026-09-12": 67,
+    "2026-09-13": 60,
     "2026-09-14": 38,
-    "2026-09-15": 38,
-    "2026-09-16": 46,
-    "2026-09-17": 57,
-    "2026-09-18": 70,
+    "2026-09-15": 39,
+    "2026-09-16": 52,
+    "2026-09-17": 64,
+    "2026-09-18": 71,
     "2026-09-19": 83,
-    "2026-09-20": 64,
+    "2026-09-20": 65,
     "2026-09-21": 36,
     "2026-09-22": 36,
     "2026-09-23": 40,
     "2026-09-24": 46,
-    "2026-09-25": 56,
-    "2026-09-26": 73,
-    "2026-09-27": 73,
-    "2026-09-28": 61,
+    "2026-09-25": 58,
+    "2026-09-26": 82,
+    "2026-09-27": 95,
+    "2026-09-28": 83,
     "2026-09-29": 65,
     "2026-09-30": 61
   },
-  "hotelOccupancyNotes": "Rough estimate of how full downtown hotels were, as it bears on each day (within about 10 points). Each day blends 60% of the night before with 40% of that night. Nights are built from the day of the week, the season, meetings in town, the night before cruise departures and a few visitor-heavy nights (Bruno Mars, the YMCA assembly, the Saints-Raiders weekend, WEFTEC). Southern Decadence nights use Fox 8's reported occupancy (over 60% Fri, nearly 80% Sat, about 60% Sun). The season level is August's, calibrated to CoStar; CoStar's September figure isn't out yet. The total is the month's average.",
+  "hotelOccupancyNotes": "Rough estimate of how full downtown hotels were, as it bears on each day (within about 10 points). Each day blends 60% of the night before with 40% of that night. Nights are built from the day of the week, the season, meetings in town, the night before cruise departures, and the out-of-town fans of big shows and games (Bruno Mars, the three arena shows, the Saints–Raiders weekend). Published figures set floors: Southern Decadence (Fox 8: over 60% Friday, nearly 80% Saturday, about 60% Sunday) and the Saints opener weekend (New Orleans & Company's forecast on Sept 25: above 95% Saturday and Sunday nights, which also covers WEFTEC attendees arriving Sunday). The season level is August's, calibrated to CoStar; CoStar's September figure isn't out yet (it usually comes out around the 20th of the next month). The total is the month's average.",
   "hotelOccupancySources": [
     "https://www.fox8live.com/2026/09/08/southern-decadence-wraps-up-final-day-french-quarter/",
+    "https://www.fox8live.com/2026/09/26/saints-home-opener-brings-fans-superdome-boost-new-orleans-tourism/",
+    "https://www.wlox.com/2026/09/26/saints-home-opener-brings-fans-superdome-boost-new-orleans-tourism/",
     "https://www.hotel-online.com/news/us-hotel-performance-posts-modest-gains-in-august",
     "https://www.hotel-online.com/news/whats-changed-in-new-orleans-tourism-industry-rising-visitors-but-a-steeper-summer-slump"
   ],
   "events": [
     {
-      "id": "ev-dxyyw77w",
+      "id": "ev-tvyeeqo2",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-01",
+      "totalAttendance": 15700,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 1,570 expected through the sheds: 1 in 10 of the roughly 15,700 visitors staying in or near downtown who are free during market hours. About 15,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), and about 80 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (32%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-n9n15pwx",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-01",
@@ -49,7 +65,7 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "plus Georgia REALTORS Annual Conference & Expo, New Orleans Marriott (~800, estimate; began Aug 31, before the city calendar's Sept 2 start). Large conventions listed separately are left out of this total. Counted once per day. The city calendar now starts at Sept 2, so meetings that began before then (other than those named) are missing and this total is low.",
+      "notes": "No smaller meeting on the city calendar that day (its listing starts Sept 2); Georgia REALTORS Annual Conference & Expo, New Orleans Marriott (~800, estimate; began Aug 31, before the city calendar's Sept 2 start). Large conventions listed separately are left out of this total. Counted once per day. The city calendar now starts at Sept 2, so meetings that began before then (other than those named) are missing and this total is low. Market estimate: Convention attendees on a meeting day: about 3 in 10 have free time during market hours, and 1 in 10 of those pass through the sheds (3% in all).",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/",
         "https://garealtor.com/events/future-gar-conferences/",
@@ -57,7 +73,21 @@
       ]
     },
     {
-      "id": "ev-flefkp9j",
+      "id": "ev-ls4fpcbm",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-02",
+      "totalAttendance": 17000,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 1,700 expected through the sheds: 1 in 10 of the roughly 17,000 visitors staying in or near downtown who are free during market hours. About 16,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 250 are in town for events or cruises (), and about 80 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (34%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-8rwpgzyc",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-02",
@@ -65,7 +95,7 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "1 smaller meeting in session on the city calendar (25); plus Georgia REALTORS Annual Conference & Expo, New Orleans Marriott (~800, estimate; began Aug 31, before the city calendar's Sept 2 start). Large conventions listed separately are left out of this total. Counted once per day. The city calendar now starts at Sept 2, so meetings that began before then (other than those named) are missing and this total is low.",
+      "notes": "1 smaller meeting in session on the city calendar (25); plus Georgia REALTORS Annual Conference & Expo, New Orleans Marriott (~800, estimate; began Aug 31, before the city calendar's Sept 2 start). Large conventions listed separately are left out of this total. Counted once per day. The city calendar now starts at Sept 2, so meetings that began before then (other than those named) are missing and this total is low. Market estimate: Convention attendees on a meeting day: about 3 in 10 have free time during market hours, and 1 in 10 of those pass through the sheds (3% in all).",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/",
         "https://garealtor.com/events/future-gar-conferences/",
@@ -73,7 +103,35 @@
       ]
     },
     {
-      "id": "ev-ambv17kn",
+      "id": "ev-a3ka8fqb",
+      "title": "Vow-renewal second line (Exchange Place → Café du Monde)",
+      "category": "Parades",
+      "startDate": "2026-09-02",
+      "totalAttendance": 100,
+      "impactWindow": "12:00 PM – 12:30 PM",
+      "location": "Exchange Place → Café du Monde (800 Decatur St.)",
+      "proximity": "French Quarter Riverfront",
+      "notes": "Private second line with a 6-piece band for a vow renewal, ending at Café du Monde, about three blocks from the sheds. Guest count isn't on the permit; 100 is typical of this year's private second-line permits. Listed under your rule of Oct 8: second lines in the 35% group count when their times fit market hours. Market estimate: Second line that runs from Exchange Place to Café du Monde, ending at 12:30 PM: in the 35% zone (Jackson Square to Café du Monde, Decatur toward the market, the first blocks of Frenchmen), so 35% of the guests (your rule).",
+      "sources": [
+        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-17467-SPMA"
+      ]
+    },
+    {
+      "id": "ev-jere1phj",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-03",
+      "totalAttendance": 20700,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 2,070 expected through the sheds: 1 in 10 of the roughly 20,700 visitors staying in or near downtown who are free during market hours. About 18,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 1,900 are in town for events or cruises (Southern Decadence), and about 80 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (41%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-9u2c9cm3",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-03",
@@ -81,7 +139,7 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "1 smaller meeting in session on the city calendar (25); plus Georgia REALTORS Annual Conference & Expo, New Orleans Marriott (~800, estimate; began Aug 31, before the city calendar's Sept 2 start). Large conventions listed separately are left out of this total. Counted once per day. The city calendar now starts at Sept 2, so meetings that began before then (other than those named) are missing and this total is low.",
+      "notes": "1 smaller meeting in session on the city calendar (25); plus Georgia REALTORS Annual Conference & Expo, New Orleans Marriott (~800, estimate; began Aug 31, before the city calendar's Sept 2 start). Large conventions listed separately are left out of this total. Counted once per day. The city calendar now starts at Sept 2, so meetings that began before then (other than those named) are missing and this total is low. Market estimate: Convention attendees on a meeting day: about 3 in 10 have free time during market hours, and 1 in 10 of those pass through the sheds (3% in all).",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/",
         "https://garealtor.com/events/future-gar-conferences/",
@@ -89,7 +147,7 @@
       ]
     },
     {
-      "id": "ev-j7sb4woi",
+      "id": "ev-z7ylkl0e",
       "title": "Southern Decadence",
       "category": "Festivals",
       "startDate": "2026-09-03",
@@ -105,7 +163,7 @@
       "impactWindow": "11:00 AM – 11:00 PM",
       "location": "French Quarter, centered at Bourbon & St. Ann; parade from Royal & Barracks",
       "proximity": "French Quarter (interior)",
-      "notes": "Labor Day weekend, Thu–Mon. Fox 8: 'tens of thousands of visitors'; hotels over 60% Friday, nearly 80% Saturday, about 60% Sunday; organizers estimate $275 million in economic impact. The last published head count is over 250,000 (2018); that total is split across the five days here (estimate; Gemini had 275,000). Grand Marshal parade Sun Sept 6 at 3:00 PM from the Golden Lantern (1239 Royal St., Royal & Barracks, about 3 blocks from the sheds) through the Quarter to Bourbon & St. Ann (permit: 1,000 guests, 500 walkers).",
+      "notes": "Labor Day weekend, Thu–Mon. Fox 8: 'tens of thousands of visitors'; hotels over 60% Friday, nearly 80% Saturday, about 60% Sunday; organizers estimate $275 million in economic impact. The last published head count is over 250,000 (2018); that total is split across the five days here (estimate; Gemini had 275,000). Grand Marshal parade Sun Sept 6 at 3:00 PM from the Golden Lantern (1239 Royal St., Royal & Barracks, about 3 blocks from the sheds) through the Quarter to Bourbon & St. Ann (permit: 1,000 guests, 500 walkers). Market estimate: Festival or event in the Quarter or Marigny: of the 40% of the crowd not staying overnight, about 1 in 5 reach the sheds. Overnight visitors are in the Free-range tourists line.",
       "sources": [
         "https://www.fox8live.com/2026/09/04/southern-decadence-takes-over-new-orleans-54th-annual-lgbtq-celebration/",
         "https://www.fox8live.com/2026/09/08/southern-decadence-wraps-up-final-day-french-quarter/",
@@ -115,7 +173,21 @@
       ]
     },
     {
-      "id": "ev-g2rmc9wl",
+      "id": "ev-575tn7hu",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-04",
+      "totalAttendance": 27300,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 2,730 expected through the sheds: 1 in 10 of the roughly 27,300 visitors staying in or near downtown who are free during market hours. About 24,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 2,500 are in town for events or cruises (Southern Decadence; cruise guests staying the night before sailing), and about 80 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (54%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-vpl0qs6c",
       "title": "Live music near the market (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-04",
@@ -123,13 +195,13 @@
       "impactWindow": "11:00 AM – 11:45 AM",
       "location": "French Market (Farmers Market stage, Dutch Alley)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
-      "notes": "Free shows at the market itself: Johnette Downing's Family Music Series, Dutch Alley (916 N. Peters), 11:00–11:45 AM (~75). Rough estimates (no counts published). Listed under your rule for music near the market during the business day.",
+      "notes": "Free shows at the market itself: Johnette Downing's Family Music Series, Dutch Alley (916 N. Peters), 11:00–11:45 AM (~75). Rough estimates (no counts published). Listed under your rule for music near the market during the business day. Market estimate: Shows near the sheds, by your distance rule: 50% for Johnette Downing's family show in Dutch Alley.",
       "sources": [
         "https://www.frenchmarket.org/events/month/2026-09/"
       ]
     },
     {
-      "id": "ev-bg2yvslh",
+      "id": "ev-5o0z33pt",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-04",
@@ -137,7 +209,7 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "1 smaller meeting in session on the city calendar (14); plus Georgia REALTORS Annual Conference & Expo, New Orleans Marriott (~800, estimate; began Aug 31, before the city calendar's Sept 2 start). Large conventions listed separately are left out of this total. Counted once per day. The city calendar now starts at Sept 2, so meetings that began before then (other than those named) are missing and this total is low.",
+      "notes": "1 smaller meeting in session on the city calendar (14); plus Georgia REALTORS Annual Conference & Expo, New Orleans Marriott (~800, estimate; began Aug 31, before the city calendar's Sept 2 start). Large conventions listed separately are left out of this total. Counted once per day. The city calendar now starts at Sept 2, so meetings that began before then (other than those named) are missing and this total is low. Market estimate: Convention attendees on a meeting day: about 3 in 10 have free time during market hours, and 1 in 10 of those pass through the sheds (3% in all).",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/",
         "https://garealtor.com/events/future-gar-conferences/",
@@ -145,7 +217,7 @@
       ]
     },
     {
-      "id": "ev-eo8pocj4",
+      "id": "ev-v7zqbfi3",
       "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-09-05",
@@ -153,14 +225,28 @@
       "impactWindow": "8:00 AM – 3:30 PM",
       "location": "Erato St. Cruise Terminal",
       "proximity": "MCCNO Corridor",
-      "notes": "Ship returns from its Aug 31 sailing and leaves on a 5-night cruise. About 2,984 guests off at 8:00 AM and 2,984 on for the afternoon departure (double-occupancy capacity). Dates from the port's September schedule and the ship's own sailings.",
+      "notes": "Ship returns from its Aug 31 sailing and leaves on a 5-night cruise. About 2,984 guests off at 8:00 AM and 2,984 on for the afternoon departure (double-occupancy capacity). Dates from the port's September schedule and the ship's own sailings. Market estimate: Ocean-cruise turnaround: about 1 in 20 of the guests getting on or off spend some of the day in the Quarter and pass through the sheds. Guests staying the night before are in the Free-range tourists line.",
       "sources": [
         "https://www.cruisemapper.com/ports/new-orleans-port-43",
         "https://www.cruisemapper.com/ships/Carnival-Valor-604"
       ]
     },
     {
-      "id": "ev-2n6tt25d",
+      "id": "ev-m5ar5u4k",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-05",
+      "totalAttendance": 41300,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 4,130 expected through the sheds: 1 in 10 of the roughly 41,300 visitors staying in or near downtown who are free during market hours. About 37,900 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 3,000 are in town for events or cruises (cruise guests staying the night before sailing; Southern Decadence), about 210 are fans in town around an evening event or big game (fans in town for Sunday's Tyrese, Jaheim, Dru Hill & Ginuwine show), and about 160 are convention attendees with a free day before or after their meeting (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (68%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-e63oihnz",
       "title": "Live music near the market (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-05",
@@ -168,13 +254,13 @@
       "impactWindow": "12:00 PM – 1:00 PM",
       "location": "French Market (Farmers Market stage, Dutch Alley)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
-      "notes": "Free shows at the market itself: Culture & Cuisine: New Orleans Black Masking Indians and a cooking demo, Farmers Market stage, 12:00–1:00 PM (~150). Rough estimates (no counts published). Listed under your rule for music near the market during the business day.",
+      "notes": "Free shows at the market itself: Culture & Cuisine: New Orleans Black Masking Indians and a cooking demo, Farmers Market stage, 12:00–1:00 PM (~150). Rough estimates (no counts published). Listed under your rule for music near the market during the business day. Market estimate: Shows near the sheds, by your distance rule: 100% for Culture & Cuisine on the Farmers Market stage.",
       "sources": [
         "https://www.frenchmarket.org/events/month/2026-09/"
       ]
     },
     {
-      "id": "ev-fa3yzwv3",
+      "id": "ev-ipr64qfb",
       "title": "Carnival Liberty turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-09-06",
@@ -182,7 +268,7 @@
       "impactWindow": "8:00 AM – 3:30 PM",
       "location": "Erato St. Cruise Terminal",
       "proximity": "MCCNO Corridor",
-      "notes": "Sunday 7-night sailing. About 2,978 guests off at 8:00 AM and 2,978 on for the afternoon departure (double-occupancy capacity). Dates from the port's September schedule and the ship's own sailings.",
+      "notes": "Sunday 7-night sailing. About 2,978 guests off at 8:00 AM and 2,978 on for the afternoon departure (double-occupancy capacity). Dates from the port's September schedule and the ship's own sailings. Market estimate: Ocean-cruise turnaround: about 1 in 20 of the guests getting on or off spend some of the day in the Quarter and pass through the sheds. Guests staying the night before are in the Free-range tourists line.",
       "sources": [
         "https://www.cruisemapper.com/ports/new-orleans-port-43",
         "https://www.icruise.com/ships/carnival-cruises-carnival-liberty-cruise-itineraries-september-2026.html",
@@ -190,7 +276,21 @@
       ]
     },
     {
-      "id": "ev-08sd604f",
+      "id": "ev-kfcoilgm",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-06",
+      "totalAttendance": 42300,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 4,230 expected through the sheds: 1 in 10 of the roughly 42,300 visitors staying in or near downtown who are free during market hours. About 32,200 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), and about 10,100 are in town for events or cruises (cruise guests staying the night before sailing; Southern Decadence). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (71%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-3xu67vk4",
       "title": "Live music near the market (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-06",
@@ -198,13 +298,13 @@
       "impactWindow": "2:00 PM – 3:00 PM",
       "location": "French Market (Farmers Market stage, Dutch Alley)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
-      "notes": "Free shows at the market itself: Sunday Sounds: a local musician, French Market, 2:00–3:00 PM (~100). Rough estimates (no counts published). Listed under your rule for music near the market during the business day.",
+      "notes": "Free shows at the market itself: Sunday Sounds: a local musician, French Market, 2:00–3:00 PM (~100). Rough estimates (no counts published). Listed under your rule for music near the market during the business day. Market estimate: Shows near the sheds, by your distance rule: 100% for Sunday Sounds at the French Market (counted as in the sheds).",
       "sources": [
         "https://www.frenchmarket.org/events/month/2026-09/"
       ]
     },
     {
-      "id": "ev-yj2y6lz7",
+      "id": "ev-vs8bfrme",
       "title": "Tyrese, Jaheim, Dru Hill & Ginuwine",
       "category": "Concerts",
       "startDate": "2026-09-06",
@@ -212,14 +312,28 @@
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "Smoothie King Center",
       "proximity": "Superdome",
-      "notes": "Sunday of Labor Day weekend. Evening only; little overlap with market business hours. Attendance = arena capacity (an upper bound).",
+      "notes": "Sunday of Labor Day weekend. Evening event: out-of-town fans spend the day in the Quarter first. Attendance = arena capacity (an upper bound). Market estimate: Evening arena show: about 10% of the crowd are out-of-town fans staying over, 30% drive in for the day and 60% are locals. Show day counts as a free day for those staying over: 1 in 10 pass through the sheds. On a weekend day, about 1 in 10 day-trippers and 1 in 100 locals get there before closing. Fans in town on the days before and after are in the Free-range tourists line.",
       "sources": [
         "https://www.songkick.com/venues/2541399-smoothie-king-center/gigography",
         "https://en.wikipedia.org/wiki/Smoothie_King_Center"
       ]
     },
     {
-      "id": "ev-n4jgpuln",
+      "id": "ev-37o3x94q",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-07",
+      "totalAttendance": 27200,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 2,720 expected through the sheds: 1 in 10 of the roughly 27,200 visitors staying in or near downtown who are free during market hours. About 16,200 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 10,000 are in town for events or cruises (Southern Decadence; Labor Day weekend), and about 1,000 are fans in town around an evening event or big game (fans in town for Sunday's Tyrese, Jaheim, Dru Hill & Ginuwine show). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (49%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-lqw5ib3n",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-07",
@@ -227,13 +341,27 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "3 smaller meetings in session on the city calendar (264). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "3 smaller meetings in session on the city calendar (264). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees on a meeting day: about 3 in 10 have free time during market hours, and 1 in 10 of those pass through the sheds (3% in all).",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-uke023gj",
+      "id": "ev-qti5nhik",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-08",
+      "totalAttendance": 16900,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 1,690 expected through the sheds: 1 in 10 of the roughly 16,900 visitors staying in or near downtown who are free during market hours. About 15,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 1,100 are in town for events or cruises (Labor Day weekend), and about 100 are convention attendees with a free day before or after their meeting (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (33%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-h1y6p4r0",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-08",
@@ -241,13 +369,13 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "3 smaller meetings in session on the city calendar (264). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "3 smaller meetings in session on the city calendar (264). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees on a meeting day: about 3 in 10 have free time during market hours, and 1 in 10 of those pass through the sheds (3% in all).",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-sa00zibw",
+      "id": "ev-yqquufz2",
       "title": "Smaller evening shows (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-08",
@@ -255,7 +383,7 @@
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "House of Blues; The Fillmore",
       "proximity": "Canal St. / CBD",
-      "notes": "Touring acts likely to draw fans from out of town: Theory of a Deadman & Sevendust, The Fillmore (~1,800); Los Mirlos, House of Blues (~700). Estimates at about 85% of each venue's size (no counts published). Evening only; little overlap with market business hours.",
+      "notes": "Touring acts likely to draw fans from out of town: Theory of a Deadman & Sevendust, The Fillmore (~1,800); Los Mirlos, House of Blues (~700). Estimates at about 85% of each venue's size (no counts published). Evening shows: their out-of-town fans spend the day in the Quarter first. Market estimate: Club show downtown: about 5% of the crowd are out-of-town fans staying over, 15% drive in for the day and 80% are locals. Show day counts as a free day for those staying over: 1 in 10 pass through the sheds. On a weeknight, about 1 in 40 day-trippers and 1 in 500 locals get there before closing.",
       "sources": [
         "https://www.setlist.fm/venue/the-fillmore-new-orleans-la-usa-23d3a47f.html",
         "https://www.songkick.com/venues/4060459-fillmore-new-orleans/gigography",
@@ -263,7 +391,21 @@
       ]
     },
     {
-      "id": "ev-z3o6mdee",
+      "id": "ev-2qpwu1wm",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-09",
+      "totalAttendance": 17300,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 1,730 expected through the sheds: 1 in 10 of the roughly 17,300 visitors staying in or near downtown who are free during market hours. About 16,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 510 are in town for events or cruises (cruise guests staying the night before sailing), and about 130 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (35%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-2pfo48jn",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-09",
@@ -271,13 +413,13 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "7 smaller meetings in session on the city calendar (1,260). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "7 smaller meetings in session on the city calendar (1,260). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees on a meeting day: about 3 in 10 have free time during market hours, and 1 in 10 of those pass through the sheds (3% in all).",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-rdrr5lwf",
+      "id": "ev-9neik0re",
       "title": "Smaller evening shows (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-09",
@@ -285,7 +427,7 @@
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "Civic Theatre; The Fillmore",
       "proximity": "Canal St. / CBD",
-      "notes": "Touring acts likely to draw fans from out of town: Chance the Rapper, 'Coloring Book' 10th anniversary, The Fillmore (~1,900); The Midnight, Civic Theatre (~1,000). Estimates at about 85% of each venue's size (no counts published). Evening only; little overlap with market business hours.",
+      "notes": "Touring acts likely to draw fans from out of town: Chance the Rapper, 'Coloring Book' 10th anniversary, The Fillmore (~1,900); The Midnight, Civic Theatre (~1,000). Estimates at about 85% of each venue's size (no counts published). Evening shows: their out-of-town fans spend the day in the Quarter first. Market estimate: Theater show downtown: about 5% of the crowd are out-of-town fans staying over, 25% drive in for the day and 70% are locals. Show day counts as a free day for those staying over: 1 in 10 pass through the sheds. On a weeknight, about 1 in 40 day-trippers and 1 in 500 locals get there before closing.",
       "sources": [
         "https://www.setlist.fm/venue/the-fillmore-new-orleans-la-usa-23d3a47f.html",
         "https://www.songkick.com/venues/4060459-fillmore-new-orleans/gigography",
@@ -293,7 +435,7 @@
       ]
     },
     {
-      "id": "ev-hkarbevu",
+      "id": "ev-4ipxwz2c",
       "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-09-10",
@@ -301,7 +443,7 @@
       "impactWindow": "8:00 AM – 3:30 PM",
       "location": "Erato St. Cruise Terminal",
       "proximity": "MCCNO Corridor",
-      "notes": "Ship returns from its Sept 5 sailing and leaves on a 4-night cruise to Cozumel. About 2,984 guests off at 8:00 AM and 2,984 on for the afternoon departure (double-occupancy capacity). Dates from the port's September schedule and the ship's own sailings.",
+      "notes": "Ship returns from its Sept 5 sailing and leaves on a 4-night cruise to Cozumel. About 2,984 guests off at 8:00 AM and 2,984 on for the afternoon departure (double-occupancy capacity). Dates from the port's September schedule and the ship's own sailings. Market estimate: Ocean-cruise turnaround: about 1 in 20 of the guests getting on or off spend some of the day in the Quarter and pass through the sheds. Guests staying the night before are in the Free-range tourists line.",
       "sources": [
         "https://www.cruisemapper.com/ports/new-orleans-port-43",
         "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-valor/2026-09-10/4-nights",
@@ -309,7 +451,21 @@
       ]
     },
     {
-      "id": "ev-3gxzdo6i",
+      "id": "ev-nrv3jsuq",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-10",
+      "totalAttendance": 19600,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 1,960 expected through the sheds: 1 in 10 of the roughly 19,600 visitors staying in or near downtown who are free during market hours. About 18,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 760 are in town for events or cruises (cruise guests staying the night before sailing), and about 130 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (40%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-63i2r2wk",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-10",
@@ -317,13 +473,27 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "8 smaller meetings in session on the city calendar (1,295). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "8 smaller meetings in session on the city calendar (1,295). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees on a meeting day: about 3 in 10 have free time during market hours, and 1 in 10 of those pass through the sheds (3% in all).",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-llo5owpv",
+      "id": "ev-h9u7rie0",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-11",
+      "totalAttendance": 25000,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 2,500 expected through the sheds: 1 in 10 of the roughly 25,000 visitors staying in or near downtown who are free during market hours. About 24,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 210 are fans in town around an evening event or big game (fans in town for Saturday's Cash Money & No Limit show), and about 130 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (51%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-t6oexrb7",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-11",
@@ -331,13 +501,13 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "8 smaller meetings in session on the city calendar (1,300). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "8 smaller meetings in session on the city calendar (1,300). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees on a meeting day: about 3 in 10 have free time during market hours, and 1 in 10 of those pass through the sheds (3% in all).",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-gjsjgnvu",
+      "id": "ev-c9tz7819",
       "title": "Cash Money & No Limit Tour (Master P, Juvenile, Birdman and more)",
       "category": "Concerts",
       "startDate": "2026-09-12",
@@ -345,7 +515,7 @@
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "Smoothie King Center",
       "proximity": "Superdome",
-      "notes": "Saturday. Evening only; little overlap with market business hours. Attendance = arena capacity (an upper bound).",
+      "notes": "Saturday. Evening event: out-of-town fans spend the day in the Quarter first. Attendance = arena capacity (an upper bound). Market estimate: Evening arena show: about 10% of the crowd are out-of-town fans staying over, 30% drive in for the day and 60% are locals. Show day counts as a free day for those staying over: 1 in 10 pass through the sheds. On a weekend day, about 1 in 10 day-trippers and 1 in 100 locals get there before closing. Fans in town on the days before and after are in the Free-range tourists line.",
       "sources": [
         "https://www.songkick.com/venues/2541399-smoothie-king-center/gigography",
         "https://www.myneworleans.com/september-2026-events-in-new-orleans/",
@@ -353,7 +523,21 @@
       ]
     },
     {
-      "id": "ev-3lheuju2",
+      "id": "ev-fprb6345",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-12",
+      "totalAttendance": 38600,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 3,860 expected through the sheds: 1 in 10 of the roughly 38,600 visitors staying in or near downtown who are free during market hours. About 37,900 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 510 are in town for events or cruises (cruise guests staying the night before sailing), about 80 are convention attendees with a free day before or after their meeting (smaller meetings), and about 120 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (67%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-1r1lh4wt",
       "title": "Live music near the market (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-12",
@@ -361,27 +545,28 @@
       "impactWindow": "12:00 PM – 1:00 PM",
       "location": "French Market (Farmers Market stage, Dutch Alley)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
-      "notes": "Free shows at the market itself: Culture & Cuisine: New Orleans Black Masking Indians and a cooking demo, Farmers Market stage, 12:00–1:00 PM (~150). Rough estimates (no counts published). Listed under your rule for music near the market during the business day.",
+      "notes": "Free shows at the market itself: Culture & Cuisine: New Orleans Black Masking Indians and a cooking demo, Farmers Market stage, 12:00–1:00 PM (~150). Rough estimates (no counts published). Listed under your rule for music near the market during the business day. Market estimate: Shows near the sheds, by your distance rule: 100% for Culture & Cuisine on the Farmers Market stage.",
       "sources": [
         "https://www.frenchmarket.org/events/month/2026-09/"
       ]
     },
     {
-      "id": "ev-fkux0shg",
+      "id": "ev-1jkfeufv",
       "title": "NOLA River Fest",
       "category": "Festivals",
       "startDate": "2026-09-12",
       "totalAttendance": 900,
-      "impactWindow": "11:00 AM – 7:00 PM",
+      "impactWindow": "11:00 AM – 7:45 PM",
       "location": "New Orleans Jazz Museum (Old U.S. Mint, 400 Esplanade Ave.)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
-      "notes": "Free festival about the Mississippi River: live music, talks and food vendors (one stage, eleven tents). Next to the Flea Market. 900 is the organizer's figure on the city permit.",
+      "notes": "Free festival about the Mississippi River at the Jazz Museum, right across the street from the Flea Market: an opening second line (11 AM–noon) with the N'awlins D'awlins Baby Dolls, Big Queen Mary K & the Original Wild Tchoupitoulas Indians and the Treme Lafitte Brass Band; a main stage with Kinfolk Brass Band, Yusa, Kumasi, Grayhawk Perkins and others; talks and readings; food vendors (one stage, eleven tents on the permit). 900 is the organizer's figure on the city permit. Market estimate: Right across the street from the sheds and starts by 6 PM: 75% of attendance (your rule).",
       "sources": [
-        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-22561-SPMA"
+        "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-22561-SPMA",
+        "https://www.wwoz.org/events/1381396"
       ]
     },
     {
-      "id": "ev-ig490bgd",
+      "id": "ev-ewxn3dxm",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-12",
@@ -389,13 +574,13 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "6 smaller meetings in session on the city calendar (1,115). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "6 smaller meetings in session on the city calendar (1,115). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees with a free weekend day: 1 in 10 pass through the sheds.",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-gyremv1c",
+      "id": "ev-uivhqate",
       "title": "Carnival Liberty turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-09-13",
@@ -403,7 +588,7 @@
       "impactWindow": "8:00 AM – 3:30 PM",
       "location": "Erato St. Cruise Terminal",
       "proximity": "MCCNO Corridor",
-      "notes": "Sunday 7-night sailing. About 2,978 guests off at 8:00 AM and 2,978 on for the afternoon departure (double-occupancy capacity). Dates from the port's September schedule and the ship's own sailings.",
+      "notes": "Sunday 7-night sailing. About 2,978 guests off at 8:00 AM and 2,978 on for the afternoon departure (double-occupancy capacity). Dates from the port's September schedule and the ship's own sailings. Market estimate: Ocean-cruise turnaround: about 1 in 20 of the guests getting on or off spend some of the day in the Quarter and pass through the sheds. Guests staying the night before are in the Free-range tourists line.",
       "sources": [
         "https://www.cruisemapper.com/ports/new-orleans-port-43",
         "https://www.icruise.com/ships/carnival-cruises-carnival-liberty-cruise-itineraries-september-2026.html",
@@ -411,21 +596,36 @@
       ]
     },
     {
-      "id": "ev-5mvhesy3",
-      "title": "Live music near the market (grouped)",
-      "category": "Concerts",
+      "id": "ev-fjenxtzi",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
       "startDate": "2026-09-13",
-      "totalAttendance": 100,
-      "impactWindow": "2:00 PM – 3:00 PM",
-      "location": "French Market (Farmers Market stage, Dutch Alley)",
-      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
-      "notes": "Free shows at the market itself: Sunday Sounds: a local musician, French Market, 2:00–3:00 PM (~100). Rough estimates (no counts published). Listed under your rule for music near the market during the business day.",
+      "totalAttendance": 35100,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 3,510 expected through the sheds: 1 in 10 of the roughly 35,100 visitors staying in or near downtown who are free during market hours. About 32,200 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 1,500 are in town for events or cruises (cruise guests staying the night before sailing), about 1,000 are fans in town around an evening event or big game (fans in town for Saturday's Cash Money & No Limit show), about 110 are convention attendees with a free day before or after their meeting (smaller meetings), and about 170 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (60%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
       "sources": [
-        "https://www.frenchmarket.org/events/month/2026-09/"
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
       ]
     },
     {
-      "id": "ev-5tq60uly",
+      "id": "ev-m51kri7m",
+      "title": "Live music near the market (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-09-13",
+      "totalAttendance": 400,
+      "impactWindow": "2:00 PM – 3:00 PM",
+      "location": "French Market and New Orleans Jazz Museum (400 Esplanade Ave.)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free or small shows within a few blocks of the sheds: Sunday Sounds: a local musician, French Market, 2:00–3:00 PM (~100); El Grito (Mexican Independence Day) with the Consulate of Mexico, New Orleans Jazz Museum (400 Esplanade Ave.), time not published (~300). Rough estimates (no counts published). El Grito was on the museum's balcony and courtyard; the museum's page calls it an evening event but gives no time (the 2024 celebration ran 5:30–7:30 PM), so it counts under your rule for unknown times. Listed under your rule for music near the market during the business day or just after 5 PM. Market estimate: Shows near the sheds, by your distance rule: 100% for Sunday Sounds at the French Market (counted as in the sheds); 75% for El Grito (time not published, so it counts until a source shows otherwise) at the Jazz Museum.",
+      "sources": [
+        "https://www.frenchmarket.org/events/month/2026-09/",
+        "https://nolajazzmuseum.org/events/2026/9/13/el-grito"
+      ]
+    },
+    {
+      "id": "ev-54dj08dm",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-13",
@@ -433,13 +633,13 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "9 smaller meetings in session on the city calendar (1,579). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "9 smaller meetings in session on the city calendar (1,579). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees with a free weekend day: 1 in 10 pass through the sheds.",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-qa86btq7",
+      "id": "ev-1d14odrt",
       "title": "Smaller evening shows (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-13",
@@ -447,13 +647,13 @@
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "House of Blues",
       "proximity": "Canal St. / CBD",
-      "notes": "Touring acts likely to draw fans from out of town: The Garden, House of Blues (~700). Estimates at about 85% of each venue's size (no counts published). Evening only; little overlap with market business hours.",
+      "notes": "Touring acts likely to draw fans from out of town: The Garden, House of Blues (~700). Estimates at about 85% of each venue's size (no counts published). Evening shows: their out-of-town fans spend the day in the Quarter first. Market estimate: Club show downtown: about 5% of the crowd are out-of-town fans staying over, 15% drive in for the day and 80% are locals. Show day counts as a free day for those staying over: 1 in 10 pass through the sheds. On a weekend day, about 1 in 10 day-trippers and 1 in 100 locals get there before closing.",
       "sources": [
         "https://www.songkick.com/venues/30481-house-of-blues-new-orleans/gigography"
       ]
     },
     {
-      "id": "ev-kuhaj2jv",
+      "id": "ev-8ukbdy6x",
       "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-09-14",
@@ -461,7 +661,7 @@
       "impactWindow": "8:00 AM – 3:30 PM",
       "location": "Erato St. Cruise Terminal",
       "proximity": "MCCNO Corridor",
-      "notes": "Ship returns from its Sept 10 sailing (8:00 AM) and leaves on a 5-night cruise. About 2,984 guests off at 8:00 AM and 2,984 on for the afternoon departure (double-occupancy capacity). Dates from the port's September schedule and the ship's own sailings.",
+      "notes": "Ship returns from its Sept 10 sailing (8:00 AM) and leaves on a 5-night cruise. About 2,984 guests off at 8:00 AM and 2,984 on for the afternoon departure (double-occupancy capacity). Dates from the port's September schedule and the ship's own sailings. Market estimate: Ocean-cruise turnaround: about 1 in 20 of the guests getting on or off spend some of the day in the Quarter and pass through the sheds. Guests staying the night before are in the Free-range tourists line.",
       "sources": [
         "https://www.cruisemapper.com/ports/new-orleans-port-43",
         "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-valor/2026-09-10/4-nights",
@@ -469,7 +669,21 @@
       ]
     },
     {
-      "id": "ev-6i0gzyyb",
+      "id": "ev-edhdjf4v",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-14",
+      "totalAttendance": 17800,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 1,780 expected through the sheds: 1 in 10 of the roughly 17,800 visitors staying in or near downtown who are free during market hours. About 16,200 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 1,100 are in town for events or cruises (cruise guests staying the night before sailing), about 220 are convention attendees with a free day before or after their meeting (smaller meetings), and about 290 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (38%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-88uc8mh2",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-14",
@@ -477,13 +691,13 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "13 smaller meetings in session on the city calendar (2,710). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "13 smaller meetings in session on the city calendar (2,710). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees on a meeting day: about 3 in 10 have free time during market hours, and 1 in 10 of those pass through the sheds (3% in all).",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-09kbivlv",
+      "id": "ev-u2b1xr4g",
       "title": "Smaller evening shows (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-14",
@@ -491,14 +705,42 @@
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "The Fillmore",
       "proximity": "Canal St. / CBD",
-      "notes": "Touring acts likely to draw fans from out of town: Danzig, The Fillmore (~1,500). Estimates at about 85% of each venue's size (no counts published). Evening only; little overlap with market business hours.",
+      "notes": "Touring acts likely to draw fans from out of town: Danzig, The Fillmore (~1,500). Estimates at about 85% of each venue's size (no counts published). Evening shows: their out-of-town fans spend the day in the Quarter first. Market estimate: Club show downtown: about 5% of the crowd are out-of-town fans staying over, 15% drive in for the day and 80% are locals. Show day counts as a free day for those staying over: 1 in 10 pass through the sheds. On a weeknight, about 1 in 40 day-trippers and 1 in 500 locals get there before closing.",
       "sources": [
         "https://www.setlist.fm/venue/the-fillmore-new-orleans-la-usa-23d3a47f.html",
         "https://www.songkick.com/venues/4060459-fillmore-new-orleans/gigography"
       ]
     },
     {
-      "id": "ev-y8duvxal",
+      "id": "ev-a8omns8c",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-15",
+      "totalAttendance": 17000,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 1,700 expected through the sheds: 1 in 10 of the roughly 17,000 visitors staying in or near downtown who are free during market hours. About 15,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 880 are fans in town around an evening event or big game (fans in town for Wednesday's Bruno Mars show), and about 490 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (39%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-xuqn1ngl",
+      "title": "Live music near the market (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-09-15",
+      "totalAttendance": 150,
+      "impactWindow": "5:00 PM (end time not published)",
+      "location": "New Orleans Jazz Museum (400 Esplanade Ave.)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free or small shows within a few blocks of the sheds: Hispanic Heritage Month balcony concert: Jafet Perez, A Tribute to Bad Bunny, New Orleans Jazz Museum (400 Esplanade Ave.), 5:00 PM (~150). Rough estimates (no counts published). Free, on the museum balcony; presented with Positive Vibrations. Listed under your rule for music near the market during the business day or just after 5 PM. Market estimate: Shows near the sheds, by your distance rule: 75% for Jafet Perez, A Tribute to Bad Bunny at the Jazz Museum.",
+      "sources": [
+        "https://nolajazzmuseum.org/events/2026/9/15/hispanic-heritage-month-el-grito"
+      ]
+    },
+    {
+      "id": "ev-xvelr47r",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-15",
@@ -506,7 +748,7 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "17 smaller meetings in session on the city calendar (3,330); plus Psych Congress, Convention Center (~1,600 per New Orleans & Company; not on the city calendar). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "17 smaller meetings in session on the city calendar (3,330); plus Psych Congress, Convention Center (~1,600 per New Orleans & Company; not on the city calendar). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees on a meeting day: about 3 in 10 have free time during market hours, and 1 in 10 of those pass through the sheds (3% in all).",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/",
         "https://www.neworleans.com/articles/post/major-conventions-and-meetings-position-new-orleans-for-a-strong-finish-to-2026/",
@@ -514,7 +756,7 @@
       ]
     },
     {
-      "id": "ev-ninv5dyv",
+      "id": "ev-d6r8406m",
       "title": "Bruno Mars – The Romantic Tour",
       "category": "Concerts",
       "startDate": "2026-09-16",
@@ -522,7 +764,7 @@
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "Caesars Superdome",
       "proximity": "Superdome",
-      "notes": "Wednesday, 7:00 PM. Sold out (Tulane Hullabaloo). Evening only; little overlap with market business hours. Attendance = stadium capacity (an upper bound); a concert stage takes some seats, so the real crowd was likely somewhat lower.",
+      "notes": "Wednesday, 7:00 PM. Sold out (Tulane Hullabaloo). Evening event: out-of-town fans spend the day in the Quarter first. Attendance = stadium capacity (an upper bound); a concert stage takes some seats, so the real crowd was likely somewhat lower. Market estimate: Evening stadium show: about 15% of the crowd are out-of-town fans staying over, 35% drive in for the day and 50% are locals. Show day counts as a free day for those staying over: 1 in 10 pass through the sheds. On a weeknight, about 1 in 40 day-trippers and 1 in 500 locals get there before closing. Fans in town on the days before and after are in the Free-range tourists line.",
       "sources": [
         "https://tulanehullabaloo.com/75990/arcade/bruno-mars-sells-out-caesars-superdome-for-international-the-romantic-tour/",
         "https://www.caesarssuperdome.com/events-tickets/pdf/",
@@ -531,7 +773,21 @@
       ]
     },
     {
-      "id": "ev-gem05dfe",
+      "id": "ev-yhm6ywbj",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-16",
+      "totalAttendance": 18900,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 1,890 expected through the sheds: 1 in 10 of the roughly 18,900 visitors staying in or near downtown who are free during market hours. About 16,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 1,500 are convention attendees with a free day before or after their meeting (YMCA General Assembly attendees arriving a day early), and about 690 are family members traveling with convention attendees (smaller meetings, YMCA General Assembly). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (52%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-tguwbvw5",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-16",
@@ -539,7 +795,7 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "17 smaller meetings in session on the city calendar (3,061); plus Psych Congress, Convention Center (~1,600 per New Orleans & Company; not on the city calendar). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "17 smaller meetings in session on the city calendar (3,061); plus Psych Congress, Convention Center (~1,600 per New Orleans & Company; not on the city calendar). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees on a meeting day: about 3 in 10 have free time during market hours, and 1 in 10 of those pass through the sheds (3% in all).",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/",
         "https://www.neworleans.com/articles/post/major-conventions-and-meetings-position-new-orleans-for-a-strong-finish-to-2026/",
@@ -547,7 +803,7 @@
       ]
     },
     {
-      "id": "ev-tjuzhdxx",
+      "id": "ev-6nm5hsbx",
       "title": "Smaller evening shows (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-16",
@@ -555,14 +811,28 @@
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "The Fillmore",
       "proximity": "Canal St. / CBD",
-      "notes": "Touring acts likely to draw fans from out of town: Lucki, The Fillmore (~1,800). Estimates at about 85% of each venue's size (no counts published). Evening only; little overlap with market business hours.",
+      "notes": "Touring acts likely to draw fans from out of town: Lucki, The Fillmore (~1,800). Estimates at about 85% of each venue's size (no counts published). Evening shows: their out-of-town fans spend the day in the Quarter first. Market estimate: Club show downtown: about 5% of the crowd are out-of-town fans staying over, 15% drive in for the day and 80% are locals. Show day counts as a free day for those staying over: 1 in 10 pass through the sheds. On a weeknight, about 1 in 40 day-trippers and 1 in 500 locals get there before closing.",
       "sources": [
         "https://www.setlist.fm/venue/the-fillmore-new-orleans-la-usa-23d3a47f.html",
         "https://www.songkick.com/venues/4060459-fillmore-new-orleans/gigography"
       ]
     },
     {
-      "id": "ev-f7sdnwmg",
+      "id": "ev-isuva90p",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-17",
+      "totalAttendance": 27500,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 2,750 expected through the sheds: 1 in 10 of the roughly 27,500 visitors staying in or near downtown who are free during market hours. About 18,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 250 are in town for events or cruises (), about 6,600 are fans in town around an evening event or big game (fans in town for Wednesday's Bruno Mars show), about 150 are convention attendees with a free day before or after their meeting (smaller meetings), and about 1,800 are family members traveling with convention attendees (YMCA General Assembly, smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (64%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-ak384o7w",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-17",
@@ -570,7 +840,7 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "11 smaller meetings in session on the city calendar (1,625); plus Psych Congress, Convention Center (~1,600 per New Orleans & Company; not on the city calendar). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "11 smaller meetings in session on the city calendar (1,625); plus Psych Congress, Convention Center (~1,600 per New Orleans & Company; not on the city calendar). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees on a meeting day: about 3 in 10 have free time during market hours, and 1 in 10 of those pass through the sheds (3% in all).",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/",
         "https://www.neworleans.com/articles/post/major-conventions-and-meetings-position-new-orleans-for-a-strong-finish-to-2026/",
@@ -578,7 +848,7 @@
       ]
     },
     {
-      "id": "ev-ozh4rxau",
+      "id": "ev-849qqagq",
       "title": "YMCA of the USA General Assembly",
       "category": "Conventions",
       "startDate": "2026-09-17",
@@ -592,7 +862,7 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Ernest N. Morial Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "Thu Sept 17 – Sat Sept 19. The city's convention calendar lists a 10,000-person 'Social Welfare' meeting on exactly these dates, matching the YMCA General Assembly (Gemini's 42,000-person 'SHRM Talent Conference' on these dates isn't real). Counted once per day.",
+      "notes": "Thu Sept 17 – Sat Sept 19. The city's convention calendar lists a 10,000-person 'Social Welfare' meeting on exactly these dates, matching the YMCA General Assembly (Gemini's 42,000-person 'SHRM Talent Conference' on these dates isn't real). Counted once per day. Market estimate: On its Thursday and Friday meeting days, about 3 in 10 attendees have free time during market hours and 1 in 10 of those pass through the sheds (3% in all). Saturday is a weekend day: 1 in 10 pass through.",
       "sources": [
         "https://www.daxko.com/insights/your-guide-to-the-2026-ymca-general-assembly",
         "https://www.neworleans.com/articles/post/major-conventions-and-meetings-position-new-orleans-for-a-strong-finish-to-2026/",
@@ -601,7 +871,35 @@
       ]
     },
     {
-      "id": "ev-18cnz9ab",
+      "id": "ev-pil3hqxf",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-18",
+      "totalAttendance": 27800,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 2,780 expected through the sheds: 1 in 10 of the roughly 27,800 visitors staying in or near downtown who are free during market hours. About 24,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 1,000 are in town for events or cruises (cruise guests staying the night before sailing; Inspire the City football), about 210 are fans in town around an evening event or big game (fans in town for Saturday's Rod Wave show), and about 1,800 are family members traveling with convention attendees (YMCA General Assembly, smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (71%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-w2f5ayo1",
+      "title": "Live music near the market (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-09-18",
+      "totalAttendance": 150,
+      "impactWindow": "2:00 PM (end time not published)",
+      "location": "New Orleans Jazz Museum (400 Esplanade Ave.)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free or small shows within a few blocks of the sheds: Hispanic Heritage Month: Azuquita La Cubana (with NOLAxNOLA504), New Orleans Jazz Museum (400 Esplanade Ave.), 2:00 PM (~150). Rough estimates (no counts published). Free, in the museum's third-floor Performance Center (its page sits at an older address ending 'national-park-conference'). Listed under your rule for music near the market during the business day or just after 5 PM. Market estimate: Shows near the sheds, by your distance rule: 75% for Azuquita La Cubana (with NOLAxNOLA504) at the Jazz Museum.",
+      "sources": [
+        "https://nolajazzmuseum.org/events/2026/9/15/national-park-conference"
+      ]
+    },
+    {
+      "id": "ev-is83qnwv",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-18",
@@ -609,7 +907,7 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "9 smaller meetings in session on the city calendar (1,645); plus Psych Congress, Convention Center (~1,600 per New Orleans & Company; not on the city calendar). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "9 smaller meetings in session on the city calendar (1,645); plus Psych Congress, Convention Center (~1,600 per New Orleans & Company; not on the city calendar). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees on a meeting day: about 3 in 10 have free time during market hours, and 1 in 10 of those pass through the sheds (3% in all).",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/",
         "https://www.neworleans.com/articles/post/major-conventions-and-meetings-position-new-orleans-for-a-strong-finish-to-2026/",
@@ -617,7 +915,7 @@
       ]
     },
     {
-      "id": "ev-0e6t0ivp",
+      "id": "ev-6rpv8q7t",
       "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-09-19",
@@ -625,14 +923,28 @@
       "impactWindow": "8:00 AM – 3:30 PM",
       "location": "Erato St. Cruise Terminal",
       "proximity": "MCCNO Corridor",
-      "notes": "Ship returns from its Sept 14 sailing and leaves on a 5-night cruise. About 2,984 guests off at 8:00 AM and 2,984 on for the afternoon departure (double-occupancy capacity). Dates from the port's September schedule and the ship's own sailings.",
+      "notes": "Ship returns from its Sept 14 sailing and leaves on a 5-night cruise. About 2,984 guests off at 8:00 AM and 2,984 on for the afternoon departure (double-occupancy capacity). Dates from the port's September schedule and the ship's own sailings. Market estimate: Ocean-cruise turnaround: about 1 in 20 of the guests getting on or off spend some of the day in the Quarter and pass through the sheds. Guests staying the night before are in the Free-range tourists line.",
       "sources": [
         "https://www.cruisemapper.com/ports/new-orleans-port-43",
         "https://www.cruisemapper.com/ships/Carnival-Valor-604"
       ]
     },
     {
-      "id": "ev-op7j08g5",
+      "id": "ev-djbmajti",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-19",
+      "totalAttendance": 41200,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 4,120 expected through the sheds: 1 in 10 of the roughly 41,200 visitors staying in or near downtown who are free during market hours. About 37,900 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 1,500 are in town for events or cruises (cruise guests staying the night before sailing; Inspire the City football), and about 1,800 are family members traveling with convention attendees (YMCA General Assembly, smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (83%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-n305kqmm",
       "title": "Inspire the City Invitational (high school football)",
       "category": "Youth Events",
       "startDate": "2026-09-19",
@@ -640,7 +952,7 @@
       "impactWindow": "12:00 PM – 9:30 PM",
       "location": "Caesars Superdome",
       "proximity": "Superdome",
-      "notes": "Saturday doubleheader: Ruston vs. Edna Karr at 3:00 PM, then East Ascension vs. St. Augustine about 6:30 PM. Ruston's fans come from north Louisiana (about 5 hours away). Rough estimate for both games (no count published). Two news reports put the games on Saturday; one reading of the Superdome's calendar showed other dates.",
+      "notes": "Saturday doubleheader: Ruston vs. Edna Karr at 3:00 PM, then East Ascension vs. St. Augustine about 6:30 PM. Ruston's fans come from north Louisiana (about 5 hours away). Rough estimate for both games (no count published). Two news reports put the games on Saturday; one reading of the Superdome's calendar showed other dates. Market estimate: Youth event at the Superdome: about 4 in 10 of the crowd are families who drive in for the day, and on a Saturday about 1 in 10 of them reach the sheds before closing, plus 1 in 200 of the locals (about half the crowd).",
       "sources": [
         "https://crescentcitysports.com/crescent-city-sports-to-broadcast-saturdays-inspire-the-city-invitational-twinbill-from-dome/",
         "https://lincolnparishjournal.com/2026/09/19/cats-head-to-the-super-dome-for-a-september-cougar-matchup/",
@@ -649,7 +961,7 @@
       ]
     },
     {
-      "id": "ev-esndp7g7",
+      "id": "ev-hplitofo",
       "title": "Live music near the market (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-19",
@@ -657,13 +969,13 @@
       "impactWindow": "12:00 PM – 2:00 PM",
       "location": "French Market (Farmers Market stage, Dutch Alley)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
-      "notes": "Free shows at the market itself: Culture & Cuisine: New Orleans Black Masking Indians and a cooking demo, Farmers Market stage, 12:00–1:00 PM (~150); Hispanic Heritage Concert, French Market, 1:00–2:00 PM (~150). Rough estimates (no counts published). Listed under your rule for music near the market during the business day.",
+      "notes": "Free shows at the market itself: Culture & Cuisine: New Orleans Black Masking Indians and a cooking demo, Farmers Market stage, 12:00–1:00 PM (~150); Hispanic Heritage Concert, French Market, 1:00–2:00 PM (~150). Rough estimates (no counts published). Listed under your rule for music near the market during the business day. Market estimate: Shows near the sheds, by your distance rule: 100% for Culture & Cuisine on the Farmers Market stage, Hispanic Heritage Concert at the French Market (counted as in the sheds).",
       "sources": [
         "https://www.frenchmarket.org/events/month/2026-09/"
       ]
     },
     {
-      "id": "ev-mijj3ahw",
+      "id": "ev-7tpxs79c",
       "title": "Rod Wave",
       "category": "Concerts",
       "startDate": "2026-09-19",
@@ -671,14 +983,14 @@
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "Smoothie King Center",
       "proximity": "Superdome",
-      "notes": "Saturday, with Fridayy. Evening only; little overlap with market business hours. Attendance = arena capacity (an upper bound).",
+      "notes": "Saturday, with Fridayy. Evening event: out-of-town fans spend the day in the Quarter first. Attendance = arena capacity (an upper bound). Market estimate: Evening arena show: about 10% of the crowd are out-of-town fans staying over, 30% drive in for the day and 60% are locals. Show day counts as a free day for those staying over: 1 in 10 pass through the sheds. On a weekend day, about 1 in 10 day-trippers and 1 in 100 locals get there before closing. Fans in town on the days before and after are in the Free-range tourists line.",
       "sources": [
         "https://www.songkick.com/venues/2541399-smoothie-king-center/gigography",
         "https://en.wikipedia.org/wiki/Smoothie_King_Center"
       ]
     },
     {
-      "id": "ev-sgtuy1cz",
+      "id": "ev-w42jmz2d",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-19",
@@ -686,7 +998,7 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "5 smaller meetings in session on the city calendar (1,561); plus Psych Congress, Convention Center (~1,600 per New Orleans & Company; not on the city calendar). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "5 smaller meetings in session on the city calendar (1,561); plus Psych Congress, Convention Center (~1,600 per New Orleans & Company; not on the city calendar). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees with a free weekend day: 1 in 10 pass through the sheds.",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/",
         "https://www.neworleans.com/articles/post/major-conventions-and-meetings-position-new-orleans-for-a-strong-finish-to-2026/",
@@ -694,7 +1006,7 @@
       ]
     },
     {
-      "id": "ev-wp9zxn2g",
+      "id": "ev-lf46jlun",
       "title": "Smaller evening shows (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-19",
@@ -702,27 +1014,27 @@
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "House of Blues",
       "proximity": "Canal St. / CBD",
-      "notes": "Touring acts likely to draw fans from out of town: Morgan Wade, House of Blues (~700). Estimates at about 85% of each venue's size (no counts published). Evening only; little overlap with market business hours.",
+      "notes": "Touring acts likely to draw fans from out of town: Morgan Wade, House of Blues (~700). Estimates at about 85% of each venue's size (no counts published). Evening shows: their out-of-town fans spend the day in the Quarter first. Market estimate: Club show downtown: about 5% of the crowd are out-of-town fans staying over, 15% drive in for the day and 80% are locals. Show day counts as a free day for those staying over: 1 in 10 pass through the sheds. On a weekend day, about 1 in 10 day-trippers and 1 in 100 locals get there before closing.",
       "sources": [
         "https://www.songkick.com/venues/30481-house-of-blues-new-orleans/gigography"
       ]
     },
     {
-      "id": "ev-m9dlb00b",
+      "id": "ev-ki0pxex9",
       "title": "Viking Mississippi turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-09-19",
       "totalAttendance": 386,
       "location": "New Orleans riverfront (dock not published)",
       "proximity": "Riverfront (dock not published)",
-      "notes": "River ship arrives from St. Paul (14-night trip from Sept 5) and leaves for Memphis; 386 guests. Times not published.",
+      "notes": "River ship arrives from St. Paul (14-night trip from Sept 5) and leaves for Memphis; 386 guests. Times not published. Market estimate: River ship day in port: about 1 in 10 guests walk through the sheds.",
       "sources": [
         "https://www.cruisemapper.com/ports/new-orleans-port-43",
         "https://www.cruisemapper.com/ships/Viking-Mississippi-965"
       ]
     },
     {
-      "id": "ev-z6uj66yc",
+      "id": "ev-yeddhufj",
       "title": "Wedding second line (St. Mary's Church)",
       "category": "Parades",
       "startDate": "2026-09-19",
@@ -730,13 +1042,13 @@
       "impactWindow": "5:05 PM – 5:35 PM",
       "location": "Starts at St. Mary's Church / Old Ursuline Convent (1116 Chartres St.)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
-      "notes": "Private second line; starts about two blocks from the sheds. Destination isn't on the permit. Guest count isn't on the permit; 100 is typical of this year's private second-line permits.",
+      "notes": "Private second line; starts about two blocks from the sheds. Destination isn't on the permit. Guest count isn't on the permit; 100 is typical of this year's private second-line permits. Market estimate: Second line that starts at St. Mary's Church on Chartres St. at 5:05 PM (its end point isn't on the permit). It's past the lake side of Decatur, so it gets the regular estimate for an event in the Quarter: of the half of the guests not staying overnight, about 1 in 20 reach the sheds. Guests staying overnight are in the Free-range tourists line.",
       "sources": [
         "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-21465-SPMA"
       ]
     },
     {
-      "id": "ev-1nxibz4x",
+      "id": "ev-s3n2bwr3",
       "title": "Carnival Liberty turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-09-20",
@@ -744,7 +1056,7 @@
       "impactWindow": "8:00 AM – 3:30 PM",
       "location": "Erato St. Cruise Terminal",
       "proximity": "MCCNO Corridor",
-      "notes": "Sunday 7-night sailing. About 2,978 guests off at 8:00 AM and 2,978 on for the afternoon departure (double-occupancy capacity). Dates from the port's September schedule and the ship's own sailings.",
+      "notes": "Sunday 7-night sailing. About 2,978 guests off at 8:00 AM and 2,978 on for the afternoon departure (double-occupancy capacity). Dates from the port's September schedule and the ship's own sailings. Market estimate: Ocean-cruise turnaround: about 1 in 20 of the guests getting on or off spend some of the day in the Quarter and pass through the sheds. Guests staying the night before are in the Free-range tourists line.",
       "sources": [
         "https://www.cruisemapper.com/ports/new-orleans-port-43",
         "https://www.icruise.com/ships/carnival-cruises-carnival-liberty-cruise-itineraries-september-2026.html",
@@ -752,7 +1064,21 @@
       ]
     },
     {
-      "id": "ev-nsrv8q4a",
+      "id": "ev-ny5tzs3x",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-20",
+      "totalAttendance": 36200,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 3,620 expected through the sheds: 1 in 10 of the roughly 36,200 visitors staying in or near downtown who are free during market hours. About 32,200 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 760 are in town for events or cruises (cruise guests staying the night before sailing; Inspire the City football), about 1,000 are fans in town around an evening event or big game (fans in town for Saturday's Rod Wave show), about 1,700 are convention attendees with a free day before or after their meeting (YMCA General Assembly attendees staying on; smaller meetings), and about 430 are family members traveling with convention attendees (YMCA General Assembly, smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (65%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-vrr0j53d",
       "title": "Live music near the market (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-20",
@@ -760,13 +1086,13 @@
       "impactWindow": "2:00 PM – 3:00 PM",
       "location": "French Market (Farmers Market stage, Dutch Alley)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
-      "notes": "Free shows at the market itself: Sunday Sounds: a local musician, French Market, 2:00–3:00 PM (~100). Rough estimates (no counts published). Listed under your rule for music near the market during the business day.",
+      "notes": "Free shows at the market itself: Sunday Sounds: a local musician, French Market, 2:00–3:00 PM (~100). Rough estimates (no counts published). Listed under your rule for music near the market during the business day. Market estimate: Shows near the sheds, by your distance rule: 100% for Sunday Sounds at the French Market (counted as in the sheds).",
       "sources": [
         "https://www.frenchmarket.org/events/month/2026-09/"
       ]
     },
     {
-      "id": "ev-ch47sihi",
+      "id": "ev-60vf6hcf",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-20",
@@ -774,13 +1100,27 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "7 smaller meetings in session on the city calendar (1,816). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "7 smaller meetings in session on the city calendar (1,816). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees with a free weekend day: 1 in 10 pass through the sheds.",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-shuxkckt",
+      "id": "ev-ops3b5z0",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-21",
+      "totalAttendance": 16500,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 1,650 expected through the sheds: 1 in 10 of the roughly 16,500 visitors staying in or near downtown who are free during market hours. About 16,200 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 50 are convention attendees with a free day before or after their meeting (smaller meetings), and about 290 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (36%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-ekrjkkc1",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-21",
@@ -788,13 +1128,13 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "9 smaller meetings in session on the city calendar (2,850). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "9 smaller meetings in session on the city calendar (2,850). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees on a meeting day: about 3 in 10 have free time during market hours, and 1 in 10 of those pass through the sheds (3% in all).",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-7gaptzs6",
+      "id": "ev-6osfkui8",
       "title": "Smaller evening shows (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-21",
@@ -802,14 +1142,28 @@
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "House of Blues; The Fillmore",
       "proximity": "Canal St. / CBD",
-      "notes": "Touring acts likely to draw fans from out of town: Chief Keef, The Fillmore (~1,800); Geordie Greep, House of Blues (~700). Estimates at about 85% of each venue's size (no counts published). Evening only; little overlap with market business hours.",
+      "notes": "Touring acts likely to draw fans from out of town: Chief Keef, The Fillmore (~1,800); Geordie Greep, House of Blues (~700). Estimates at about 85% of each venue's size (no counts published). Evening shows: their out-of-town fans spend the day in the Quarter first. Market estimate: Club show downtown: about 5% of the crowd are out-of-town fans staying over, 15% drive in for the day and 80% are locals. Show day counts as a free day for those staying over: 1 in 10 pass through the sheds. On a weeknight, about 1 in 40 day-trippers and 1 in 500 locals get there before closing.",
       "sources": [
         "https://www.songkick.com/venues/4060459-fillmore-new-orleans/gigography",
         "https://www.songkick.com/venues/30481-house-of-blues-new-orleans/gigography"
       ]
     },
     {
-      "id": "ev-uxtoud87",
+      "id": "ev-dql78766",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-22",
+      "totalAttendance": 16100,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 1,620 expected through the sheds: 1 in 10 of the roughly 16,100 visitors staying in or near downtown who are free during market hours. About 15,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 140 are convention attendees with a free day before or after their meeting (smaller meetings), and about 350 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (36%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-5fv1p38h",
       "title": "Jersey Boys (Broadway tour)",
       "category": "Concerts",
       "startDate": "2026-09-22",
@@ -826,7 +1180,7 @@
       "impactWindow": "7:00 PM – 10:30 PM",
       "location": "Saenger Theatre (1111 Canal St.)",
       "proximity": "Canal St. / CBD",
-      "notes": "Touring Broadway musical, Tue Sept 22 – Sun Sept 27. Estimate: about 2,200 a show (85% of the ~2,600-seat theater), with the usual touring week of 8 shows (one show Tue–Fri, two on Sat and Sun; weekend matinees around 1–2 PM). Show times weren't confirmed. Each show is a different audience, so the days are summed.",
+      "notes": "Touring Broadway musical, Tue Sept 22 – Sun Sept 27. Estimate: about 2,200 a show (85% of the ~2,600-seat theater), with the usual touring week of 8 shows (one show Tue–Fri, two on Sat and Sun; weekend matinees around 1–2 PM). Show times weren't confirmed. Each show is a different audience, so the days are summed. Market estimate: Theater show downtown: about 5% of the crowd are out-of-town fans staying over, 25% drive in for the day and 70% are locals. Show day counts as a free day for those staying over: 1 in 10 pass through the sheds. About 1 in 40 day-trippers and 1 in 500 locals get there before closing on Tuesday through Thursday, 1 in 20 and 1 in 200 on Friday, and 1 in 10 and 1 in 100 on the weekend (fewer stay close by on Saturday, when hotels are nearly full).",
       "sources": [
         "https://us.atgtickets.com/events/jersey-boys/saenger-theatre/",
         "https://hoodline.com/2026/09/frankie-valli-s-new-orleans-run-begins-as-jersey-boys-hits-the-saenger/",
@@ -834,7 +1188,7 @@
       ]
     },
     {
-      "id": "ev-95oc5tsr",
+      "id": "ev-n50wqa3x",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-22",
@@ -842,13 +1196,27 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "10 smaller meetings in session on the city calendar (3,384). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "10 smaller meetings in session on the city calendar (3,384). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees on a meeting day: about 3 in 10 have free time during market hours, and 1 in 10 of those pass through the sheds (3% in all).",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-82rt3ygl",
+      "id": "ev-humazlfd",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-23",
+      "totalAttendance": 17900,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 1,790 expected through the sheds: 1 in 10 of the roughly 17,900 visitors staying in or near downtown who are free during market hours. About 16,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 760 are in town for events or cruises (cruise guests staying the night before sailing), and about 470 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (40%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-i18u10yx",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-23",
@@ -856,13 +1224,13 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "13 smaller meetings in session on the city calendar (4,749). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "13 smaller meetings in session on the city calendar (4,749). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees on a meeting day: about 3 in 10 have free time during market hours, and 1 in 10 of those pass through the sheds (3% in all).",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-9orjikrk",
+      "id": "ev-s211209k",
       "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-09-24",
@@ -870,7 +1238,7 @@
       "impactWindow": "8:00 AM – 3:30 PM",
       "location": "Erato St. Cruise Terminal",
       "proximity": "MCCNO Corridor",
-      "notes": "Ship returns from its Sept 19 sailing and leaves on a 4-night cruise to Cozumel. About 2,984 guests off at 8:00 AM and 2,984 on for the afternoon departure (double-occupancy capacity). Dates from the port's September schedule and the ship's own sailings.",
+      "notes": "Ship returns from its Sept 19 sailing and leaves on a 4-night cruise to Cozumel. About 2,984 guests off at 8:00 AM and 2,984 on for the afternoon departure (double-occupancy capacity). Dates from the port's September schedule and the ship's own sailings. Market estimate: Ocean-cruise turnaround: about 1 in 20 of the guests getting on or off spend some of the day in the Quarter and pass through the sheds. Guests staying the night before are in the Free-range tourists line.",
       "sources": [
         "https://www.cruisemapper.com/ports/new-orleans-port-43",
         "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-valor/2026-09-24/4-nights",
@@ -878,7 +1246,36 @@
       ]
     },
     {
-      "id": "ev-vd2i0mvn",
+      "id": "ev-qpb008d5",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-24",
+      "totalAttendance": 20300,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 2,030 expected through the sheds: 1 in 10 of the roughly 20,300 visitors staying in or near downtown who are free during market hours. About 18,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 1,100 are in town for events or cruises (cruise guests staying the night before sailing), and about 480 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (46%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-eh2d35kp",
+      "title": "Live music near the market (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-09-24",
+      "totalAttendance": 150,
+      "impactWindow": "2:00 PM (end time not published)",
+      "location": "New Orleans Jazz Museum (400 Esplanade Ave.)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free or small shows within a few blocks of the sheds: John Coltrane Day with the Congo Square Jazz Orchestra, New Orleans Jazz Museum (400 Esplanade Ave.), 2:00 PM (~150). Rough estimates (no counts published). Free, in the museum's third-floor Performance Center. Listed under your rule for music near the market during the business day or just after 5 PM. Market estimate: Shows near the sheds, by your distance rule: 75% for John Coltrane Day with the Congo Square Jazz Orchestra at the Jazz Museum.",
+      "sources": [
+        "https://nolajazzmuseum.org/events/2026/9/24/john-coltrane-day",
+        "https://countryroadsmagazine.com/events/john-coltrane-day/"
+      ]
+    },
+    {
+      "id": "ev-le62qu4j",
       "title": "NOLAxNOLA (opening days)",
       "category": "Festivals",
       "startDate": "2026-09-24",
@@ -896,7 +1293,7 @@
       "impactWindow": "4:00 PM – 11:00 PM",
       "location": "About 50 venues citywide, incl. Frenchmen St. and the French Quarter",
       "proximity": "Marigny",
-      "notes": "Citywide music festival, Sept 24 – Oct 4 (October's list has the final days). Mostly evening club shows, with early sets on Frenchmen St., a few blocks from the market. Estimate (no count published), the same method as October's: 300+ shows over 11 days is about 27 a night, at ~200 people a show; about half the venues are in the Quarter, Marigny and CBD. Fri–Sat higher.",
+      "notes": "Citywide music festival, Sept 24 – Oct 4 (October's list has the final days). Mostly evening club shows, with early sets on Frenchmen St., a few blocks from the market. Estimate (no count published), the same method as October's: 300+ shows over 11 days is about 27 a night, at ~200 people a show; about half the venues are in the Quarter, Marigny and CBD. Fri–Sat higher. Market estimate: Festival or event in the Quarter or Marigny: of the 50% of the crowd not staying overnight, about 1 in 20 reach the sheds. Overnight visitors are in the Free-range tourists line.",
       "sources": [
         "https://hoodline.com/2026/09/nolaxnola-returns-with-300-plus-shows-1-05m-poured-into-local-music/",
         "https://www.neworleans.com/nolaxnola/",
@@ -904,7 +1301,7 @@
       ]
     },
     {
-      "id": "ev-2zqmg7mb",
+      "id": "ev-3ir95kbn",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-24",
@@ -912,13 +1309,13 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "16 smaller meetings in session on the city calendar (4,786). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "16 smaller meetings in session on the city calendar (4,786). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees on a meeting day: about 3 in 10 have free time during market hours, and 1 in 10 of those pass through the sheds (3% in all).",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-7e4ia3vp",
+      "id": "ev-udq2432o",
       "title": "Smaller evening shows (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-24",
@@ -926,13 +1323,27 @@
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "The Fillmore",
       "proximity": "Canal St. / CBD",
-      "notes": "Touring acts likely to draw fans from out of town: Zack Fox, The Fillmore (~1,500). Estimates at about 85% of each venue's size (no counts published). Evening only; little overlap with market business hours.",
+      "notes": "Touring acts likely to draw fans from out of town: Zack Fox, The Fillmore (~1,500). Estimates at about 85% of each venue's size (no counts published). Evening shows: their out-of-town fans spend the day in the Quarter first. Market estimate: Club show downtown: about 5% of the crowd are out-of-town fans staying over, 15% drive in for the day and 80% are locals. Show day counts as a free day for those staying over: 1 in 10 pass through the sheds. On a weeknight, about 1 in 40 day-trippers and 1 in 500 locals get there before closing.",
       "sources": [
         "https://www.songkick.com/venues/4060459-fillmore-new-orleans/gigography"
       ]
     },
     {
-      "id": "ev-jwqtrg5d",
+      "id": "ev-2z9a5yyd",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-25",
+      "totalAttendance": 27100,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 2,710 expected through the sheds: 1 in 10 of the roughly 27,100 visitors staying in or near downtown who are free during market hours. About 24,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 250 are in town for events or cruises (Dolly Day), about 1,700 are fans in town around an evening event or big game (fans in town for Sunday's Saints–Raiders game), about 60 are convention attendees with a free day before or after their meeting (smaller meetings), and about 450 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (58%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-g43fwnm6",
       "title": "Krewe of Dolly – Dolly Day Celebration of Life parade",
       "category": "Parades",
       "startDate": "2026-09-25",
@@ -940,7 +1351,7 @@
       "impactWindow": "4:00 PM – 7:00 PM",
       "location": "Armstrong Park (line-up 4 PM, rolls 5 PM) through the Quarter to the New Orleans Jazz Museum (400 Esplanade Ave.)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
-      "notes": "Friday. Jazz-funeral-style parade honoring Dolly Parton, ending at the Jazz Museum, next to the Flea Market, for a proclamation by Mayor Moreno; after-parties at the Blue Nile and Hi-Ho Lounge. The 700-member krewe 'turned out in full force'; a board member expected 'thousands'. Estimate 3,000 marchers and onlookers (no count published). Moved from Sept 5 (Fox 8, Sept 1).",
+      "notes": "Friday. Jazz-funeral-style parade honoring Dolly Parton, ending at the Jazz Museum, right across the street from the Flea Market, for a proclamation by Mayor Moreno; after-parties at the Blue Nile and Hi-Ho Lounge. The 700-member krewe 'turned out in full force'; a board member expected 'thousands'. Estimate 3,000 marchers and onlookers (no count published). Moved from Sept 5 (Fox 8, Sept 1). The city permit gives the route as beginning on Rampart St., down St. Ann St. to Esplanade Ave., then on to Frenchmen St., ending at the Blue Nile. Market estimate: Large parade through the Quarter (your rule of Oct 8): its onlookers wander the neighborhood once it has passed them, and the usual shares apply where and when they're let go. It rolled at 5 PM, so most were let go after most vendors close: of the half of the roughly 2,300 onlookers not staying overnight, about 1 in 20 of those let go before 6 PM and 1 in 100 of those let go later pass through the sheds (about 37). Those watching the finish across from the Flea Market, around 6:45 PM, don't count (after 6 PM). About 1 in 4 of the onlookers arrived before 5 PM, and 1 in 20 of those came through the sheds first (about 29). The krewe's 700 marchers break up across from the Flea Market after 5 PM, so they don't count (your rule).",
       "sources": [
         "https://www.fox8live.com/2026/09/25/new-orleans-honors-dolly-parton-with-celebration-life-parade-8-foot-skeleton-dolly-day/",
         "https://www.frenchquarterjournal.com/archives/dolly-parton-celebration-of-life-parade-2026",
@@ -950,7 +1361,21 @@
       ]
     },
     {
-      "id": "ev-a2x0vcx7",
+      "id": "ev-sa2fs8pk",
+      "title": "Live music near the market (grouped)",
+      "category": "Concerts",
+      "startDate": "2026-09-25",
+      "totalAttendance": 150,
+      "impactWindow": "2:00 PM (end time not published)",
+      "location": "New Orleans Jazz Museum (400 Esplanade Ave.)",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "notes": "Free or small shows within a few blocks of the sheds: Hispanic Heritage Month: Pavel & Direct Contact (with NOLAxNOLA504), New Orleans Jazz Museum (400 Esplanade Ave.), 2:00 PM (~150). Rough estimates (no counts published). Free. Listed under your rule for music near the market during the business day or just after 5 PM. Market estimate: Shows near the sheds, by your distance rule: 75% for Pavel & Direct Contact (with NOLAxNOLA504) at the Jazz Museum.",
+      "sources": [
+        "https://nolajazzmuseum.org/events/2026/9/25/hispanic-heritage-month-show"
+      ]
+    },
+    {
+      "id": "ev-6zk2z4vq",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-25",
@@ -958,13 +1383,13 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "13 smaller meetings in session on the city calendar (4,482). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "13 smaller meetings in session on the city calendar (4,482). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees on a meeting day: about 3 in 10 have free time during market hours, and 1 in 10 of those pass through the sheds (3% in all).",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-11jbbyxm",
+      "id": "ev-63n27qyi",
       "title": "Smaller evening shows (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-25",
@@ -972,27 +1397,41 @@
       "impactWindow": "7:00 PM – 11:00 PM",
       "location": "Mahalia Jackson Theater",
       "proximity": "Armstrong Park / Tremé",
-      "notes": "Touring acts likely to draw fans from out of town: Taj Mahal & Keb' Mo', Mahalia Jackson Theater (~1,800). Estimates at about 85% of each venue's size (no counts published). Evening only; little overlap with market business hours.",
+      "notes": "Touring acts likely to draw fans from out of town: Taj Mahal & Keb' Mo', Mahalia Jackson Theater (~1,800). Estimates at about 85% of each venue's size (no counts published). Evening shows: their out-of-town fans spend the day in the Quarter first. Market estimate: Theater show downtown: about 5% of the crowd are out-of-town fans staying over, 25% drive in for the day and 70% are locals. Show day counts as a free day for those staying over: 1 in 10 pass through the sheds. On a Friday, about 1 in 20 day-trippers and 1 in 200 locals get there before closing.",
       "sources": [
         "https://www.songkick.com/venues/48363-mahalia-jackson-theater-of-the-performing-arts/gigography"
       ]
     },
     {
-      "id": "ev-rcydx4fd",
+      "id": "ev-h02ofyvc",
       "title": "American Cruise Lines – American Heritage in port",
       "category": "Cruise Ships",
       "startDate": "2026-09-26",
       "totalAttendance": 170,
       "location": "New Orleans riverfront (dock not published)",
       "proximity": "Riverfront (dock not published)",
-      "notes": "Listed on the port's September schedule; whether it started or ended a cruise here isn't published. About 170 guests (estimate). Times not published.",
+      "notes": "Listed on the port's September schedule; whether it started or ended a cruise here isn't published. About 170 guests (estimate). Times not published. Market estimate: River ship day in port: about 1 in 10 guests walk through the sheds.",
       "sources": [
         "https://www.cruisemapper.com/ports/new-orleans-port-43",
         "https://www.cruisemapper.com/ships/American-Heritage-828"
       ]
     },
     {
-      "id": "ev-7gojpg0w",
+      "id": "ev-togg5srn",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-26",
+      "totalAttendance": 47200,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 4,720 expected through the sheds: 1 in 10 of the roughly 47,200 visitors staying in or near downtown who are free during market hours. About 36,300 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 1,600 are in town for events or cruises (Dolly Day; cruise guests staying the night before sailing; other visitors on the Saints opener weekend, when New Orleans & Company expected hotels above 95%), about 8,400 are fans in town around an evening event or big game (fans in town for Sunday's Saints–Raiders game), about 550 are convention attendees with a free day before or after their meeting (smaller meetings), and about 290 are family members traveling with convention attendees (smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (82%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-uwf4j8qr",
       "title": "Live music near the market (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-26",
@@ -1000,13 +1439,13 @@
       "impactWindow": "12:00 PM – 2:00 PM",
       "location": "French Market (Farmers Market stage, Dutch Alley)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
-      "notes": "Free shows at the market itself: Culture & Cuisine: New Orleans Black Masking Indians and a cooking demo, Farmers Market stage, 12:00–1:00 PM (~150); Hispanic Heritage Concert, French Market, 1:00–2:00 PM (~150). Rough estimates (no counts published). Listed under your rule for music near the market during the business day.",
+      "notes": "Free shows at the market itself: Culture & Cuisine: New Orleans Black Masking Indians and a cooking demo, Farmers Market stage, 12:00–1:00 PM (~150); Hispanic Heritage Concert, French Market, 1:00–2:00 PM (~150). Rough estimates (no counts published). Listed under your rule for music near the market during the business day. Market estimate: Shows near the sheds, by your distance rule: 100% for Culture & Cuisine on the Farmers Market stage, Hispanic Heritage Concert at the French Market (counted as in the sheds).",
       "sources": [
         "https://www.frenchmarket.org/events/month/2026-09/"
       ]
     },
     {
-      "id": "ev-7sn6hbzf",
+      "id": "ev-lmv2jkj6",
       "title": "Saints Kickoff Run (5K)",
       "category": "Miscellaneous",
       "startDate": "2026-09-26",
@@ -1014,7 +1453,7 @@
       "impactWindow": "7:00 AM – 1:00 PM",
       "location": "Champions Square (Superdome) → Poydras → S. Peters → Canal → Decatur / N. Peters St., turning around past St. Louis St.",
       "proximity": "French Quarter Riverfront",
-      "notes": "Saturday morning race, start 7:30 AM (Louisiana National Guard Foundation). The route comes up Decatur and N. Peters as far as St. Louis St., about seven blocks short of the sheds. 5,000 is the organizer's figure on the city permit.",
+      "notes": "Saturday morning race, start 7:30 AM (Louisiana National Guard Foundation). The route comes up Decatur and N. Peters as far as St. Louis St., about seven blocks short of the sheds. 5,000 is the organizer's figure on the city permit. Market estimate: A Saturday-morning race along the Quarter's riverfront (start 7:30 AM): of the half of runners and spectators not staying overnight, about 1 in 5 reach the sheds later that day, the rule for crowds already in the Quarter before 3 PM. Overnight visitors are in the Free-range tourists line.",
       "sources": [
         "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-21025-SPMA",
         "https://www.caesarssuperdome.com/events-tickets/pdf/",
@@ -1022,7 +1461,7 @@
       ]
     },
     {
-      "id": "ev-1pzziydj",
+      "id": "ev-2chia29s",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-26",
@@ -1030,13 +1469,13 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "12 smaller meetings in session on the city calendar (2,382). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "12 smaller meetings in session on the city calendar (2,382). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees with a free weekend day: 1 in 10 pass through the sheds.",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-p0fupll8",
+      "id": "ev-89iwbxq7",
       "title": "Carnival Liberty turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-09-27",
@@ -1044,7 +1483,7 @@
       "impactWindow": "8:00 AM – 3:30 PM",
       "location": "Erato St. Cruise Terminal",
       "proximity": "MCCNO Corridor",
-      "notes": "Sunday 7-night sailing. About 2,978 guests off at 8:00 AM and 2,978 on for the afternoon departure (double-occupancy capacity). Dates from the port's September schedule and the ship's own sailings.",
+      "notes": "Sunday 7-night sailing. About 2,978 guests off at 8:00 AM and 2,978 on for the afternoon departure (double-occupancy capacity). Dates from the port's September schedule and the ship's own sailings. Market estimate: Ocean-cruise turnaround: about 1 in 20 of the guests getting on or off spend some of the day in the Quarter and pass through the sheds. Guests staying the night before are in the Free-range tourists line.",
       "sources": [
         "https://www.cruisemapper.com/ports/new-orleans-port-43",
         "https://www.icruise.com/ships/carnival-cruises-carnival-liberty-cruise-itineraries-september-2026.html",
@@ -1052,7 +1491,21 @@
       ]
     },
     {
-      "id": "ev-b2jlosd0",
+      "id": "ev-mjkawcdk",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-27",
+      "totalAttendance": 40500,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 2,840 expected through the sheds: 1 in 10 of the roughly 40,500 visitors staying in or near downtown who are free during market hours, less the game-day dip below. About 29,800 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 5,800 are in town for events or cruises (cruise guests staying the night before sailing; other visitors on the Saints opener weekend, when New Orleans & Company expected hotels above 95%), about 3,700 are convention attendees with a free day before or after their meeting (WEFTEC attendees arriving a day early; smaller meetings), and about 1,300 are family members traveling with convention attendees (WEFTEC, smaller meetings). Convention attendees on meeting days are counted in their own rows. Saints game day: about 1,200 fewer than usual come through (30% of the everyday visitors): many are at the Saints–Raiders game or watching it instead of wandering the Quarter, and some stayed away from a pricier game weekend. Built from the day's hotel estimate (95%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-jhy3o5kx",
       "title": "Live music near the market (grouped)",
       "category": "Concerts",
       "startDate": "2026-09-27",
@@ -1060,13 +1513,13 @@
       "impactWindow": "2:00 PM – 3:00 PM",
       "location": "French Market (Farmers Market stage, Dutch Alley)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
-      "notes": "Free shows at the market itself: Sunday Sounds: a local musician, French Market, 2:00–3:00 PM (~100). Rough estimates (no counts published). Listed under your rule for music near the market during the business day.",
+      "notes": "Free shows at the market itself: Sunday Sounds: a local musician, French Market, 2:00–3:00 PM (~100). Rough estimates (no counts published). Listed under your rule for music near the market during the business day. Market estimate: Shows near the sheds, by your distance rule: 100% for Sunday Sounds at the French Market (counted as in the sheds).",
       "sources": [
         "https://www.frenchmarket.org/events/month/2026-09/"
       ]
     },
     {
-      "id": "ev-vsu0z3ud",
+      "id": "ev-38qoh73u",
       "title": "Saints vs. Las Vegas Raiders",
       "category": "Sports",
       "startDate": "2026-09-27",
@@ -1074,15 +1527,16 @@
       "impactWindow": "12:00 PM – 3:30 PM",
       "location": "Caesars Superdome",
       "proximity": "Superdome",
-      "notes": "Sunday, kickoff 3:25 PM; the Saints' only September home game (Sept 13 at Detroit, Sept 20 away). Attendance = stadium capacity (an upper bound).",
+      "notes": "Sunday, kickoff 3:25 PM; the Saints' only September home game (Sept 13 at Detroit, Sept 20 away). Attendance = stadium capacity (an upper bound). Market estimate: Saints afternoon game (3:25 PM kickoff): about 23% of the crowd are out-of-town fans staying over (visiting-team fans plus Saints fans from out of town), 29% drive in for the day and 48% are locals. Getting to the Superdome, through security and to your seat takes the middle of the market day, so the market catches fans only a little before or after the game: about 1 in 40 of those staying over, 1 in 40 day-trippers and 1 in 200 locals. Everyday visitors are down too on game day (see the Free-range tourists line). Fans in town on the days before and after are in the Free-range tourists line. Hotels were nearly full that weekend, so about 1 in 10 fewer of them stayed close by.",
       "sources": [
         "https://www.caesarssuperdome.com/events-tickets/pdf/",
         "https://www.neworleanssaints.com/schedule/",
-        "https://en.wikipedia.org/wiki/Caesars_Superdome"
+        "https://en.wikipedia.org/wiki/Caesars_Superdome",
+        "https://www.wlox.com/2026/09/26/saints-home-opener-against-las-vegas-raiders/"
       ]
     },
     {
-      "id": "ev-nl92shcy",
+      "id": "ev-6o8z6o7n",
       "title": "Second line (Chartres House → Marché, Dutch Alley)",
       "category": "Parades",
       "startDate": "2026-09-27",
@@ -1090,13 +1544,13 @@
       "impactWindow": "6:00 PM – 6:45 PM",
       "location": "540 Chartres St. → Decatur St. → St. Philip St. → Dutch Alley → Marché (914 N. Peters St.)",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
-      "notes": "Private second line with a 7-piece brass band; 100 guests (permit). Ends next to the Farmers Market. Evening only; little overlap with market business hours. The permit was still listed as 'application submitted', so it may not have gone ahead.",
+      "notes": "Private second line with a 7-piece brass band; 100 guests (permit). Ends at Marché in Dutch Alley, about a block from the Farmers Market. Evening only; little overlap with market business hours. The permit was still listed as 'application submitted', so it may not have gone ahead. Market estimate: Second line that ends at Marché, by Dutch Alley, around 6:45 PM: it breaks up within two blocks after 5 PM, so it isn't counted (your rule).",
       "sources": [
         "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-23639-SPMA"
       ]
     },
     {
-      "id": "ev-ddy0xril",
+      "id": "ev-az4xlhtt",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-27",
@@ -1104,26 +1558,26 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "15 smaller meetings in session on the city calendar (3,667). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "15 smaller meetings in session on the city calendar (3,667). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees with a free weekend day: 1 in 10 pass through the sheds.",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-e5tk2694",
+      "id": "ev-3741v0t1",
       "title": "Wedding second line (547 Esplanade → Frenchmen)",
       "category": "Parades",
       "startDate": "2026-09-27",
       "totalAttendance": 30,
       "location": "547 Esplanade Ave. to Frenchmen St. via Esplanade",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
-      "notes": "Private second line, about 30 people and a 7-piece brass band (permit); starts about two blocks from the Flea Market's downriver end. Time isn't on the permit.",
+      "notes": "Private second line, about 30 people and a 7-piece brass band (permit); starts about two blocks from the Flea Market's downriver end. Time isn't on the permit. Market estimate: Second line that runs from 547 Esplanade Ave. to Frenchmen St.: in the 35% zone (Jackson Square to Café du Monde, Decatur toward the market, the first blocks of Frenchmen), so 35% of the guests (your rule). Its time isn't on the permit, so it counts until a source shows otherwise.",
       "sources": [
         "https://data.nola.gov/resource/aib5-en5t.json?permitnumber=26-24649-SPMA"
       ]
     },
     {
-      "id": "ev-1lzlbewv",
+      "id": "ev-lnbekw57",
       "title": "Carnival Valor turnaround",
       "category": "Cruise Ships",
       "startDate": "2026-09-28",
@@ -1131,7 +1585,7 @@
       "impactWindow": "8:00 AM – 3:30 PM",
       "location": "Erato St. Cruise Terminal",
       "proximity": "MCCNO Corridor",
-      "notes": "Ship returns from its Sept 24 sailing (8:00 AM) and leaves on a 5-night cruise. About 2,984 guests off at 8:00 AM and 2,984 on for the afternoon departure (double-occupancy capacity). Dates from the port's September schedule and the ship's own sailings.",
+      "notes": "Ship returns from its Sept 24 sailing (8:00 AM) and leaves on a 5-night cruise. About 2,984 guests off at 8:00 AM and 2,984 on for the afternoon departure (double-occupancy capacity). Dates from the port's September schedule and the ship's own sailings. Market estimate: Ocean-cruise turnaround: about 1 in 20 of the guests getting on or off spend some of the day in the Quarter and pass through the sheds. Guests staying the night before are in the Free-range tourists line.",
       "sources": [
         "https://www.cruisemapper.com/ports/new-orleans-port-43",
         "https://gangwaze.com/cruise-lines/carnival-cruise-lines/carnival-valor/2026-09-24/4-nights",
@@ -1139,7 +1593,21 @@
       ]
     },
     {
-      "id": "ev-sfan76x8",
+      "id": "ev-p4mcheng",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-28",
+      "totalAttendance": 31900,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 3,190 expected through the sheds: 1 in 10 of the roughly 31,900 visitors staying in or near downtown who are free during market hours. About 16,200 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), about 5,800 are in town for events or cruises (cruise guests staying the night before sailing; other visitors on the Saints opener weekend, when New Orleans & Company expected hotels above 95%), about 5,000 are fans in town around an evening event or big game (fans in town for Sunday's Saints–Raiders game), and about 4,900 are family members traveling with convention attendees (WEFTEC, smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (83%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-rphxeu1o",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-28",
@@ -1147,13 +1615,13 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "12 smaller meetings in session on the city calendar (4,226). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "12 smaller meetings in session on the city calendar (4,226). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees on a meeting day: about 3 in 10 have free time during market hours, and 1 in 10 of those pass through the sheds (3% in all).",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-q7z4zq4w",
+      "id": "ev-g97x0y4j",
       "title": "WEFTEC 2026 (Water Environment Federation)",
       "category": "Conventions",
       "startDate": "2026-09-28",
@@ -1167,7 +1635,7 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Ernest N. Morial Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "About 18,000 (city calendar and New Orleans & Company's Sept 25 release; Gemini had 110,000). Exhibition Sept 28–30; workshops began Sept 26. A Brown and Caldwell block party closed Lafayette St. by the Convention Center on Sept 28. Counted once per day.",
+      "notes": "About 18,000 (city calendar and New Orleans & Company's Sept 25 release; Gemini had 110,000). Exhibition Sept 28–30; workshops began Sept 26. A Brown and Caldwell block party closed Lafayette St. by the Convention Center on Sept 28. Counted once per day. Market estimate: Convention attendees on a meeting day: about 3 in 10 have free time during market hours, and 1 in 10 of those pass through the sheds (3% in all).",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/",
         "https://www.neworleans.com/articles/post/major-conventions-and-meetings-position-new-orleans-for-a-strong-finish-to-2026/",
@@ -1176,7 +1644,21 @@
       ]
     },
     {
-      "id": "ev-lght7iax",
+      "id": "ev-xlmbi5kj",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-29",
+      "totalAttendance": 20600,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 2,060 expected through the sheds: 1 in 10 of the roughly 20,600 visitors staying in or near downtown who are free during market hours. About 15,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), and about 4,900 are family members traveling with convention attendees (WEFTEC, smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (65%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-igxeoljq",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-29",
@@ -1184,13 +1666,27 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "14 smaller meetings in session on the city calendar (4,357). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "14 smaller meetings in session on the city calendar (4,357). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees on a meeting day: about 3 in 10 have free time during market hours, and 1 in 10 of those pass through the sheds (3% in all).",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
     },
     {
-      "id": "ev-scflgwsq",
+      "id": "ev-ogoieup8",
+      "title": "Free-range tourists",
+      "category": "Miscellaneous",
+      "startDate": "2026-09-30",
+      "totalAttendance": 21600,
+      "impactWindow": "Market hours",
+      "location": "Visitors staying in or near downtown, free to explore the French Quarter",
+      "notes": "About 2,160 expected through the sheds: 1 in 10 of the roughly 21,600 visitors staying in or near downtown who are free during market hours. About 16,700 are everyday leisure and business travelers (getaways, girls' trips, bachelor and bachelorette parties, family reunions, business travelers off the clock), and about 4,900 are family members traveling with convention attendees (WEFTEC, smaller meetings). Convention attendees on meeting days are counted in their own rows. Built from the day's hotel estimate (61%), 1.88 people per room, and visitors in rentals or with friends. Market estimate: Visitors in town and free during market hours × 1 in 10 who pass through the sheds each day: about 1 in 4 visits per trip, from the visitor surveys (an assumption to check with vendor check-ins or Placer.ai).",
+      "sources": [
+        "https://www.explorelouisiana.com/sites/default/files/2024-07/2023%20Louisiana%20Visitor%20Profile%20Report.pdf",
+        "https://www.neworleans.com/articles/post/new-orleans-company-releases-strong-visitation-results-for-2025-1946-million-visitors-spent-10b/"
+      ]
+    },
+    {
+      "id": "ev-f98tun0u",
       "title": "Smaller conventions & meetings (grouped)",
       "category": "Conventions",
       "startDate": "2026-09-30",
@@ -1198,7 +1694,7 @@
       "impactWindow": "10:00 AM – 4:00 PM",
       "location": "Downtown hotels & Convention Center",
       "proximity": "MCCNO Corridor",
-      "notes": "14 smaller meetings in session on the city calendar (4,282). Large conventions listed separately are left out of this total. Counted once per day.",
+      "notes": "14 smaller meetings in session on the city calendar (4,282). Large conventions listed separately are left out of this total. Counted once per day. Market estimate: Convention attendees on a meeting day: about 3 in 10 have free time during market hours, and 1 in 10 of those pass through the sheds (3% in all).",
       "sources": [
         "https://www.neworleans.com/meeting-planners/convention-calendar/"
       ]
