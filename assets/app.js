@@ -34,6 +34,14 @@ function occupancyFor(key) {
 
 const $ = (id) => document.getElementById(id);
 
+// Weather is optional: if weather.js didn't load or a service fails, everything works without it.
+const weatherFor = (key) => { try { return typeof Weather !== "undefined" ? Weather.get(key) : null; } catch { return null; } };
+function weatherIconHtml(w, cls) {
+  if (!w) return "";
+  const what = w.kind === "typical" ? `Typical: ${w.text}` : w.kind === "observed" ? `Observed: ${w.text}` : `Forecast: ${w.text}`;
+  return `<span class="${cls} leading-none ${w.kind === "typical" ? "opacity-40" : ""}" title="${escapeHtml(what)}" aria-hidden="true">${w.icon}</span>`;
+}
+
 function monthFor(offset) {
   const d = new Date(today.getFullYear(), today.getMonth() + offset, 1);
   return { y: d.getFullYear(), m: d.getMonth() };
@@ -212,7 +220,8 @@ function renderCalendar() {
     const day = days[key];
     const occ = occupancyFor(key);
     const issues = issuesFor(key);
-    const opens = !!day || occ !== null || issues.length > 0; // occupancy-only or flagged days still open
+    const wx = weatherFor(key);
+    const opens = !!day || occ !== null || issues.length > 0 || !!wx; // occupancy, flags or weather still open a day
     const isToday = key === todayKey;
     const cats = day ? Object.entries(day.cats).sort((a, b) => b[1] - a[1]) : [];
     const extra = cats.length - MAX_MOBILE_BADGES;
@@ -221,7 +230,7 @@ function renderCalendar() {
         class="day-cell relative flex flex-col items-stretch gap-0.5 p-0.5 sm:p-1.5 min-h-20 sm:min-h-28 min-w-0 text-left border-b border-r border-stone-100 ${day ? (state.market ? marketHeatClass : heatClass)(day.total) + " hover:brightness-95 cursor-pointer" : opens ? "bg-white cursor-pointer" : "bg-white cursor-default"}"
         ${opens ? "" : 'tabindex="-1"'} aria-label="${MONTHS_LONG[m]} ${d}${day ? state.market ? `, about ${formatAttendance(day.total)} market visitors` : `, about ${formatAttendance(day.total)} expected` : ", no tracked events"}${occ !== null ? `, estimated hotel occupancy ${occ}%` : ""}${issues.length ? ", hotel occupancy data problem" : ""}">
       <div class="flex items-center justify-between gap-0.5 px-0.5">
-        ${issues.length ? `<span class="flex items-center gap-0.5">` : ""}<span class="text-[11px] sm:text-sm font-semibold ${isToday ? "bg-emerald-800 text-white rounded-full w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center" : "text-stone-700"}">${d}</span>${issues.length ? `${issueIcon("w-4 h-4 sm:w-5 sm:h-5 text-[10px] sm:text-xs")}</span>` : ""}
+        ${issues.length || wx ? `<span class="flex items-center gap-0.5 min-w-0">` : ""}<span class="text-[11px] sm:text-sm font-semibold ${isToday ? "bg-emerald-800 text-white rounded-full w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center" : "text-stone-700"}">${d}</span>${issues.length ? issueIcon("w-4 h-4 sm:w-5 sm:h-5 text-[10px] sm:text-xs") : ""}${weatherIconHtml(wx, "text-[10px] sm:text-sm")}${issues.length || wx ? `</span>` : ""}
         ${day && day.total > 0 ? `<span class="hidden sm:inline text-[10px] font-semibold text-stone-500">~${formatAttendance(day.total)}</span>` : ""}
       </div>
       ${cats.map(([name, att], i) => badgeHtml(name, att, i)).join("")}
@@ -246,6 +255,45 @@ async function showMonth(offset) {
   state.market = res.ok && res.json.events.some(hasMarketFigures);
   state.days = !res.ok ? {} : state.market ? indexByDayMarket(res.json.events, y, m) : indexByDay(res.json.events, y, m);
   renderCalendar();
+  refreshWeather(monthKey(y, m), offset);
+}
+
+// ---------- Weather ----------
+
+// Draw weather icons once the weather has loaded (and again if older days need the archive).
+async function refreshWeather(month, offset) {
+  if (typeof Weather === "undefined") return;
+  try {
+    await Weather.load();
+    if (state.offset === offset && state.data) renderCalendar();
+    const more = Weather.ensureMonth(month);
+    if (more) { await more; if (state.offset === offset && state.data) renderCalendar(); }
+  } catch (e) { console.warn("Weather unavailable:", e); }
+}
+
+function weatherLineHtml(key) {
+  const w = weatherFor(key);
+  if (!w) return "";
+  const label = Weather.LINK_LABEL[w.kind];
+  return `<button type="button" data-weather="${key}" class="inline-flex items-center gap-1.5 min-h-10 -my-1 text-left text-emerald-800 font-semibold underline underline-offset-2">
+      <span class="text-lg leading-none no-underline ${w.kind === "typical" ? "opacity-50" : ""}" aria-hidden="true">${w.icon}</span>${label}</button>${w.kind === "forecast" && w.extended ? ` <span class="text-xs text-stone-500">(extended forecast, less certain)</span>` : ""}`;
+}
+
+function openWeather(key) {
+  const w = weatherFor(key);
+  if (!w) return;
+  const d = parseDate(key);
+  $("weather-title").textContent = `${Weather.LINK_LABEL[w.kind]}: ${d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" })}`;
+  $("weather-body").innerHTML = Weather.detailsHtml(key);
+  $("weather-modal").classList.remove("hidden");
+  $("weather-close").focus();
+}
+function closeWeather() {
+  if ($("weather-modal").classList.contains("hidden")) return false;
+  $("weather-modal").classList.add("hidden");
+  const back = document.querySelector("#modal-weather [data-weather]");
+  if (back) back.focus();
+  return true;
 }
 
 // ---------- Modal ----------
@@ -255,7 +303,7 @@ let lastFocus = null;
 function openModal(key, focusCat) {
   const occ = occupancyFor(key);
   const issues = issuesFor(key);
-  const day = state.days[key] || (occ !== null || issues.length ? { total: 0, items: [] } : null);
+  const day = state.days[key] || (occ !== null || issues.length || weatherFor(key) ? { total: 0, downtown: 0, items: [] } : null);
   if (!day) return;
   const d = parseDate(key);
   $("modal-title").textContent = d.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" });
@@ -269,6 +317,8 @@ function openModal(key, focusCat) {
   $("modal-downtown").classList.toggle("hidden", !showDowntown);
   $("modal-occupancy").innerHTML = occ !== null ? `Estimated Hotel Occupancy: <strong class="text-stone-900">${occ}%</strong>` : "";
   $("modal-occupancy").classList.toggle("hidden", occ === null);
+  $("modal-weather").innerHTML = weatherLineHtml(key);
+  $("modal-weather").classList.toggle("hidden", !$("modal-weather").innerHTML);
 
   const items = [...day.items].sort((a, b) => {
     if (focusCat) {
@@ -341,7 +391,10 @@ $("calendar").addEventListener("click", (e) => {
 $("modal-close").addEventListener("click", closeModal);
 $("modal-backdrop").addEventListener("click", closeModal);
 $("modal").addEventListener("click", (e) => { if (e.target === e.currentTarget || e.target.parentElement === e.currentTarget) closeModal(); });
-document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !closeWeather()) closeModal(); });
+$("modal-weather").addEventListener("click", (e) => { const b = e.target.closest("[data-weather]"); if (b) openWeather(b.dataset.weather); });
+$("weather-close").addEventListener("click", closeWeather);
+$("weather-modal").addEventListener("click", (e) => { if (e.target.hasAttribute("data-weather-close")) closeWeather(); });
 
 renderLegend();
 showMonth(0);
