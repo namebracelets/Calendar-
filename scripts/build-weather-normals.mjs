@@ -45,10 +45,10 @@ const span = (rec, from, to) => rec.hours.slice(from, to).filter(Boolean);
 const r1 = (x) => (x === null ? null : Math.round(x * 10) / 10);
 
 // WMO-style code for the typical look of the day (drives the calendar icon). Uses rain during
-// market hours (noon–5 PM), not the whole day: the archive counts even light overnight drizzle.
-function typicalCode(afternoonRain, cloud) {
-  if (afternoonRain >= 50) return 63;
-  if (afternoonRain >= 30) return 80;
+// market hours (10 AM–5 PM), not the whole day: the archive counts even light overnight drizzle.
+function typicalCode(marketRain, cloud) {
+  if (marketRain >= 50) return 63;
+  if (marketRain >= 30) return 80;
   if (cloud >= 75) return 3;
   if (cloud >= 45) return 2;
   if (cloud >= 20) return 1;
@@ -86,6 +86,7 @@ export function buildNormals(years) {
       afternoonTemp: Math.round(mean(pm.flat().map((h) => h.temp))),
       morningRain: pct(am.map((hs) => (hs.length ? hs.some((h) => h.rain >= WET) : null))),
       afternoonRain: pct(pm.map((hs) => (hs.length ? hs.some((h) => h.rain >= WET) : null))),
+      marketRain: pct(day.map((hs) => (hs.length ? hs.some((h) => h.rain >= WET) : null))), // 10 AM–5 PM
       humidity: Math.round(mean(day.flat().map((h) => h.rh))),
       wind: Math.round(mean(day.map((hs) => Math.max(...hs.map((h) => h.wind ?? 0))))),
       cloud: Math.round(cloud ?? 0),
@@ -93,7 +94,7 @@ export function buildNormals(years) {
       years: LAST_YEAR - FIRST_YEAR + 1,
       span: `${FIRST_YEAR}–${LAST_YEAR}`,
     };
-    days[mmdd].code = typicalCode(days[mmdd].afternoonRain ?? 0, cloud ?? 0);
+    days[mmdd].code = typicalCode(days[mmdd].marketRain ?? 0, cloud ?? 0);
   }
   return days;
 }

@@ -14,6 +14,7 @@ const Weather = (() => {
   const TTL = 60 * 60 * 1000;
   const FORECAST_DAYS = 16, PAST_DAYS = 92;
   const MORNING = [8, 12], AFTERNOON = [12, 17]; // hours: 8 AM–noon, noon–5 PM
+  const MARKET = [10, 17];                        // market hours: 10 AM–5 PM
 
   const DAILY = "weather_code,temperature_2m_max,temperature_2m_min,apparent_temperature_max,precipitation_sum,precipitation_probability_max,wind_speed_10m_max,wind_gusts_10m_max";
   const HOURLY = "weather_code,temperature_2m,precipitation_probability,precipitation,relative_humidity_2m,wind_speed_10m";
@@ -173,8 +174,13 @@ const Weather = (() => {
       const rec = days[key];
       if (!rec || rec.hi === null) return null;
       const kind = ahead < 0 ? "observed" : "forecast";
-      const d = describe(rec.code);
-      return d && { ...rec, kind, ahead, extended: ahead >= 7, icon: d.icon, text: d.text };
+      // Icon and rain chance describe market hours (10 AM–5 PM), not the night
+      const mh = rec.hours.slice(MARKET[0], MARKET[1]).filter(Boolean);
+      const marketCode = worst(mh.map((h) => h.code));
+      const pops = mh.map((h) => h.pop).filter((v) => v !== null && v !== undefined);
+      const d = describe(marketCode ?? rec.code);
+      return d && { ...rec, kind, ahead, extended: ahead >= 7, icon: d.icon, text: d.text,
+        marketRainChance: pops.length ? Math.max(...pops) : rec.rainChance };
     }
     const n = normals && normals[key.slice(5)];
     if (!n) return null;
@@ -220,7 +226,7 @@ const Weather = (() => {
       parts.push(`<dl class="text-sm">
         ${row("Morning (8 AM–noon)", `${deg(w.morningTemp)}${w.morningRain !== undefined ? `, rain on ${w.morningRain}% of days` : ""}`)}
         ${row("Afternoon (noon–5 PM)", `${deg(w.afternoonTemp)}${w.afternoonRain !== undefined ? `, rain on ${w.afternoonRain}% of days` : ""}`)}
-        ${row("Chance of rain", `${w.rainChance}% of days have rain`)}
+        ${row("Rain, 10 AM–5 PM", w.marketRain !== undefined ? `on ${w.marketRain}% of days` : `${w.rainChance}% of days have rain`)}
         ${row("High / low", `${deg(w.hi)} / ${deg(w.lo)}`)}
         ${row("Wind", w.wind !== undefined ? `about ${Math.round(w.wind)} mph` : "–")}
         ${row("Humidity", w.humidity !== undefined ? `about ${Math.round(w.humidity)}%` : "–")}
@@ -229,16 +235,16 @@ const Weather = (() => {
       const am = partOfDay(w, MORNING), pm = partOfDay(w, AFTERNOON);
       const part = (p) => !p ? "–" : `${p.icon} ${escapeHtml(p.text)}, ${p.tLo === p.tHi ? deg(p.tHi) : `${deg(p.tLo)}–${deg(p.tHi)}`}` +
         (w.kind === "observed" ? (p.rain >= 0.01 ? `, ${p.rain.toFixed(2)} in rain` : "") : (p.pop !== null ? `, ${p.pop}% rain` : ""));
-      const daytime = w.hours.slice(10, 17).filter(Boolean).map((h) => h.rh).filter((v) => v !== null);
+      const daytime = w.hours.slice(MARKET[0], MARKET[1]).filter(Boolean).map((h) => h.rh).filter((v) => v !== null);
       parts.push(`<dl class="text-sm">
         ${row("Morning (8 AM–noon)", part(am))}
         ${row("Afternoon (noon–5 PM)", part(pm))}
         ${w.kind === "observed"
-          ? row("Rain that fell", w.rain === null ? "–" : w.rain >= 0.01 ? `${w.rain.toFixed(2)} in` : "None")
-          : row("Chance of rain", w.rainChance === null ? "–" : `${w.rainChance}%`)}
+          ? row("Rain that fell (whole day)", w.rain === null ? "–" : w.rain >= 0.01 ? `${w.rain.toFixed(2)} in` : "None")
+          : row("Chance of rain, 10 AM–5 PM", w.marketRainChance === null || w.marketRainChance === undefined ? "–" : `${w.marketRainChance}%`)}
         ${row("High / low", `${deg(w.hi)} / ${deg(w.lo)}`)}
         ${row("Wind", w.wind === null ? "–" : `up to ${Math.round(w.wind)} mph${w.gusts ? `, gusts ${Math.round(w.gusts)}` : ""}`)}
-        ${row("Humidity", daytime.length ? `${Math.round(daytime.reduce((a, b) => a + b, 0) / daytime.length)}% (daytime average)` : "–")}
+        ${row("Humidity", daytime.length ? `${Math.round(daytime.reduce((a, b) => a + b, 0) / daytime.length)}% (10 AM–5 PM average)` : "–")}
       </dl>`);
     }
     const notes = [];

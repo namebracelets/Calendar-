@@ -294,7 +294,7 @@ const Checkin = (() => {
       }
     }
     const w = weatherFor(key);
-    const rain = w && w.kind !== "typical" ? (w.kind === "observed" ? (w.rain ?? 0) >= 0.05 : (w.rainChance ?? 0) >= 60) : null;
+    const rain = w && w.kind !== "typical" ? (w.kind === "observed" ? (w.rain ?? 0) >= 0.05 : (w.marketRainChance ?? w.rainChance ?? 0) >= 60) : null;
     return { mv, top, cats, rain };
   }
 
@@ -349,7 +349,7 @@ const Checkin = (() => {
         if (bestCat && cats.includes(bestCat)) score += 2;
         if (market && mvBusy !== null && day.total >= mvBusy) score += 2;
         const w = weatherFor(key);
-        if (w && w.kind === "forecast" && (w.rainChance ?? 0) >= 60) score -= 1;
+        if (w && w.kind === "forecast" && (w.marketRainChance ?? w.rainChance ?? 0) >= 60) score -= 1;
         if (score >= 2) upcoming.push({ key, score, total: day.total, market, top: Object.entries(day.cats).sort((a, b) => b[1] - a[1]).map(([c]) => c).find((c) => c !== "Miscellaneous") });
       }
     }
