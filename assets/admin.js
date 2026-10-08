@@ -636,7 +636,7 @@ $("event-form").addEventListener("submit", (e) => {
   if (s && end) for (const d of eachDay(s, end)) if (formMarketDaily[d] !== undefined) mvDaily[d] = formMarketDaily[d];
   if (Object.keys(mvDaily).length) {
     ev.dailyMarketVisitors = mvDaily;
-    if (ev.marketVisitors === undefined) ev.marketVisitors = Object.values(mvDaily).reduce((a, b) => a + b, 0);
+    ev.marketVisitors = Object.values(mvDaily).reduce((a, b) => a + b, 0); // the days add up to the total
   }
   const errs = validateEvent(ev);
   if (val("marketVisitors") && ev.marketVisitors === undefined) errs.push("Market visitors must be a number (or left blank).");
