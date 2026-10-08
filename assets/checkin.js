@@ -7,16 +7,16 @@
 // Leave them blank and answers stay on each vendor's device only (and day summaries stay hidden).
 const CHECKIN_CONFIG = {
   // The form's response URL: https://docs.google.com/forms/d/e/<FORM_ID>/formResponse
-  formUrl: "",
+  formUrl: "https://docs.google.com/forms/d/e/1FAIpQLScL_DHqeRLfR2VW1dEG6nW5odupKLWzQCLd_8yFlpKLCdMMJw/formResponse",
   // Entry IDs from the form's pre-filled link, e.g. "entry.1234567890"
   entries: {
-    vendorId: "",
-    date: "",
-    answer: "",
-    weekday: "",
-    month: "",
-    timing: "",
-    version: "",
+    vendorId: "entry.84823523",   // Vendor ID
+    date: "entry.434026411",      // Date rated
+    answer: "entry.248032330",    // Answer
+    weekday: "entry.185419435",   // Weekday
+    month: "entry.737709073",     // Month
+    timing: "entry.41088056",     // Same day or looking back
+    version: "entry.1952108551",  // App version
   },
   // File → Share → Publish to web → the Summary tab as CSV
   summaryCsvUrl: "",
