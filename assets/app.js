@@ -5,7 +5,9 @@ const WEEKDAYS = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 const MAX_MOBILE_BADGES = 3;
 
 const today = new Date();
-const state = { offset: 0, data: null, days: {} };
+// market: true when the loaded month has estimated market visitors (the newer view).
+// pick: { from, to } while a vendor is choosing a day to rate (check-in), else null.
+const state = { offset: 0, data: null, days: {}, market: false, pick: null };
 const cache = new Map();
 
 // Bad hotel occupancy entries flagged by the admin import. date === null → shown above the month.
@@ -33,6 +35,14 @@ function occupancyFor(key) {
 
 const $ = (id) => document.getElementById(id);
 
+// Weather is optional: if weather.js didn't load or a service fails, everything works without it.
+const weatherFor = (key) => { try { return typeof Weather !== "undefined" ? Weather.get(key) : null; } catch { return null; } };
+function weatherIconHtml(w, cls) {
+  if (!w) return "";
+  const what = w.kind === "typical" ? `Typical: ${w.text}` : w.kind === "observed" ? `Observed: ${w.text}` : `Forecast: ${w.text}`;
+  return `<span class="${cls} leading-none ${w.kind === "typical" ? "opacity-40" : ""}" title="${escapeHtml(what)}" aria-hidden="true">${w.icon}</span>`;
+}
+
 function monthFor(offset) {
   const d = new Date(today.getFullYear(), today.getMonth() + offset, 1);
   return { y: d.getFullYear(), m: d.getMonth() };
@@ -57,6 +67,32 @@ async function loadMonth(y, m) {
   }
   cache.set(key, result);
   return result;
+}
+
+// Market-visitor view: { "YYYY-MM-DD": { total: market visitors, downtown: attendees,
+//   cats: { name: market visitors }, items: [{ ev, att, mv }] } }. mv is null when the event has no
+// market figures; an event with 0 market visitors on a day isn't listed that day at all.
+function indexByDayMarket(events, y, m) {
+  const prefix = monthKey(y, m) + "-";
+  const days = {};
+  for (const ev of events) {
+    const cat = findCategory(ev.category) || findCategory("Miscellaneous");
+    ev._cat = cat;
+    const att = dailyBreakdown(ev);
+    const mvMap = dailyMarketBreakdown(ev);
+    const keys = new Set([...Object.keys(att), ...Object.keys(mvMap || {})]);
+    for (const day of keys) {
+      if (!day.startsWith(prefix)) continue;
+      const a = Number(att[day]) || 0;
+      const mv = mvMap ? Number(mvMap[day]) || 0 : null;
+      if (mv !== null ? mv <= 0 : a <= 0) continue;
+      const d = (days[day] ||= { total: 0, downtown: 0, cats: {}, items: [] });
+      d.downtown += a;
+      if (mv > 0) { d.total += mv; d.cats[cat.name] = (d.cats[cat.name] || 0) + mv; }
+      d.items.push({ ev, att: a, mv });
+    }
+  }
+  return days;
 }
 
 // Build { "YYYY-MM-DD": { total, cats: { name: sum }, items: [{ev, att}] } } for the given month.
@@ -99,6 +135,18 @@ function renderLegend() {
   ).join("");
 }
 
+// Market-visitor view shading: 3K, 6K, 9K, 12K+ market visitors, lightest to darkest.
+function marketHeatClass(total) {
+  if (total >= 12000) return "bg-amber-300";
+  if (total >= 9000) return "bg-amber-200";
+  if (total >= 6000) return "bg-amber-100";
+  if (total >= 3000) return "bg-amber-50";
+  return "bg-white";
+}
+
+const LEGEND_NOTE_ATTENDANCE = "Badges show estimated attendance for that day, rounded (under 1,000 → nearest 100; 1,000+ → nearest 1K). Darker day shading = bigger total crowd. Tap any day for details.";
+const LEGEND_NOTE_MARKET = "Badges show estimated market visitors: people likely to walk through the Farmers and Flea Market sheds during market hours because of each kind of event, rounded (under 1,000 → nearest 100; 1,000+ → nearest 1K). Darker shading = more market visitors (3K, 6K, 9K, 12K+). Tap any day for details.";
+
 function heatClass(total) {
   if (total >= 50000) return "bg-amber-200";
   if (total >= 15000) return "bg-amber-100";
@@ -126,8 +174,9 @@ function renderCalendar() {
   $("updated").textContent = "";
   $("sample-banner").classList.add("hidden");
   $("issue-banner").classList.add("hidden");
+  $("legend-note").textContent = state.market ? LEGEND_NOTE_MARKET : LEGEND_NOTE_ATTENDANCE;
 
-  if (!state.data) {
+  if (!state.data && !state.pick) {
     cal.innerHTML = `
       <div class="px-6 py-16 text-center">
         <div class="text-4xl mb-3">🗓️</div>
@@ -137,7 +186,7 @@ function renderCalendar() {
     return;
   }
 
-  const json = state.data;
+  const json = state.data || { events: [] }; // while picking a day, a month without a file still shows its days
   if (json.sample) $("sample-banner").classList.remove("hidden");
   const undated = occupancyIssues().filter((i) => !i.date);
   if (undated.length) {
@@ -151,8 +200,10 @@ function renderCalendar() {
   const entries = Object.entries(days);
   if (entries.length) {
     const [bKey, bDay] = entries.reduce((a, b) => (b[1].total > a[1].total ? b : a));
+    if (bDay.total > 0) {
     const bd = parseDate(bKey);
     $("month-total").innerHTML = `Busiest: <strong>${MONTHS_SHORT[bd.getMonth()]} ${bd.getDate()}</strong> (~${formatAttendance(bDay.total)})`;
+    }
   }
 
   const first = new Date(y, m, 1).getDay();
@@ -170,17 +221,22 @@ function renderCalendar() {
     const day = days[key];
     const occ = occupancyFor(key);
     const issues = issuesFor(key);
-    const opens = !!day || occ !== null || issues.length > 0; // occupancy-only or flagged days still open
+    const wx = weatherFor(key);
+    const inWindow = !!state.pick && key >= state.pick.from && key <= state.pick.to;
+    const reported = inWindow && state.pick.done && state.pick.done.has(key); // already reported: shown with ✓, not pickable
+    const pickable = state.pick ? inWindow : null; // reported days can be picked again to change the answer
+    const opens = pickable ?? (!!day || occ !== null || issues.length > 0 || !!wx); // occupancy, flags or weather still open a day
+    const pickCls = pickable === null ? "" : pickable ? " ring-2 ring-inset ring-emerald-600" : " opacity-30";
     const isToday = key === todayKey;
     const cats = day ? Object.entries(day.cats).sort((a, b) => b[1] - a[1]) : [];
     const extra = cats.length - MAX_MOBILE_BADGES;
 
     html += `<button type="button" data-date="${key}"
-        class="day-cell relative flex flex-col items-stretch gap-0.5 p-0.5 sm:p-1.5 min-h-20 sm:min-h-28 min-w-0 text-left border-b border-r border-stone-100 ${day ? heatClass(day.total) + " hover:brightness-95 cursor-pointer" : opens ? "bg-white cursor-pointer" : "bg-white cursor-default"}"
-        ${opens ? "" : 'tabindex="-1"'} aria-label="${MONTHS_LONG[m]} ${d}${day ? `, about ${formatAttendance(day.total)} expected` : ", no tracked events"}${occ !== null ? `, estimated hotel occupancy ${occ}%` : ""}${issues.length ? ", hotel occupancy data problem" : ""}">
+        class="day-cell relative flex flex-col items-stretch gap-0.5 p-0.5 sm:p-1.5 min-h-20 sm:min-h-28 min-w-0 text-left border-b border-r border-stone-100 ${day ? (state.market ? marketHeatClass : heatClass)(day.total) + (opens ? " hover:brightness-95 cursor-pointer" : " cursor-default") : opens ? "bg-white cursor-pointer" : "bg-white cursor-default"}${pickCls}"
+        ${opens ? "" : 'tabindex="-1"'}${pickable === false ? ' aria-disabled="true"' : ""} aria-label="${MONTHS_LONG[m]} ${d}${day ? state.market ? `, about ${formatAttendance(day.total)} market visitors` : `, about ${formatAttendance(day.total)} expected` : ", no tracked events"}${occ !== null ? `, estimated hotel occupancy ${occ}%` : ""}${issues.length ? ", hotel occupancy data problem" : ""}">
       <div class="flex items-center justify-between gap-0.5 px-0.5">
-        ${issues.length ? `<span class="flex items-center gap-0.5">` : ""}<span class="text-[11px] sm:text-sm font-semibold ${isToday ? "bg-emerald-800 text-white rounded-full w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center" : "text-stone-700"}">${d}</span>${issues.length ? `${issueIcon("w-4 h-4 sm:w-5 sm:h-5 text-[10px] sm:text-xs")}</span>` : ""}
-        ${day ? `<span class="hidden sm:inline text-[10px] font-semibold text-stone-500">~${formatAttendance(day.total)}</span>` : ""}
+        ${issues.length || wx || reported ? `<span class="flex items-center gap-0.5 min-w-0">` : ""}<span class="text-[11px] sm:text-sm font-semibold ${isToday ? "bg-emerald-800 text-white rounded-full w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center" : "text-stone-700"}">${d}</span>${issues.length ? issueIcon("w-4 h-4 sm:w-5 sm:h-5 text-[10px] sm:text-xs") : ""}${weatherIconHtml(wx, "text-[10px] sm:text-sm")}${reported ? `<span class="text-[11px] sm:text-sm font-black text-emerald-700" title="Already reported">✓</span>` : ""}${issues.length || wx || reported ? `</span>` : ""}
+        ${day && day.total > 0 ? `<span class="hidden sm:inline text-[10px] font-semibold text-stone-500">~${formatAttendance(day.total)}</span>` : ""}
       </div>
       ${cats.map(([name, att], i) => badgeHtml(name, att, i)).join("")}
       ${extra > 0 ? `<span class="sm:hidden mt-auto text-[9px] text-stone-500 font-medium px-0.5">+${extra} more</span>` : ""}
@@ -201,8 +257,48 @@ async function showMonth(offset) {
   const res = await loadMonth(y, m);
   if (state.offset !== offset) return; // user clicked another month meanwhile
   state.data = res.ok ? res.json : null;
-  state.days = res.ok ? indexByDay(res.json.events, y, m) : {};
+  state.market = res.ok && res.json.events.some(hasMarketFigures);
+  state.days = !res.ok ? {} : state.market ? indexByDayMarket(res.json.events, y, m) : indexByDay(res.json.events, y, m);
   renderCalendar();
+  refreshWeather(monthKey(y, m), offset);
+}
+
+// ---------- Weather ----------
+
+// Draw weather icons once the weather has loaded (and again if older days need the archive).
+async function refreshWeather(month, offset) {
+  if (typeof Weather === "undefined") return;
+  try {
+    await Weather.load();
+    if (state.offset === offset && state.data) renderCalendar();
+    const more = Weather.ensureMonth(month);
+    if (more) { await more; if (state.offset === offset && state.data) renderCalendar(); }
+  } catch (e) { console.warn("Weather unavailable:", e); }
+}
+
+function weatherLineHtml(key) {
+  const w = weatherFor(key);
+  if (!w) return "";
+  const label = Weather.LINK_LABEL[w.kind];
+  return `<button type="button" data-weather="${key}" class="inline-flex items-center gap-1.5 min-h-10 -my-1 text-left text-emerald-800 font-semibold underline underline-offset-2">
+      <span class="text-lg leading-none no-underline ${w.kind === "typical" ? "opacity-50" : ""}" aria-hidden="true">${w.icon}</span>${label}</button>${w.kind === "forecast" && w.extended ? ` <span class="text-xs text-stone-500">(extended forecast, less certain)</span>` : ""}`;
+}
+
+function openWeather(key) {
+  const w = weatherFor(key);
+  if (!w) return;
+  const d = parseDate(key);
+  $("weather-title").textContent = `${Weather.LINK_LABEL[w.kind]}: ${d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" })}`;
+  $("weather-body").innerHTML = Weather.detailsHtml(key);
+  $("weather-modal").classList.remove("hidden");
+  $("weather-close").focus();
+}
+function closeWeather() {
+  if ($("weather-modal").classList.contains("hidden")) return false;
+  $("weather-modal").classList.add("hidden");
+  const back = document.querySelector("#modal-weather [data-weather]");
+  if (back) back.focus();
+  return true;
 }
 
 // ---------- Modal ----------
@@ -212,26 +308,33 @@ let lastFocus = null;
 function openModal(key, focusCat) {
   const occ = occupancyFor(key);
   const issues = issuesFor(key);
-  const day = state.days[key] || (occ !== null || issues.length ? { total: 0, items: [] } : null);
+  const day = state.days[key] || (occ !== null || issues.length || weatherFor(key) ? { total: 0, downtown: 0, items: [] } : null);
   if (!day) return;
   const d = parseDate(key);
   $("modal-title").textContent = d.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" });
-  $("modal-total").innerHTML = day.items.length
-    ? `Estimated foot-traffic drivers: <strong class="text-stone-900">~${day.total.toLocaleString()}</strong> <span class="text-stone-400">(${formatAttendance(day.total)})</span>`
-    : "";
+  $("modal-total").innerHTML = !day.items.length ? ""
+    : state.market
+      ? `Estimated Market Visitors: <strong class="text-stone-900">~${day.total.toLocaleString()}</strong> <span class="text-stone-400">(${formatAttendance(day.total)})</span>`
+      : `Estimated foot-traffic drivers: <strong class="text-stone-900">~${day.total.toLocaleString()}</strong> <span class="text-stone-400">(${formatAttendance(day.total)})</span>`;
   $("modal-total").classList.toggle("hidden", !day.items.length);
+  const showDowntown = state.market && day.items.length > 0;
+  $("modal-downtown").innerHTML = showDowntown ? `Estimated Downtown Visitors: <strong class="text-stone-900">~${day.downtown.toLocaleString()}</strong>` : "";
+  $("modal-downtown").classList.toggle("hidden", !showDowntown);
   $("modal-occupancy").innerHTML = occ !== null ? `Estimated Hotel Occupancy: <strong class="text-stone-900">${occ}%</strong>` : "";
   $("modal-occupancy").classList.toggle("hidden", occ === null);
+  $("modal-weather").innerHTML = weatherLineHtml(key);
+  $("modal-weather").classList.toggle("hidden", !$("modal-weather").innerHTML);
 
   const items = [...day.items].sort((a, b) => {
     if (focusCat) {
       const fa = a.ev._cat.name === focusCat, fb = b.ev._cat.name === focusCat;
       if (fa !== fb) return fa ? -1 : 1;
     }
+    if (state.market) return (b.mv ?? -1) - (a.mv ?? -1) || b.att - a.att;
     return b.att - a.att;
   });
 
-  $("modal-body").innerHTML = items.map(({ ev, att }) => {
+  $("modal-body").innerHTML = items.map(({ ev, att, mv }) => {
     const c = ev._cat;
     const hl = focusCat && c.name === focusCat ? "ring-2 ring-emerald-600" : "";
     const sources = Array.isArray(ev.sources) ? ev.sources.filter(Boolean) : [];
@@ -241,10 +344,16 @@ function openModal(key, focusCat) {
         <span class="shrink-0 rounded-full px-2 py-0.5 text-[11px] font-semibold ${c.badge}">${escapeHtml(c.name)}</span>
       </div>
       <dl class="mt-2 grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-sm">
+        ${state.market ? `
+        <dt class="text-stone-500">This day</dt>
+        <dd><span class="block font-semibold text-emerald-800">Estimated market visitors: ${mv === null ? "not given" : `~${mv.toLocaleString()}`}</span>
+          <span class="block">Total daily attendees: ~${att.toLocaleString()}</span></dd>
+        <dt class="text-stone-500">Event</dt>
+        <dd>${escapeHtml(formatSpan(ev.startDate, ev.endDate))} | Total attendees: ${eventTotal(ev).toLocaleString()}</dd>` : `
         <dt class="text-stone-500">This day</dt>
         <dd class="font-semibold">~${att.toLocaleString()} attendees</dd>
         <dt class="text-stone-500">Event</dt>
-        <dd>${escapeHtml(formatSpan(ev.startDate, ev.endDate))} | Total: ${eventTotal(ev).toLocaleString()}</dd>
+        <dd>${escapeHtml(formatSpan(ev.startDate, ev.endDate))} | Total: ${eventTotal(ev).toLocaleString()}</dd>`}
         ${ev.impactWindow ? `<dt class="text-stone-500">Market impact</dt><dd class="font-semibold text-emerald-800">${escapeHtml(ev.impactWindow)}</dd>` : ""}
         ${ev.location ? `<dt class="text-stone-500">Location</dt><dd>${escapeHtml(ev.location)}</dd>` : ""}
       </dl>
@@ -255,6 +364,10 @@ function openModal(key, focusCat) {
           : escapeHtml(s)).join(", ")}</p>` : ""}
     </article>`;
   }).join("") || `<p class="py-6 text-center text-sm text-stone-500">No tracked events</p>`;
+  const vendors = typeof Checkin !== "undefined" ? Checkin.summaryHtml(key) : "";
+  if (vendors) $("modal-body").insertAdjacentHTML("afterbegin", vendors);
+  const report = typeof Checkin !== "undefined" ? Checkin.dayActionHtml(key) : "";
+  if (report) $("modal-body").insertAdjacentHTML("afterbegin", report);
   if (issues.length) {
     $("modal-body").insertAdjacentHTML("afterbegin",
       issuesBoxHtml(issues, `Hotel occupancy entry problem${issues.length === 1 ? "" : "s"} for this day`));
@@ -281,13 +394,27 @@ document.querySelectorAll(".month-btn").forEach((btn) =>
 $("calendar").addEventListener("click", (e) => {
   const cell = e.target.closest("[data-date]");
   if (!cell) return;
+  if (state.pick) { if (typeof Checkin !== "undefined") Checkin.pickDay(cell.dataset.date); return; }
   const badge = e.target.closest("[data-cat]");
   openModal(cell.dataset.date, badge ? badge.dataset.cat : null);
 });
 $("modal-close").addEventListener("click", closeModal);
 $("modal-backdrop").addEventListener("click", closeModal);
 $("modal").addEventListener("click", (e) => { if (e.target === e.currentTarget || e.target.parentElement === e.currentTarget) closeModal(); });
-document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !closeWeather()) closeModal(); });
+$("modal-body").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-report]");
+  if (b && typeof Checkin !== "undefined") Checkin.reportFromDetails(b.dataset.report);
+});
+$("modal-weather").addEventListener("click", (e) => { const b = e.target.closest("[data-weather]"); if (b) openWeather(b.dataset.weather); });
+$("weather-close").addEventListener("click", closeWeather);
+$("weather-modal").addEventListener("click", (e) => { if (e.target.hasAttribute("data-weather-close")) closeWeather(); });
 
 renderLegend();
-showMonth(0);
+showMonth(0).then(() => {
+  // First visit → tutorial. Later visits → the vendor check-in (at most once a day).
+  if (typeof Tour === "undefined") return;
+  if (!Tour.hasSeen()) Tour.playTutorial();
+  else if (typeof Checkin !== "undefined") Checkin.maybeShow();
+});
+$("how-it-works").addEventListener("click", () => { if (typeof Tour !== "undefined") Tour.playTutorial({ replay: true }); });

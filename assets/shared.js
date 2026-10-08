@@ -65,6 +65,21 @@ function normalizeMonthFile(json) {
     return undefined;
   };
   const toNumber = (v) => (typeof v === "number" ? v : Number(String(v ?? "").replace(/[,\s]/g, "")) || 0);
+  // "2026-10-16:1200; 2026-10-17:1300" or { "2026-10-16": 1200 } → { date: number }, or undefined when empty
+  const dailyMap = (value) => {
+    if (typeof value === "string") {
+      const obj = {};
+      for (const part of value.split(/[;|,]/)) {
+        const [d, n] = part.split(":").map((x) => x.trim());
+        if (parseDate(d) && n !== undefined && n !== "") obj[d] = toNumber(n);
+      }
+      value = obj;
+    }
+    if (!value || typeof value !== "object") return undefined;
+    const out = {};
+    for (const [d, n] of Object.entries(value)) if (parseDate(d) && n !== null && n !== "" && Number.isFinite(Number(n))) out[d] = Number(n);
+    return Object.keys(out).length ? out : undefined;
+  };
   const events = root.events.filter((e) => e && typeof e === "object").map((e) => {
     let daily = pick(e, "dailyAttendance", "daily_attendance");
     if (typeof daily === "string") {
@@ -75,6 +90,8 @@ function normalizeMonthFile(json) {
       }
       daily = obj;
     }
+    // Market visitors: 0 is a real value; a missing or blank field means "not given".
+    const mv = pick(e, "marketVisitors", "market_visitors");
     let sources = pick(e, "sources", "source");
     if (typeof sources === "string") sources = sources.split(/\s*[;|]\s*/).filter(Boolean);
     return {
@@ -84,6 +101,8 @@ function normalizeMonthFile(json) {
       endDate: String(pick(e, "endDate", "end_date") || "").trim() || undefined,
       totalAttendance: toNumber(pick(e, "totalAttendance", "total_attendance", "attendance")),
       dailyAttendance: daily && typeof daily === "object" && Object.keys(daily).length ? daily : undefined,
+      marketVisitors: mv === undefined || !Number.isFinite(toNumber(mv)) ? undefined : toNumber(mv),
+      dailyMarketVisitors: dailyMap(pick(e, "dailyMarketVisitors", "daily_market_visitors")),
       impactWindow: pick(e, "impactWindow", "impact_window"),
       location: pick(e, "location"),
       proximity: pick(e, "proximity"),
@@ -140,6 +159,22 @@ function dailyBreakdown(ev) {
   if (!start) return {};
   const days = eachDay(start, end);
   const each = Math.round((Number(ev.totalAttendance) || 0) / days.length);
+  return Object.fromEntries(days.map((k) => [k, each]));
+}
+
+// Does this event carry estimated market visitors (people likely to walk through the sheds)?
+const hasMarketFigures = (ev) => ev.marketVisitors !== undefined || !!(ev.dailyMarketVisitors && Object.keys(ev.dailyMarketVisitors).length);
+
+// { "YYYY-MM-DD": market visitors } for an event, or null when it has no market figures.
+// dailyMarketVisitors wins; otherwise marketVisitors is split evenly across the event's days.
+function dailyMarketBreakdown(ev) {
+  if (ev.dailyMarketVisitors && Object.keys(ev.dailyMarketVisitors).length) return ev.dailyMarketVisitors;
+  if (ev.marketVisitors === undefined) return null;
+  const start = parseDate(ev.startDate);
+  const end = parseDate(ev.endDate || ev.startDate) || start;
+  if (!start) return {};
+  const days = eachDay(start, end);
+  const each = Math.round((Number(ev.marketVisitors) || 0) / days.length);
   return Object.fromEntries(days.map((k) => [k, each]));
 }
 
