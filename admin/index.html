@@ -205,6 +205,13 @@ Oct 16-18 Dental Association Annual Meeting 12K at Morial Convention Center 5-8p
             <p class="text-sm font-medium">Attendance by day <span class="font-normal text-stone-500">(optional; blank = total split evenly)</span></p>
             <div id="daily-inputs" class="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-2"></div>
           </div>
+          <label class="block"><span class="text-sm font-medium">Estimated market visitors</span>
+            <span class="block text-xs text-stone-500">People likely to walk through the sheds during market hours because of this event. Blank = not given; 0 = none.</span>
+            <input name="marketVisitors" inputmode="numeric" placeholder="e.g. 718" class="mt-1 w-full border border-stone-300 rounded-lg px-3 py-2 text-base"></label>
+          <div id="mv-daily-wrap" class="hidden rounded-lg bg-emerald-50 p-3">
+            <p class="text-sm font-medium">Market visitors by day <span class="font-normal text-stone-500">(optional; blank = total split evenly; 0 = not shown that day)</span></p>
+            <div id="mv-daily-inputs" class="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-2"></div>
+          </div>
           <label class="block"><span class="text-sm font-medium">French Market impact window</span>
             <input name="impactWindow" placeholder="10:30 AM – 1:30 PM" class="mt-1 w-full border border-stone-300 rounded-lg px-3 py-2 text-base"></label>
           <label class="block"><span class="text-sm font-medium">Location</span>

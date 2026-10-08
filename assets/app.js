@@ -5,7 +5,8 @@ const WEEKDAYS = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 const MAX_MOBILE_BADGES = 3;
 
 const today = new Date();
-const state = { offset: 0, data: null, days: {} };
+// market: true when the loaded month has estimated market visitors (the newer view).
+const state = { offset: 0, data: null, days: {}, market: false };
 const cache = new Map();
 
 // Bad hotel occupancy entries flagged by the admin import. date === null → shown above the month.
@@ -59,6 +60,32 @@ async function loadMonth(y, m) {
   return result;
 }
 
+// Market-visitor view: { "YYYY-MM-DD": { total: market visitors, downtown: attendees,
+//   cats: { name: market visitors }, items: [{ ev, att, mv }] } }. mv is null when the event has no
+// market figures; an event with 0 market visitors on a day isn't listed that day at all.
+function indexByDayMarket(events, y, m) {
+  const prefix = monthKey(y, m) + "-";
+  const days = {};
+  for (const ev of events) {
+    const cat = findCategory(ev.category) || findCategory("Miscellaneous");
+    ev._cat = cat;
+    const att = dailyBreakdown(ev);
+    const mvMap = dailyMarketBreakdown(ev);
+    const keys = new Set([...Object.keys(att), ...Object.keys(mvMap || {})]);
+    for (const day of keys) {
+      if (!day.startsWith(prefix)) continue;
+      const a = Number(att[day]) || 0;
+      const mv = mvMap ? Number(mvMap[day]) || 0 : null;
+      if (mv !== null ? mv <= 0 : a <= 0) continue;
+      const d = (days[day] ||= { total: 0, downtown: 0, cats: {}, items: [] });
+      d.downtown += a;
+      if (mv > 0) { d.total += mv; d.cats[cat.name] = (d.cats[cat.name] || 0) + mv; }
+      d.items.push({ ev, att: a, mv });
+    }
+  }
+  return days;
+}
+
 // Build { "YYYY-MM-DD": { total, cats: { name: sum }, items: [{ev, att}] } } for the given month.
 function indexByDay(events, y, m) {
   const prefix = monthKey(y, m) + "-";
@@ -99,6 +126,18 @@ function renderLegend() {
   ).join("");
 }
 
+// Market-visitor view shading: 3K, 6K, 9K, 12K+ market visitors, lightest to darkest.
+function marketHeatClass(total) {
+  if (total >= 12000) return "bg-amber-300";
+  if (total >= 9000) return "bg-amber-200";
+  if (total >= 6000) return "bg-amber-100";
+  if (total >= 3000) return "bg-amber-50";
+  return "bg-white";
+}
+
+const LEGEND_NOTE_ATTENDANCE = "Badges show estimated attendance for that day, rounded (under 1,000 → nearest 100; 1,000+ → nearest 1K). Darker day shading = bigger total crowd. Tap any day for details.";
+const LEGEND_NOTE_MARKET = "Badges show estimated market visitors: people likely to walk through the Farmers and Flea Market sheds during market hours because of each kind of event, rounded (under 1,000 → nearest 100; 1,000+ → nearest 1K). Darker shading = more market visitors (3K, 6K, 9K, 12K+). Tap any day for details.";
+
 function heatClass(total) {
   if (total >= 50000) return "bg-amber-200";
   if (total >= 15000) return "bg-amber-100";
@@ -126,6 +165,7 @@ function renderCalendar() {
   $("updated").textContent = "";
   $("sample-banner").classList.add("hidden");
   $("issue-banner").classList.add("hidden");
+  $("legend-note").textContent = state.market ? LEGEND_NOTE_MARKET : LEGEND_NOTE_ATTENDANCE;
 
   if (!state.data) {
     cal.innerHTML = `
@@ -151,8 +191,10 @@ function renderCalendar() {
   const entries = Object.entries(days);
   if (entries.length) {
     const [bKey, bDay] = entries.reduce((a, b) => (b[1].total > a[1].total ? b : a));
+    if (bDay.total > 0) {
     const bd = parseDate(bKey);
     $("month-total").innerHTML = `Busiest: <strong>${MONTHS_SHORT[bd.getMonth()]} ${bd.getDate()}</strong> (~${formatAttendance(bDay.total)})`;
+    }
   }
 
   const first = new Date(y, m, 1).getDay();
@@ -176,11 +218,11 @@ function renderCalendar() {
     const extra = cats.length - MAX_MOBILE_BADGES;
 
     html += `<button type="button" data-date="${key}"
-        class="day-cell relative flex flex-col items-stretch gap-0.5 p-0.5 sm:p-1.5 min-h-20 sm:min-h-28 min-w-0 text-left border-b border-r border-stone-100 ${day ? heatClass(day.total) + " hover:brightness-95 cursor-pointer" : opens ? "bg-white cursor-pointer" : "bg-white cursor-default"}"
-        ${opens ? "" : 'tabindex="-1"'} aria-label="${MONTHS_LONG[m]} ${d}${day ? `, about ${formatAttendance(day.total)} expected` : ", no tracked events"}${occ !== null ? `, estimated hotel occupancy ${occ}%` : ""}${issues.length ? ", hotel occupancy data problem" : ""}">
+        class="day-cell relative flex flex-col items-stretch gap-0.5 p-0.5 sm:p-1.5 min-h-20 sm:min-h-28 min-w-0 text-left border-b border-r border-stone-100 ${day ? (state.market ? marketHeatClass : heatClass)(day.total) + " hover:brightness-95 cursor-pointer" : opens ? "bg-white cursor-pointer" : "bg-white cursor-default"}"
+        ${opens ? "" : 'tabindex="-1"'} aria-label="${MONTHS_LONG[m]} ${d}${day ? state.market ? `, about ${formatAttendance(day.total)} market visitors` : `, about ${formatAttendance(day.total)} expected` : ", no tracked events"}${occ !== null ? `, estimated hotel occupancy ${occ}%` : ""}${issues.length ? ", hotel occupancy data problem" : ""}">
       <div class="flex items-center justify-between gap-0.5 px-0.5">
         ${issues.length ? `<span class="flex items-center gap-0.5">` : ""}<span class="text-[11px] sm:text-sm font-semibold ${isToday ? "bg-emerald-800 text-white rounded-full w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center" : "text-stone-700"}">${d}</span>${issues.length ? `${issueIcon("w-4 h-4 sm:w-5 sm:h-5 text-[10px] sm:text-xs")}</span>` : ""}
-        ${day ? `<span class="hidden sm:inline text-[10px] font-semibold text-stone-500">~${formatAttendance(day.total)}</span>` : ""}
+        ${day && day.total > 0 ? `<span class="hidden sm:inline text-[10px] font-semibold text-stone-500">~${formatAttendance(day.total)}</span>` : ""}
       </div>
       ${cats.map(([name, att], i) => badgeHtml(name, att, i)).join("")}
       ${extra > 0 ? `<span class="sm:hidden mt-auto text-[9px] text-stone-500 font-medium px-0.5">+${extra} more</span>` : ""}
@@ -201,7 +243,8 @@ async function showMonth(offset) {
   const res = await loadMonth(y, m);
   if (state.offset !== offset) return; // user clicked another month meanwhile
   state.data = res.ok ? res.json : null;
-  state.days = res.ok ? indexByDay(res.json.events, y, m) : {};
+  state.market = res.ok && res.json.events.some(hasMarketFigures);
+  state.days = !res.ok ? {} : state.market ? indexByDayMarket(res.json.events, y, m) : indexByDay(res.json.events, y, m);
   renderCalendar();
 }
 
@@ -216,10 +259,14 @@ function openModal(key, focusCat) {
   if (!day) return;
   const d = parseDate(key);
   $("modal-title").textContent = d.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" });
-  $("modal-total").innerHTML = day.items.length
-    ? `Estimated foot-traffic drivers: <strong class="text-stone-900">~${day.total.toLocaleString()}</strong> <span class="text-stone-400">(${formatAttendance(day.total)})</span>`
-    : "";
+  $("modal-total").innerHTML = !day.items.length ? ""
+    : state.market
+      ? `Estimated Market Visitors: <strong class="text-stone-900">~${day.total.toLocaleString()}</strong> <span class="text-stone-400">(${formatAttendance(day.total)})</span>`
+      : `Estimated foot-traffic drivers: <strong class="text-stone-900">~${day.total.toLocaleString()}</strong> <span class="text-stone-400">(${formatAttendance(day.total)})</span>`;
   $("modal-total").classList.toggle("hidden", !day.items.length);
+  const showDowntown = state.market && day.items.length > 0;
+  $("modal-downtown").innerHTML = showDowntown ? `Estimated Downtown Visitors: <strong class="text-stone-900">~${day.downtown.toLocaleString()}</strong>` : "";
+  $("modal-downtown").classList.toggle("hidden", !showDowntown);
   $("modal-occupancy").innerHTML = occ !== null ? `Estimated Hotel Occupancy: <strong class="text-stone-900">${occ}%</strong>` : "";
   $("modal-occupancy").classList.toggle("hidden", occ === null);
 
@@ -228,10 +275,11 @@ function openModal(key, focusCat) {
       const fa = a.ev._cat.name === focusCat, fb = b.ev._cat.name === focusCat;
       if (fa !== fb) return fa ? -1 : 1;
     }
+    if (state.market) return (b.mv ?? -1) - (a.mv ?? -1) || b.att - a.att;
     return b.att - a.att;
   });
 
-  $("modal-body").innerHTML = items.map(({ ev, att }) => {
+  $("modal-body").innerHTML = items.map(({ ev, att, mv }) => {
     const c = ev._cat;
     const hl = focusCat && c.name === focusCat ? "ring-2 ring-emerald-600" : "";
     const sources = Array.isArray(ev.sources) ? ev.sources.filter(Boolean) : [];
@@ -241,10 +289,16 @@ function openModal(key, focusCat) {
         <span class="shrink-0 rounded-full px-2 py-0.5 text-[11px] font-semibold ${c.badge}">${escapeHtml(c.name)}</span>
       </div>
       <dl class="mt-2 grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-sm">
+        ${state.market ? `
+        <dt class="text-stone-500">This day</dt>
+        <dd><span class="block font-semibold text-emerald-800">Estimated market visitors: ${mv === null ? "not given" : `~${mv.toLocaleString()}`}</span>
+          <span class="block">Total daily attendees: ~${att.toLocaleString()}</span></dd>
+        <dt class="text-stone-500">Event</dt>
+        <dd>${escapeHtml(formatSpan(ev.startDate, ev.endDate))} | Total attendees: ${eventTotal(ev).toLocaleString()}</dd>` : `
         <dt class="text-stone-500">This day</dt>
         <dd class="font-semibold">~${att.toLocaleString()} attendees</dd>
         <dt class="text-stone-500">Event</dt>
-        <dd>${escapeHtml(formatSpan(ev.startDate, ev.endDate))} | Total: ${eventTotal(ev).toLocaleString()}</dd>
+        <dd>${escapeHtml(formatSpan(ev.startDate, ev.endDate))} | Total: ${eventTotal(ev).toLocaleString()}</dd>`}
         ${ev.impactWindow ? `<dt class="text-stone-500">Market impact</dt><dd class="font-semibold text-emerald-800">${escapeHtml(ev.impactWindow)}</dd>` : ""}
         ${ev.location ? `<dt class="text-stone-500">Location</dt><dd>${escapeHtml(ev.location)}</dd>` : ""}
       </dl>

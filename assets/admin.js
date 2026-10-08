@@ -5,6 +5,7 @@ const $ = (id) => document.getElementById(id);
 const VAULT_KEY = "fmAdminVault:v1";
 const FILE_RE = /^events-(\d{4})-(\d{2})\.json$/;
 const FIELD_ORDER = ["id", "title", "category", "startDate", "endDate", "totalAttendance", "dailyAttendance",
+  "marketVisitors", "dailyMarketVisitors",
   "impactWindow", "location", "proximity", "notes", "sources"];
 
 const S = {
@@ -122,10 +123,10 @@ function canonical(ev) {
   for (const k of FIELD_ORDER) {
     const v = ev[k];
     if (v === undefined || v === null || v === "" || (Array.isArray(v) && !v.length)) continue;
-    if (k === "dailyAttendance") {
+    if (k === "dailyAttendance" || k === "dailyMarketVisitors") {
       if (!Object.keys(v).length) continue;
       out[k] = Object.fromEntries(Object.keys(v).sort().map((d) => [d, Number(v[d])]));
-    } else out[k] = k === "totalAttendance" ? Number(v) : v;
+    } else out[k] = k === "totalAttendance" || k === "marketVisitors" ? Number(v) : v; // marketVisitors 0 is kept
   }
   return out;
 }
@@ -464,6 +465,7 @@ function eventCardHtml(ev, { selectable = true, status = rowStatus(ev), actions 
         <p class="text-xs text-stone-600 mt-0.5">
           ${ev.startDate ? escapeHtml(formatSpan(ev.startDate, ev.endDate)) + ", " + (parseDate(ev.startDate) || new Date()).getFullYear() : "No date"}
           · ${ev.totalAttendance ? fmtNum(ev.totalAttendance) + " people" : "no attendance"}
+          ${ev.marketVisitors !== undefined ? ` · <span class="font-semibold text-emerald-800">${fmtNum(ev.marketVisitors)} market visitors</span>` : ""}
           ${ev.impactWindow ? " · " + escapeHtml(ev.impactWindow) : ""}
         </p>
         ${ev.location || ev.proximity ? `<p class="text-xs text-stone-500 truncate">${escapeHtml([ev.location, ev.proximity].filter(Boolean).join(" · "))}</p>` : ""}
@@ -543,11 +545,13 @@ $("proximity-options").innerHTML = PROXIMITY_RULES.map(([tag]) => `<option value
 
 let formSave = null;
 let formDaily = {};
+let formMarketDaily = {}; // date → market visitors; 0 is a real value, a missing date means "not given"
 
 function openForm(ev, onSave) {
   const f = $("event-form");
   formSave = onSave;
   formDaily = { ...(ev.dailyAttendance || {}) };
+  formMarketDaily = { ...(ev.dailyMarketVisitors || {}) };
   $("form-title").textContent = ev.id || ev._importIndex !== undefined ? "Edit event" : "Add event";
   f.dataset.id = ev.id || "";
   f.elements.title.value = ev.title || "";
@@ -555,6 +559,7 @@ function openForm(ev, onSave) {
   f.elements.startDate.value = ev.startDate || "";
   f.elements.endDate.value = ev.endDate || "";
   f.elements.totalAttendance.value = ev.totalAttendance ? fmtNum(ev.totalAttendance) : "";
+  f.elements.marketVisitors.value = ev.marketVisitors !== undefined ? fmtNum(ev.marketVisitors) : "";
   f.elements.impactWindow.value = ev.impactWindow || "";
   f.elements.location.value = ev.location || "";
   f.elements.proximity.value = ev.proximity || "";
@@ -579,18 +584,27 @@ function renderDailyInputs() {
   const s = parseDate(f.elements.startDate.value), e = parseDate(f.elements.endDate.value);
   const multi = s && e && e > s && (e - s) / 86400000 <= 92;
   $("daily-wrap").classList.toggle("hidden", !multi);
-  if (!multi) { $("daily-inputs").innerHTML = ""; return; }
-  $("daily-inputs").innerHTML = eachDay(s, e).map((d) => {
+  $("mv-daily-wrap").classList.toggle("hidden", !multi);
+  if (!multi) { $("daily-inputs").innerHTML = ""; $("mv-daily-inputs").innerHTML = ""; return; }
+  const boxes = (attr, values) => eachDay(s, e).map((d) => {
     const dt = parseDate(d);
     return `<label class="block text-xs"><span class="text-stone-600">${MONTHS_SHORT[dt.getMonth()]} ${dt.getDate()}</span>
-      <input data-day="${d}" inputmode="numeric" value="${formDaily[d] ? fmtNum(formDaily[d]) : ""}" class="mt-0.5 w-full border border-stone-300 rounded-md px-2 py-1.5 text-base"></label>`;
+      <input ${attr}="${d}" inputmode="numeric" value="${values[d] !== undefined && (values[d] || attr === "data-mvday") ? fmtNum(values[d]) : ""}" class="mt-0.5 w-full border border-stone-300 rounded-md px-2 py-1.5 text-base"></label>`;
   }).join("");
+  $("daily-inputs").innerHTML = boxes("data-day", formDaily);
+  $("mv-daily-inputs").innerHTML = boxes("data-mvday", formMarketDaily);
 }
 ["startDate", "endDate"].forEach((n) => $("event-form").elements[n].addEventListener("change", renderDailyInputs));
 $("daily-inputs").addEventListener("input", (e) => {
   if (!e.target.dataset.day) return;
   formDaily[e.target.dataset.day] = parseAttendance(e.target.value);
   if (!formDaily[e.target.dataset.day]) delete formDaily[e.target.dataset.day];
+});
+$("mv-daily-inputs").addEventListener("input", (e) => {
+  const d = e.target.dataset.mvday;
+  if (!d) return;
+  if (/\d/.test(e.target.value)) formMarketDaily[d] = parseAttendance(e.target.value);
+  else delete formMarketDaily[d];
 });
 
 $("event-form").addEventListener("submit", (e) => {
@@ -604,6 +618,7 @@ $("event-form").addEventListener("submit", (e) => {
     startDate: val("startDate"),
     endDate: val("endDate") && val("endDate") !== val("startDate") ? val("endDate") : undefined,
     totalAttendance: parseAttendance(val("totalAttendance")),
+    marketVisitors: /\d/.test(val("marketVisitors")) ? parseAttendance(val("marketVisitors")) : undefined,
     impactWindow: val("impactWindow") || undefined,
     location: val("location") || undefined,
     proximity: val("proximity") || undefined,
@@ -617,7 +632,14 @@ $("event-form").addEventListener("submit", (e) => {
     ev.dailyAttendance = daily;
     if (!ev.totalAttendance) ev.totalAttendance = Object.values(daily).reduce((a, b) => a + b, 0);
   }
+  const mvDaily = {};
+  if (s && end) for (const d of eachDay(s, end)) if (formMarketDaily[d] !== undefined) mvDaily[d] = formMarketDaily[d];
+  if (Object.keys(mvDaily).length) {
+    ev.dailyMarketVisitors = mvDaily;
+    if (ev.marketVisitors === undefined) ev.marketVisitors = Object.values(mvDaily).reduce((a, b) => a + b, 0);
+  }
   const errs = validateEvent(ev);
+  if (val("marketVisitors") && ev.marketVisitors === undefined) errs.push("Market visitors must be a number (or left blank).");
   if (errs.length) return showError($("form-errors"), errs.join(" "));
   const save = formSave;
   closeForm();

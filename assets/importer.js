@@ -175,6 +175,10 @@ const FIELD_ALIASES = {
   totalAttendance: ["totalattendance", "attendance", "total", "expectedattendance", "estimatedattendance", "estattendance",
     "crowd", "crowdsize", "people", "headcount", "expected", "estimate", "attendees", "count", "size"],
   dailyAttendance: ["dailyattendance", "daily", "perday", "dailybreakdown", "attendancebyday"],
+  // Estimated market visitors: people likely to walk through the sheds because of the event.
+  // (Not "impact"/"market impact": those already mean the impact window.)
+  marketVisitors: ["marketvisitors", "estimatedmarketvisitors", "totalmarketvisitors", "marketvisitorstotal", "marketvisits"],
+  dailyMarketVisitors: ["dailymarketvisitors", "marketvisitorsbyday", "estimateddailymarketvisitors", "marketvisitorsperday", "dailymarketvisits"],
   impactWindow: ["impactwindow", "marketimpact", "marketimpactwindow", "frenchmarketimpactwindow", "time", "times",
     "timewindow", "window", "hours", "impact", "peakhours", "impacttime"],
   location: ["location", "venue", "place", "where", "address", "site"],
@@ -283,6 +287,30 @@ function recordToEvent(rec, defaultYear) {
   if (daily) ev.dailyAttendance = daily;
   ev.totalAttendance = parseAttendance(rec.totalAttendance);
   if (!ev.totalAttendance && daily) ev.totalAttendance = Object.values(daily).reduce((a, b) => a + b, 0);
+
+  // Market visitors: 0 is a real value; a blank cell means "not given".
+  const mvText = str(rec.marketVisitors);
+  if (mvText) {
+    if (/\d/.test(mvText)) ev.marketVisitors = parseAttendance(rec.marketVisitors);
+    else errors.push(`Market visitors "${mvText}" isn't a number.`);
+  }
+  const dmv = rec.dailyMarketVisitors;
+  if (dmv !== undefined && dmv !== null && str(typeof dmv === "object" ? "x" : dmv)) {
+    const parts = typeof dmv === "object" ? Object.entries(dmv).map(([d, n]) => [d, String(n)])
+      : String(dmv).split(/[;|\n]|,(?=\s*\d{4}-)/).map((p) => p.trim()).filter(Boolean)
+        .map((p) => { const m = /^(.+?)\s*[:=]\s*(.*)$/.exec(p); return m ? [m[1], m[2]] : [p, ""]; });
+    const out = {};
+    for (const [d, n] of parts) {
+      const date = parseFlexibleDate(String(d).trim(), defaultYear);
+      if (!date) errors.push(`Daily market visitors: "${String(d).trim()}" isn't a real date.`);
+      else if (!/\d/.test(n)) errors.push(`Daily market visitors for ${date}: "${n}" isn't a number.`);
+      else out[date] = parseAttendance(n);
+    }
+    if (Object.keys(out).length) {
+      ev.dailyMarketVisitors = out;
+      if (ev.marketVisitors === undefined) ev.marketVisitors = Object.values(out).reduce((a, b) => a + b, 0);
+    }
+  }
 
   const iw = str(rec.impactWindow);
   if (iw) { const t = findTimeWindow(iw); ev.impactWindow = t ? t.value : iw; }
@@ -401,6 +429,11 @@ function validateEvent(ev) {
   if (ev.dailyAttendance && s && e) {
     const bad = Object.keys(ev.dailyAttendance).filter((d) => { const x = parseDate(d); return !x || x < s || x > e; });
     if (bad.length) errs.push(`Daily attendance has dates outside the event: ${bad.join(", ")}.`);
+  }
+  if (ev.marketVisitors !== undefined && !(Number(ev.marketVisitors) >= 0)) errs.push("Market visitors must be 0 or more.");
+  if (ev.dailyMarketVisitors && s && e) {
+    const bad = Object.keys(ev.dailyMarketVisitors).filter((d) => { const x = parseDate(d); return !x || x < s || x > e; });
+    if (bad.length) errs.push(`Daily market visitors has dates outside the event: ${bad.join(", ")}.`);
   }
   return errs;
 }

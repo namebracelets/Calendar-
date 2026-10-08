@@ -49,10 +49,21 @@ Events that run across two months (e.g. Oct 30 – Nov 1) are saved into both mo
 Spreadsheets and CSVs use one row per event, with this header (other column names are recognized too):
 
 ```
-title,category,start_date,end_date,total_attendance,daily_attendance,impact_window,location,proximity,notes,sources
+title,category,start_date,end_date,total_attendance,daily_attendance,market_visitors,daily_market_visitors,impact_window,location,proximity,notes,sources
 ```
 
 - `category` is one of the 9 categories. `daily_attendance` is optional (`2026-10-16:12000; 2026-10-17:13000`). If it's left blank, the total is split evenly across the days. `sources` are separated by `;`.
+- **Estimated market visitors** (optional): the people likely to walk through the Farmers and Flea Market sheds during market hours because of the event.
+  - `market_visitors`: the event's total. `daily_market_visitors`: per day, in the same format as `daily_attendance` (`2026-10-16:1200; 2026-10-17:1300`). If only the total is given, it's split evenly across the days.
+  - `0` is a real value: that event isn't shown on that day. A blank cell means "not given."
+  - In the month files the fields are `marketVisitors` and `dailyMarketVisitors`.
+  - `total_attendance` and `daily_attendance` stay the event's whole crowd.
+- **When a month has market figures** (any event in its file has them), that month shows the market-visitor view:
+  - Badges, day totals, "Busiest" and shading use market visitors. Shading steps are 3,000+, 6,000+, 9,000+ and 12,000+.
+  - The day window starts with *Estimated Market Visitors*, then *Estimated Downtown Visitors* (the day's total attendees across everything listed), hotel occupancy and weather.
+  - Each event shows its market visitors and total daily attendees.
+  - Months without market figures look as they always have.
+- **Free-range tourists:** visitors staying downtown with no scheduled event during market hours. They come as one ordinary **Miscellaneous** row per day, titled "Free-range tourists". `total_attendance` is the number of such visitors in town; `market_visitors` is those likely to pass through the sheds.
 - **Estimated hotel occupancy** goes in one extra row with the same header and **Hotel Occupancy** as its category (any capitalization). It isn't an event: it never becomes a badge and never counts toward crowd totals.
   - `daily_attendance`: one whole-number percentage (0–100) per date, e.g. `2026-10-01:51; 2026-10-02:74; …; 2026-10-31:92`.
   - `total_attendance`: the month's average. `start_date`/`end_date` give the period it covers.
