@@ -10,6 +10,8 @@
   <style>
     body { -webkit-tap-highlight-color: transparent; }
     .day-cell:focus-visible { outline: 2px solid #1e3a8a; outline-offset: -2px; }
+    @keyframes tour-ripple { from { transform: scale(.3); opacity: .9; } to { transform: scale(2.4); opacity: 0; } }
+    .tour-ripple { animation: tour-ripple 550ms ease-out forwards; }
   </style>
 </head>
 <body class="bg-stone-100 text-stone-900 min-h-screen antialiased">
@@ -51,6 +53,9 @@
         Badges show estimated attendance for that day, rounded (under 1,000 → nearest 100; 1,000+ → nearest 1K).
         Darker day shading = bigger total crowd. Tap any day for details.
       </p>
+      <div class="mt-1 flex flex-wrap gap-x-5">
+        <button id="how-it-works" type="button" class="min-h-10 text-sm font-semibold text-emerald-800 underline underline-offset-2">How it works</button>
+      </div>
     </section>
   </main>
 
@@ -89,5 +94,6 @@
   <script src="assets/shared.js"></script>
   <script src="assets/weather.js"></script>
   <script src="assets/app.js"></script>
+  <script src="assets/tour.js"></script>
 </body>
 </html>

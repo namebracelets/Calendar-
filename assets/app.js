@@ -397,4 +397,10 @@ $("weather-close").addEventListener("click", closeWeather);
 $("weather-modal").addEventListener("click", (e) => { if (e.target.hasAttribute("data-weather-close")) closeWeather(); });
 
 renderLegend();
-showMonth(0);
+showMonth(0).then(() => {
+  // First visit → tutorial. Later visits → the vendor check-in (at most once a day).
+  if (typeof Tour === "undefined") return;
+  if (!Tour.hasSeen()) Tour.playTutorial();
+  else if (typeof Checkin !== "undefined") Checkin.maybeShow();
+});
+$("how-it-works").addEventListener("click", () => { if (typeof Tour !== "undefined") Tour.playTutorial({ replay: true }); });
