@@ -118,7 +118,7 @@ Each day shows a weather icon:
 
 Icons and the chance of rain describe market hours, 10 AM–5 PM. The day window has a link to a small weather window with morning (8 AM–noon) and afternoon (noon–5 PM) conditions, rain, high and low, wind, humidity and any National Weather Service alerts.
 
-Sources are free and need no keys: Open-Meteo (forecast and archive) and the National Weather Service. Typical conditions come from `weather-normals.json`, built once from 30 years of Open-Meteo archive data with `node scripts/build-weather-normals.mjs`. Weather is cached on the phone for about an hour. If a service is down, the calendar works without it.
+Sources are free and need no keys: Open-Meteo (forecast and archive) and the National Weather Service. Typical conditions come from `weather-normals.json`, built once from 30 years of Open-Meteo archive data by `scripts/build-weather-normals.mjs`. To refresh it, go to the repository's **Actions** tab on GitHub, choose **Build weather normals** and click **Run workflow**. Weather is cached on the phone for about an hour. If a service is down, the calendar works without it.
 
 ## How the app behaves
 

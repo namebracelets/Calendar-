@@ -1,14 +1,10 @@
 # Builds weather-normals.json (30-year typical weather for each calendar date) on GitHub's servers
-# and saves it to the branch. Runs when the build script or this file changes, or by hand from the
-# Actions tab ("Run workflow"). Free for public repositories; no keys needed.
+# and saves it to the branch it runs on. Run it by hand when you want to refresh the file:
+# GitHub → Actions tab → "Build weather normals" → "Run workflow". Free for public repositories; no keys needed.
 name: Build weather normals
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - scripts/build-weather-normals.mjs
-      - .github/workflows/build-weather-normals.yml
 
 permissions:
   contents: write
