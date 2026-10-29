@@ -260,14 +260,23 @@ function renderCalendar() {
 // Smaller squares switch to one-line badges, then to smaller text with "+N" beside the date. If even that can't fit
 // (a very short screen, or banners taking room), the page goes back to normal scrolling.
 const FIT_MIN_ROW = 50; // px: the shortest week row that still holds a date, three badges and "+N"
+function setFit(on) {
+  document.body.classList.toggle("fit", on);
+  document.documentElement.classList.toggle("fit-root", on);
+}
 function fitToScreen() {
   // Older browsers without container queries (e.g. iOS 15) keep the normal scrolling page
   const canFit = !!(window.CSS && CSS.supports && CSS.supports("container-type", "size"));
   const phone = canFit && !!(window.matchMedia && matchMedia("(max-width: 639.98px)").matches);
-  document.body.classList.toggle("fit", phone);
+  // Size the page to the part of the screen that's really visible right now. Phone browsers' own "screen height"
+  // (100vh, and on some browsers 100dvh) can assume the address bar is hidden, which made the page about one
+  // address bar too tall: the Categories note was cut off, or the page shifted and hid the weekday row.
+  document.documentElement.style.setProperty("--app-h", `${window.innerHeight}px`);
+  setFit(phone);
   if (!phone) return;
+  if (window.scrollY) window.scrollTo(0, 0); // nothing to scroll in this layout; undo any shift
   const cell = document.querySelector("#calendar .day-cell");
-  if (cell && cell.getBoundingClientRect().height < FIT_MIN_ROW) { document.body.classList.remove("fit"); return; }
+  if (cell && cell.getBoundingClientRect().height < FIT_MIN_ROW) { setFit(false); return; }
   // A one-line badge still too wide for its square (some phone fonts run wide) gets just enough smaller to fit
   document.querySelectorAll("#calendar .b-one").forEach((s) => {
     s.style.fontSize = "";
@@ -276,8 +285,16 @@ function fitToScreen() {
     s.style.fontSize = `${Math.max(5.5, (px * s.clientWidth) / s.scrollWidth * 0.97).toFixed(2)}px`;
   });
 }
+// Re-measure whenever the visible area changes: the address bar showing or hiding, or the phone being turned.
+// After turning, browsers report the new size a little late, so check a few times.
 let fitTimer = null;
-window.addEventListener("resize", () => { clearTimeout(fitTimer); fitTimer = setTimeout(fitToScreen, 150); });
+const refit = () => { clearTimeout(fitTimer); fitTimer = setTimeout(fitToScreen, 120); };
+window.addEventListener("resize", refit);
+if (window.visualViewport) visualViewport.addEventListener("resize", refit);
+window.addEventListener("orientationchange", () => [150, 400, 900].forEach((ms) => setTimeout(fitToScreen, ms)));
+window.addEventListener("pageshow", refit); // coming back to the tab or with the Back button
+// In this layout the page itself never scrolls; if a browser shifts it anyway, put it back.
+window.addEventListener("scroll", () => { if (document.body.classList.contains("fit") && window.scrollY) window.scrollTo(0, 0); }, { passive: true });
 
 async function showMonth(offset) {
   state.offset = offset;

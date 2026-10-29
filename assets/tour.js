@@ -98,7 +98,8 @@ const Tour = (() => {
     const find = () => (typeof target === "string" ? document.querySelector(target) : target);
     const first = find();
     if (!first) return;
-    first.scrollIntoView({ block: "center", behavior: reducedMotion() ? "auto" : "smooth" });
+    // On phones that fit everything on one screen (body.fit) the day is already showing: don't scroll the page
+    if (!document.body.classList.contains("fit")) first.scrollIntoView({ block: "center", behavior: reducedMotion() ? "auto" : "smooth" });
     await sleep(settle, signal);
     const el = find() || first;
     const r = el.getBoundingClientRect();
