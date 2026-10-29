@@ -260,6 +260,22 @@ function renderCalendar() {
 // Smaller squares switch to one-line badges, then to smaller text with "+N" beside the date. If even that can't fit
 // (a very short screen, or banners taking room), the page goes back to normal scrolling.
 const FIT_MIN_ROW = 50; // px: the shortest week row that still holds a date, three badges and "+N"
+// Height the page should fill: the screen with the browser's address bar SHOWING ("small viewport", 100svh).
+// Sizing to the current height instead (which grows when the bar hides) made the page exactly fill a bar-less
+// screen, so it couldn't scroll and the address bar could get stuck hidden after turning the phone. If the bar is
+// hidden, this just leaves a little room at the bottom. Browsers without 100svh use the current height.
+function visibleHeight() {
+  let probe = document.getElementById("svh-probe");
+  if (!probe) {
+    probe = document.createElement("div");
+    probe.id = "svh-probe";
+    probe.setAttribute("aria-hidden", "true");
+    probe.style.cssText = "position:fixed;top:0;left:0;width:0;height:100svh;visibility:hidden;pointer-events:none";
+    document.body.appendChild(probe);
+  }
+  const svh = probe.offsetHeight; // 0 where 100svh isn't understood
+  return svh > 0 ? Math.min(window.innerHeight, svh) : window.innerHeight;
+}
 function setFit(on) {
   document.body.classList.toggle("fit", on);
   document.documentElement.classList.toggle("fit-root", on);
@@ -268,10 +284,10 @@ function fitToScreen() {
   // Older browsers without container queries (e.g. iOS 15) keep the normal scrolling page
   const canFit = !!(window.CSS && CSS.supports && CSS.supports("container-type", "size"));
   const phone = canFit && !!(window.matchMedia && matchMedia("(max-width: 639.98px)").matches);
-  // Size the page to the part of the screen that's really visible right now. Phone browsers' own "screen height"
-  // (100vh, and on some browsers 100dvh) can assume the address bar is hidden, which made the page about one
-  // address bar too tall: the Categories note was cut off, or the page shifted and hid the weekday row.
-  document.documentElement.style.setProperty("--app-h", `${window.innerHeight}px`);
+  // Size the page to the visible screen (see visibleHeight). Phone browsers' own "screen height" (100vh, and on
+  // some browsers 100dvh) can assume the address bar is hidden, which made the page about one address bar too
+  // tall: the Categories note was cut off, or the page shifted and hid the weekday row.
+  document.documentElement.style.setProperty("--app-h", `${visibleHeight()}px`);
   setFit(phone);
   if (!phone) return;
   if (window.scrollY) window.scrollTo(0, 0); // nothing to scroll in this layout; undo any shift

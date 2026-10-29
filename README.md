@@ -132,6 +132,8 @@ Sources are free and need no keys: Open-Meteo (forecast and archive) and the Nat
 - If a day has an estimated hotel occupancy figure, its window shows *Estimated Hotel Occupancy: 51%* under the foot-traffic line. A day with a figure but no events still opens, showing the figure and "No tracked events".
 - If a month's file hasn't been uploaded yet, the page says: *"Data for [Month Year] is currently being audited and will be available shortly."*
 
+**When changing the code:** the script tags in `index.html` and `admin/index.html` end in `?v=…`. Change that version (for example to today's date) whenever files in `assets/` change, so phones load the new files together instead of mixing old and new copies from their cache.
+
 To change category colors or names, edit the `CATEGORIES` list in `assets/shared.js`. To keep data files in a subfolder, set `DATA_PATH` in the same file (e.g. `"data/"`).
 
 ---
