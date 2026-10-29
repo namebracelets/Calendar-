@@ -40,19 +40,30 @@ const Tour = (() => {
       document.body.appendChild(el);
     }
     el.textContent = text;
+    el._placeToken = (el._placeToken || 0) + 1;
     el.style.transition = "none";
     el.style.transform = "";
     el.style.opacity = "";
     el.classList.remove("hidden");
     if (center) {
-      const r = el.getBoundingClientRect();
-      el.style.transform = `translateY(${Math.round(window.innerHeight / 2 - (r.top + r.height / 2))}px)`;
-      if (!reducedMotion()) {
-        el.style.opacity = "0";
+      // Measure only once the bar has its styles: the page's Tailwind stylesheet is built in the browser and
+      // styles a newly added element a moment later, so on a first visit the bar starts out at the top of the
+      // screen (or further down a long page) instead of pinned to the bottom. It stays invisible until it's there; we check each
+      // frame (giving up after about a second).
+      el.style.opacity = "0";
+      const token = (el._placeToken = (el._placeToken || 0) + 1);
+      let tries = 0;
+      const place = () => {
+        if (el._placeToken !== token || el.classList.contains("hidden")) return; // replaced or closed meanwhile
+        const r = el.getBoundingClientRect(); // resting place: pinned just above the bottom edge of the screen
+        if (Math.abs(r.bottom - window.innerHeight) > 48 && ++tries < 60) { requestAnimationFrame(place); return; }
+        el.style.transform = `translateY(${Math.round(window.innerHeight / 2 - (r.top + r.height / 2))}px)`;
+        if (reducedMotion()) { el.style.opacity = ""; return; }
         void el.offsetWidth; // start the fade from the hidden state
         el.style.transition = "opacity 400ms ease-out";
         el.style.opacity = "1";
-      }
+      };
+      place();
     }
   }
   function moveCaptionDown(ms = 900) {
