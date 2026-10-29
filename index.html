@@ -20,9 +20,10 @@
        removed again if the screen is too short for it). Nothing is dropped; text and spacing get smaller. */
     .b-one, .more-top { display: none; }
     @media (max-width: 639.98px) {
-      /* Height = the visible part of the screen, measured by app.js (--app-h); 100dvh/100vh only until then */
-      html.fit-root { height: 100%; overflow: hidden; overscroll-behavior: none; }
-      body.fit { height: 100vh; height: 100dvh; height: var(--app-h, 100dvh); min-height: 0; display: flex; flex-direction: column; overflow: hidden; overscroll-behavior: none; }
+      /* Height = the visible screen with the address bar showing, measured by app.js (--app-h); 100svh/100vh only
+         until then. Page scrolling and the phone's swipe gestures are left alone, so a swipe down still brings
+         back a hidden address bar. */
+      body.fit { height: 100vh; height: 100svh; height: var(--app-h, 100svh); min-height: 0; display: flex; flex-direction: column; }
       body.fit > header { flex: none; position: relative; } /* nothing scrolls under it in this layout */
       body.fit > header > div { padding-top: 6px; padding-bottom: 6px; }
       body.fit > header h1 { font-size: 15px; }
@@ -164,10 +165,10 @@
     </div>
   </div>
 
-  <script src="assets/shared.js"></script>
-  <script src="assets/weather.js"></script>
-  <script src="assets/app.js"></script>
-  <script src="assets/tour.js"></script>
-  <script src="assets/checkin.js"></script>
+  <script src="assets/shared.js?v=2026-10-29c"></script>
+  <script src="assets/weather.js?v=2026-10-29c"></script>
+  <script src="assets/app.js?v=2026-10-29c"></script>
+  <script src="assets/tour.js?v=2026-10-29c"></script>
+  <script src="assets/checkin.js?v=2026-10-29c"></script>
 </body>
 </html>
