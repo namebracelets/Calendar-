@@ -63,7 +63,11 @@
     @container (max-height: 67.98px) {
       .day-cell > div:first-child { font-size: 9.5px; line-height: 11px; }
       .day-cell > div:first-child span { font-size: 9.5px; }
-      .day-cell > div:first-child .rounded-full { width: 13px; height: 13px; }
+      /* Today's circle fits the 11 px date line, and badges lose their 1 px top/bottom padding, so even today's
+         square (date circle, weather icon and three badges) fits a 50 px week row in a six-week month */
+      .day-cell > div:first-child { height: 11px; }
+      .day-cell > div:first-child .rounded-full { width: 12px; height: 11px; }
+      .day-cell .badge { padding-top: 0; padding-bottom: 0; }
       .day-cell .b-one { font-size: min(8px, calc((100cqw - 5px) / (var(--chars, 8) * 0.6))); line-height: 9.5px; }
       .day-cell .more-bottom { display: none; }
       .day-cell .more-top { display: inline; font-size: 9px; }
@@ -165,10 +169,10 @@
     </div>
   </div>
 
-  <script src="assets/shared.js?v=2026-10-29c"></script>
-  <script src="assets/weather.js?v=2026-10-29c"></script>
-  <script src="assets/app.js?v=2026-10-29c"></script>
-  <script src="assets/tour.js?v=2026-10-29c"></script>
-  <script src="assets/checkin.js?v=2026-10-29c"></script>
+  <script src="assets/shared.js?v=2026-10-29d"></script>
+  <script src="assets/weather.js?v=2026-10-29d"></script>
+  <script src="assets/app.js?v=2026-10-29d"></script>
+  <script src="assets/tour.js?v=2026-10-29d"></script>
+  <script src="assets/checkin.js?v=2026-10-29d"></script>
 </body>
 </html>
