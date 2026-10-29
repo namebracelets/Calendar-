@@ -159,9 +159,10 @@ function badgeHtml(catName, att, idx) {
   const n = formatAttendance(att);
   const hideOnMobile = idx >= MAX_MOBILE_BADGES ? "hidden sm:flex" : "flex";
   return `<span data-cat="${escapeHtml(c.name)}" title="${escapeHtml(n + " " + c.name)}"
-      class="${hideOnMobile} w-full min-w-0 flex-col sm:flex-row items-center sm:items-stretch rounded-md sm:rounded-full px-0.5 sm:px-1.5 py-px font-semibold leading-none sm:leading-tight ${c.badge}">
-      <span class="sm:hidden text-[10px]">${n}</span>
-      <span class="sm:hidden text-[8px] font-medium tracking-tight overflow-hidden whitespace-nowrap max-w-full">${escapeHtml(c.short)}</span>
+      class="badge ${hideOnMobile} w-full min-w-0 flex-col sm:flex-row items-center sm:items-stretch rounded-md sm:rounded-full px-0.5 sm:px-1.5 py-px font-semibold leading-none sm:leading-tight ${c.badge}">
+      <span class="b-num sm:hidden text-[10px]">${n}</span>
+      <span class="b-lbl sm:hidden text-[8px] font-medium tracking-tight overflow-hidden whitespace-nowrap max-w-full">${escapeHtml(c.short)}</span>
+      <span class="b-one sm:hidden" style="--chars:${n.length + 1 + c.short.length}">${n} <span class="font-medium">${escapeHtml(c.short)}</span></span>
       <span class="hidden sm:block truncate text-[11px]">${n} ${escapeHtml(c.name)}</span>
     </span>`;
 }
@@ -183,6 +184,7 @@ function renderCalendar() {
         <p class="text-base sm:text-lg font-semibold text-stone-800">Data for ${MONTHS_LONG[m]} ${y} is currently being audited and will be available shortly.</p>
         <p class="text-sm text-stone-500 mt-2">Check back soon, or view another month using the buttons above.</p>
       </div>`;
+    fitToScreen();
     return;
   }
 
@@ -210,11 +212,12 @@ function renderCalendar() {
   const count = new Date(y, m + 1, 0).getDate();
   const todayKey = toKey(today);
 
-  let html = `<div class="grid grid-cols-7 bg-stone-50 border-b border-stone-200 text-center text-[10px] sm:text-xs font-semibold text-stone-500 uppercase">
+  const weeks = Math.ceil((first + count) / 7);
+  let html = `<div class="cal-weekdays grid grid-cols-7 bg-stone-50 border-b border-stone-200 text-center text-[10px] sm:text-xs font-semibold text-stone-500 uppercase">
     ${WEEKDAYS.map((w) => `<div class="py-1.5">${w}</div>`).join("")}</div>
-    <div class="grid grid-cols-7">`;
+    <div class="cal-days grid grid-cols-7" style="--weeks:${weeks}">`;
 
-  for (let i = 0; i < first; i++) html += `<div class="border-b border-r border-stone-100 bg-stone-50/60 min-h-20 sm:min-h-28"></div>`;
+  for (let i = 0; i < first; i++) html += `<div class="cal-pad border-b border-r border-stone-100 bg-stone-50/60 min-h-20 sm:min-h-28"></div>`;
 
   for (let d = 1; d <= count; d++) {
     const key = dateKey(y, m, d);
@@ -237,17 +240,44 @@ function renderCalendar() {
       <div class="flex items-center justify-between gap-0.5 px-0.5">
         ${issues.length || wx || reported ? `<span class="flex items-center gap-0.5 min-w-0">` : ""}<span class="text-[11px] sm:text-sm font-semibold ${isToday ? "bg-emerald-800 text-white rounded-full w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center" : "text-stone-700"}">${d}</span>${issues.length ? issueIcon("w-4 h-4 sm:w-5 sm:h-5 text-[10px] sm:text-xs") : ""}${weatherIconHtml(wx, "text-[10px] sm:text-sm")}${reported ? `<span class="text-[11px] sm:text-sm font-black text-emerald-700" title="Already reported">✓</span>` : ""}${issues.length || wx || reported ? `</span>` : ""}
         ${day && day.total > 0 ? `<span class="hidden sm:inline text-[10px] font-semibold text-stone-500">~${formatAttendance(day.total)}</span>` : ""}
+        ${extra > 0 ? `<span class="more-top sm:hidden font-semibold text-stone-500">+${extra}</span>` : ""}
       </div>
       ${cats.map(([name, att], i) => badgeHtml(name, att, i)).join("")}
-      ${extra > 0 ? `<span class="sm:hidden mt-auto text-[9px] text-stone-500 font-medium px-0.5">+${extra} more</span>` : ""}
+      ${extra > 0 ? `<span class="more-bottom sm:hidden mt-auto text-[9px] text-stone-500 font-medium px-0.5">+${extra} more</span>` : ""}
     </button>`;
   }
 
   const trailing = (7 - ((first + count) % 7)) % 7;
-  for (let i = 0; i < trailing; i++) html += `<div class="border-b border-r border-stone-100 bg-stone-50/60 min-h-20 sm:min-h-28"></div>`;
+  for (let i = 0; i < trailing; i++) html += `<div class="cal-pad border-b border-r border-stone-100 bg-stone-50/60 min-h-20 sm:min-h-28"></div>`;
   html += `</div>`;
   cal.innerHTML = html;
+  fitToScreen();
 }
+
+// ---------- Phones: fit the whole page on one screen ----------
+// On phone-width screens the page is sized to the screen's height (body.fit, styles in index.html): the header,
+// month buttons, calendar and Categories key all show without scrolling, and the day squares share the space left.
+// Smaller squares switch to one-line badges, then to smaller text with "+N" beside the date. If even that can't fit
+// (a very short screen, or banners taking room), the page goes back to normal scrolling.
+const FIT_MIN_ROW = 50; // px: the shortest week row that still holds a date, three badges and "+N"
+function fitToScreen() {
+  // Older browsers without container queries (e.g. iOS 15) keep the normal scrolling page
+  const canFit = !!(window.CSS && CSS.supports && CSS.supports("container-type", "size"));
+  const phone = canFit && !!(window.matchMedia && matchMedia("(max-width: 639.98px)").matches);
+  document.body.classList.toggle("fit", phone);
+  if (!phone) return;
+  const cell = document.querySelector("#calendar .day-cell");
+  if (cell && cell.getBoundingClientRect().height < FIT_MIN_ROW) { document.body.classList.remove("fit"); return; }
+  // A one-line badge still too wide for its square (some phone fonts run wide) gets just enough smaller to fit
+  document.querySelectorAll("#calendar .b-one").forEach((s) => {
+    s.style.fontSize = "";
+    if (s.offsetParent === null || s.scrollWidth <= s.clientWidth + 0.5) return;
+    const px = parseFloat(getComputedStyle(s).fontSize);
+    s.style.fontSize = `${Math.max(5.5, (px * s.clientWidth) / s.scrollWidth * 0.97).toFixed(2)}px`;
+  });
+}
+let fitTimer = null;
+window.addEventListener("resize", () => { clearTimeout(fitTimer); fitTimer = setTimeout(fitToScreen, 150); });
 
 async function showMonth(offset) {
   state.offset = offset;
