@@ -240,10 +240,10 @@ function renderCalendar() {
       <div class="flex items-center justify-between gap-0.5 px-0.5">
         ${issues.length || wx || reported ? `<span class="flex items-center gap-0.5 min-w-0">` : ""}<span class="text-[11px] sm:text-sm font-semibold ${isToday ? "bg-emerald-800 text-white rounded-full w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center" : "text-stone-700"}">${d}</span>${issues.length ? issueIcon("w-4 h-4 sm:w-5 sm:h-5 text-[10px] sm:text-xs") : ""}${weatherIconHtml(wx, "text-[10px] sm:text-sm")}${reported ? `<span class="text-[11px] sm:text-sm font-black text-emerald-700" title="Already reported">✓</span>` : ""}${issues.length || wx || reported ? `</span>` : ""}
         ${day && day.total > 0 ? `<span class="hidden sm:inline text-[10px] font-semibold text-stone-500">~${formatAttendance(day.total)}</span>` : ""}
-        ${extra > 0 ? `<span class="more-top sm:hidden font-semibold text-stone-500">+${extra}</span>` : ""}
+        ${cats.length ? `<span class="more-top sm:hidden font-semibold text-stone-500" data-extra="${Math.max(0, extra)}">+${extra}</span>` : ""}
       </div>
       ${cats.map(([name, att], i) => badgeHtml(name, att, i)).join("")}
-      ${extra > 0 ? `<span class="more-bottom sm:hidden mt-auto text-[9px] text-stone-500 font-medium px-0.5">+${extra} more</span>` : ""}
+      ${cats.length ? `<span class="more-bottom ${extra > 0 ? "" : "hidden "}sm:hidden mt-auto text-[9px] text-stone-500 font-medium px-0.5" data-extra="${Math.max(0, extra)}">+${extra} more</span>` : ""}
     </button>`;
   }
 
@@ -252,14 +252,20 @@ function renderCalendar() {
   html += `</div>`;
   cal.innerHTML = html;
   fitToScreen();
+  // The page's styles are built in the browser and can reach new badges a moment late: measure again then
+  requestAnimationFrame(() => requestAnimationFrame(fitToScreen));
+  setTimeout(fitToScreen, 300);
 }
 
 // ---------- Phones: fit the whole page on one screen ----------
 // On phone-width screens the page is sized to the screen's height (body.fit, styles in index.html): the header,
 // month buttons, calendar and Categories key all show without scrolling, and the day squares share the space left.
-// Smaller squares switch to one-line badges, then to smaller text with "+N" beside the date. If even that can't fit
-// (a very short screen, or banners taking room), the page goes back to normal scrolling.
-const FIT_MIN_ROW = 50; // px: the shortest week row that still holds a date, three badges and "+N"
+// Each day shows as many badges as fit in its square, and "+N more" only for the ones that don't. One badge size is
+// used for the whole month: the largest that shows the most badges (two-line badges, one-line badges, or smaller
+// one-line text with "+N" beside the date). If a day can't show at least two badges (a very short screen, or
+// banners taking room), the page goes back to normal scrolling, with three badges a day.
+const FIT_MIN_ROW = 34; // px: the shortest week row that holds a date and two of the smallest badges
+const BADGE_SIZES = [[], ["tier-one"], ["tier-one", "tier-tiny"]]; // classes on #calendar: largest first
 // Height the page should fill: the screen with the browser's address bar SHOWING ("small viewport", 100svh).
 // Sizing to the current height instead (which grows when the bar hides) made the page exactly fill a bar-less
 // screen, so it couldn't scroll and the address bar could get stuck hidden after turning the phone. If the bar is
@@ -292,7 +298,8 @@ function fitToScreen() {
   if (!phone) return;
   if (window.scrollY) window.scrollTo(0, 0); // nothing to scroll in this layout; undo any shift
   const cell = document.querySelector("#calendar .day-cell");
-  if (cell && cell.getBoundingClientRect().height < FIT_MIN_ROW) { setFit(false); return; }
+  const h = cell ? cell.getBoundingClientRect().height : 0;
+  if (cell && (h < FIT_MIN_ROW || !packBadges(h))) { setFit(false); resetNotes(); return; }
   // A one-line badge still too wide for its square (some phone fonts run wide) gets just enough smaller to fit
   document.querySelectorAll("#calendar .b-one").forEach((s) => {
     s.style.fontSize = "";
@@ -300,6 +307,61 @@ function fitToScreen() {
     const px = parseFloat(getComputedStyle(s).fontSize);
     s.style.fontSize = `${Math.max(5.5, (px * s.clientWidth) / s.scrollWidth * 0.97).toFixed(2)}px`;
   });
+}
+// The "+N" notes: count = how many of the day's badges aren't showing
+function setNotes(day, count) {
+  day.querySelectorAll(".more-top, .more-bottom").forEach((n) => {
+    n.classList.toggle("fit-show", count > 0);
+    n.textContent = n.classList.contains("more-top") ? `+${count}` : `+${count} more`;
+  });
+}
+// Back to the scrolling page's notes (three badges a day, then "+N more")
+function resetNotes() {
+  document.querySelectorAll("#calendar .more-top, #calendar .more-bottom").forEach((n) => {
+    const count = Number(n.dataset.extra);
+    n.textContent = n.classList.contains("more-top") ? `+${count}` : `+${count} more`;
+  });
+}
+// Show as many badges in each day square as fit; returns false if some day can't show two (or its only one)
+function packBadges(cellH) {
+  const cal = document.getElementById("calendar");
+  const days = [...cal.querySelectorAll(".day-cell")].filter((d) => d.querySelector(".badge"));
+  const largest = cellH >= 96 ? 0 : cellH >= 68 ? 1 : 2; // badge sizes that suit squares this tall, and smaller
+  const tryOne = (size) => {
+    cal.classList.remove("tier-one", "tier-tiny");
+    cal.classList.add(...BADGE_SIZES[size]);
+    // Every badge on, then keep the ones whose bottom edge is inside the square
+    days.forEach((d) => { d.querySelectorAll(".badge").forEach((b) => b.classList.remove("fit-hide")); setNotes(d, 0); });
+    const fits = (d) => d.scrollHeight <= d.clientHeight + 0.5;
+    let hidden = 0, ok = true;
+    for (const d of days) {
+      const badges = [...d.querySelectorAll(".badge")];
+      let shown = badges.length;
+      if (!fits(d)) {
+        const bottom = d.getBoundingClientRect().top + d.clientTop + d.clientHeight - parseFloat(getComputedStyle(d).paddingBottom);
+        shown = badges.filter((b) => b.getBoundingClientRect().bottom <= bottom + 0.5).length;
+        if (shown === badges.length) shown--; // something else ran over: make room
+        for (;;) {
+          badges.forEach((b, i) => b.classList.toggle("fit-hide", i >= shown));
+          setNotes(d, badges.length - shown);
+          if (fits(d) || shown === 0) break;
+          shown--;
+        }
+      }
+      hidden += badges.length - shown;
+      if (shown < Math.min(2, badges.length)) ok = false;
+    }
+    return { size, hidden, ok };
+  };
+  // A smaller size is used only if it shows more badges (or is the only one that shows two a day)
+  let best = tryOne(largest), last = largest;
+  for (let size = largest + 1; best.hidden > 0 && size < BADGE_SIZES.length; size++) {
+    const r = tryOne(size);
+    last = size;
+    if (r.hidden < best.hidden || (!best.ok && r.ok)) best = r;
+  }
+  if (last !== best.size) tryOne(best.size); // put the chosen size back
+  return best.ok;
 }
 // Re-measure whenever the visible area changes: the address bar showing or hiding, or the phone being turned.
 // After turning, browsers report the new size a little late, so check a few times.

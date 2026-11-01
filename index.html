@@ -51,27 +51,23 @@
       /* The links look small but keep a 40 px tall tap area (it reaches past the text without moving anything) */
       body.fit main > section > div:last-child button { min-height: 40px; margin: -7px 0 -13px; padding-bottom: 6px; font-size: 11px; }
     }
-    /* Inside the day squares (phones only; the squares become size containers in body.fit).
+    /* Inside the day squares (phones, body.fit). app.js shows as many badges as fit in each square (the rest
+       count toward "+N more") and picks one badge size for the month: two-line badges, or #calendar.tier-one
+       (one-line, "3K Misc"), or .tier-one.tier-tiny (smaller text, "+N" beside the date).
        Each one-line badge shrinks just enough for its own text ("--chars" letters) to fit the square's width. */
-    /* Shorter squares: one-line badges ("3K Misc") */
-    @container (max-height: 95.98px) {
-      .day-cell .b-num, .day-cell .b-lbl { display: none; }
-      .day-cell .b-one { display: block; font-size: min(9px, calc((100cqw - 5px) / (var(--chars, 8) * 0.6))); line-height: 11px; white-space: nowrap; overflow: hidden; max-width: 100%; letter-spacing: -0.01em; }
-      .day-cell > div:first-child { line-height: 13px; }
-    }
-    /* Shortest squares: smaller text, and "+N" moves up beside the date */
-    @container (max-height: 67.98px) {
-      .day-cell > div:first-child { font-size: 9.5px; line-height: 11px; }
-      .day-cell > div:first-child span { font-size: 9.5px; }
-      /* Today's circle fits the 11 px date line, and badges lose their 1 px top/bottom padding, so even today's
-         square (date circle, weather icon and three badges) fits a 50 px week row in a six-week month */
-      .day-cell > div:first-child { height: 11px; }
-      .day-cell > div:first-child .rounded-full { width: 12px; height: 11px; }
-      .day-cell .badge { padding-top: 0; padding-bottom: 0; }
-      .day-cell .b-one { font-size: min(8px, calc((100cqw - 5px) / (var(--chars, 8) * 0.6))); line-height: 9.5px; }
-      .day-cell .more-bottom { display: none; }
-      .day-cell .more-top { display: inline; font-size: 9px; }
-    }
+    body.fit .day-cell .badge { display: flex; }
+    body.fit .day-cell .badge.fit-hide, body.fit .day-cell .more-bottom, body.fit .day-cell .more-top { display: none; }
+    body.fit #calendar:not(.tier-tiny) .day-cell .more-bottom.fit-show { display: block; }
+    body.fit .tier-one .day-cell .b-num, body.fit .tier-one .day-cell .b-lbl { display: none; }
+    body.fit .tier-one .day-cell .b-one { display: block; font-size: min(9px, calc((100cqw - 5px) / (var(--chars, 8) * 0.6))); line-height: 11px; white-space: nowrap; overflow: hidden; max-width: 100%; letter-spacing: -0.01em; }
+    body.fit .tier-one .day-cell > div:first-child { line-height: 13px; }
+    /* Today's circle fits the 11 px date line, and badges lose their 1 px top/bottom padding */
+    body.fit .tier-tiny .day-cell > div:first-child { font-size: 9.5px; line-height: 11px; height: 11px; }
+    body.fit .tier-tiny .day-cell > div:first-child span { font-size: 9.5px; }
+    body.fit .tier-tiny .day-cell > div:first-child .rounded-full { width: 12px; height: 11px; }
+    body.fit .tier-tiny .day-cell .badge { padding-top: 0; padding-bottom: 0; }
+    body.fit .tier-tiny .day-cell .b-one { font-size: min(8px, calc((100cqw - 5px) / (var(--chars, 8) * 0.6))); line-height: 9.5px; }
+    body.fit .tier-tiny .day-cell .more-top.fit-show { display: inline; font-size: 9px; }
   </style>
 </head>
 <body class="bg-stone-100 text-stone-900 min-h-screen antialiased">
@@ -169,10 +165,10 @@
     </div>
   </div>
 
-  <script src="assets/shared.js?v=2026-10-29d"></script>
-  <script src="assets/weather.js?v=2026-10-29d"></script>
-  <script src="assets/app.js?v=2026-10-29d"></script>
-  <script src="assets/tour.js?v=2026-10-29d"></script>
-  <script src="assets/checkin.js?v=2026-10-29d"></script>
+  <script src="assets/shared.js?v=2026-11-01a"></script>
+  <script src="assets/weather.js?v=2026-11-01a"></script>
+  <script src="assets/app.js?v=2026-11-01a"></script>
+  <script src="assets/tour.js?v=2026-11-01a"></script>
+  <script src="assets/checkin.js?v=2026-11-01a"></script>
 </body>
 </html>
