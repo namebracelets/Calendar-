@@ -160,8 +160,8 @@ function badgeHtml(catName, att, idx) {
   const hideOnMobile = idx >= MAX_MOBILE_BADGES ? "hidden sm:flex" : "flex";
   return `<span data-cat="${escapeHtml(c.name)}" title="${escapeHtml(n + " " + c.name)}"
       class="badge ${hideOnMobile} w-full min-w-0 flex-col sm:flex-row items-center sm:items-stretch rounded-md sm:rounded-full px-0.5 sm:px-1.5 py-px font-semibold leading-none sm:leading-tight ${c.badge}">
-      <span class="b-num sm:hidden text-[10px]">${n}</span>
-      <span class="b-lbl sm:hidden text-[8px] font-medium tracking-tight overflow-hidden whitespace-nowrap max-w-full">${escapeHtml(c.short)}</span>
+      <span class="b-num sm:hidden text-[10px]" style="--chars:${n.length}">${n}</span>
+      <span class="b-lbl sm:hidden text-[8px] font-medium tracking-tight overflow-hidden whitespace-nowrap max-w-full" style="--chars:${c.short.length}">${escapeHtml(c.short)}</span>
       <span class="b-one sm:hidden" style="--chars:${n.length + 1 + c.short.length}">${n} <span class="font-medium">${escapeHtml(c.short)}</span></span>
       <span class="hidden sm:block truncate text-[11px]">${n} ${escapeHtml(c.name)}</span>
     </span>`;
@@ -240,10 +240,10 @@ function renderCalendar() {
       <div class="flex items-center justify-between gap-0.5 px-0.5">
         ${issues.length || wx || reported ? `<span class="flex items-center gap-0.5 min-w-0">` : ""}<span class="text-[11px] sm:text-sm font-semibold ${isToday ? "bg-emerald-800 text-white rounded-full w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center" : "text-stone-700"}">${d}</span>${issues.length ? issueIcon("w-4 h-4 sm:w-5 sm:h-5 text-[10px] sm:text-xs") : ""}${weatherIconHtml(wx, "text-[10px] sm:text-sm")}${reported ? `<span class="text-[11px] sm:text-sm font-black text-emerald-700" title="Already reported">✓</span>` : ""}${issues.length || wx || reported ? `</span>` : ""}
         ${day && day.total > 0 ? `<span class="hidden sm:inline text-[10px] font-semibold text-stone-500">~${formatAttendance(day.total)}</span>` : ""}
-        ${extra > 0 ? `<span class="more-top sm:hidden font-semibold text-stone-500">+${extra}</span>` : ""}
+        ${cats.length ? `<span class="more-top sm:hidden font-semibold text-stone-500" data-extra="${Math.max(0, extra)}">+${extra}</span>` : ""}
       </div>
       ${cats.map(([name, att], i) => badgeHtml(name, att, i)).join("")}
-      ${extra > 0 ? `<span class="more-bottom sm:hidden mt-auto text-[9px] text-stone-500 font-medium px-0.5">+${extra} more</span>` : ""}
+      ${cats.length ? `<span class="more-bottom ${extra > 0 ? "" : "hidden "}sm:hidden mt-auto text-[9px] text-stone-500 font-medium px-0.5" data-extra="${Math.max(0, extra)}">+${extra} more</span>` : ""}
     </button>`;
   }
 
@@ -252,14 +252,26 @@ function renderCalendar() {
   html += `</div>`;
   cal.innerHTML = html;
   fitToScreen();
+  // The page's styles are built in the browser and can reach new badges a moment late: measure again then
+  requestAnimationFrame(() => requestAnimationFrame(fitToScreen));
+  setTimeout(fitToScreen, 300);
 }
 
 // ---------- Phones: fit the whole page on one screen ----------
 // On phone-width screens the page is sized to the screen's height (body.fit, styles in index.html): the header,
 // month buttons, calendar and Categories key all show without scrolling, and the day squares share the space left.
-// Smaller squares switch to one-line badges, then to smaller text with "+N" beside the date. If even that can't fit
-// (a very short screen, or banners taking room), the page goes back to normal scrolling.
-const FIT_MIN_ROW = 50; // px: the shortest week row that still holds a date, three badges and "+N"
+// The space is shared out in this order:
+//  1. Badges: each day shows as many as fit in its square, and "+N more" only for the ones that don't. One badge
+//     style is used for the whole month (two-line badges, one-line badges, or smaller one-line text with "+N"
+//     beside the date): of the styles that show the most badges, the one with the largest text once it's grown.
+//  2. The badges and dates grow (up to BADGE_GROW_MAX) until the busiest day's square is full.
+//  3. Room still left over makes the header, month title and Categories key bigger (up to PAGE_GROW_MAX).
+// Anything added to the page later just leaves less room: the same steps shrink things back to fit.
+// If a day can't show at least two badges (a very short screen, or banners taking room), the page goes back to
+// normal scrolling, with three badges a day.
+const FIT_MIN_ROW = 34; // px: the shortest week row that holds a date and two of the smallest badges
+const BADGE_SIZES = [[], ["tier-one"], ["tier-one", "tier-tiny"]]; // classes on #calendar: largest first
+const BADGE_GROW_MAX = 1.5, DATE_GROW_MAX = 1.3, PAGE_GROW_MAX = 1.4;
 // Height the page should fill: the screen with the browser's address bar SHOWING ("small viewport", 100svh).
 // Sizing to the current height instead (which grows when the bar hides) made the page exactly fill a bar-less
 // screen, so it couldn't scroll and the address bar could get stuck hidden after turning the phone. If the bar is
@@ -281,7 +293,7 @@ function setFit(on) {
   document.documentElement.classList.toggle("fit-root", on);
 }
 function fitToScreen() {
-  // Older browsers without container queries (e.g. iOS 15) keep the normal scrolling page
+  // Older browsers (without container queries, e.g. iOS 15) keep the normal scrolling page
   const canFit = !!(window.CSS && CSS.supports && CSS.supports("container-type", "size"));
   const phone = canFit && !!(window.matchMedia && matchMedia("(max-width: 639.98px)").matches);
   // Size the page to the visible screen (see visibleHeight). Phone browsers' own "screen height" (100vh, and on
@@ -291,15 +303,164 @@ function fitToScreen() {
   setFit(phone);
   if (!phone) return;
   if (window.scrollY) window.scrollTo(0, 0); // nothing to scroll in this layout; undo any shift
+  const ones = document.querySelectorAll("#calendar .b-one");
+  ones.forEach((s) => { s.style.fontSize = ""; });
+  setGrow("--page-grow", 1);
   const cell = document.querySelector("#calendar .day-cell");
-  if (cell && cell.getBoundingClientRect().height < FIT_MIN_ROW) { setFit(false); return; }
+  const h = cell ? cell.getBoundingClientRect().height : 0;
+  if (cell) { // the squares' inner width, which caps how big badge text can get (all squares are the same width)
+    const cs = getComputedStyle(cell);
+    document.getElementById("calendar").style.setProperty("--cell-w", `${(cell.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight)).toFixed(2)}px`);
+  }
+  if (cell && (h < FIT_MIN_ROW || !fillScreen())) { setFit(false); resetNotes(); return; }
   // A one-line badge still too wide for its square (some phone fonts run wide) gets just enough smaller to fit
-  document.querySelectorAll("#calendar .b-one").forEach((s) => {
-    s.style.fontSize = "";
+  ones.forEach((s) => {
     if (s.offsetParent === null || s.scrollWidth <= s.clientWidth + 0.5) return;
     const px = parseFloat(getComputedStyle(s).fontSize);
     s.style.fontSize = `${Math.max(5.5, (px * s.clientWidth) / s.scrollWidth * 0.97).toFixed(2)}px`;
   });
+}
+// The "+N" notes: count = how many of the day's badges aren't showing
+function setNotes(day, count) {
+  day.querySelectorAll(".more-top, .more-bottom").forEach((n) => {
+    n.classList.toggle("fit-show", count > 0);
+    const text = n.classList.contains("more-top") ? `+${count}` : `+${count} more`;
+    if (count > 0 && n.textContent !== text) n.textContent = text;
+  });
+}
+// Back to the scrolling page's notes (three badges a day, then "+N more")
+function resetNotes() {
+  document.querySelectorAll("#calendar .more-top, #calendar .more-bottom").forEach((n) => {
+    const count = Number(n.dataset.extra);
+    n.textContent = n.classList.contains("more-top") ? `+${count}` : `+${count} more`;
+  });
+}
+// --page-grow is set on the page; the badge sizes only on the calendar, which is quicker to restyle
+function setGrow(name, v, el = document.documentElement) { el.style.setProperty(name, v.toFixed(3)); }
+let packed = ""; // the badge style, badge size and page size last laid out, so the same isn't laid out twice in a row
+const packKey = (size, grow) => `${size}/${grow}/${document.documentElement.style.getPropertyValue("--page-grow")}`;
+function ensurePacked(size, grow) { if (packed !== packKey(size, grow)) packBadges(size, grow); }
+// Show as many badges in each day square as fit, in one badge style (an index into BADGE_SIZES) at one size
+// (--badge-grow). Returns how many badges are left out, and ok = false if some day can't show two (or its only one).
+function packBadges(size, grow) {
+  const cal = document.getElementById("calendar");
+  cal.classList.remove("tier-one", "tier-tiny");
+  cal.classList.add(...BADGE_SIZES[size]);
+  setGrow("--badge-grow", grow, cal);
+  setGrow("--date-grow", Math.min(grow, DATE_GROW_MAX), cal);
+  const days = [...cal.querySelectorAll(".day-cell")].filter((d) => d.querySelector(".badge"));
+  // Every badge and note on, measure once, then keep the badges whose bottom edge leaves room inside the square
+  // (and for the note below them, unless "+N" sits beside the date). Measuring each day separately was too slow.
+  days.forEach((d) => { d.querySelectorAll(".badge").forEach((b) => b.classList.remove("fit-hide")); d.querySelectorAll(".more-top, .more-bottom").forEach((n) => n.classList.add("fit-show")); });
+  const plans = days.map((d) => {
+    const r = d.getBoundingClientRect(), cs = getComputedStyle(d);
+    const bottom = r.top + d.clientTop + d.clientHeight - parseFloat(cs.paddingBottom) + 0.5;
+    const note = d.querySelector(".more-bottom");
+    const noteH = note && note.offsetParent ? note.getBoundingClientRect().height + parseFloat(cs.rowGap || 0) : 0;
+    const ends = [...d.querySelectorAll(".badge")].map((b) => b.getBoundingClientRect().bottom);
+    let shown = ends.length;
+    if (ends[ends.length - 1] > bottom) {
+      shown = 0;
+      while (shown < ends.length && ends[shown] <= bottom - noteH) shown++;
+    }
+    return { d, total: ends.length, shown };
+  });
+  let hidden = 0, ok = true;
+  for (const { d, total, shown } of plans) {
+    d.querySelectorAll(".badge").forEach((b, i) => b.classList.toggle("fit-hide", i >= shown));
+    setNotes(d, total - shown);
+    hidden += total - shown;
+    if (shown < Math.min(2, total)) ok = false;
+  }
+  packed = packKey(size, grow);
+  return { size, grow, hidden, ok };
+}
+// The badges' average text size as shown (two-line badges: number and label), for comparing styles
+function badgeTextSize() {
+  const px = (el) => parseFloat(getComputedStyle(el).fontSize);
+  const sizes = [...document.querySelectorAll("#calendar .badge")].filter((b) => b.offsetParent).map((b) => {
+    const one = b.querySelector(".b-one");
+    return one.offsetParent ? px(one) : (px(b.querySelector(".b-num")) + px(b.querySelector(".b-lbl"))) / 2;
+  });
+  return sizes.length ? sizes.reduce((a, b) => a + b, 0) / sizes.length : 0;
+}
+// The largest value in [lo, hi] for which works(value) is true (works(lo) is known to be true), to within ~5%
+function largestThatWorks(lo, hi, works) {
+  if (works(hi)) return hi;
+  for (let i = 0; i < 4; i++) { const mid = (lo + hi) / 2; if (works(mid)) lo = mid; else hi = mid; }
+  return lo;
+}
+// How much shorter the week rows could get with nothing in any square running out of room (px, all rows together)
+function calendarSlack() {
+  const cells = [...document.querySelectorAll("#calendar .day-cell")];
+  if (!cells.length) return 0;
+  let slack = Infinity;
+  for (const d of cells) {
+    const r = d.getBoundingClientRect();
+    const kids = [...d.children].filter((k) => k.offsetParent && !k.classList.contains("more-bottom"));
+    const note = d.querySelector(".more-bottom.fit-show");
+    const used = Math.max(0, ...kids.map((k) => k.getBoundingClientRect().bottom)) + (note && note.offsetParent ? note.getBoundingClientRect().height + 1 : 0);
+    slack = Math.min(slack, r.bottom - parseFloat(getComputedStyle(d).paddingBottom) - used, r.height - FIT_MIN_ROW);
+  }
+  const weeks = Number(document.querySelector("#calendar .cal-days").style.getPropertyValue("--weeks")) || 5;
+  return Math.max(0, slack) * weeks;
+}
+// Steps 1–3 above. Returns false if the page should scroll instead.
+function fillScreen() {
+  if (!document.querySelector("#calendar .badge")) { // no badges this month: just let the page grow
+    setGrow("--page-grow", largestThatWorks(1, PAGE_GROW_MAX, (g) => { setGrow("--page-grow", g); return calendarFits(); }));
+    return true;
+  }
+  // 1. How many badges each style shows (the smallest style only matters if one-line badges leave some out)
+  const counts = [];
+  for (let size = 0; size < BADGE_SIZES.length; size++) {
+    if (size === 2 && counts[1].hidden === 0) break;
+    counts.push(packBadges(size, 1));
+  }
+  const usable = counts.filter((r) => r.ok);
+  if (!usable.length) return false;
+  const fewest = Math.min(...usable.map((r) => r.hidden));
+  // 2. Grow each of those styles as far as it goes without leaving out more badges; keep the most readable
+  let best = null;
+  for (const r of usable.filter((r) => r.hidden === fewest)) {
+    const grow = largestThatWorks(1, BADGE_GROW_MAX, (g) => packBadges(r.size, g).hidden <= fewest);
+    ensurePacked(r.size, grow);
+    const text = badgeTextSize();
+    if (!best || text > best.text + 0.05) best = { size: r.size, grow, text, slack: calendarSlack() };
+  }
+  ensurePacked(best.size, best.grow);
+  // 3. Grow the rest of the page into whatever room is left: estimate from the room left in the squares, then check
+  // (text that wraps onto more lines makes it grow faster than the zoom, so a missed guess is corrected once)
+  const grownHeight = () => [...document.querySelectorAll("body > header > div, body > main > div:first-child, #calendar .cal-weekdays, body > main > section")]
+    .reduce((h, el) => h + el.getBoundingClientRect().height, 0);
+  const before = grownHeight();
+  if (best.slack > 2 && before > 0) {
+    const works = (g) => { setGrow("--page-grow", g); return packBadges(best.size, best.grow).hidden <= fewest && calendarFits(); };
+    let guess = Math.min(PAGE_GROW_MAX, 1 + (best.slack - 2) / before), page = guess;
+    if (!works(guess)) {
+      const used = grownHeight() - before; // what that guess added
+      guess = used > 0 ? 1 + (guess - 1) * Math.min(1, (best.slack - 2) / used) * 0.95 : 1;
+      page = guess > 1 && works(guess) ? guess : largestThatWorks(1, Math.max(1, guess), works);
+    }
+    setGrow("--page-grow", page);
+    ensurePacked(best.size, best.grow);
+  }
+  // Last check, square by square (rarely needed): one that still runs over drops another badge
+  document.querySelectorAll("#calendar .day-cell").forEach((d) => {
+    const badges = [...d.querySelectorAll(".badge")];
+    let shown = badges.filter((b) => !b.classList.contains("fit-hide")).length;
+    while (shown > 0 && d.scrollHeight > d.clientHeight + 0.5) {
+      shown--;
+      badges.forEach((b, i) => b.classList.toggle("fit-hide", i >= shown));
+      setNotes(d, badges.length - shown);
+    }
+  });
+  return true;
+}
+// Nothing pushed below the screen, and no day square squeezed shorter than the smallest it may be
+function calendarFits() {
+  const cell = document.querySelector("#calendar .day-cell");
+  return document.documentElement.scrollHeight <= window.innerHeight + 1 && (!cell || cell.getBoundingClientRect().height >= FIT_MIN_ROW);
 }
 // Re-measure whenever the visible area changes: the address bar showing or hiding, or the phone being turned.
 // After turning, browsers report the new size a little late, so check a few times.
