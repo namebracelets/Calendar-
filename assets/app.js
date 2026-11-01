@@ -558,24 +558,31 @@ function openModal(key, focusCat) {
     return b.att - a.att;
   });
 
+  // Each event shows its title, category and the day's estimate; "Details" opens the rest
   $("modal-body").innerHTML = items.map(({ ev, att, mv }) => {
     const c = ev._cat;
     const hl = focusCat && c.name === focusCat ? "ring-2 ring-emerald-600" : "";
     const sources = Array.isArray(ev.sources) ? ev.sources.filter(Boolean) : [];
-    return `<article class="rounded-xl border border-stone-200 p-3 ${hl}">
-      <div class="flex items-start justify-between gap-2">
-        <h3 class="font-bold leading-snug">${escapeHtml(ev.title)}</h3>
-        <span class="shrink-0 rounded-full px-2 py-0.5 text-[11px] font-semibold ${c.badge}">${escapeHtml(c.name)}</span>
-      </div>
-      <dl class="mt-2 grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-sm">
+    return `<details class="group rounded-xl border border-stone-200 ${hl}">
+      <summary class="list-none [&::-webkit-details-marker]:hidden cursor-pointer select-none px-3 py-2.5 min-h-11">
+        <div class="flex items-start justify-between gap-2">
+          <h3 class="font-bold leading-snug">${escapeHtml(ev.title)}</h3>
+          <span class="shrink-0 rounded-full px-2 py-0.5 text-[11px] font-semibold ${c.badge}">${escapeHtml(c.name)}</span>
+        </div>
+        <div class="mt-1 flex items-baseline justify-between gap-2 text-sm">
+          ${state.market
+            ? `<span class="font-semibold text-emerald-800">Estimated market visitors: ${mv === null ? "not given" : `~${mv.toLocaleString()}`}</span>`
+            : `<span class="font-semibold">This day: ~${att.toLocaleString()} attendees</span>`}
+          <span class="shrink-0 text-xs font-semibold text-emerald-800 underline"><span class="group-open:hidden">Details ▾</span><span class="hidden group-open:inline">Less ▴</span></span>
+        </div>
+      </summary>
+      <div class="px-3 pb-3">
+      <dl class="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-sm">
         ${state.market ? `
         <dt class="text-stone-500">This day</dt>
-        <dd><span class="block font-semibold text-emerald-800">Estimated market visitors: ${mv === null ? "not given" : `~${mv.toLocaleString()}`}</span>
-          <span class="block">Total daily attendees: ~${att.toLocaleString()}</span></dd>
+        <dd>Total daily attendees: ~${att.toLocaleString()}</dd>
         <dt class="text-stone-500">Event</dt>
         <dd>${escapeHtml(formatSpan(ev.startDate, ev.endDate))} | Total attendees: ${eventTotal(ev).toLocaleString()}</dd>` : `
-        <dt class="text-stone-500">This day</dt>
-        <dd class="font-semibold">~${att.toLocaleString()} attendees</dd>
         <dt class="text-stone-500">Event</dt>
         <dd>${escapeHtml(formatSpan(ev.startDate, ev.endDate))} | Total: ${eventTotal(ev).toLocaleString()}</dd>`}
         ${ev.impactWindow ? `<dt class="text-stone-500">Market impact</dt><dd class="font-semibold text-emerald-800">${escapeHtml(ev.impactWindow)}</dd>` : ""}
@@ -586,7 +593,8 @@ function openModal(key, focusCat) {
       ${sources.length ? `<p class="mt-1 text-[11px] text-stone-400">Source: ${sources.map((s) => /^https?:\/\//.test(s)
           ? `<a class="underline" href="${escapeHtml(s)}" target="_blank" rel="noopener">${escapeHtml(new URL(s).hostname)}</a>`
           : escapeHtml(s)).join(", ")}</p>` : ""}
-    </article>`;
+      </div>
+    </details>`;
   }).join("") || `<p class="py-6 text-center text-sm text-stone-500">No tracked events</p>`;
   const vendors = typeof Checkin !== "undefined" ? Checkin.summaryHtml(key) : "";
   if (vendors) $("modal-body").insertAdjacentHTML("afterbegin", vendors);
@@ -601,6 +609,29 @@ function openModal(key, focusCat) {
   $("modal").classList.remove("hidden");
   document.body.style.overflow = "hidden";
   $("modal-close").focus();
+  fitModal();
+  // The page's styles are built in the browser and can reach the new cards a moment late: measure again then
+  requestAnimationFrame(() => requestAnimationFrame(fitModal));
+  setTimeout(fitModal, 300);
+}
+// A day's details fit on one screen when the events are folded: if they don't at full size, the whole window
+// shrinks evenly, down to DD_MIN (the header shrinks only as much as needed). Past that, the window scrolls.
+const DD_MIN = 0.72;
+function fitModal() {
+  const m = $("modal");
+  if (m.classList.contains("hidden") || m.querySelector("#modal-body details[open]")) return; // keep the size while reading
+  const panel = m.querySelector(".max-w-lg");
+  const wrap = getComputedStyle(panel.parentElement); // the window's margin above and below
+  const room = visibleHeight() - parseFloat(wrap.paddingTop) - parseFloat(wrap.paddingBottom);
+  const set = (z) => m.style.setProperty("--dd", z.toFixed(3));
+  set(1);
+  let h = panel.getBoundingClientRect().height, z = 1;
+  // Text re-wraps as it shrinks, so the first guess is checked and corrected a few times
+  for (let i = 0; i < 5 && h > room && z > DD_MIN; i++) {
+    z = Math.max(DD_MIN, z * (room / h) * 0.995);
+    set(z);
+    h = panel.getBoundingClientRect().height;
+  }
 }
 
 function closeModal() {
