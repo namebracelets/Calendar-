@@ -528,6 +528,56 @@ function closeWeather() {
 // ---------- Modal ----------
 
 let lastFocus = null;
+let modalViews = { separate: "", combined: "" }; // the open day's event cards: one per event / one per category
+
+// The rest of one event's information (inside "Details")
+function eventDetailsHtml(ev, att) {
+  const sources = Array.isArray(ev.sources) ? ev.sources.filter(Boolean) : [];
+  return `<dl class="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-sm">
+        ${state.market ? `
+        <dt class="text-stone-500">This day</dt>
+        <dd>Total daily attendees: ~${att.toLocaleString()}</dd>
+        <dt class="text-stone-500">Event</dt>
+        <dd>${escapeHtml(formatSpan(ev.startDate, ev.endDate))} | Total attendees: ${eventTotal(ev).toLocaleString()}</dd>` : `
+        <dt class="text-stone-500">Event</dt>
+        <dd>${escapeHtml(formatSpan(ev.startDate, ev.endDate))} | Total: ${eventTotal(ev).toLocaleString()}</dd>`}
+        ${ev.impactWindow ? `<dt class="text-stone-500">Market impact</dt><dd class="font-semibold text-emerald-800">${escapeHtml(ev.impactWindow)}</dd>` : ""}
+        ${ev.location ? `<dt class="text-stone-500">Location</dt><dd>${escapeHtml(ev.location)}</dd>` : ""}
+      </dl>
+      ${ev.proximity ? `<p class="mt-2"><span class="inline-block rounded-md bg-stone-100 text-stone-700 text-xs font-medium px-2 py-1">📍 ${escapeHtml(ev.proximity)}</span></p>` : ""}
+      ${ev.notes ? `<p class="mt-2 text-xs text-stone-600">${escapeHtml(ev.notes)}</p>` : ""}
+      ${sources.length ? `<p class="mt-1 text-[11px] text-stone-400">Source: ${sources.map((s) => /^https?:\/\//.test(s)
+          ? `<a class="underline" href="${escapeHtml(s)}" target="_blank" rel="noopener">${escapeHtml(new URL(s).hostname)}</a>`
+          : escapeHtml(s)).join(", ")}</p>` : ""}`;
+}
+// The day's estimate for one or more events ("not given" if none of them has one)
+function estimateHtml(list) {
+  if (!state.market) return `<span class="font-semibold">This day: ~${list.reduce((n, it) => n + it.att, 0).toLocaleString()} attendees</span>`;
+  const given = list.filter((it) => it.mv !== null);
+  return `<span class="font-semibold text-emerald-800">Estimated market visitors: ${given.length ? `~${given.reduce((n, it) => n + it.mv, 0).toLocaleString()}` : "not given"}</span>`;
+}
+// A folded event card. With several events (same category) the details list each one under its own heading.
+function eventCardHtml(title, c, list, hl) {
+  const details = list.length === 1 ? eventDetailsHtml(list[0].ev, list[0].att)
+    : list.map((it) => `<section class="border-t border-stone-200 pt-2 mt-2 first:mt-0 first:border-t-0 first:pt-0">
+        <h4 class="font-bold leading-snug">${escapeHtml(it.ev.title)}</h4>
+        <p class="mb-1 text-sm">${estimateHtml([it])}</p>
+        ${eventDetailsHtml(it.ev, it.att)}
+      </section>`).join("");
+  return `<details class="group rounded-xl border border-stone-200 ${hl}">
+      <summary class="list-none [&::-webkit-details-marker]:hidden cursor-pointer select-none px-3 py-2.5 min-h-11">
+        <div class="flex items-start justify-between gap-2">
+          <h3 class="font-bold leading-snug">${escapeHtml(title)}</h3>
+          <span class="shrink-0 rounded-full px-2 py-0.5 text-[11px] font-semibold ${c.badge}">${escapeHtml(c.name)}</span>
+        </div>
+        <div class="mt-1 flex items-baseline justify-between gap-2 text-sm">
+          ${estimateHtml(list)}
+          <span class="shrink-0 text-xs font-semibold text-emerald-800 underline"><span class="group-open:hidden">Details ▾</span><span class="hidden group-open:inline">Less ▴</span></span>
+        </div>
+      </summary>
+      <div class="px-3 pb-3">${details}</div>
+    </details>`;
+}
 
 function openModal(key, focusCat) {
   const occ = occupancyFor(key);
@@ -558,44 +608,25 @@ function openModal(key, focusCat) {
     return b.att - a.att;
   });
 
-  // Each event shows its title, category and the day's estimate; "Details" opens the rest
-  $("modal-body").innerHTML = items.map(({ ev, att, mv }) => {
-    const c = ev._cat;
-    const hl = focusCat && c.name === focusCat ? "ring-2 ring-emerald-600" : "";
-    const sources = Array.isArray(ev.sources) ? ev.sources.filter(Boolean) : [];
-    return `<details class="group rounded-xl border border-stone-200 ${hl}">
-      <summary class="list-none [&::-webkit-details-marker]:hidden cursor-pointer select-none px-3 py-2.5 min-h-11">
-        <div class="flex items-start justify-between gap-2">
-          <h3 class="font-bold leading-snug">${escapeHtml(ev.title)}</h3>
-          <span class="shrink-0 rounded-full px-2 py-0.5 text-[11px] font-semibold ${c.badge}">${escapeHtml(c.name)}</span>
-        </div>
-        <div class="mt-1 flex items-baseline justify-between gap-2 text-sm">
-          ${state.market
-            ? `<span class="font-semibold text-emerald-800">Estimated market visitors: ${mv === null ? "not given" : `~${mv.toLocaleString()}`}</span>`
-            : `<span class="font-semibold">This day: ~${att.toLocaleString()} attendees</span>`}
-          <span class="shrink-0 text-xs font-semibold text-emerald-800 underline"><span class="group-open:hidden">Details ▾</span><span class="hidden group-open:inline">Less ▴</span></span>
-        </div>
-      </summary>
-      <div class="px-3 pb-3">
-      <dl class="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-sm">
-        ${state.market ? `
-        <dt class="text-stone-500">This day</dt>
-        <dd>Total daily attendees: ~${att.toLocaleString()}</dd>
-        <dt class="text-stone-500">Event</dt>
-        <dd>${escapeHtml(formatSpan(ev.startDate, ev.endDate))} | Total attendees: ${eventTotal(ev).toLocaleString()}</dd>` : `
-        <dt class="text-stone-500">Event</dt>
-        <dd>${escapeHtml(formatSpan(ev.startDate, ev.endDate))} | Total: ${eventTotal(ev).toLocaleString()}</dd>`}
-        ${ev.impactWindow ? `<dt class="text-stone-500">Market impact</dt><dd class="font-semibold text-emerald-800">${escapeHtml(ev.impactWindow)}</dd>` : ""}
-        ${ev.location ? `<dt class="text-stone-500">Location</dt><dd>${escapeHtml(ev.location)}</dd>` : ""}
-      </dl>
-      ${ev.proximity ? `<p class="mt-2"><span class="inline-block rounded-md bg-stone-100 text-stone-700 text-xs font-medium px-2 py-1">📍 ${escapeHtml(ev.proximity)}</span></p>` : ""}
-      ${ev.notes ? `<p class="mt-2 text-xs text-stone-600">${escapeHtml(ev.notes)}</p>` : ""}
-      ${sources.length ? `<p class="mt-1 text-[11px] text-stone-400">Source: ${sources.map((s) => /^https?:\/\//.test(s)
-          ? `<a class="underline" href="${escapeHtml(s)}" target="_blank" rel="noopener">${escapeHtml(new URL(s).hostname)}</a>`
-          : escapeHtml(s)).join(", ")}</p>` : ""}
-      </div>
-    </details>`;
-  }).join("") || `<p class="py-6 text-center text-sm text-stone-500">No tracked events</p>`;
+  // Each event shows its title, category and the day's estimate; "Details" opens the rest. Two versions: one card
+  // per event, and one where events in the same category share a card (used only if it helps the day fit on one
+  // screen; see fitModal).
+  const hl = (c) => (focusCat && c.name === focusCat ? "ring-2 ring-emerald-600" : "");
+  const separate = items.map((it) => eventCardHtml(it.ev.title, it.ev._cat, [it], hl(it.ev._cat))).join("");
+  const groups = new Map(); // category → its events, in the order above
+  items.forEach((it) => { const k = it.ev._cat.name; if (!groups.has(k)) groups.set(k, []); groups.get(k).push(it); });
+  const combined = [...groups.values()].some((g) => g.length > 1)
+    ? [...groups.values()].map((g) => {
+        const c = g[0].ev._cat;
+        if (g.length === 1) return eventCardHtml(g[0].ev.title, c, g, hl(c));
+        // "Festivals: A, B": each title without its own "Category:" opening
+        const names = g.map(({ ev }) => ev.title.replace(/^[^:]{1,30}:\s+/, ""));
+        return eventCardHtml(`${c.name}: ${names.join(", ")}`, c, g, hl(c));
+      }).join("")
+    : "";
+  modalViews = { separate, combined };
+  $("modal-body").innerHTML = items.length ? `<div id="modal-events" class="space-y-3">${separate}</div>`
+    : `<p class="py-6 text-center text-sm text-stone-500">No tracked events</p>`;
   const vendors = typeof Checkin !== "undefined" ? Checkin.summaryHtml(key) : "";
   if (vendors) $("modal-body").insertAdjacentHTML("afterbegin", vendors);
   const report = typeof Checkin !== "undefined" ? Checkin.dayActionHtml(key) : "";
@@ -615,7 +646,8 @@ function openModal(key, focusCat) {
   setTimeout(fitModal, 300);
 }
 // A day's details fit on one screen when the events are folded: if they don't at full size, the whole window
-// shrinks evenly, down to DD_MIN (the header shrinks only as much as needed). Past that, the window scrolls.
+// shrinks evenly, down to DD_MIN (the header shrinks only as much as needed). If even that isn't enough and
+// some category has several events, they share one card (if that's shorter). Past that, the window scrolls.
 const DD_MIN = 0.72;
 function fitModal() {
   const m = $("modal");
@@ -624,14 +656,30 @@ function fitModal() {
   const wrap = getComputedStyle(panel.parentElement); // the window's margin above and below
   const room = visibleHeight() - parseFloat(wrap.paddingTop) - parseFloat(wrap.paddingBottom);
   const set = (z) => m.style.setProperty("--dd", z.toFixed(3));
-  set(1);
-  let h = panel.getBoundingClientRect().height, z = 1;
-  // Text re-wraps as it shrinks, so the first guess is checked and corrected a few times
-  for (let i = 0; i < 5 && h > room && z > DD_MIN; i++) {
-    z = Math.max(DD_MIN, z * (room / h) * 0.995);
-    set(z);
-    h = panel.getBoundingClientRect().height;
-  }
+  const heightAt = (z) => { set(z); return panel.getBoundingClientRect().height; };
+  const shrink = () => {
+    let h = heightAt(1), z = 1, tooBig = 1;
+    // Text re-wraps as it shrinks, so the first guess is checked and corrected a few times...
+    for (let i = 0; i < 5 && h > room && z > DD_MIN; i++) {
+      tooBig = z;
+      z = Math.max(DD_MIN, z * (room / h) * 0.995);
+      h = heightAt(z);
+    }
+    if (h > room) return h;
+    // ...and, as re-wrapping can save more than expected, grown back to the largest size that still fits
+    for (let i = 0; i < 4 && tooBig - z > 0.01; i++) {
+      const mid = (z + tooBig) / 2, hm = heightAt(mid);
+      if (hm <= room) { z = mid; h = hm; } else tooBig = mid;
+    }
+    return heightAt(z);
+  };
+  const events = $("modal-events");
+  if (events && modalViews.combined && events.dataset.view !== "separate") { events.innerHTML = modalViews.separate; events.dataset.view = "separate"; }
+  const separateH = shrink();
+  if (separateH <= room + 0.5 || !events || !modalViews.combined) return;
+  events.innerHTML = modalViews.combined;
+  events.dataset.view = "combined";
+  if (shrink() >= separateH - 0.5) { events.innerHTML = modalViews.separate; events.dataset.view = "separate"; shrink(); }
 }
 
 function closeModal() {
