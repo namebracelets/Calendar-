@@ -6,7 +6,7 @@ const VAULT_KEY = "fmAdminVault:v1";
 const FILE_RE = /^events-(\d{4})-(\d{2})\.json$/;
 const FIELD_ORDER = ["id", "title", "category", "startDate", "endDate", "totalAttendance", "dailyAttendance",
   "marketVisitors", "dailyMarketVisitors",
-  "impactWindow", "location", "proximity", "notes", "sources"];
+  "impactWindow", "location", "proximity", "whosComing", "notes", "sources"];
 
 const S = {
   gh: null,
@@ -445,7 +445,7 @@ function filteredEvents() {
   const q = $("search").value.trim().toLowerCase();
   return S.events.filter((ev) =>
     (!month || monthsOf(ev).includes(month)) &&
-    (!q || [ev.title, ev.category, ev.location, ev.notes, ev.proximity].join(" ").toLowerCase().includes(q))
+    (!q || [ev.title, ev.category, ev.location, ev.whosComing, ev.notes, ev.proximity].join(" ").toLowerCase().includes(q))
   ).sort(sortEvents);
 }
 
@@ -563,6 +563,7 @@ function openForm(ev, onSave) {
   f.elements.impactWindow.value = ev.impactWindow || "";
   f.elements.location.value = ev.location || "";
   f.elements.proximity.value = ev.proximity || "";
+  f.elements.whosComing.value = ev.whosComing || "";
   f.elements.notes.value = ev.notes || "";
   f.elements.sources.value = (ev.sources || []).join("; ");
   showError($("form-errors"), "");
@@ -622,6 +623,7 @@ $("event-form").addEventListener("submit", (e) => {
     impactWindow: val("impactWindow") || undefined,
     location: val("location") || undefined,
     proximity: val("proximity") || undefined,
+    whosComing: val("whosComing") || undefined,
     notes: val("notes") || undefined,
     sources: val("sources") ? val("sources").split(/\s*;\s*/).filter(Boolean) : undefined,
   };

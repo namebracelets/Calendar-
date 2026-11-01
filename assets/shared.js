@@ -106,6 +106,7 @@ function normalizeMonthFile(json) {
       impactWindow: pick(e, "impactWindow", "impact_window"),
       location: pick(e, "location"),
       proximity: pick(e, "proximity"),
+      whosComing: pick(e, "whosComing", "whos_coming"),
       notes: pick(e, "notes"),
       sources,
     };

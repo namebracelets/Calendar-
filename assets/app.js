@@ -530,10 +530,23 @@ function closeWeather() {
 let lastFocus = null;
 let modalViews = { separate: "", combined: "" }; // the open day's event cards: one per event / one per category
 
+// "Who's coming": the crowd profile (age, gender, income, stage of life, where from, been here before).
+// Shown first in the unfolded card, right under the estimate, in regular print. Groups are separated by " • ".
+function whosComingHtml(text) {
+  const parts = String(text || "").split(/\s+•\s+/).map((s) => s.trim()).filter(Boolean);
+  if (!parts.length) return "";
+  return `<div class="mb-2 rounded-lg border border-amber-200 bg-amber-50 px-2.5 py-2">
+      <p class="text-[11px] font-bold uppercase tracking-wide text-amber-800">Who's coming</p>
+      ${parts.length > 1
+        ? `<ul class="mt-1 space-y-1.5 text-sm leading-snug text-stone-800">${parts.map((p) => `<li>${escapeHtml(p)}</li>`).join("")}</ul>`
+        : `<p class="mt-1 text-sm leading-snug text-stone-800">${escapeHtml(parts[0])}</p>`}
+    </div>`;
+}
+
 // The rest of one event's information (inside "Details")
 function eventDetailsHtml(ev, att) {
   const sources = Array.isArray(ev.sources) ? ev.sources.filter(Boolean) : [];
-  return `<dl class="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-sm">
+  return `${whosComingHtml(ev.whosComing)}<dl class="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-sm">
         ${state.market ? `
         <dt class="text-stone-500">This day</dt>
         <dd>Total daily attendees: ~${att.toLocaleString()}</dd>
