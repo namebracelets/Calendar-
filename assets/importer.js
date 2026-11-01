@@ -183,6 +183,8 @@ const FIELD_ALIASES = {
     "timewindow", "window", "hours", "impact", "peakhours", "impacttime"],
   location: ["location", "venue", "place", "where", "address", "site"],
   proximity: ["proximity", "proximitytag", "area", "zone", "distance", "neighborhood"],
+  // Crowd profile ("Who's coming"). Not "crowd": that header already means attendance (above).
+  whosComing: ["whoscoming", "whoiscoming", "crowdprofile", "audienceprofile", "demographics"],
   notes: ["notes", "note", "description", "details", "comments", "comment", "info"],
   sources: ["sources", "source", "url", "link", "links", "reference", "references", "website"],
 };
@@ -316,6 +318,7 @@ function recordToEvent(rec, defaultYear) {
   if (iw) { const t = findTimeWindow(iw); ev.impactWindow = t ? t.value : iw; }
   if (str(rec.location)) ev.location = str(rec.location);
   ev.proximity = str(rec.proximity) || guessProximity(`${str(rec.location)} ${ev.title}`) || undefined;
+  if (str(rec.whosComing)) ev.whosComing = str(rec.whosComing);
   if (str(rec.notes)) ev.notes = str(rec.notes);
   const src = Array.isArray(rec.sources) ? rec.sources.map(str).filter(Boolean) : str(rec.sources).split(/\s*[;|]\s*|\s+(?=https?:)/).filter(Boolean);
   if (src.length) ev.sources = src;
