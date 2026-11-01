@@ -74,6 +74,10 @@
     body.fit .tier-tiny .day-cell .badge { padding-top: 0; padding-bottom: 0; }
     body.fit .tier-tiny .day-cell .b-one { font-size: min(calc(8px * var(--badge-grow, 1)), calc((var(--cell-w, 48px) - 5px) / (var(--chars, 8) * 0.6))); line-height: 1.19em; }
     body.fit .tier-tiny .day-cell .more-top.fit-show { display: inline; font-size: 9px; }
+    /* A day's details: app.js (fitModal) shrinks the window evenly (--dd) when the folded events don't fit on the
+       screen at full size; the close button keeps its size */
+    #modal .max-w-lg { zoom: var(--dd, 1); }
+    #modal-close { zoom: calc(1 / var(--dd, 1)); }
   </style>
 </head>
 <body class="bg-stone-100 text-stone-900 min-h-screen antialiased">
@@ -171,10 +175,10 @@
     </div>
   </div>
 
-  <script src="assets/shared.js?v=2026-11-01b"></script>
-  <script src="assets/weather.js?v=2026-11-01b"></script>
-  <script src="assets/app.js?v=2026-11-01b"></script>
-  <script src="assets/tour.js?v=2026-11-01b"></script>
-  <script src="assets/checkin.js?v=2026-11-01b"></script>
+  <script src="assets/shared.js?v=2026-11-01c"></script>
+  <script src="assets/weather.js?v=2026-11-01c"></script>
+  <script src="assets/app.js?v=2026-11-01c"></script>
+  <script src="assets/tour.js?v=2026-11-01c"></script>
+  <script src="assets/checkin.js?v=2026-11-01c"></script>
 </body>
 </html>
