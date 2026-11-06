@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <!-- What the page may load and contact. Add a service here before the app uses it (README, "Security"). -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.open-meteo.com https://archive-api.open-meteo.com https://api.weather.gov https://docs.google.com https://*.googleusercontent.com; object-src 'none'; base-uri 'self'; form-action 'self'">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>French Market Foot Traffic</title>
   <meta name="description" content="Calendar of events expected to drive foot traffic to the New Orleans French Market and the 1200 block of N. Peters St.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚜️</text></svg>">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <style>
     body { -webkit-tap-highlight-color: transparent; }
     .day-cell:focus-visible { outline: 2px solid #1e3a8a; outline-offset: -2px; }
@@ -81,6 +82,7 @@
     /* The "Methodology" link keeps a 40 px tall tap area however much the window shrinks */
     #modal details details > summary { min-height: calc(40px / var(--dd, 1)); }
   </style>
+  <link rel="stylesheet" href="assets/site.css?v=2026-11-06a"><!-- prebuilt Tailwind CSS: see README, "Security" -->
 </head>
 <body class="bg-stone-100 text-stone-900 min-h-screen antialiased">
 
@@ -177,10 +179,10 @@
     </div>
   </div>
 
-  <script src="assets/shared.js?v=2026-11-05a"></script>
-  <script src="assets/weather.js?v=2026-11-05a"></script>
-  <script src="assets/app.js?v=2026-11-05a"></script>
-  <script src="assets/tour.js?v=2026-11-05a"></script>
-  <script src="assets/checkin.js?v=2026-11-05a"></script>
+  <script src="assets/shared.js?v=2026-11-06a"></script>
+  <script src="assets/weather.js?v=2026-11-06a"></script>
+  <script src="assets/app.js?v=2026-11-06a"></script>
+  <script src="assets/tour.js?v=2026-11-06a"></script>
+  <script src="assets/checkin.js?v=2026-11-06a"></script>
 </body>
 </html>

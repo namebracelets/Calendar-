@@ -34,9 +34,12 @@ const store = {
 const b64 = (buf) => btoa(String.fromCharCode(...new Uint8Array(buf)));
 const unb64 = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
 
-async function deriveKey(password, salt) {
+// 600,000 PBKDF2-SHA-256 rounds: OWASP's current figure. Vaults saved before 2026-11-06 used 250,000 (no "rounds" field);
+// they still open, and are saved again with the new count on the next unlock.
+const VAULT_ROUNDS = 600000, OLD_VAULT_ROUNDS = 250000;
+async function deriveKey(password, salt, rounds = VAULT_ROUNDS) {
   const base = await crypto.subtle.importKey("raw", new TextEncoder().encode(password), "PBKDF2", false, ["deriveKey"]);
-  return crypto.subtle.deriveKey({ name: "PBKDF2", salt, iterations: 250000, hash: "SHA-256" },
+  return crypto.subtle.deriveKey({ name: "PBKDF2", salt, iterations: rounds, hash: "SHA-256" },
     base, { name: "AES-GCM", length: 256 }, false, ["encrypt", "decrypt"]);
 }
 async function saveVault(password, payload) {
@@ -44,13 +47,16 @@ async function saveVault(password, payload) {
   const iv = crypto.getRandomValues(new Uint8Array(12));
   const key = await deriveKey(password, salt);
   const data = await crypto.subtle.encrypt({ name: "AES-GCM", iv }, key, new TextEncoder().encode(JSON.stringify(payload)));
-  return store.set(VAULT_KEY, JSON.stringify({ salt: b64(salt), iv: b64(iv), data: b64(data), repo: `${payload.owner}/${payload.repo}` }));
+  return store.set(VAULT_KEY, JSON.stringify({ salt: b64(salt), iv: b64(iv), data: b64(data), repo: `${payload.owner}/${payload.repo}`, rounds: VAULT_ROUNDS }));
 }
 async function openVault(password) {
   const v = JSON.parse(store.get(VAULT_KEY));
-  const key = await deriveKey(password, unb64(v.salt));
+  const rounds = Number(v.rounds) || OLD_VAULT_ROUNDS;
+  const key = await deriveKey(password, unb64(v.salt), rounds);
   const plain = await crypto.subtle.decrypt({ name: "AES-GCM", iv: unb64(v.iv) }, key, unb64(v.data));
-  return JSON.parse(new TextDecoder().decode(plain));
+  const payload = JSON.parse(new TextDecoder().decode(plain));
+  if (rounds < VAULT_ROUNDS) await saveVault(password, payload); // upgrade an older vault in place
+  return payload;
 }
 function vaultInfo() {
   try { return JSON.parse(store.get(VAULT_KEY)); } catch { return null; }
@@ -251,13 +257,28 @@ $("unlock-form").addEventListener("submit", async (e) => {
   } finally { busy(); }
 });
 
-$("lock-btn").addEventListener("click", () => {
-  if (hasChanges() && !confirm("You have changes that aren't published yet. Lock anyway and lose them?")) return;
+function lockNow(message) {
   S.gh = null;
   S.events = [];
   S.original = new Map();
   showLogin();
+  if (message) toast(message);
+}
+$("lock-btn").addEventListener("click", () => {
+  if (hasChanges() && !confirm("You have changes that aren't published yet. Lock anyway and lose them?")) return;
+  lockNow();
 });
+
+// Lock by itself after 30 minutes without a tap, click or key, so the GitHub token doesn't stay open in a forgotten tab.
+// Not while there are unpublished changes (locking would lose them).
+const IDLE_LOCK_MS = 30 * 60 * 1000;
+let lastActive = Date.now();
+for (const t of ["pointerdown", "keydown", "wheel", "touchstart"]) addEventListener(t, () => { lastActive = Date.now(); }, { capture: true, passive: true });
+function idleCheck() {
+  if (S.gh && !hasChanges() && Date.now() - lastActive > IDLE_LOCK_MS) lockNow("Locked after 30 minutes without use. Enter your password to continue.");
+}
+setInterval(idleCheck, 60 * 1000);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) idleCheck(); });
 
 async function startSession(gh, info) {
   S.gh = gh;
@@ -670,7 +691,7 @@ async function readFile(file) {
   if (/\.(xlsx|xls|xlsm|ods)$/i.test(name)) {
     busy("Reading spreadsheet…");
     try {
-      await loadScript("https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js");
+      await loadScript("../assets/vendor/xlsx-0.20.3.full.min.js"); // SheetJS 0.20.3, kept in this repository (0.18.5 had known flaws)
       const wb = XLSX.read(await file.arrayBuffer(), { type: "array", cellDates: true });
       const sheets = wb.SheetNames.map((n) => ({ name: n, rows: XLSX.utils.sheet_to_json(wb.Sheets[n], { header: 1, raw: true, defval: "" }) }))
         .filter((s) => s.rows.some((r) => r.some((c) => String(c).trim())));
@@ -686,7 +707,7 @@ function loadScript(src) {
     if (document.querySelector(`script[src="${src}"]`)) return resolve();
     const s = document.createElement("script");
     s.src = src; s.onload = resolve;
-    s.onerror = () => reject(new Error("Couldn't load the Excel reader. Check your internet connection, or save the sheet as CSV and try again."));
+    s.onerror = () => reject(new Error("Couldn't load the Excel reader (assets/vendor/xlsx-0.20.3.full.min.js). Save the sheet as CSV and try again."));
     document.head.appendChild(s);
   });
 }

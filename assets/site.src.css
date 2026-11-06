@@ -1,0 +1,8 @@
+/* Source for assets/site.css, the prebuilt Tailwind stylesheet (it replaced the Tailwind CDN script on 2026-11-06).
+   Rebuild after changing classes in the pages or scripts, from the repository root:
+     npx @tailwindcss/cli@4 -i assets/site.src.css -o assets/site.css --minify
+   Only the files below are scanned, so the month files' text never adds stray classes. */
+@import "tailwindcss" source(none);
+@source "../index.html";
+@source "../admin/index.html";
+@source "./*.js";
