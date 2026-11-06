@@ -546,22 +546,37 @@ function whosComingHtml(text) {
 // The rest of one event's information (inside "Details")
 function eventDetailsHtml(ev, att) {
   const sources = Array.isArray(ev.sources) ? ev.sources.filter(Boolean) : [];
+  // Everyday-visitor listings (free-range tourists, holiday visitors, locals) count visitors, not attendees, and have no event totals.
+  const visitors = ev.listingType === "visitors";
+  const oneDay = !ev.endDate || ev.endDate === ev.startDate;
+  const oneDayLabel = /concert|show|theat/i.test(ev.category || "") ? "One-day show" : "One-day event";
+  // Who's being counted: passengers on cruise ships, visitors on tours and everyday-visitor listings, attendees at everything else.
+  const who = visitors || /tour/i.test(ev.category || "") ? "visitors" : /cruise/i.test(ev.category || "") ? "passengers" : "attendees";
+  const total = eventTotal(ev);
+  const row = (label, value) => `<dt class="text-stone-500">${label}</dt><dd>${value}</dd>`;
+  const rows = state.market
+    ? (visitors ? row("This day", `Total daily ${who}: ~${att.toLocaleString()}`)
+      : oneDay ? row(oneDayLabel, `Total ${who}: ~${att.toLocaleString()}`)
+      : row("This day", `Total daily ${who}: ~${att.toLocaleString()}`)
+        + row("Event totals", `${escapeHtml(formatSpan(ev.startDate, ev.endDate))} | Total ${who}: ${total.toLocaleString()}`))
+    : (visitors ? row("This day", `Total ${who}: ${total.toLocaleString()}`)
+      : oneDay ? row(oneDayLabel, `Total: ${total.toLocaleString()}`)
+      : row("Event totals", `${escapeHtml(formatSpan(ev.startDate, ev.endDate))} | Total: ${total.toLocaleString()}`));
+  // The notes (how the estimate was made) and the sources stay folded under a "Methodology" link.
+  const method = ev.notes || sources.length ? `<details class="group/method mt-1">
+        <summary class="list-none [&::-webkit-details-marker]:hidden cursor-pointer select-none inline-flex items-center min-h-10 text-xs font-semibold text-emerald-800 underline">${state.market ? "Methodology" : "Notes and sources"}&nbsp;<span class="group-open/method:hidden">▾</span><span class="hidden group-open/method:inline">▴</span></summary>
+        ${ev.notes ? `<p class="text-xs text-stone-600">${escapeHtml(ev.notes)}</p>` : ""}
+        ${sources.length ? `<p class="mt-1 text-[11px] text-stone-400">Source: ${sources.map((s) => /^https?:\/\//.test(s)
+          ? `<a class="underline" href="${escapeHtml(s)}" target="_blank" rel="noopener">${escapeHtml(new URL(s).hostname)}</a>`
+          : escapeHtml(s)).join(", ")}</p>` : ""}
+      </details>` : "";
   return `${whosComingHtml(ev.whosComing)}<dl class="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-sm">
-        ${state.market ? `
-        <dt class="text-stone-500">This day</dt>
-        <dd>Total daily attendees: ~${att.toLocaleString()}</dd>
-        <dt class="text-stone-500">Event</dt>
-        <dd>${escapeHtml(formatSpan(ev.startDate, ev.endDate))} | Total attendees: ${eventTotal(ev).toLocaleString()}</dd>` : `
-        <dt class="text-stone-500">Event</dt>
-        <dd>${escapeHtml(formatSpan(ev.startDate, ev.endDate))} | Total: ${eventTotal(ev).toLocaleString()}</dd>`}
+        ${rows}
         ${ev.impactWindow ? `<dt class="text-stone-500">Market impact</dt><dd class="font-semibold text-emerald-800">${escapeHtml(ev.impactWindow)}</dd>` : ""}
         ${ev.location ? `<dt class="text-stone-500">Location</dt><dd>${escapeHtml(ev.location)}</dd>` : ""}
       </dl>
       ${ev.proximity ? `<p class="mt-2"><span class="inline-block rounded-md bg-stone-100 text-stone-700 text-xs font-medium px-2 py-1">📍 ${escapeHtml(ev.proximity)}</span></p>` : ""}
-      ${ev.notes ? `<p class="mt-2 text-xs text-stone-600">${escapeHtml(ev.notes)}</p>` : ""}
-      ${sources.length ? `<p class="mt-1 text-[11px] text-stone-400">Source: ${sources.map((s) => /^https?:\/\//.test(s)
-          ? `<a class="underline" href="${escapeHtml(s)}" target="_blank" rel="noopener">${escapeHtml(new URL(s).hostname)}</a>`
-          : escapeHtml(s)).join(", ")}</p>` : ""}`;
+      ${method}`;
 }
 // The day's estimate for one or more events ("not given" if none of them has one)
 function estimateHtml(list) {
