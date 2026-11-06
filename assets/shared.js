@@ -107,6 +107,7 @@ function normalizeMonthFile(json) {
       location: pick(e, "location"),
       proximity: pick(e, "proximity"),
       whosComing: pick(e, "whosComing", "whos_coming"),
+      listingType: /^visitors?$/i.test(String(pick(e, "listingType", "listing_type") || "").trim()) ? "visitors" : undefined,
       notes: pick(e, "notes"),
       sources,
     };
