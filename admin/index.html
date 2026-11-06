@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <!-- What the page may load and contact. Add a service here before the app uses it (README, "Security"). -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <script src="../assets/frame-guard.js?v=2026-11-06a"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <title>Calendar Admin</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔐</text></svg>">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <style>
     body { -webkit-tap-highlight-color: transparent; }
     .drop-active { outline: 3px dashed #047857; outline-offset: -6px; background: #ecfdf5; }
   </style>
+  <link rel="stylesheet" href="../assets/site.css?v=2026-11-06a"><!-- prebuilt Tailwind CSS: see README, "Security" -->
 </head>
 <body class="bg-stone-100 text-stone-900 min-h-screen antialiased pb-28">
 
@@ -251,8 +254,8 @@ Oct 16-18 Dental Association Annual Meeting 12K at Morial Convention Center 5-8p
   <!-- Toast -->
   <div id="toast" class="hidden fixed inset-x-3 mx-auto bottom-24 z-[70] max-w-md rounded-xl px-4 py-3 text-sm font-medium shadow-lg"></div>
 
-  <script src="../assets/shared.js?v=2026-11-05a"></script>
-  <script src="../assets/importer.js?v=2026-11-05a"></script>
-  <script src="../assets/admin.js?v=2026-11-05a"></script>
+  <script src="../assets/shared.js?v=2026-11-06a"></script>
+  <script src="../assets/importer.js?v=2026-11-06a"></script>
+  <script src="../assets/admin.js?v=2026-11-06a"></script>
 </body>
 </html>

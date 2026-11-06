@@ -1,6 +1,6 @@
 # ⚜️ French Market Foot Traffic Dashboard
 
-A mobile-first calendar of events expected to drive foot traffic to the New Orleans French Market and the 1200 block of N. Peters St. It's a plain static site (HTML, Tailwind from a CDN, vanilla JavaScript). There's no build step, and it's free to host on GitHub Pages.
+A mobile-first calendar of events expected to drive foot traffic to the New Orleans French Market and the 1200 block of N. Peters St. It's a plain static site (HTML, a prebuilt Tailwind stylesheet, vanilla JavaScript) that loads nothing from other sites, and it's free to host on GitHub Pages. The only build step is rebuilding the stylesheet after changing classes (see "Security").
 
 | File | What it is |
 |---|---|
@@ -137,6 +137,18 @@ Sources are free and need no keys: Open-Meteo (forecast and archive) and the Nat
 To change category colors or names, edit the `CATEGORIES` list in `assets/shared.js`. To keep data files in a subfolder, set `DATA_PATH` in the same file (e.g. `"data/"`).
 
 ---
+
+## Security
+
+- **No outside code.** The pages load only this site's own files. Styling is a prebuilt Tailwind stylesheet, `assets/site.css`, built from `assets/site.src.css`. After adding or changing classes in the pages or scripts, rebuild it from the repository root and commit both files: `npx @tailwindcss/cli@4 -i assets/site.src.css -o assets/site.css --minify`. The Excel reader (SheetJS 0.20.3) is kept in `assets/vendor/`. Before 2026-11-06 the pages loaded Tailwind from a CDN, which took whatever version was newest, and SheetJS 0.18.5, which has two known flaws when reading crafted files.
+- **Content Security Policy.** A `<meta>` tag at the top of `index.html` and `admin/index.html` lets scripts come only from this site. Connections are limited to Open-Meteo, the National Weather Service and Google Forms/Sheets on the calendar, and to the GitHub API on the admin page. Add a new service to that tag before the app uses it, or the browser will block it.
+- **Admin page.**
+  - It refuses to show inside another site's frame (`assets/frame-guard.js`, since GitHub Pages can't send the header that blocks framing).
+  - The GitHub token is stored encrypted with the admin password: PBKDF2-SHA-256 with 600,000 rounds, and AES-GCM. Older vaults (250,000 rounds) are upgraded on the next unlock.
+  - It locks itself after 30 minutes without use, but not while there are unpublished changes.
+  - Use a fine-grained token limited to this repository (Contents: read and write) with an expiration date.
+- **Visitors' devices** keep only a random anonymous ID, their own check-in answers, the demo-seen note, and cached weather and summaries. There are no cookies, analytics or ads.
+- **Check-ins.** Publish only the Summary tab of the Google Sheet to the web, never the entire document. The tab with individual answers stays private.
 
 ## Data audit checklist (for whoever compiles each month)
 
