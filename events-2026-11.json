@@ -1,6 +1,6 @@
 {
   "month": "2026-11",
-  "lastUpdated": "2026-11-09",
+  "lastUpdated": "2026-11-12",
   "hotelOccupancy": {
     "2026-11-01": 71,
     "2026-11-02": 41,
@@ -43,7 +43,7 @@
   ],
   "events": [
     {
-      "id": "ev-bgnfc8he",
+      "id": "ev-q0tynnxa",
       "title": "Concerts and shows: Disney's The Lion King, Skilla Baby",
       "category": "Concerts",
       "startDate": "2026-11-01",
@@ -63,7 +63,7 @@
       ]
     },
     {
-      "id": "ev-u1jthqju",
+      "id": "ev-durcepxx",
       "title": "Conventions: 7 smaller meetings",
       "category": "Conventions",
       "startDate": "2026-11-01",
@@ -79,7 +79,7 @@
       ]
     },
     {
-      "id": "ev-wsdg8jfu",
+      "id": "ev-3sn03v5d",
       "title": "Cruise ships: Mariner of the Seas departure, Carnival Liberty turnaround, American Heritage (river) + guests before and after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-01",
@@ -100,7 +100,7 @@
       ]
     },
     {
-      "id": "ev-6xl4xmwk",
+      "id": "ev-0ooueryy",
       "title": "Festivals: Halloween weekend visitors, Halloween Tea Dance",
       "category": "Festivals",
       "startDate": "2026-11-01",
@@ -117,7 +117,7 @@
       ]
     },
     {
-      "id": "ev-2gqz6vbz",
+      "id": "ev-vfv9dhzc",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-01",
@@ -135,18 +135,18 @@
       ]
     },
     {
-      "id": "ev-brb4wtf0",
+      "id": "ev-iixphw1t",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-01",
-      "totalAttendance": 1562,
-      "marketVisitors": 1562,
+      "totalAttendance": 1558,
+      "marketVisitors": 1558,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 1,562 today: a Sunday (2.2 ×). Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 1,558 today: a Sunday (2.2 ×). Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -155,7 +155,7 @@
       ]
     },
     {
-      "id": "ev-f4fm3aex",
+      "id": "ev-bqkhd4cy",
       "title": "Tours: Tours of Distinction group",
       "category": "Tours/Charters",
       "startDate": "2026-11-01",
@@ -172,7 +172,7 @@
       ]
     },
     {
-      "id": "ev-m6kwy7p5",
+      "id": "ev-mdyxbn8s",
       "title": "Conventions: 13 smaller meetings; DEMA Show attendees arriving early",
       "category": "Conventions",
       "startDate": "2026-11-02",
@@ -192,7 +192,7 @@
       ]
     },
     {
-      "id": "ev-tgdeblft",
+      "id": "ev-y0zeu72o",
       "title": "Cruise ships: Cruise guests in town before or after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-02",
@@ -210,7 +210,7 @@
       ]
     },
     {
-      "id": "ev-cqkjztn0",
+      "id": "ev-vj4xgwn0",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-02",
@@ -228,18 +228,18 @@
       ]
     },
     {
-      "id": "ev-mbzn0qn0",
+      "id": "ev-ffr6skkh",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-02",
-      "totalAttendance": 710,
-      "marketVisitors": 710,
+      "totalAttendance": 708,
+      "marketVisitors": 708,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 710 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 708 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -248,7 +248,7 @@
       ]
     },
     {
-      "id": "ev-3bnwnpiy",
+      "id": "ev-79cksnni",
       "title": "School field trips",
       "category": "Youth Events",
       "startDate": "2026-11-02",
@@ -267,7 +267,7 @@
       ]
     },
     {
-      "id": "ev-nw91haqz",
+      "id": "ev-vloah556",
       "title": "Tours: Tours of Distinction group",
       "category": "Tours/Charters",
       "startDate": "2026-11-02",
@@ -284,7 +284,7 @@
       ]
     },
     {
-      "id": "ev-mqbj1w6x",
+      "id": "ev-jw8zlrq0",
       "title": "Concerts and shows: Disney's The Lion King",
       "category": "Concerts",
       "startDate": "2026-11-03",
@@ -303,7 +303,7 @@
       ]
     },
     {
-      "id": "ev-uv7hdek7",
+      "id": "ev-pjqo7sl0",
       "title": "Conventions: DEMA Show + 14 smaller meetings",
       "category": "Conventions",
       "startDate": "2026-11-03",
@@ -323,7 +323,7 @@
       ]
     },
     {
-      "id": "ev-40pdsebb",
+      "id": "ev-yhlicke0",
       "title": "Cruise ships: Cruise guests in town before or after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-03",
@@ -341,7 +341,7 @@
       ]
     },
     {
-      "id": "ev-i6jnzyly",
+      "id": "ev-g5sax8v9",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-03",
@@ -359,18 +359,18 @@
       ]
     },
     {
-      "id": "ev-zgy3ek7o",
+      "id": "ev-tdtkcuxy",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-03",
-      "totalAttendance": 710,
-      "marketVisitors": 710,
+      "totalAttendance": 708,
+      "marketVisitors": 708,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 710 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 708 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -379,7 +379,7 @@
       ]
     },
     {
-      "id": "ev-pjsjnm5i",
+      "id": "ev-fswqsx10",
       "title": "School field trips",
       "category": "Youth Events",
       "startDate": "2026-11-03",
@@ -398,7 +398,7 @@
       ]
     },
     {
-      "id": "ev-tae82c3h",
+      "id": "ev-oqtdjia0",
       "title": "Tours: Tours of Distinction group",
       "category": "Tours/Charters",
       "startDate": "2026-11-03",
@@ -415,7 +415,7 @@
       ]
     },
     {
-      "id": "ev-x1xzpaq1",
+      "id": "ev-gsp1skle",
       "title": "Concerts and shows: Disney's The Lion King, The Living Tombstone",
       "category": "Concerts",
       "startDate": "2026-11-04",
@@ -434,7 +434,7 @@
       ]
     },
     {
-      "id": "ev-t9ifrm60",
+      "id": "ev-4qdlob10",
       "title": "Conventions: DEMA Show + 15 smaller meetings",
       "category": "Conventions",
       "startDate": "2026-11-04",
@@ -454,7 +454,7 @@
       ]
     },
     {
-      "id": "ev-nbrrju3s",
+      "id": "ev-bsws6f87",
       "title": "Cruise ships: Cruise guests in town before or after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-04",
@@ -472,7 +472,7 @@
       ]
     },
     {
-      "id": "ev-ftz1ygv0",
+      "id": "ev-xkalmzo0",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-04",
@@ -490,18 +490,18 @@
       ]
     },
     {
-      "id": "ev-sftkl690",
+      "id": "ev-zmcy3y10",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-04",
-      "totalAttendance": 710,
-      "marketVisitors": 710,
+      "totalAttendance": 708,
+      "marketVisitors": 708,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 710 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 708 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -510,7 +510,7 @@
       ]
     },
     {
-      "id": "ev-yzyrfqlc",
+      "id": "ev-9zm7uuhu",
       "title": "School field trips",
       "category": "Youth Events",
       "startDate": "2026-11-04",
@@ -529,7 +529,7 @@
       ]
     },
     {
-      "id": "ev-oawf50xf",
+      "id": "ev-ulz9wx8z",
       "title": "Sports: Pelicans vs. Utah Jazz",
       "category": "Sports",
       "startDate": "2026-11-04",
@@ -548,7 +548,7 @@
       ]
     },
     {
-      "id": "ev-hunr22lk",
+      "id": "ev-iygpnltq",
       "title": "Concerts and shows: Disney's The Lion King, Anthony Jeselnik, Thundercat and Channel Tres",
       "category": "Concerts",
       "startDate": "2026-11-05",
@@ -568,7 +568,7 @@
       ]
     },
     {
-      "id": "ev-6oyxd800",
+      "id": "ev-zlpolo4c",
       "title": "Conventions: DEMA Show + 12 smaller meetings; NAR NXT attendees arriving early",
       "category": "Conventions",
       "startDate": "2026-11-05",
@@ -590,7 +590,7 @@
       ]
     },
     {
-      "id": "ev-92iewyqu",
+      "id": "ev-g7ns2000",
       "title": "Cruise ships: Carnival Valor turnaround + guests before and after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-05",
@@ -609,7 +609,7 @@
       ]
     },
     {
-      "id": "ev-h1z0owua",
+      "id": "ev-pceemr8f",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-05",
@@ -627,18 +627,18 @@
       ]
     },
     {
-      "id": "ev-iwcygxdx",
+      "id": "ev-7actvl8b",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-05",
-      "totalAttendance": 710,
-      "marketVisitors": 710,
+      "totalAttendance": 708,
+      "marketVisitors": 708,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 710 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 708 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -647,7 +647,7 @@
       ]
     },
     {
-      "id": "ev-zcdrremr",
+      "id": "ev-sod0fsnh",
       "title": "School field trips",
       "category": "Youth Events",
       "startDate": "2026-11-05",
@@ -666,7 +666,7 @@
       ]
     },
     {
-      "id": "ev-myoihi00",
+      "id": "ev-titultds",
       "title": "Sports: Tulane homecoming visitors in town",
       "category": "Sports",
       "startDate": "2026-11-05",
@@ -686,7 +686,7 @@
       ]
     },
     {
-      "id": "ev-xlflpvp0",
+      "id": "ev-0yuf9qqn",
       "title": "Concerts and shows: Disney's The Lion King, Johnette Downing's family show, Pretty Lights + 2 more",
       "category": "Concerts",
       "startDate": "2026-11-06",
@@ -707,7 +707,7 @@
       ]
     },
     {
-      "id": "ev-blqcnbyr",
+      "id": "ev-rns6pwm9",
       "title": "Conventions: NAR NXT, DEMA Show + 11 smaller meetings",
       "category": "Conventions",
       "startDate": "2026-11-06",
@@ -729,7 +729,7 @@
       ]
     },
     {
-      "id": "ev-mbbptxlm",
+      "id": "ev-wuh9mvtq",
       "title": "Cruise ships: Cruise guests in town before or after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-06",
@@ -747,7 +747,7 @@
       ]
     },
     {
-      "id": "ev-obcsrlb3",
+      "id": "ev-bevpdy4l",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-06",
@@ -765,18 +765,18 @@
       ]
     },
     {
-      "id": "ev-pn09ttrz",
+      "id": "ev-lgvvrzhr",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-06",
-      "totalAttendance": 886,
-      "marketVisitors": 886,
+      "totalAttendance": 883,
+      "marketVisitors": 883,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 923 today: a Friday (1.3 × a plain weekday). About 38 of them would have been at the market anyway and are counted in the listing of today's free event at the market (Johnette Downing's family show), so this listing shows the rest: 886. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 921 today: a Friday (1.3 × a plain weekday). About 38 of them would have been at the market anyway and are counted in the listing of today's free event at the market (Johnette Downing's family show), so this listing shows the rest: 883. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -785,7 +785,7 @@
       ]
     },
     {
-      "id": "ev-udd8nhlz",
+      "id": "ev-ltsh30tg",
       "title": "School field trips",
       "category": "Youth Events",
       "startDate": "2026-11-06",
@@ -804,7 +804,7 @@
       ]
     },
     {
-      "id": "ev-ps9djbrk",
+      "id": "ev-zmzyeyx0",
       "title": "Sports: Pelicans vs. Minnesota Timberwolves + Tulane homecoming visitors in town and Saints–Browns fans in town",
       "category": "Sports",
       "startDate": "2026-11-06",
@@ -833,7 +833,7 @@
       ]
     },
     {
-      "id": "ev-lzwtyh00",
+      "id": "ev-qvsdgt3m",
       "title": "Concerts and shows: Disney's The Lion King, Pretty Lights, D.L. Hughley",
       "category": "Concerts",
       "startDate": "2026-11-07",
@@ -853,7 +853,7 @@
       ]
     },
     {
-      "id": "ev-o7xi3ipx",
+      "id": "ev-xg1jblly",
       "title": "Conventions: NAR NXT + 9 smaller meetings; DEMA Show attendees staying on",
       "category": "Conventions",
       "startDate": "2026-11-07",
@@ -875,7 +875,7 @@
       ]
     },
     {
-      "id": "ev-9excto6v",
+      "id": "ev-3s3dnhys",
       "title": "Cruise ships: Mariner of the Seas turnaround + guests before and after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-07",
@@ -894,7 +894,7 @@
       ]
     },
     {
-      "id": "ev-n295dq3o",
+      "id": "ev-ubvvwqti",
       "title": "Festivals: Bayou Bacchanal",
       "category": "Festivals",
       "startDate": "2026-11-07",
@@ -910,7 +910,7 @@
       ]
     },
     {
-      "id": "ev-xna677lv",
+      "id": "ev-askhijn7",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-07",
@@ -928,18 +928,18 @@
       ]
     },
     {
-      "id": "ev-s2m4lvhm",
+      "id": "ev-iknnduep",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-07",
-      "totalAttendance": 1385,
-      "marketVisitors": 1385,
+      "totalAttendance": 1381,
+      "marketVisitors": 1381,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 1,385 today: a Saturday (2.6 ×); LSU vs. Alabama at 2:30 PM (a big game, 2–4 PM kickoff): −25% during game time. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 1,381 today: a Saturday (2.6 ×); LSU vs. Alabama at 2:30 PM (a big game, 2–4 PM kickoff): −25% during game time. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -949,7 +949,7 @@
       ]
     },
     {
-      "id": "ev-s55e8hgz",
+      "id": "ev-bamzqljo",
       "title": "Sports: Tulane homecoming + Saints–Browns fans in town",
       "category": "Sports",
       "startDate": "2026-11-07",
@@ -974,7 +974,7 @@
       ]
     },
     {
-      "id": "ev-kvnnc4jv",
+      "id": "ev-7gpczaht",
       "title": "Concerts and shows: Disney's The Lion King, The Carpenters Songbook, Pretty Lights + 1 more",
       "category": "Concerts",
       "startDate": "2026-11-08",
@@ -994,7 +994,7 @@
       ]
     },
     {
-      "id": "ev-kfpvbmi8",
+      "id": "ev-m4h7byy0",
       "title": "Conventions: NAR NXT + 9 smaller meetings",
       "category": "Conventions",
       "startDate": "2026-11-08",
@@ -1013,7 +1013,7 @@
       ]
     },
     {
-      "id": "ev-fbhdvfza",
+      "id": "ev-ijefmfo5",
       "title": "Cruise ships: Carnival Liberty turnaround, American Heritage (river) + guests before and after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-08",
@@ -1034,7 +1034,7 @@
       ]
     },
     {
-      "id": "ev-svainang",
+      "id": "ev-nfmpzwvv",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-08",
@@ -1052,18 +1052,18 @@
       ]
     },
     {
-      "id": "ev-rmc3wr3v",
+      "id": "ev-xgalsj0n",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-08",
-      "totalAttendance": 781,
-      "marketVisitors": 781,
+      "totalAttendance": 779,
+      "marketVisitors": 779,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 781 today: a Sunday (2.2 ×); Saints home game vs. the Browns at noon: −50% during game time. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 779 today: a Sunday (2.2 ×); Saints home game vs. the Browns at noon: −50% during game time. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -1072,7 +1072,7 @@
       ]
     },
     {
-      "id": "ev-hbtyzeup",
+      "id": "ev-lcrczj8f",
       "title": "Sports: Saints vs. Cleveland Browns + Tulane homecoming visitors in town",
       "category": "Sports",
       "startDate": "2026-11-08",
@@ -1099,7 +1099,7 @@
       ]
     },
     {
-      "id": "ev-vvbmbsiz",
+      "id": "ev-5kyscz9q",
       "title": "Conventions: 18 smaller meetings; NAR NXT attendees staying on",
       "category": "Conventions",
       "startDate": "2026-11-09",
@@ -1118,7 +1118,7 @@
       ]
     },
     {
-      "id": "ev-w3uihwqc",
+      "id": "ev-mhqx6bie",
       "title": "Cruise ships: Margaritaville at Sea Islander (day visit), Carnival Valor turnaround + guests before and after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-09",
@@ -1139,7 +1139,7 @@
       ]
     },
     {
-      "id": "ev-qz5obdqn",
+      "id": "ev-qefqqem2",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-09",
@@ -1157,18 +1157,18 @@
       ]
     },
     {
-      "id": "ev-zd7ynau3",
+      "id": "ev-3kfoupw1",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-09",
-      "totalAttendance": 710,
-      "marketVisitors": 710,
+      "totalAttendance": 708,
+      "marketVisitors": 708,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 710 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 708 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -1177,7 +1177,7 @@
       ]
     },
     {
-      "id": "ev-nwjejply",
+      "id": "ev-thfif8fh",
       "title": "School field trips",
       "category": "Youth Events",
       "startDate": "2026-11-09",
@@ -1196,7 +1196,7 @@
       ]
     },
     {
-      "id": "ev-swwegs7t",
+      "id": "ev-2dy88mp1",
       "title": "Sports: Saints–Browns fans in town and Tulane homecoming visitors in town",
       "category": "Sports",
       "startDate": "2026-11-09",
@@ -1221,7 +1221,7 @@
       ]
     },
     {
-      "id": "ev-73z9pwvt",
+      "id": "ev-7zlayd00",
       "title": "Concerts and shows: Mannequin Pussy and Wednesday",
       "category": "Concerts",
       "startDate": "2026-11-10",
@@ -1237,7 +1237,7 @@
       ]
     },
     {
-      "id": "ev-qjsq2ac0",
+      "id": "ev-ira7mjia",
       "title": "Conventions: 19 smaller meetings",
       "category": "Conventions",
       "startDate": "2026-11-10",
@@ -1253,7 +1253,7 @@
       ]
     },
     {
-      "id": "ev-tc7oqeua",
+      "id": "ev-o5bkohf0",
       "title": "Cruise ships: Cruise guests in town before or after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-10",
@@ -1271,7 +1271,7 @@
       ]
     },
     {
-      "id": "ev-shtrawh9",
+      "id": "ev-chbzknoa",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-10",
@@ -1289,18 +1289,18 @@
       ]
     },
     {
-      "id": "ev-h0umncft",
+      "id": "ev-zzojp2ut",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-10",
-      "totalAttendance": 710,
-      "marketVisitors": 710,
+      "totalAttendance": 708,
+      "marketVisitors": 708,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 710 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 708 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -1309,7 +1309,7 @@
       ]
     },
     {
-      "id": "ev-cwz0erz6",
+      "id": "ev-jepezhcc",
       "title": "School field trips",
       "category": "Youth Events",
       "startDate": "2026-11-10",
@@ -1328,7 +1328,7 @@
       ]
     },
     {
-      "id": "ev-zn2unbl0",
+      "id": "ev-ziqxh3t0",
       "title": "Tours: Road Scholar group (Slower Pace)",
       "category": "Tours/Charters",
       "startDate": "2026-11-10",
@@ -1346,7 +1346,7 @@
       ]
     },
     {
-      "id": "ev-szlmdzb0",
+      "id": "ev-ilyfoqkb",
       "title": "Conventions: 21 smaller meetings; corporate meeting attendees arriving early",
       "category": "Conventions",
       "startDate": "2026-11-11",
@@ -1362,7 +1362,7 @@
       ]
     },
     {
-      "id": "ev-xbozxdye",
+      "id": "ev-wnwelwwj",
       "title": "Festivals: Arts & Ideas Festival",
       "category": "Festivals",
       "startDate": "2026-11-11",
@@ -1378,7 +1378,7 @@
       ]
     },
     {
-      "id": "ev-kf6p95pe",
+      "id": "ev-x8df7nzh",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-11",
@@ -1396,18 +1396,18 @@
       ]
     },
     {
-      "id": "ev-ymenbe3y",
+      "id": "ev-asfheqis",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-11",
-      "totalAttendance": 710,
-      "marketVisitors": 710,
+      "totalAttendance": 708,
+      "marketVisitors": 708,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 710 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 708 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -1416,7 +1416,7 @@
       ]
     },
     {
-      "id": "ev-x6pyzsbz",
+      "id": "ev-pilpi6xy",
       "title": "Sports: Pelicans vs. Brooklyn Nets",
       "category": "Sports",
       "startDate": "2026-11-11",
@@ -1435,7 +1435,7 @@
       ]
     },
     {
-      "id": "ev-ivqtrrx0",
+      "id": "ev-efwq8tkm",
       "title": "Conventions: corporate meeting + 19 smaller meetings",
       "category": "Conventions",
       "startDate": "2026-11-12",
@@ -1451,7 +1451,7 @@
       ]
     },
     {
-      "id": "ev-c2aybcxa",
+      "id": "ev-npqmm77n",
       "title": "Cruise ships: Cruise guests in town before or after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-12",
@@ -1470,25 +1470,26 @@
       ]
     },
     {
-      "id": "ev-elxlcd4w",
-      "title": "Festivals: Arts & Ideas Festival + We Belong Here fans in town",
+      "id": "ev-jvscdqpq",
+      "title": "Festivals: Arts & Ideas Festival, SET Fest + We Belong Here fans in town",
       "category": "Festivals",
       "startDate": "2026-11-12",
-      "totalAttendance": 444,
-      "marketVisitors": 239,
+      "totalAttendance": 944,
+      "marketVisitors": 247,
       "impactWindow": "4:00 PM – 10:00 PM",
       "location": "New Orleans Jazz Museum (400 Esplanade Ave.) and others",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
-      "whosComing": "New Orleans Arts & Ideas Festival: adults interested in the arts, culture and ideas (ticketed, $55). • We Belong Here: electronic-music fans 21 and over, mostly young adults; many travel in for the weekend.",
-      "notes": "About 239 expected through the sheds from this listing today (2 parts below). • New Orleans Arts & Ideas Festival (NOAI) — New Orleans Jazz Museum (400 Esplanade Ave.): about 300. Ticketed, $55; about 300 a day, a rough estimate. Timing: Wed Nov 11 4–10 PM; Thu–Fri Nov 12–13 9 AM–6 PM (museum calendar). Market estimate: right across the street, starting by 4 PM: 75% of attendance: about 225. • We Belong Here fans in town before the festival: about 140 out-of-town fans staying over are in town and free. Market estimate: 1 in 10 pass through the sheds on a free day: about 14.",
+      "whosComing": "SET Fest: adults (a free outdoor DJ and live-music event with food trucks). Mostly locals and regional fans. • New Orleans Arts & Ideas Festival: adults interested in the arts, culture and ideas (ticketed, $55). • We Belong Here: electronic-music fans 21 and over, mostly young adults; many travel in for the weekend.",
+      "notes": "About 247 expected through the sheds from this listing today (3 parts below). • SET Fest — 900 Camp St. (St. Joseph St. between Camp and Magazine): about 500. Timing: Thu–Fri, Nov 12–13; the permit (26-30290-SPMA, in review) lists a street closure with unclear hours, so the daytime rule is used; 500 on its permit. Market estimate: a festival in the CBD: of the half of the crowd not staying overnight, about 3 in 100 reach the sheds when it starts before 3 PM: about 8. Its visitors staying overnight are counted elsewhere (Free-range tourists or their own event's listing). • New Orleans Arts & Ideas Festival (NOAI) — New Orleans Jazz Museum (400 Esplanade Ave.): about 300. Ticketed, $55; about 300 a day, a rough estimate. Timing: Wed Nov 11 4–10 PM; Thu–Fri Nov 12–13 9 AM–6 PM (museum calendar). Market estimate: right across the street, starting by 4 PM: 75% of attendance: about 225. • We Belong Here fans in town before the festival: about 140 out-of-town fans staying over are in town and free. Market estimate: 1 in 10 pass through the sheds on a free day: about 14.",
       "sources": [
+        "https://data.nola.gov/resource/aib5-en5t.json?$q=Attendees&$where=application_submitted%3E%272026-10-01T00:00:00%27&$order=application_submitted&$limit=50",
         "https://nolajazzmuseum.org/events",
         "https://www.stubhub.com/we-belong-here-new-orleans-tickets-11-13-2026/event/161672529/",
         "https://www.songkick.com/metro-areas/11772-us-new-orleans?filters%5BminDate%5D=11%2F01%2F2026&filters%5BmaxDate%5D=11%2F30%2F2026&page=2"
       ]
     },
     {
-      "id": "ev-oz4affop",
+      "id": "ev-8kdrqtd3",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-12",
@@ -1506,18 +1507,18 @@
       ]
     },
     {
-      "id": "ev-wq301600",
+      "id": "ev-l5x17ln2",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-12",
-      "totalAttendance": 710,
-      "marketVisitors": 710,
+      "totalAttendance": 708,
+      "marketVisitors": 708,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 710 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 708 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -1526,7 +1527,7 @@
       ]
     },
     {
-      "id": "ev-n85adzwl",
+      "id": "ev-x8slk380",
       "title": "School field trips",
       "category": "Youth Events",
       "startDate": "2026-11-12",
@@ -1545,7 +1546,7 @@
       ]
     },
     {
-      "id": "ev-hqwu8y00",
+      "id": "ev-f3eymmpy",
       "title": "Conventions: corporate meeting + 13 smaller meetings; AARC Congress attendees arriving early",
       "category": "Conventions",
       "startDate": "2026-11-13",
@@ -1568,7 +1569,7 @@
       ]
     },
     {
-      "id": "ev-474czt7l",
+      "id": "ev-rxxg6wth",
       "title": "Cruise ships: American Cruise Lines river ship (river) + guests before and after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-13",
@@ -1588,25 +1589,26 @@
       ]
     },
     {
-      "id": "ev-hqrpdgse",
-      "title": "Festivals: Arts & Ideas Festival, We Belong Here",
+      "id": "ev-litwifqw",
+      "title": "Festivals: Arts & Ideas Festival, We Belong Here, SET Fest",
       "category": "Festivals",
       "startDate": "2026-11-13",
-      "totalAttendance": 6300,
-      "marketVisitors": 312,
+      "totalAttendance": 6800,
+      "marketVisitors": 320,
       "impactWindow": "4:00 PM – 10:00 PM",
       "location": "New Orleans Jazz Museum (400 Esplanade Ave.) and others",
       "proximity": "Direct Market Proximity (1200 Block N. Peters)",
-      "whosComing": "We Belong Here: electronic-music fans 21 and over, mostly young adults; many travel in for the weekend. • New Orleans Arts & Ideas Festival: adults interested in the arts, culture and ideas (ticketed, $55).",
-      "notes": "About 312 expected through the sheds from this listing today (2 parts below). • We Belong Here (electronic music festival, 21+) — Woldenberg Riverfront Park (1 Canal St.): about 6,000. Capped at 6,000 a day (the organizer's permit), mostly the same fans each day, so the total counts them once. Timing: Fri–Sun, gates 2:00–10:00 PM; fenced and ticketed, so ticket holders inside don't wander to the sheds, and only the hours before the gates open count (half the evening rates for a 2 PM start). Market estimate: a fenced, ticketed festival, counted like an evening event for the hours before the shows (the gates open at 2 PM, so half the evening rates): about 20% of the crowd are out-of-town fans staying over (about 700 in town today, 1 in 20), 30% drive in for the day (1 in 40 on a Friday) and 50% are locals (1 in 400): about 87. Fans in town the night before and the morning after are in this listing on those days. • New Orleans Arts & Ideas Festival (NOAI) — New Orleans Jazz Museum (400 Esplanade Ave.): about 300. Ticketed, $55; about 300 a day, a rough estimate. Timing: Wed Nov 11 4–10 PM; Thu–Fri Nov 12–13 9 AM–6 PM (museum calendar). Market estimate: right across the street, starting by 4 PM: 75% of attendance: about 225.",
+      "whosComing": "We Belong Here: electronic-music fans 21 and over, mostly young adults; many travel in for the weekend. • SET Fest: adults (a free outdoor DJ and live-music event with food trucks). Mostly locals and regional fans. • New Orleans Arts & Ideas Festival: adults interested in the arts, culture and ideas (ticketed, $55).",
+      "notes": "About 320 expected through the sheds from this listing today (3 parts below). • We Belong Here (electronic music festival, 21+) — Woldenberg Riverfront Park (1 Canal St.): about 6,000. Capped at 6,000 a day (the organizer's permit), mostly the same fans each day, so the total counts them once. Timing: Fri–Sun, gates 2:00–10:00 PM; fenced and ticketed, so ticket holders inside don't wander to the sheds, and only the hours before the gates open count (half the evening rates for a 2 PM start). Market estimate: a fenced, ticketed festival, counted like an evening event for the hours before the shows (the gates open at 2 PM, so half the evening rates): about 20% of the crowd are out-of-town fans staying over (about 700 in town today, 1 in 20), 30% drive in for the day (1 in 40 on a Friday) and 50% are locals (1 in 400): about 87. Fans in town the night before and the morning after are in this listing on those days. • SET Fest — 900 Camp St. (St. Joseph St. between Camp and Magazine): about 500. Timing: Thu–Fri, Nov 12–13; the permit (26-30290-SPMA, in review) lists a street closure with unclear hours, so the daytime rule is used; 500 on its permit. Market estimate: a festival in the CBD: of the half of the crowd not staying overnight, about 3 in 100 reach the sheds when it starts before 3 PM: about 8. Its visitors staying overnight are counted elsewhere (Free-range tourists or their own event's listing). • New Orleans Arts & Ideas Festival (NOAI) — New Orleans Jazz Museum (400 Esplanade Ave.): about 300. Ticketed, $55; about 300 a day, a rough estimate. Timing: Wed Nov 11 4–10 PM; Thu–Fri Nov 12–13 9 AM–6 PM (museum calendar). Market estimate: right across the street, starting by 4 PM: 75% of attendance: about 225.",
       "sources": [
         "https://www.stubhub.com/we-belong-here-new-orleans-tickets-11-13-2026/event/161672529/",
         "https://www.songkick.com/metro-areas/11772-us-new-orleans?filters%5BminDate%5D=11%2F01%2F2026&filters%5BmaxDate%5D=11%2F30%2F2026&page=2",
+        "https://data.nola.gov/resource/aib5-en5t.json?$q=Attendees&$where=application_submitted%3E%272026-10-01T00:00:00%27&$order=application_submitted&$limit=50",
         "https://nolajazzmuseum.org/events"
       ]
     },
     {
-      "id": "ev-ibdokg7d",
+      "id": "ev-lp3jdgug",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-13",
@@ -1624,18 +1626,18 @@
       ]
     },
     {
-      "id": "ev-dguiqoic",
+      "id": "ev-mxzimiww",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-13",
-      "totalAttendance": 923,
-      "marketVisitors": 923,
+      "totalAttendance": 921,
+      "marketVisitors": 921,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 923 today: a Friday (1.3 × a plain weekday). Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 921 today: a Friday (1.3 × a plain weekday). Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -1644,7 +1646,7 @@
       ]
     },
     {
-      "id": "ev-rk6ot2jc",
+      "id": "ev-cvk8zppj",
       "title": "Miscellaneous: marathon runners and companions in town",
       "category": "Miscellaneous",
       "startDate": "2026-11-13",
@@ -1660,7 +1662,7 @@
       ]
     },
     {
-      "id": "ev-litquzlq",
+      "id": "ev-5mebcgwo",
       "title": "School field trips",
       "category": "Youth Events",
       "startDate": "2026-11-13",
@@ -1679,7 +1681,7 @@
       ]
     },
     {
-      "id": "ev-aib9ovlu",
+      "id": "ev-ilgkt2p0",
       "title": "Sports: Pelicans vs. Memphis Grizzlies + Saints–Panthers fans in town",
       "category": "Sports",
       "startDate": "2026-11-13",
@@ -1702,7 +1704,7 @@
       ]
     },
     {
-      "id": "ev-9cia2500",
+      "id": "ev-hsif189e",
       "title": "Concerts and shows: Kerwin Claiborne",
       "category": "Concerts",
       "startDate": "2026-11-14",
@@ -1718,7 +1720,7 @@
       ]
     },
     {
-      "id": "ev-j8czyvvg",
+      "id": "ev-layl4mgf",
       "title": "Conventions: corporate meeting, AARC Congress + 13 smaller meetings",
       "category": "Conventions",
       "startDate": "2026-11-14",
@@ -1741,7 +1743,7 @@
       ]
     },
     {
-      "id": "ev-qgwcg6kt",
+      "id": "ev-zc4pkdin",
       "title": "Cruise ships: Mariner of the Seas turnaround, Carnival Valor turnaround + guests before and after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-14",
@@ -1760,29 +1762,30 @@
       ]
     },
     {
-      "id": "ev-pa3azy45",
-      "title": "Festivals: Tremé Creole Gumbo Festival, We Belong Here, Yelp's Big Easy Bash + 2 more",
+      "id": "ev-gexw0pz9",
+      "title": "Festivals: Tremé Creole Gumbo Festival, We Belong Here, Yelp's Big Easy Bash + 3 more",
       "category": "Festivals",
       "startDate": "2026-11-14",
-      "totalAttendance": 24200,
-      "marketVisitors": 825,
+      "totalAttendance": 26200,
+      "marketVisitors": 855,
       "impactWindow": "Daytime (Kids Tent to 6 PM)",
       "location": "Louis Armstrong Park (701 N. Rampart St.) and others",
       "proximity": "Armstrong Park / Tremé",
-      "whosComing": "Tremé Creole Gumbo Festival: mostly locals and families, plus visitors. • We Belong Here: electronic-music fans 21 and over, mostly young adults; many travel in for the weekend. • LUNA Fête: locals and families, plus visitors. • Family and Military Appreciation Block Party: military families and families with kids. • Yelp's Big Easy Bash: local Yelp members, 21 and over.",
-      "notes": "About 825 expected through the sheds from this listing today (5 parts below). • Tremé Creole Gumbo Festival — Louis Armstrong Park (701 N. Rampart St.): about 6,000. Free; about 6,000 Saturday and 4,000 Sunday, rough estimates. Timing: Sat–Sun, Nov 14–15; daily hours not yet posted (the Kids Tent closes at 6 PM); music lineup to be announced. Market estimate: a festival in Armstrong Park, about 0.6 mile away: of the 80% of the crowd not staying overnight, about 1 in 10 reach the sheds: about 480. Its visitors staying overnight are counted elsewhere (Free-range tourists or their own event's listing). • We Belong Here (electronic music festival, 21+) — Woldenberg Riverfront Park (1 Canal St.): about 6,000. Capped at 6,000 a day (the organizer's permit), mostly the same fans each day, so the total counts them once. Timing: Fri–Sun, gates 2:00–10:00 PM; fenced and ticketed, so ticket holders inside don't wander to the sheds, and only the hours before the gates open count (half the evening rates for a 2 PM start). Market estimate: a fenced, ticketed festival, counted like an evening event for the hours before the shows (the gates open at 2 PM, so half the evening rates): about 20% of the crowd are out-of-town fans staying over (about 1,200 in town today, 1 in 20), 30% drive in for the day (1 in 20 on a weekend day) and 50% are locals (1 in 200): about 165. Fans in town the night before and the morning after are in this listing on those days. • LUNA Fête (light and art festival) — Gallier Hall and Lafayette Square to the Piazza d'Italia (CBD): about 10,000. Free; about 40,000 over four nights (Arts New Orleans). Timing: four nights, Sat–Tue, Nov 14–17; an after-dark light festival (nightly hours not yet posted). Market estimate: a festival in the CBD: of the half of the crowd not staying overnight, about 1 in 100 reach the sheds when it starts after 3 PM: about 50. Its visitors staying overnight are counted elsewhere (Free-range tourists or their own event's listing). • Family and Military Appreciation Block Party (National WWII Museum) — The National WWII Museum (945 Magazine St.): about 2,000. Free; a rough estimate. Timing: Saturday 9 AM–3 PM. Market estimate: a festival in the CBD: of the half of the crowd not staying overnight, about 3 in 100 reach the sheds when it starts before 3 PM: about 30. Its visitors staying overnight are counted elsewhere (Free-range tourists or their own event's listing). • Yelp's Big Easy Bash (Jazz Museum) — New Orleans Jazz Museum (400 Esplanade Ave.): about 200. RSVP only; a rough estimate; the list has a waitlist. Timing: Saturday from 5:00 PM (the listing shows 5–6 PM; an indoor/outdoor party). Market estimate: right across the street, starting between 4 and 5 PM (the lower step): 50% of attendance: about 100.",
+      "whosComing": "Tremé Creole Gumbo Festival: mostly locals and families, plus visitors. • We Belong Here: electronic-music fans 21 and over, mostly young adults; many travel in for the weekend. • LUNA Fête: locals and families, plus visitors. • Lemon Drip Festival NOLA: adults (a ticketed food, drink and DJ festival). Mostly locals and regional fans. • Family and Military Appreciation Block Party: military families and families with kids. • Yelp's Big Easy Bash: local Yelp members, 21 and over.",
+      "notes": "About 855 expected through the sheds from this listing today (6 parts below). • Tremé Creole Gumbo Festival — Louis Armstrong Park (701 N. Rampart St.): about 6,000. Free; about 6,000 Saturday and 4,000 Sunday, rough estimates. Timing: Sat–Sun, Nov 14–15; daily hours not yet posted (the Kids Tent closes at 6 PM); music lineup to be announced. Market estimate: a festival in Armstrong Park, about 0.6 mile away: of the 80% of the crowd not staying overnight, about 1 in 10 reach the sheds: about 480. Its visitors staying overnight are counted elsewhere (Free-range tourists or their own event's listing). • We Belong Here (electronic music festival, 21+) — Woldenberg Riverfront Park (1 Canal St.): about 6,000. Capped at 6,000 a day (the organizer's permit), mostly the same fans each day, so the total counts them once. Timing: Fri–Sun, gates 2:00–10:00 PM; fenced and ticketed, so ticket holders inside don't wander to the sheds, and only the hours before the gates open count (half the evening rates for a 2 PM start). Market estimate: a fenced, ticketed festival, counted like an evening event for the hours before the shows (the gates open at 2 PM, so half the evening rates): about 20% of the crowd are out-of-town fans staying over (about 1,200 in town today, 1 in 20), 30% drive in for the day (1 in 20 on a weekend day) and 50% are locals (1 in 200): about 165. Fans in town the night before and the morning after are in this listing on those days. • LUNA Fête (light and art festival) — Gallier Hall and Lafayette Square to the Piazza d'Italia (CBD): about 10,000. Free; about 40,000 over four nights (Arts New Orleans). Timing: four nights, Sat–Tue, Nov 14–17; an after-dark light festival (nightly hours not yet posted). Market estimate: a festival in the CBD: of the half of the crowd not staying overnight, about 1 in 100 reach the sheds when it starts after 3 PM: about 50. Its visitors staying overnight are counted elsewhere (Free-range tourists or their own event's listing). • Lemon Drip Festival NOLA — Duncan Plaza (300 Gravier St.): about 2,000. Timing: Saturday, 2–8 PM; 2,000 on its permit (26-31832-SPMA, submitted). Market estimate: a festival in the CBD: of the half of the crowd not staying overnight, about 3 in 100 reach the sheds when it starts before 3 PM: about 30. Its visitors staying overnight are counted elsewhere (Free-range tourists or their own event's listing). • Family and Military Appreciation Block Party (National WWII Museum) — The National WWII Museum (945 Magazine St.): about 2,000. Free; a rough estimate. Timing: Saturday 9 AM–3 PM. Market estimate: a festival in the CBD: of the half of the crowd not staying overnight, about 3 in 100 reach the sheds when it starts before 3 PM: about 30. Its visitors staying overnight are counted elsewhere (Free-range tourists or their own event's listing). • Yelp's Big Easy Bash (Jazz Museum) — New Orleans Jazz Museum (400 Esplanade Ave.): about 200. RSVP only; a rough estimate; the list has a waitlist. Timing: Saturday from 5:00 PM (the listing shows 5–6 PM; an indoor/outdoor party). Market estimate: right across the street, starting between 4 and 5 PM (the lower step): 50% of attendance: about 100.",
       "sources": [
         "https://www.jazzandheritage.org/events/2026-treme-creole-gumbo-festival",
         "https://www.stubhub.com/we-belong-here-new-orleans-tickets-11-13-2026/event/161672529/",
         "https://www.songkick.com/metro-areas/11772-us-new-orleans?filters%5BminDate%5D=11%2F01%2F2026&filters%5BmaxDate%5D=11%2F30%2F2026&page=2",
         "https://www.neworleans.com/blog/post/things-to-do-near-luna-fete/",
         "https://www.artsneworleans.org/?p=11781",
+        "https://data.nola.gov/resource/aib5-en5t.json?$q=Attendees&$where=application_submitted%3E%272026-10-01T00:00:00%27&$order=application_submitted&$limit=50",
         "https://www.nationalww2museum.org/events-programs/events/2026-family-and-military-appreciation-block-party",
         "https://nolajazzmuseum.org/events"
       ]
     },
     {
-      "id": "ev-b7bz46rk",
+      "id": "ev-wdmf3dui",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-14",
@@ -1800,18 +1803,18 @@
       ]
     },
     {
-      "id": "ev-htrws3q0",
+      "id": "ev-mtprhmhd",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-14",
-      "totalAttendance": 1846,
-      "marketVisitors": 1846,
+      "totalAttendance": 1841,
+      "marketVisitors": 1841,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 1,846 today: a Saturday (2.6 ×). No LSU dip: the kickoff time for LSU vs. Texas (2:30 or 6:30 PM, to be set) isn't set yet. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 1,841 today: a Saturday (2.6 ×). No LSU dip: the kickoff time for LSU vs. Texas (2:30 or 6:30 PM, to be set) isn't set yet. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -1821,7 +1824,7 @@
       ]
     },
     {
-      "id": "ev-ftawcutu",
+      "id": "ev-icxygc6y",
       "title": "Miscellaneous: New Orleans Marathon",
       "category": "Miscellaneous",
       "startDate": "2026-11-14",
@@ -1837,7 +1840,23 @@
       ]
     },
     {
-      "id": "ev-cbrbrdeq",
+      "id": "ev-zxm1d3j7",
+      "title": "Parades: Second line to Jax Brewery",
+      "category": "Parades",
+      "startDate": "2026-11-14",
+      "totalAttendance": 40,
+      "marketVisitors": 14,
+      "impactWindow": "10:15 AM",
+      "location": "Omni Royal Orleans (621 St. Louis St.) to Jax Brewery (600 Decatur St.)",
+      "proximity": "French Quarter Riverfront",
+      "whosComing": "Wedding second line: wedding guests, mostly from out of town.",
+      "notes": "About 14 expected through the sheds from this listing today. • Wedding second line: Omni Royal Orleans to Jax Brewery — Omni Royal Orleans (621 St. Louis St.) to Jax Brewery (600 Decatur St.): about 40. Timing: Saturday, 10:15 AM; it ends at Jax Brewery on Decatur, by Jackson Square ; 40 walkers on the permit (26-30257-SPMA). Market estimate: in the Jackson Square group (Jackson Square, Café du Monde, lower Decatur, the first blocks of Frenchmen), starting by 4 PM: 35% of attendance: about 14.",
+      "sources": [
+        "https://data.nola.gov/resource/aib5-en5t.json?$q=second%20line&$where=application_submitted%3E%272026-10-01T00:00:00%27&$order=application_submitted&$limit=50"
+      ]
+    },
+    {
+      "id": "ev-xlwpui4x",
       "title": "Sports: Pelicans vs. Denver Nuggets + Saints–Panthers fans in town",
       "category": "Sports",
       "startDate": "2026-11-14",
@@ -1860,7 +1879,7 @@
       ]
     },
     {
-      "id": "ev-bia1ctd2",
+      "id": "ev-6qrrlquu",
       "title": "Concerts and shows: Buena Vista Orchestra",
       "category": "Concerts",
       "startDate": "2026-11-15",
@@ -1876,7 +1895,7 @@
       ]
     },
     {
-      "id": "ev-rdhvgkw2",
+      "id": "ev-ur9s0tn8",
       "title": "Conventions: AARC Congress + 17 smaller meetings; corporate meeting attendees staying on",
       "category": "Conventions",
       "startDate": "2026-11-15",
@@ -1899,7 +1918,7 @@
       ]
     },
     {
-      "id": "ev-so5y5x2i",
+      "id": "ev-mwpw2bik",
       "title": "Cruise ships: Carnival Liberty turnaround + guests before and after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-15",
@@ -1918,7 +1937,7 @@
       ]
     },
     {
-      "id": "ev-dzqtx4pm",
+      "id": "ev-knj23h10",
       "title": "Festivals: Tremé Creole Gumbo Festival, We Belong Here, LUNA Fête",
       "category": "Festivals",
       "startDate": "2026-11-15",
@@ -1938,7 +1957,7 @@
       ]
     },
     {
-      "id": "ev-ff4ij2p0",
+      "id": "ev-f6boihqq",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-15",
@@ -1956,18 +1975,18 @@
       ]
     },
     {
-      "id": "ev-y5rvxf40",
+      "id": "ev-eoc9v1lk",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-15",
-      "totalAttendance": 781,
-      "marketVisitors": 781,
+      "totalAttendance": 779,
+      "marketVisitors": 779,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 781 today: a Sunday (2.2 ×); Saints home game vs. the Panthers at noon: −50% during game time. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 779 today: a Sunday (2.2 ×); Saints home game vs. the Panthers at noon: −50% during game time. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -1976,7 +1995,7 @@
       ]
     },
     {
-      "id": "ev-olrafptc",
+      "id": "ev-bbf7bga1",
       "title": "Miscellaneous: marathon runners and companions in town",
       "category": "Miscellaneous",
       "startDate": "2026-11-15",
@@ -1992,7 +2011,7 @@
       ]
     },
     {
-      "id": "ev-u51dot4h",
+      "id": "ev-cmallva0",
       "title": "Sports: Saints vs. Carolina Panthers",
       "category": "Sports",
       "startDate": "2026-11-15",
@@ -2012,7 +2031,7 @@
       ]
     },
     {
-      "id": "ev-2t3pm5rx",
+      "id": "ev-yv3tozzt",
       "title": "Concerts and shows: Amble",
       "category": "Concerts",
       "startDate": "2026-11-16",
@@ -2028,7 +2047,7 @@
       ]
     },
     {
-      "id": "ev-2dlno7bf",
+      "id": "ev-xorrd48n",
       "title": "Conventions: AARC Congress + 18 smaller meetings",
       "category": "Conventions",
       "startDate": "2026-11-16",
@@ -2051,7 +2070,7 @@
       ]
     },
     {
-      "id": "ev-bbi4q9wp",
+      "id": "ev-9qblhkb0",
       "title": "Cruise ships: Cruise guests in town before or after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-16",
@@ -2069,7 +2088,7 @@
       ]
     },
     {
-      "id": "ev-ll0dfjjy",
+      "id": "ev-odbzhlve",
       "title": "Festivals: LUNA Fête + We Belong Here fans in town",
       "category": "Festivals",
       "startDate": "2026-11-16",
@@ -2088,7 +2107,7 @@
       ]
     },
     {
-      "id": "ev-d8gseuhn",
+      "id": "ev-jkmgh2oh",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-16",
@@ -2106,18 +2125,18 @@
       ]
     },
     {
-      "id": "ev-jnccftuw",
+      "id": "ev-a5xzgcn0",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-16",
-      "totalAttendance": 710,
-      "marketVisitors": 710,
+      "totalAttendance": 708,
+      "marketVisitors": 708,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 710 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 708 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -2126,7 +2145,7 @@
       ]
     },
     {
-      "id": "ev-pzp9wiuy",
+      "id": "ev-xsnd9zix",
       "title": "School field trips",
       "category": "Youth Events",
       "startDate": "2026-11-16",
@@ -2145,7 +2164,7 @@
       ]
     },
     {
-      "id": "ev-09b18tv0",
+      "id": "ev-5cjt6tl0",
       "title": "Sports: Pelicans vs. Golden State Warriors + Saints–Panthers fans in town",
       "category": "Sports",
       "startDate": "2026-11-16",
@@ -2168,25 +2187,26 @@
       ]
     },
     {
-      "id": "ev-etbqtfu6",
-      "title": "Concerts and shows: Rocky in Concert",
+      "id": "ev-ap43duhg",
+      "title": "Concerts and shows: Balcony Show, Rocky in Concert",
       "category": "Concerts",
       "startDate": "2026-11-17",
-      "totalAttendance": 2200,
-      "marketVisitors": 28,
-      "impactWindow": "Evening",
-      "location": "Saenger Theatre",
-      "proximity": "Canal St. / CBD",
-      "whosComing": "Rocky in Concert: adults, fans of the film; likely 40s–60s: fans of the 1976 film (Claude's estimate; touring theater audiences average about 41, Broadway League). Mostly locals and regional fans.",
-      "notes": "About 28 expected through the sheds from this listing today. • Rocky in Concert (the film with its score played live) — Saenger Theatre: about 2,200 (about 85% of the venue's size, no count published). Timing: evening show; start time not published (the usual rule). Market estimate: Theater show downtown: about 5% of the crowd are out-of-town fans staying over, 25% drive in for the day and 70% are locals. Show day counts as a free day for those staying over: 1 in 10 pass through the sheds. On a weeknight, about 1 in 40 day-trippers and 1 in 500 locals get there before closing: about 28.",
+      "totalAttendance": 2350,
+      "marketVisitors": 103,
+      "impactWindow": "5:00 PM – 6:00 PM",
+      "location": "New Orleans Jazz Museum (400 Esplanade Ave.) and others",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "whosComing": "Rocky in Concert: adults, fans of the film; likely 40s–60s: fans of the 1976 film (Claude's estimate; touring theater audiences average about 41, Broadway League). Mostly locals and regional fans. • Balcony Show: locals and visitors, all ages. Mostly locals.",
+      "notes": "About 103 expected through the sheds from this listing today (2 parts below). • Rocky in Concert (the film with its score played live) — Saenger Theatre: about 2,200 (about 85% of the venue's size, no count published). Timing: evening show; start time not published (the usual rule). Market estimate: Theater show downtown: about 5% of the crowd are out-of-town fans staying over, 25% drive in for the day and 70% are locals. Show day counts as a free day for those staying over: 1 in 10 pass through the sheds. On a weeknight, about 1 in 40 day-trippers and 1 in 500 locals get there before closing: about 28. • Balcony Show (Positive Vibrations Foundation) (New Orleans Jazz Museum) — New Orleans Jazz Museum (400 Esplanade Ave.): about 150. Timing: 5:00–6:00 PM; played from the museum balcony; about 150 (Claude's estimate, as for the museum's earlier afternoon shows). Market estimate: right across the street, starting between 4 and 5 PM (the lower step): 50% of attendance: about 75.",
       "sources": [
         "https://www.ticketsmarter.com/e/rocky-in-concert-tickets-new-orleans-11-17-2026-saenger-theatre-new-orleans/3405265",
         "https://www.songkick.com/metro-areas/11772-us-new-orleans?filters%5BminDate%5D=11%2F01%2F2026&filters%5BmaxDate%5D=11%2F30%2F2026&page=2",
-        "https://www.broadwaynews.com/broadway-league-releases-audience-demographic-report-for-2024-2025/"
+        "https://www.broadwaynews.com/broadway-league-releases-audience-demographic-report-for-2024-2025/",
+        "https://nolajazzmuseum.org/events"
       ]
     },
     {
-      "id": "ev-kfs4t0rt",
+      "id": "ev-8dox6usl",
       "title": "Conventions: AARC Congress + 18 smaller meetings",
       "category": "Conventions",
       "startDate": "2026-11-17",
@@ -2209,7 +2229,7 @@
       ]
     },
     {
-      "id": "ev-04qw0dey",
+      "id": "ev-lvroaehs",
       "title": "Cruise ships: Cruise guests in town before or after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-17",
@@ -2227,7 +2247,7 @@
       ]
     },
     {
-      "id": "ev-xxvzteft",
+      "id": "ev-rfrsavxr",
       "title": "Festivals: LUNA Fête",
       "category": "Festivals",
       "startDate": "2026-11-17",
@@ -2244,7 +2264,7 @@
       ]
     },
     {
-      "id": "ev-jp8tybb0",
+      "id": "ev-rmgbaisd",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-17",
@@ -2262,18 +2282,18 @@
       ]
     },
     {
-      "id": "ev-b4dnmiun",
+      "id": "ev-i5fsmvnd",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-17",
-      "totalAttendance": 710,
-      "marketVisitors": 710,
+      "totalAttendance": 633,
+      "marketVisitors": 633,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 710 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 708 today: a plain weekday. About 75 of them would have been at the market anyway and are counted in the listing of today's free event at the market (Balcony Show (Positive Vibrations Foundation)), so this listing shows the rest: 633. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -2282,7 +2302,7 @@
       ]
     },
     {
-      "id": "ev-7uoagml0",
+      "id": "ev-qyn6amli",
       "title": "School field trips",
       "category": "Youth Events",
       "startDate": "2026-11-17",
@@ -2301,24 +2321,25 @@
       ]
     },
     {
-      "id": "ev-znhwod1q",
-      "title": "Concerts and shows: Kurt Vile and the Violators, Toosii",
+      "id": "ev-lcyp891q",
+      "title": "Concerts and shows: Jazz Foundation of America: Karen and Norbert Stachel with LehCats, Kurt Vile and the Violators, Toosii",
       "category": "Concerts",
       "startDate": "2026-11-18",
-      "totalAttendance": 1700,
-      "marketVisitors": 20,
-      "impactWindow": "Evening",
-      "location": "Joy Theater and others",
-      "proximity": "Canal St. / CBD",
-      "whosComing": "Kurt Vile and the Violators: adults (indie rock); likely mid-30s to 50: his best-known albums came out in 2011–15, and indie fans peak at 35–54 (YouGov). Mostly locals and regional fans. • Toosii: young adults (hip-hop); likely mostly 18–30, as for hip-hop and R&B concert-goers generally (YouGov). Mostly locals and regional fans.",
-      "notes": "About 20 expected through the sheds from this listing today (2 parts below). • Kurt Vile and the Violators — Joy Theater: about 1,000 (about 85% of the venue's size, no count published). Timing: evening show; start time not published (the usual rule). Market estimate: Theater show downtown: about 5% of the crowd are out-of-town fans staying over, 25% drive in for the day and 70% are locals. Show day counts as a free day for those staying over: 1 in 10 pass through the sheds. On a weeknight, about 1 in 40 day-trippers and 1 in 500 locals get there before closing: about 13. • Toosii — House of Blues: about 700 (about 85% of the venue's size, no count published). Timing: evening show; start time not published (the usual rule). Market estimate: Club show downtown: about 5% of the crowd are out-of-town fans staying over, 15% drive in for the day and 80% are locals. Show day counts as a free day for those staying over: 1 in 10 pass through the sheds. On a weeknight, about 1 in 40 day-trippers and 1 in 500 locals get there before closing: about 7.",
+      "totalAttendance": 1850,
+      "marketVisitors": 132,
+      "impactWindow": "2:00 PM – 3:00 PM",
+      "location": "New Orleans Jazz Museum (400 Esplanade Ave.) and others",
+      "proximity": "Direct Market Proximity (1200 Block N. Peters)",
+      "whosComing": "Kurt Vile and the Violators: adults (indie rock); likely mid-30s to 50: his best-known albums came out in 2011–15, and indie fans peak at 35–54 (YouGov). Mostly locals and regional fans. • Toosii: young adults (hip-hop); likely mostly 18–30, as for hip-hop and R&B concert-goers generally (YouGov). Mostly locals and regional fans. • Jazz Foundation of America: Karen and Norbert Stachel with LehCats: locals and visitors, all ages. Mostly locals.",
+      "notes": "About 132 expected through the sheds from this listing today (3 parts below). • Kurt Vile and the Violators — Joy Theater: about 1,000 (about 85% of the venue's size, no count published). Timing: evening show; start time not published (the usual rule). Market estimate: Theater show downtown: about 5% of the crowd are out-of-town fans staying over, 25% drive in for the day and 70% are locals. Show day counts as a free day for those staying over: 1 in 10 pass through the sheds. On a weeknight, about 1 in 40 day-trippers and 1 in 500 locals get there before closing: about 13. • Toosii — House of Blues: about 700 (about 85% of the venue's size, no count published). Timing: evening show; start time not published (the usual rule). Market estimate: Club show downtown: about 5% of the crowd are out-of-town fans staying over, 15% drive in for the day and 80% are locals. Show day counts as a free day for those staying over: 1 in 10 pass through the sheds. On a weeknight, about 1 in 40 day-trippers and 1 in 500 locals get there before closing: about 7. • Jazz Foundation of America: Karen and Norbert Stachel with LehCats (New Orleans Jazz Museum) — New Orleans Jazz Museum (400 Esplanade Ave.): about 150. Timing: 2:00–3:00 PM; free afternoon concert; about 150 (Claude's estimate, as for the museum's earlier afternoon shows). Market estimate: right across the street, starting by 4 PM: 75% of attendance: about 112.",
       "sources": [
         "https://www.songkick.com/metro-areas/11772-us-new-orleans?filters%5BminDate%5D=11%2F01%2F2026&filters%5BmaxDate%5D=11%2F30%2F2026&page=2",
-        "https://yougov.com/en-us/articles/47019-most-popular-live-music-genres-among-concert-goers-in-the-united-states"
+        "https://yougov.com/en-us/articles/47019-most-popular-live-music-genres-among-concert-goers-in-the-united-states",
+        "https://nolajazzmuseum.org/events"
       ]
     },
     {
-      "id": "ev-6jk9knyn",
+      "id": "ev-qzxyhbgf",
       "title": "Conventions: 19 smaller meetings; AARC Congress and NCA Convention attendees arriving early or staying on",
       "category": "Conventions",
       "startDate": "2026-11-18",
@@ -2344,7 +2365,7 @@
       ]
     },
     {
-      "id": "ev-8glgu2r6",
+      "id": "ev-utaapnjq",
       "title": "Cruise ships: Cruise guests in town before or after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-18",
@@ -2363,7 +2384,7 @@
       ]
     },
     {
-      "id": "ev-nufcy4zb",
+      "id": "ev-v1suxpkf",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-18",
@@ -2381,18 +2402,18 @@
       ]
     },
     {
-      "id": "ev-h9rmpep0",
+      "id": "ev-jln8x8o0",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-18",
-      "totalAttendance": 710,
-      "marketVisitors": 710,
+      "totalAttendance": 596,
+      "marketVisitors": 596,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 710 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 708 today: a plain weekday. About 110 of them would have been at the market anyway and are counted in the listing of today's free event at the market (Jazz Foundation of America: Karen and Norbert Stachel with LehCats), so this listing shows the rest: 596. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -2401,7 +2422,7 @@
       ]
     },
     {
-      "id": "ev-vm0jr39p",
+      "id": "ev-cbgiuvzi",
       "title": "School field trips",
       "category": "Youth Events",
       "startDate": "2026-11-18",
@@ -2420,7 +2441,7 @@
       ]
     },
     {
-      "id": "ev-2vkquplm",
+      "id": "ev-dm3btdfr",
       "title": "Sports: Pelicans vs. Detroit Pistons",
       "category": "Sports",
       "startDate": "2026-11-18",
@@ -2439,7 +2460,7 @@
       ]
     },
     {
-      "id": "ev-yrpstldg",
+      "id": "ev-wpxolyz0",
       "title": "Concerts and shows: The Afghan Whigs + Usher & Chris Brown fans in town",
       "category": "Concerts",
       "startDate": "2026-11-19",
@@ -2458,7 +2479,7 @@
       ]
     },
     {
-      "id": "ev-qwaigl9m",
+      "id": "ev-ndi3nei2",
       "title": "Conventions: NCA Convention + 11 smaller meetings",
       "category": "Conventions",
       "startDate": "2026-11-19",
@@ -2479,7 +2500,7 @@
       ]
     },
     {
-      "id": "ev-pud8moh2",
+      "id": "ev-gl2oj660",
       "title": "Cruise ships: Carnival Valor turnaround, American Cruise Lines river ship (river) + guests before and after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-19",
@@ -2501,7 +2522,7 @@
       ]
     },
     {
-      "id": "ev-gzugxfi6",
+      "id": "ev-johsz33t",
       "title": "Festivals: Great NOLA Trendkill visitors in town",
       "category": "Festivals",
       "startDate": "2026-11-19",
@@ -2520,7 +2541,7 @@
       ]
     },
     {
-      "id": "ev-354j8oy7",
+      "id": "ev-wzrqkjzn",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-19",
@@ -2538,18 +2559,18 @@
       ]
     },
     {
-      "id": "ev-hexqn810",
+      "id": "ev-6cltiwpd",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-19",
-      "totalAttendance": 710,
-      "marketVisitors": 710,
+      "totalAttendance": 708,
+      "marketVisitors": 708,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 710 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 708 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -2558,7 +2579,7 @@
       ]
     },
     {
-      "id": "ev-pgxkaxz0",
+      "id": "ev-foyn5wjx",
       "title": "School field trips",
       "category": "Youth Events",
       "startDate": "2026-11-19",
@@ -2577,7 +2598,7 @@
       ]
     },
     {
-      "id": "ev-uu9lnh40",
+      "id": "ev-oji4bfpc",
       "title": "Tours: Road Scholar group",
       "category": "Tours/Charters",
       "startDate": "2026-11-19",
@@ -2595,26 +2616,27 @@
       ]
     },
     {
-      "id": "ev-yknqacj0",
-      "title": "Concerts and shows: Usher & Chris Brown",
+      "id": "ev-5opkpiz3",
+      "title": "Concerts and shows: Usher & Chris Brown, Gallatin Street Fridays: Piano Hour with Keiko Komaki",
       "category": "Concerts",
       "startDate": "2026-11-20",
-      "totalAttendance": 74394,
-      "marketVisitors": 2681,
+      "totalAttendance": 74544,
+      "marketVisitors": 2793,
       "impactWindow": "7:00 PM",
       "location": "Caesars Superdome and others",
       "proximity": "Superdome",
-      "whosComing": "Usher & Chris Brown: R&B fans, likely mostly 30–45, the generation that grew up with their 2000s hits (Claude's estimate; R&B is most popular with concert-goers under 35, YouGov); many travel in for the two-night run.",
-      "notes": "About 2,681 expected through the sheds from this listing today (2 parts below). • Usher & Chris Brown (with Mario and Eric Bellinger) — Caesars Superdome: about 73,208 (venue capacity, an upper bound). Timing: Friday, 7:00 PM (night 1 of 2). Market estimate: Evening stadium show: about 15% of the crowd are out-of-town fans staying over, 35% drive in for the day and 50% are locals. Show day counts as a free day for those staying over: 1 in 10 pass through the sheds. On a Friday, about 1 in 20 day-trippers and 1 in 200 locals get there before closing: about 2,562. Fans in town the night before and the morning after are in this listing on those days. • Fans in town for Saturday's Usher & Chris Brown: about 1,200 out-of-town fans staying over are in town and free the day before the show. About 10% of them also go to today's show, so they're counted there. Market estimate: 1 in 10 of them pass through the sheds on a free day: about 119.",
+      "whosComing": "Usher & Chris Brown: R&B fans, likely mostly 30–45, the generation that grew up with their 2000s hits (Claude's estimate; R&B is most popular with concert-goers under 35, YouGov); many travel in for the two-night run. • Gallatin Street Fridays: Piano Hour with Keiko Komaki: locals and visitors, all ages. Mostly locals.",
+      "notes": "About 2,793 expected through the sheds from this listing today (3 parts below). • Usher & Chris Brown (with Mario and Eric Bellinger) — Caesars Superdome: about 73,208 (venue capacity, an upper bound). Timing: Friday, 7:00 PM (night 1 of 2). Market estimate: Evening stadium show: about 15% of the crowd are out-of-town fans staying over, 35% drive in for the day and 50% are locals. Show day counts as a free day for those staying over: 1 in 10 pass through the sheds. On a Friday, about 1 in 20 day-trippers and 1 in 200 locals get there before closing: about 2,562. Fans in town the night before and the morning after are in this listing on those days. • Gallatin Street Fridays: Piano Hour with Keiko Komaki (New Orleans Jazz Museum) — New Orleans Jazz Museum (400 Esplanade Ave.): about 150. Timing: 2:00–3:00 PM; free afternoon concert; about 150 (Claude's estimate, as for the museum's earlier afternoon shows). Market estimate: right across the street, starting by 4 PM: 75% of attendance: about 112. • Fans in town for Saturday's Usher & Chris Brown: about 1,200 out-of-town fans staying over are in town and free the day before the show. About 10% of them also go to today's show, so they're counted there. Market estimate: 1 in 10 of them pass through the sheds on a free day: about 119.",
       "sources": [
         "https://new-orleans.events/venue/caesars-superdome/",
         "https://www.songkick.com/metro-areas/11772-us-new-orleans?filters%5BminDate%5D=11%2F01%2F2026&filters%5BmaxDate%5D=11%2F30%2F2026&page=2",
         "https://en.wikipedia.org/wiki/Caesars_Superdome",
+        "https://nolajazzmuseum.org/events",
         "https://yougov.com/en-us/articles/47019-most-popular-live-music-genres-among-concert-goers-in-the-united-states"
       ]
     },
     {
-      "id": "ev-dkycrqic",
+      "id": "ev-iod7bxhs",
       "title": "Conventions: NCA Convention + 6 smaller meetings",
       "category": "Conventions",
       "startDate": "2026-11-20",
@@ -2635,7 +2657,7 @@
       ]
     },
     {
-      "id": "ev-knpnyhfc",
+      "id": "ev-5baoa8f0",
       "title": "Cruise ships: American Cruise Lines river ship (river) + guests before and after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-20",
@@ -2655,7 +2677,7 @@
       ]
     },
     {
-      "id": "ev-xjh5yjks",
+      "id": "ev-pdgxvdvq",
       "title": "Festivals: Great NOLA Trendkill",
       "category": "Festivals",
       "startDate": "2026-11-20",
@@ -2674,7 +2696,7 @@
       ]
     },
     {
-      "id": "ev-zihsoicm",
+      "id": "ev-4miujrw5",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-20",
@@ -2692,18 +2714,18 @@
       ]
     },
     {
-      "id": "ev-ya27is9p",
+      "id": "ev-lluuxel7",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-20",
-      "totalAttendance": 923,
-      "marketVisitors": 923,
+      "totalAttendance": 808,
+      "marketVisitors": 808,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 923 today: a Friday (1.3 × a plain weekday). Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 921 today: a Friday (1.3 × a plain weekday). About 110 of them would have been at the market anyway and are counted in the listing of today's free event at the market (Gallatin Street Fridays: Piano Hour with Keiko Komaki), so this listing shows the rest: 808. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -2712,7 +2734,7 @@
       ]
     },
     {
-      "id": "ev-cqfijwaw",
+      "id": "ev-fnxfkk75",
       "title": "School field trips",
       "category": "Youth Events",
       "startDate": "2026-11-20",
@@ -2731,7 +2753,7 @@
       ]
     },
     {
-      "id": "ev-nfdgzgq7",
+      "id": "ev-bztrau4j",
       "title": "Concerts and shows: Usher & Chris Brown, Chris Fleming",
       "category": "Concerts",
       "startDate": "2026-11-21",
@@ -2750,7 +2772,7 @@
       ]
     },
     {
-      "id": "ev-4in0qogd",
+      "id": "ev-sssh9nzd",
       "title": "Conventions: NCA Convention + 4 smaller meetings",
       "category": "Conventions",
       "startDate": "2026-11-21",
@@ -2771,7 +2793,7 @@
       ]
     },
     {
-      "id": "ev-mk7lfh3i",
+      "id": "ev-c0bu2sq8",
       "title": "Cruise ships: Mariner of the Seas turnaround, Carnival Liberty turnaround + guests before and after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-21",
@@ -2790,7 +2812,7 @@
       ]
     },
     {
-      "id": "ev-1leww9lj",
+      "id": "ev-sxkiwuw3",
       "title": "Festivals: Great NOLA Trendkill",
       "category": "Festivals",
       "startDate": "2026-11-21",
@@ -2809,7 +2831,7 @@
       ]
     },
     {
-      "id": "ev-2iez5ccs",
+      "id": "ev-mbd8gkmp",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-21",
@@ -2827,18 +2849,18 @@
       ]
     },
     {
-      "id": "ev-vrdmoqr0",
+      "id": "ev-ytmw6qz7",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-21",
-      "totalAttendance": 1719,
-      "marketVisitors": 1719,
+      "totalAttendance": 1714,
+      "marketVisitors": 1714,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 1,719 today: a Saturday (2.6 ×); college students away from home mostly gone for Thanksgiving break (about 127 fewer). No LSU dip: the kickoff time for LSU at Tennessee (afternoon or evening window) isn't set yet. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 1,714 today: a Saturday (2.6 ×); college students away from home mostly gone for Thanksgiving break (about 127 fewer). No LSU dip: the kickoff time for LSU at Tennessee (afternoon or evening window) isn't set yet. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -2848,7 +2870,7 @@
       ]
     },
     {
-      "id": "ev-mfr1j34m",
+      "id": "ev-fgyewduj",
       "title": "Concerts and shows: Usher & Chris Brown fans in town",
       "category": "Concerts",
       "startDate": "2026-11-22",
@@ -2867,7 +2889,7 @@
       ]
     },
     {
-      "id": "ev-y0n62wn5",
+      "id": "ev-yicvozdi",
       "title": "Conventions: NCA Convention + 1 smaller meeting",
       "category": "Conventions",
       "startDate": "2026-11-22",
@@ -2888,7 +2910,7 @@
       ]
     },
     {
-      "id": "ev-txzpquky",
+      "id": "ev-ox6n3rgh",
       "title": "Cruise ships: Norwegian Breakaway turnaround + guests before and after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-22",
@@ -2908,7 +2930,7 @@
       ]
     },
     {
-      "id": "ev-qmtze9mq",
+      "id": "ev-4cavthll",
       "title": "Festivals: Great NOLA Trendkill visitors in town",
       "category": "Festivals",
       "startDate": "2026-11-22",
@@ -2927,7 +2949,7 @@
       ]
     },
     {
-      "id": "ev-3khgzszr",
+      "id": "ev-r8kyokon",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-22",
@@ -2945,18 +2967,18 @@
       ]
     },
     {
-      "id": "ev-2u8u8bp1",
+      "id": "ev-yesupsjt",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-22",
-      "totalAttendance": 727,
-      "marketVisitors": 727,
+      "totalAttendance": 725,
+      "marketVisitors": 725,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 727 today: a Sunday (2.2 ×); college students away from home mostly gone for Thanksgiving break (about 107 fewer); Saints away game vs. the Bears at noon: −50% during game time. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 725 today: a Sunday (2.2 ×); college students away from home mostly gone for Thanksgiving break (about 107 fewer); Saints away game vs. the Bears at noon: −50% during game time. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -2965,7 +2987,7 @@
       ]
     },
     {
-      "id": "ev-5pupaqj1",
+      "id": "ev-5q8htpze",
       "title": "Conventions: NCA Convention attendees staying on",
       "category": "Conventions",
       "startDate": "2026-11-23",
@@ -2986,7 +3008,7 @@
       ]
     },
     {
-      "id": "ev-dsm1hz72",
+      "id": "ev-dddb4dqs",
       "title": "Cruise ships: Carnival Valor turnaround + guests before and after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-23",
@@ -3005,7 +3027,7 @@
       ]
     },
     {
-      "id": "ev-3hekfszd",
+      "id": "ev-kwfefoi8",
       "title": "Festivals: Great NOLA Trendkill visitors in town",
       "category": "Festivals",
       "startDate": "2026-11-23",
@@ -3024,7 +3046,7 @@
       ]
     },
     {
-      "id": "ev-jthnouft",
+      "id": "ev-lbqvet53",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-23",
@@ -3042,18 +3064,18 @@
       ]
     },
     {
-      "id": "ev-1hyc6o39",
+      "id": "ev-kcb20oic",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-23",
-      "totalAttendance": 945,
-      "marketVisitors": 945,
+      "totalAttendance": 943,
+      "marketVisitors": 943,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 945 today: a plain weekday; local public schools are out for Thanksgiving week (Jefferson, St. Tammany, St. Bernard, Plaquemines, St. Charles; Orleans charters vary) (× 1.4); college students away from home mostly gone for Thanksgiving break (about 49 fewer). Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 943 today: a plain weekday; local public schools are out for Thanksgiving week (Jefferson, St. Tammany, St. Bernard, Plaquemines, St. Charles; Orleans charters vary) (× 1.4); college students away from home mostly gone for Thanksgiving break (about 49 fewer). Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -3062,7 +3084,7 @@
       ]
     },
     {
-      "id": "ev-qrfabgin",
+      "id": "ev-e5hcitds",
       "title": "Sports: Pelicans vs. Phoenix Suns",
       "category": "Sports",
       "startDate": "2026-11-23",
@@ -3081,7 +3103,7 @@
       ]
     },
     {
-      "id": "ev-ssczy8r0",
+      "id": "ev-gtxxnei0",
       "title": "Conventions: 1 smaller meeting",
       "category": "Conventions",
       "startDate": "2026-11-24",
@@ -3097,7 +3119,7 @@
       ]
     },
     {
-      "id": "ev-bbum2ntk",
+      "id": "ev-ar2fuozl",
       "title": "Cruise ships: Cruise guests in town before or after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-24",
@@ -3115,7 +3137,7 @@
       ]
     },
     {
-      "id": "ev-onypfi90",
+      "id": "ev-ppzcyznl",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-24",
@@ -3133,7 +3155,7 @@
       ]
     },
     {
-      "id": "ev-zexur0ib",
+      "id": "ev-mym39g60",
       "title": "Holiday visitors staying with family",
       "category": "Miscellaneous",
       "startDate": "2026-11-24",
@@ -3150,18 +3172,18 @@
       ]
     },
     {
-      "id": "ev-ob6osnyf",
+      "id": "ev-qrt7vmnm",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-24",
-      "totalAttendance": 945,
-      "marketVisitors": 945,
+      "totalAttendance": 943,
+      "marketVisitors": 943,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 945 today: a plain weekday; local public schools are out for Thanksgiving week (Jefferson, St. Tammany, St. Bernard, Plaquemines, St. Charles; Orleans charters vary) (× 1.4); college students away from home mostly gone for Thanksgiving break (about 49 fewer). Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 943 today: a plain weekday; local public schools are out for Thanksgiving week (Jefferson, St. Tammany, St. Bernard, Plaquemines, St. Charles; Orleans charters vary) (× 1.4); college students away from home mostly gone for Thanksgiving break (about 49 fewer). Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -3170,7 +3192,7 @@
       ]
     },
     {
-      "id": "ev-yrdte7cx",
+      "id": "ev-mlpo7wab",
       "title": "Conventions: 1 smaller meeting",
       "category": "Conventions",
       "startDate": "2026-11-25",
@@ -3186,7 +3208,7 @@
       ]
     },
     {
-      "id": "ev-aud47ku0",
+      "id": "ev-i6pnipgs",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-25",
@@ -3204,7 +3226,7 @@
       ]
     },
     {
-      "id": "ev-u6kfeyvu",
+      "id": "ev-miggnae0",
       "title": "Holiday visitors staying with family",
       "category": "Miscellaneous",
       "startDate": "2026-11-25",
@@ -3221,18 +3243,18 @@
       ]
     },
     {
-      "id": "ev-eat1ewjq",
+      "id": "ev-9emcloe4",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-25",
-      "totalAttendance": 945,
-      "marketVisitors": 945,
+      "totalAttendance": 943,
+      "marketVisitors": 943,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 945 today: a plain weekday; local public schools are out for Thanksgiving week (Jefferson, St. Tammany, St. Bernard, Plaquemines, St. Charles; Orleans charters vary) (× 1.4); college students away from home mostly gone for Thanksgiving break (about 49 fewer). Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 943 today: a plain weekday; local public schools are out for Thanksgiving week (Jefferson, St. Tammany, St. Bernard, Plaquemines, St. Charles; Orleans charters vary) (× 1.4); college students away from home mostly gone for Thanksgiving break (about 49 fewer). Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -3241,7 +3263,7 @@
       ]
     },
     {
-      "id": "ev-mscpjh9l",
+      "id": "ev-5c69jinb",
       "title": "Conventions: 2 smaller meetings",
       "category": "Conventions",
       "startDate": "2026-11-26",
@@ -3257,7 +3279,7 @@
       ]
     },
     {
-      "id": "ev-4cb2vkpk",
+      "id": "ev-wta4zhbv",
       "title": "Cruise ships: American Cruise Lines river ship (river) + guests before and after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-26",
@@ -3278,7 +3300,7 @@
       ]
     },
     {
-      "id": "ev-ikrkvir0",
+      "id": "ev-h31pukt0",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-26",
@@ -3296,7 +3318,7 @@
       ]
     },
     {
-      "id": "ev-t1rub0jc",
+      "id": "ev-nir15y2l",
       "title": "Holiday visitors staying with family",
       "category": "Miscellaneous",
       "startDate": "2026-11-26",
@@ -3313,18 +3335,18 @@
       ]
     },
     {
-      "id": "ev-xlfu86e0",
+      "id": "ev-4ccgu5x6",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-26",
-      "totalAttendance": 306,
-      "marketVisitors": 306,
+      "totalAttendance": 305,
+      "marketVisitors": 305,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 306 today: Thanksgiving Day: 0.5 × a plain weekday; college students away from home mostly gone for Thanksgiving break (about 49 fewer). Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 305 today: Thanksgiving Day: 0.5 × a plain weekday; college students away from home mostly gone for Thanksgiving break (about 49 fewer). Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -3333,7 +3355,7 @@
       ]
     },
     {
-      "id": "ev-bh8r2dvd",
+      "id": "ev-mp5g6giy",
       "title": "Parades: Bayou Classic parade",
       "category": "Parades",
       "startDate": "2026-11-26",
@@ -3351,7 +3373,7 @@
       ]
     },
     {
-      "id": "ev-y9pw9fl0",
+      "id": "ev-ez6y8jvv",
       "title": "Sports: Bayou Classic visitors in town",
       "category": "Sports",
       "startDate": "2026-11-26",
@@ -3373,7 +3395,7 @@
       ]
     },
     {
-      "id": "ev-jvl56b0o",
+      "id": "ev-47bey52o",
       "title": "Concerts and shows: Battle of the Bands, PJ Morton's annual Black Friday show",
       "category": "Concerts",
       "startDate": "2026-11-27",
@@ -3394,7 +3416,7 @@
       ]
     },
     {
-      "id": "ev-om2wzkgh",
+      "id": "ev-casa19gq",
       "title": "Conventions: 2 smaller meetings",
       "category": "Conventions",
       "startDate": "2026-11-27",
@@ -3410,7 +3432,7 @@
       ]
     },
     {
-      "id": "ev-mccorwz0",
+      "id": "ev-0cmecx90",
       "title": "Cruise ships: Cruise guests in town before or after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-27",
@@ -3428,7 +3450,7 @@
       ]
     },
     {
-      "id": "ev-5blfltil",
+      "id": "ev-xgwyzou0",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-27",
@@ -3446,7 +3468,7 @@
       ]
     },
     {
-      "id": "ev-de8czq1k",
+      "id": "ev-jlywtfd0",
       "title": "Holiday visitors staying with family",
       "category": "Miscellaneous",
       "startDate": "2026-11-27",
@@ -3463,18 +3485,18 @@
       ]
     },
     {
-      "id": "ev-kcypkdc0",
+      "id": "ev-8eaklrze",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-27",
-      "totalAttendance": 1783,
-      "marketVisitors": 1783,
+      "totalAttendance": 1778,
+      "marketVisitors": 1778,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 1,783 today: the Friday after Thanksgiving, counted as a Saturday: 2.6 × a plain weekday; college students away from home mostly gone for Thanksgiving break (about 63 fewer). Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 1,778 today: the Friday after Thanksgiving, counted as a Saturday: 2.6 × a plain weekday; college students away from home mostly gone for Thanksgiving break (about 63 fewer). Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -3483,7 +3505,7 @@
       ]
     },
     {
-      "id": "ev-xfphcils",
+      "id": "ev-g4ujz6ec",
       "title": "Sports: Bayou Classic visitors in town",
       "category": "Sports",
       "startDate": "2026-11-27",
@@ -3505,7 +3527,7 @@
       ]
     },
     {
-      "id": "ev-lnubz41x",
+      "id": "ev-7hw1b3lo",
       "title": "Concerts and shows: Ali Siddiq, Orchestra Noir, Boogie T, with SubDocta + 1 more",
       "category": "Concerts",
       "startDate": "2026-11-28",
@@ -3524,7 +3546,7 @@
       ]
     },
     {
-      "id": "ev-nsugybqs",
+      "id": "ev-cfmzzh7c",
       "title": "Conventions: 3 smaller meetings",
       "category": "Conventions",
       "startDate": "2026-11-28",
@@ -3540,7 +3562,7 @@
       ]
     },
     {
-      "id": "ev-lkcdhv8x",
+      "id": "ev-daekmkn0",
       "title": "Cruise ships: Mariner of the Seas turnaround, Carnival Valor turnaround + guests before and after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-28",
@@ -3559,7 +3581,7 @@
       ]
     },
     {
-      "id": "ev-m4tcoyrf",
+      "id": "ev-sp8shmo0",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-28",
@@ -3577,7 +3599,7 @@
       ]
     },
     {
-      "id": "ev-tfv4jsq0",
+      "id": "ev-ddu05jdc",
       "title": "Holiday visitors staying with family",
       "category": "Miscellaneous",
       "startDate": "2026-11-28",
@@ -3594,18 +3616,18 @@
       ]
     },
     {
-      "id": "ev-gqebgkoc",
+      "id": "ev-ynd5axgt",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-28",
-      "totalAttendance": 1032,
-      "marketVisitors": 1032,
+      "totalAttendance": 1029,
+      "marketVisitors": 1029,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 1,032 today: a Saturday (2.6 ×); college students away from home mostly gone for Thanksgiving break (about 127 fewer); LSU at Arkansas in the 11 AM–noon window (ESPN; exact time and network not yet set; a rival, early kickoff): −40% during game time. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 1,029 today: a Saturday (2.6 ×); college students away from home mostly gone for Thanksgiving break (about 127 fewer); LSU at Arkansas in the 11 AM–noon window (ESPN; exact time and network not yet set; a rival, early kickoff): −40% during game time. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -3614,7 +3636,7 @@
       ]
     },
     {
-      "id": "ev-povfa0c0",
+      "id": "ev-tuy8efox",
       "title": "Sports: Bayou Classic",
       "category": "Sports",
       "startDate": "2026-11-28",
@@ -3636,7 +3658,7 @@
       ]
     },
     {
-      "id": "ev-mxacnmc0",
+      "id": "ev-vvxkvfe0",
       "title": "Conventions: 4 smaller meetings",
       "category": "Conventions",
       "startDate": "2026-11-29",
@@ -3652,7 +3674,7 @@
       ]
     },
     {
-      "id": "ev-u6t05rp0",
+      "id": "ev-u6tf6ods",
       "title": "Cruise ships: Norwegian Breakaway turnaround, Carnival Liberty turnaround + guests before and after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-29",
@@ -3672,7 +3694,7 @@
       ]
     },
     {
-      "id": "ev-mhgrrlfj",
+      "id": "ev-pegvtel4",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-29",
@@ -3690,7 +3712,7 @@
       ]
     },
     {
-      "id": "ev-2gdgu2fs",
+      "id": "ev-05ixeae0",
       "title": "Holiday visitors staying with family",
       "category": "Miscellaneous",
       "startDate": "2026-11-29",
@@ -3707,18 +3729,18 @@
       ]
     },
     {
-      "id": "ev-dhcxunah",
+      "id": "ev-uqra5ut0",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-29",
-      "totalAttendance": 727,
-      "marketVisitors": 727,
+      "totalAttendance": 725,
+      "marketVisitors": 725,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 727 today: a Sunday (2.2 ×); college students away from home mostly gone for Thanksgiving break (about 107 fewer); Saints away game vs. the Bengals at noon: −50% during game time. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 725 today: a Sunday (2.2 ×); college students away from home mostly gone for Thanksgiving break (about 107 fewer); Saints away game vs. the Bengals at noon: −50% during game time. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -3727,7 +3749,7 @@
       ]
     },
     {
-      "id": "ev-hj4takgq",
+      "id": "ev-nstlj700",
       "title": "Sports: Bayou Classic visitors in town",
       "category": "Sports",
       "startDate": "2026-11-29",
@@ -3749,7 +3771,7 @@
       ]
     },
     {
-      "id": "ev-4q8y4kmq",
+      "id": "ev-ezhz6cbi",
       "title": "Concerts and shows: Trippie Redd",
       "category": "Concerts",
       "startDate": "2026-11-30",
@@ -3766,7 +3788,7 @@
       ]
     },
     {
-      "id": "ev-nwehpjnz",
+      "id": "ev-6zzadss5",
       "title": "Conventions: 6 smaller meetings",
       "category": "Conventions",
       "startDate": "2026-11-30",
@@ -3782,7 +3804,7 @@
       ]
     },
     {
-      "id": "ev-y4lxgw5o",
+      "id": "ev-lbjrbr20",
       "title": "Cruise ships: Cruise guests in town before or after sailing",
       "category": "Cruise Ships",
       "startDate": "2026-11-30",
@@ -3802,7 +3824,7 @@
       ]
     },
     {
-      "id": "ev-qe6oq1qy",
+      "id": "ev-d8jume7i",
       "title": "Free-range tourists",
       "category": "Miscellaneous",
       "startDate": "2026-11-30",
@@ -3820,7 +3842,7 @@
       ]
     },
     {
-      "id": "ev-8nizhd2j",
+      "id": "ev-n3dwlofb",
       "title": "Holiday visitors staying with family",
       "category": "Miscellaneous",
       "startDate": "2026-11-30",
@@ -3837,18 +3859,18 @@
       ]
     },
     {
-      "id": "ev-i6upexxr",
+      "id": "ev-yd7o20h4",
       "title": "Locals and regional visitors",
       "category": "Miscellaneous",
       "startDate": "2026-11-30",
-      "totalAttendance": 710,
-      "marketVisitors": 710,
+      "totalAttendance": 708,
+      "marketVisitors": 708,
       "impactWindow": "Market hours",
       "location": "Residents of the metro area and day-trippers from the region",
       "proximity": "Whole French Quarter",
       "listingType": "visitors",
       "whosComing": "Locals and regional visitors: metro residents and regional day-trippers; families with kids on weekends and school holidays. The metro's median household income is about $62,400, below the U.S. median of $81,600 (Census, 2024). Many locals and regional visitors have been to the market many times, so depending on the merchandise, they may be less likely to buy than tourists, for whom everything is new and who are shopping for gifts and souvenirs.",
-      "notes": "About 710 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
+      "notes": "About 708 today: a plain weekday. Market estimate: about a third of the market's visitors live within a few hours' drive. Those who stay a night are counted with the everyday visitors or their event; this listing counts the rest, apart from those already in an event listing.",
       "sources": [
         "https://nolafamily.com/2026-2027-greater-new-orleans-public-school-calendars/",
         "https://crescentcitysports.com/saints-2026-schedule-unveiled/",
@@ -3857,7 +3879,7 @@
       ]
     },
     {
-      "id": "ev-0ra1axe0",
+      "id": "ev-27nm8neh",
       "title": "School field trips",
       "category": "Youth Events",
       "startDate": "2026-11-30",
@@ -3876,7 +3898,7 @@
       ]
     },
     {
-      "id": "ev-0u2mfarp",
+      "id": "ev-encf6yt0",
       "title": "Sports: Bayou Classic visitors in town",
       "category": "Sports",
       "startDate": "2026-11-30",
