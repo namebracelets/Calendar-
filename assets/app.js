@@ -5,6 +5,11 @@ const WEEKDAYS = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 const MAX_MOBILE_BADGES = 3;
 
 const today = new Date();
+// The ‹ and › beside the month's name step one month at a time, back to the calendar's first month (the oldest
+// events-YYYY-MM.json) and forward to next month. Vendors can also report any day from FIRST_MONTH on (checkin.js).
+const FIRST_MONTH = "2026-08";
+const MAX_OFFSET = 1;
+const minOffset = () => { const [y, m] = FIRST_MONTH.split("-").map(Number); return Math.min(0, (y - today.getFullYear()) * 12 + (m - 1 - today.getMonth())); };
 // market: true when the loaded month has estimated market visitors (the newer view).
 // pick: { from, to } while a vendor is choosing a day to rate (check-in), else null.
 const state = { offset: 0, data: null, days: {}, market: false, pick: null };
@@ -127,6 +132,16 @@ function renderNav() {
     const label = off < 0 ? "◄ Last Month" : off > 0 ? "Next Month ►" : "This Month";
     btn.innerHTML = `${label}<span class="block text-[10px] sm:text-xs font-normal ${active ? "text-emerald-700" : "text-emerald-200"}">${MONTHS_LONG[m]}</span>`;
   });
+  // ‹ and › beside the month's name (months older than last month have no button of their own)
+  const step = (el, off, ok, none) => {
+    if (!el) return;
+    const { y, m } = monthFor(off);
+    el.disabled = !ok;
+    el.setAttribute("aria-label", ok ? `${off < state.offset ? "Earlier" : "Later"} month: ${MONTHS_LONG[m]} ${y}` : none);
+    el.title = el.getAttribute("aria-label");
+  };
+  step($("month-prev"), state.offset - 1, state.offset > minOffset(), "No earlier months");
+  step($("month-next"), state.offset + 1, state.offset < MAX_OFFSET, "No later months yet");
 }
 
 function renderLegend() {
@@ -722,6 +737,8 @@ function closeModal() {
 document.querySelectorAll(".month-btn").forEach((btn) =>
   btn.addEventListener("click", () => showMonth(Number(btn.dataset.offset)))
 );
+$("month-prev").addEventListener("click", () => { if (state.offset > minOffset()) showMonth(state.offset - 1); });
+$("month-next").addEventListener("click", () => { if (state.offset < MAX_OFFSET) showMonth(state.offset + 1); });
 $("calendar").addEventListener("click", (e) => {
   const cell = e.target.closest("[data-date]");
   if (!cell) return;

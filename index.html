@@ -16,6 +16,14 @@
     /* The tutorial's pointing hand presses down on the day it taps */
     @keyframes tour-press { 0% { transform: scale(1); } 45% { transform: scale(.86); } 100% { transform: scale(1); } }
     .tour-press { animation: tour-press 500ms ease-in-out; }
+    /* ‹ and › beside the month's name (app.js): one month back or forward. A 40 px tap area around a smaller
+       circle; the negative margin keeps the title line its usual height. */
+    .month-step { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; margin: -4px 0; padding: 0; border-radius: 9999px; color: var(--color-emerald-800); cursor: pointer; }
+    .month-step > span { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; padding-bottom: 2px; border-radius: 9999px; border: 1px solid var(--color-emerald-300); background: var(--color-emerald-50); font-size: 22px; font-weight: 700; line-height: 1; }
+    .month-step:hover > span { background: var(--color-emerald-100); }
+    .month-step:disabled { cursor: default; color: var(--color-stone-300); }
+    .month-step:disabled > span { border-color: var(--color-stone-200); background: var(--color-stone-50); }
+    .month-step:focus-visible { outline: 2px solid #1e3a8a; outline-offset: -2px; }
 
     /* Phones: the whole page fits on one screen (body.fit is set by app.js on phone-width screens, and
        removed again if the screen is too short for it). Nothing is dropped; text and spacing get smaller. */
@@ -36,6 +44,10 @@
       body.fit > main > div:first-child { margin-bottom: 3px; }
       body.fit #month-title { font-size: 16px; line-height: 1.2; }
       body.fit #month-total { font-size: 10.5px; }
+      /* A 34 × 40 px tap area that takes up only its 20 px circle, so the line fits 320 px wide screens */
+      body.fit .month-step { width: 34px; margin: -11px -7px; }
+      body.fit .month-step > span { width: 20px; height: 20px; padding-bottom: 1px; font-size: 16px; }
+      body.fit main > div:first-child > div { gap: 2px; }
       body.fit #calendar { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
       body.fit .cal-weekdays { flex: none; font-size: 8.5px; }
       body.fit .cal-weekdays > div { padding-top: 1px; padding-bottom: 1px; }
@@ -82,7 +94,7 @@
     /* The "Methodology" link keeps a 40 px tall tap area however much the window shrinks */
     #modal details details > summary { min-height: calc(40px / var(--dd, 1)); }
   </style>
-  <link rel="stylesheet" href="assets/site.css?v=2026-11-06a"><!-- prebuilt Tailwind CSS: see README, "Security" -->
+  <link rel="stylesheet" href="assets/site.css?v=2026-11-18a"><!-- prebuilt Tailwind CSS: see README, "Security" -->
 </head>
 <body class="bg-stone-100 text-stone-900 min-h-screen antialiased">
 
@@ -104,7 +116,11 @@
 
   <main class="max-w-5xl mx-auto px-2 sm:px-4 py-3">
     <div class="flex items-end justify-between mb-2 px-1">
-      <h2 id="month-title" class="text-xl sm:text-2xl font-bold"></h2>
+      <div class="flex items-center gap-1 min-w-0">
+        <button id="month-prev" type="button" class="month-step" aria-label="Earlier month"><span aria-hidden="true">‹</span></button>
+        <h2 id="month-title" class="text-xl sm:text-2xl font-bold"></h2>
+        <button id="month-next" type="button" class="month-step" aria-label="Later month"><span aria-hidden="true">›</span></button>
+      </div>
       <span id="month-total" class="text-xs sm:text-sm text-stone-600"></span>
     </div>
 
@@ -115,7 +131,7 @@
     <div id="issue-banner" class="hidden mb-2"></div>
 
     <div id="pick-banner" class="hidden sticky top-[7.5rem] sm:top-32 z-30 mb-2 flex items-center justify-between gap-3 rounded-xl bg-emerald-900 text-white px-3 py-2 shadow-lg">
-      <p class="text-sm font-semibold">Tap the most recent day you worked. <span class="font-normal text-emerald-200">(Today or the past 14 days. ✓ = reported; tap it to change your answer.)</span></p>
+      <p class="text-sm font-semibold">Tap the most recent day you worked. <span class="font-normal text-emerald-200">(Or any earlier day: ‹ goes back a month. ✓ = reported; tap it to change your answer.)</span></p>
       <button id="pick-cancel" type="button" class="shrink-0 min-h-10 rounded-lg bg-white/15 hover:bg-white/25 px-3 text-sm font-semibold">Cancel</button>
     </div>
 
@@ -179,10 +195,10 @@
     </div>
   </div>
 
-  <script src="assets/shared.js?v=2026-11-06a"></script>
-  <script src="assets/weather.js?v=2026-11-06a"></script>
-  <script src="assets/app.js?v=2026-11-06a"></script>
-  <script src="assets/tour.js?v=2026-11-06a"></script>
-  <script src="assets/checkin.js?v=2026-11-06a"></script>
+  <script src="assets/shared.js?v=2026-11-18a"></script>
+  <script src="assets/weather.js?v=2026-11-18a"></script>
+  <script src="assets/app.js?v=2026-11-18a"></script>
+  <script src="assets/tour.js?v=2026-11-18a"></script>
+  <script src="assets/checkin.js?v=2026-11-18a"></script>
 </body>
 </html>

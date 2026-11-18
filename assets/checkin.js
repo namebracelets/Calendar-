@@ -35,7 +35,10 @@ const Checkin = (() => {
     { code: "didn't work", label: null, short: "didn't work" }, // "I didn't work today/that day"
   ];
   const WEEKDAY = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  const MIN_FOR_SUMMARY = 3, NOTE_AFTER = 10, PICK_DAYS = 14, EVENING_HOUR = 16;
+  // The daily question offers today and the past RECENT_DAYS days. Any day from the calendar's first month on
+  // (FIRST_MONTH in app.js) can be reported from the calendar itself: in pick-a-day mode or from the day's details.
+  const MIN_FOR_SUMMARY = 3, NOTE_AFTER = 10, RECENT_DAYS = 14, EVENING_HOUR = 16;
+  const firstDay = () => `${FIRST_MONTH}-01`;
   const formReady = () => !!(CHECKIN_CONFIG.formUrl && Object.values(CHECKIN_CONFIG.entries).every(Boolean));
 
   const ls = {
@@ -179,11 +182,12 @@ const Checkin = (() => {
     ).join("")}</div>`;
   }
 
-  // Days a vendor can still report: today and the past 14 days, minus those already reported on this device.
+  // Recent days not yet reported on this device: today and the past 14 days. The daily question offers these;
+  // older days can still be reported from the calendar.
   function availableDays() {
     const done = ls.get(K.answers, {});
     const out = [];
-    for (let n = 0; n <= PICK_DAYS; n++) { const k = keyOffset(-n); if (!done[k]) out.push(k); }
+    for (let n = 0; n <= RECENT_DAYS; n++) { const k = keyOffset(-n); if (k >= firstDay() && !done[k]) out.push(k); }
     return out; // most recent first
   }
 
@@ -224,20 +228,22 @@ const Checkin = (() => {
     if (!availableDays().length) {
       showWindow(`<div data-all-done><p class="text-2xl font-bold text-emerald-800">Thanks!</p>
         <p class="mt-2 text-base">You've reported every day from the past two weeks.</p>
+        <p class="mt-2 text-sm text-stone-600">To report an earlier day, tap it on the calendar.</p>
         ${rated >= NOTE_AFTER ? `<p class="mt-2 text-sm text-stone-600">See <strong>Your days</strong> under the calendar for how your days lined up.</p>` : ""}</div>`);
       updateYourDaysLink();
-      // Nothing left to report: back to the calendar
-      setTimeout(() => { if (box().querySelector("[data-all-done]") && !box().classList.contains("hidden")) closeWindow(); }, 2500);
+      // No recent day left to report: back to the calendar
+      setTimeout(() => { if (box().querySelector("[data-all-done]") && !box().classList.contains("hidden")) closeWindow(); }, 4000);
       return;
     }
     showWindow(`<p class="text-2xl font-bold text-emerald-800">Thanks!</p>
       <div data-later class="opacity-0 transition-opacity duration-500">
-        ${rated >= NOTE_AFTER ? `<div class="mt-3 rounded-xl bg-stone-50 p-3 text-sm">${yourDaysHtml(true)}</div>` : ""}
-        <p class="mt-4 text-base font-semibold">Would you like to share your experience from any other recent day?</p>
+        ${rated >= NOTE_AFTER ? `<div data-your-days class="mt-3 rounded-xl bg-stone-50 p-3 text-sm">${yourDaysHtml(true)}</div>` : ""}
+        <p class="mt-4 text-base font-semibold">Would you like to share your experience from any other day?</p>
         <div class="mt-3 grid grid-cols-2 gap-2">${btn('data-go="pick"', "Yes", true)}${btn('data-go="close"', "No")}</div>
       </div>`);
     setTimeout(() => { const el = box().querySelector("[data-later]"); if (el) el.classList.remove("opacity-0"); }, 900);
     updateYourDaysLink();
+    if (rated >= NOTE_AFTER) refreshNote(true);
   }
 
   // ---------------------------------------------------------------- pick-a-day mode
@@ -246,7 +252,7 @@ const Checkin = (() => {
     closeWindow();
     const open = availableDays();
     if (!open.length) return; // nothing left to report: stay on the calendar
-    state.pick = { from: keyOffset(-PICK_DAYS), to: todayKey(), done: new Set(Object.keys(ls.get(K.answers, {}))) };
+    state.pick = { from: firstDay(), to: todayKey(), done: new Set(Object.keys(ls.get(K.answers, {}))) };
     document.getElementById("pick-banner").classList.remove("hidden");
     if (state.offset !== 0) await showMonth(0); else renderCalendar();
     const caption = "Tap the most recent day you worked.";
@@ -277,6 +283,26 @@ const Checkin = (() => {
   // ---------------------------------------------------------------- "Your days" note (worked out on the device)
 
   const ratedDays = () => Object.values(ls.get(K.answers, {})).filter((a) => /^[1-5]$/.test(a.answer));
+
+  // The note uses every day the vendor has rated, so it opens the calendar and weather of each month those days
+  // fall in. Months already open come from memory; the others load once.
+  async function loadHistory() {
+    const months = [...new Set(ratedDays().map((a) => a.date.slice(0, 7)))];
+    await Promise.allSettled(months.map(async (month) => {
+      const [y, m] = month.split("-").map(Number);
+      await loadMonth(y, m - 1);
+      if (typeof Weather !== "undefined") { await Weather.load(); await Weather.ensureMonth(month); }
+    }));
+  }
+  // Fill in the note in the open window once the older months are in (after 4 seconds at most, then again
+  // if anything arrives later).
+  async function refreshNote(short) {
+    const render = () => { const el = box().querySelector("[data-your-days]"); if (el && !box().classList.contains("hidden")) el.innerHTML = yourDaysHtml(short); };
+    const done = loadHistory();
+    await Promise.race([done, new Promise((r) => setTimeout(r, 4000))]);
+    render();
+    done.then(render);
+  }
   const busyScore = (a) => 6 - Number(a.answer); // 5 = very busy … 1 = very slow
 
   // Market visitors, kinds of events and rain for a date, from the month files and weather already loaded.
@@ -362,9 +388,10 @@ const Checkin = (() => {
       <p class="mt-2 text-xs text-stone-500">Worked out on this phone from your own answers; nothing here is sent anywhere.</p>`;
   }
 
-  // In a day's details (today and the past 14 days): report that day, or change the earlier answer.
+  // In a day's details (any day from the calendar's first month through today): report that day, or change the
+  // earlier answer.
   function dayActionHtml(key) {
-    if (key < keyOffset(-PICK_DAYS) || key > todayKey()) return "";
+    if (key < firstDay() || key > todayKey()) return "";
     const prev = ls.get(K.answers, {})[key];
     return `<button type="button" data-report="${key}" class="w-full min-h-11 rounded-xl border border-emerald-300 bg-emerald-50 hover:bg-emerald-100 px-3 py-2 text-left text-sm text-emerald-900">
       ${prev ? `✓ You reported: <strong>${escapeHtml(answerText(key, prev.answer))}</strong> · <span class="underline">Change</span>`
@@ -376,7 +403,9 @@ const Checkin = (() => {
   }
 
   function showYourDays() {
-    showWindow(`<h2 class="text-lg font-bold pr-10">Your days</h2><div class="mt-2 text-sm">${yourDaysHtml(false)}</div>`);
+    const enough = ratedDays().length >= NOTE_AFTER;
+    showWindow(`<h2 class="text-lg font-bold pr-10">Your days</h2><div class="mt-2 text-sm" data-your-days>${enough ? `<p class="text-stone-500">Looking back over your days…</p>` : yourDaysHtml(false)}</div>`);
+    if (enough) refreshNote(false);
   }
   function updateYourDaysLink() {
     const link = document.getElementById("your-days-link");
@@ -415,5 +444,5 @@ const Checkin = (() => {
   flush();
   loadSummary();
 
-  return { maybeShow, pickDay, canPick, stopPicking, summaryHtml, dayActionHtml, reportFromDetails, showYourDays, _yourDaysHtml: yourDaysHtml, _record: record };
+  return { maybeShow, pickDay, canPick, stopPicking, summaryHtml, dayActionHtml, reportFromDetails, showYourDays, _yourDaysHtml: yourDaysHtml, _record: record, _loadHistory: loadHistory };
 })();
