@@ -5,15 +5,17 @@ const WEEKDAYS = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 const MAX_MOBILE_BADGES = 3;
 
 const today = new Date();
-// The ‹ and › beside the month's name step one month at a time, back to the calendar's first month (the oldest
-// events-YYYY-MM.json) and forward to next month. Vendors can also report any day from FIRST_MONTH on (checkin.js).
+// The ‹ and › beside the month's name, and swipes on the calendar, step one month at a time: back to the calendar's
+// first month (the oldest events-YYYY-MM.json) and forward to next month, or to the month after it once its file is
+// up (the last-Monday update publishes it a few days early). Vendors can report any day from FIRST_MONTH on (checkin.js).
 const FIRST_MONTH = "2026-08";
-const MAX_OFFSET = 1;
 const minOffset = () => { const [y, m] = FIRST_MONTH.split("-").map(Number); return Math.min(0, (y - today.getFullYear()) * 12 + (m - 1 - today.getMonth())); };
 // market: true when the loaded month has estimated market visitors (the newer view).
 // pick: { from, to } while a vendor is choosing a day to rate (check-in), else null.
 const state = { offset: 0, data: null, days: {}, market: false, pick: null };
 const cache = new Map();
+// The month after next counts only once its file has loaded; it's looked for whenever someone views next month.
+const maxOffset = () => { const { y, m } = monthFor(2); const r = cache.get(monthKey(y, m)); return r && r.ok ? 2 : 1; };
 
 // Bad hotel occupancy entries flagged by the admin import. date === null → shown above the month.
 const occupancyIssues = () => (state.data && state.data.hotelOccupancyIssues) || [];
@@ -141,7 +143,24 @@ function renderNav() {
     el.title = el.getAttribute("aria-label");
   };
   step($("month-prev"), state.offset - 1, state.offset > minOffset(), "No earlier months");
-  step($("month-next"), state.offset + 1, state.offset < MAX_OFFSET, "No later months yet");
+  step($("month-next"), state.offset + 1, state.offset < maxOffset(), "No later months yet");
+  if (state.offset === 1) {
+    const { y, m } = monthFor(2);
+    if (!cache.has(monthKey(y, m))) loadMonth(y, m).then(() => { if (state.offset === 1) renderNav(); });
+  }
+}
+
+// One month back or forward (‹ ›, swipes). Past either end, the calendar gives a small bump instead.
+function stepMonth(dir) {
+  const to = state.offset + dir;
+  if (to < minOffset() || to > maxOffset()) return moveCalendar([0, -dir * 14, 0], 260);
+  showMonth(to);
+}
+// A short slide of the calendar: in from the side the new month comes from, or the bump at either end.
+function moveCalendar(xs, ms) {
+  const cal = $("calendar");
+  if (!cal.animate || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  cal.animate(xs.map((x, i) => ({ transform: `translateX(${x}px)`, opacity: i === 0 && xs[0] ? 0.35 : 1 })), { duration: ms, easing: "ease-out" });
 }
 
 function renderLegend() {
@@ -159,8 +178,8 @@ function marketHeatClass(total) {
   return "bg-white";
 }
 
-const LEGEND_NOTE_ATTENDANCE = "Badges show estimated attendance for that day, rounded (under 1,000 → nearest 100; 1,000+ → nearest 1K). Darker day shading = bigger total crowd. Tap any day for details.";
-const LEGEND_NOTE_MARKET = "Badges show estimated market visitors: people likely to walk through the Farmers and Flea Market sheds during market hours because of each kind of event, rounded (under 1,000 → nearest 100; 1,000+ → nearest 1K). Darker shading = more market visitors (3K, 6K, 9K, 12K+). Tap any day for details.";
+const LEGEND_NOTE_ATTENDANCE = "Badges show estimated attendance for that day, rounded (under 1,000 → nearest 100; 1,000+ → nearest 1K). Darker day shading = bigger total crowd. Tap any day for details, or swipe sideways for other months.";
+const LEGEND_NOTE_MARKET = "Badges show estimated market visitors: people likely to walk through the Farmers and Flea Market sheds during market hours because of each kind of event, rounded (under 1,000 → nearest 100; 1,000+ → nearest 1K). Darker shading = more market visitors (3K, 6K, 9K, 12K+). Tap any day for details, or swipe sideways for other months.";
 
 function heatClass(total) {
   if (total >= 50000) return "bg-amber-200";
@@ -489,6 +508,7 @@ window.addEventListener("pageshow", refit); // coming back to the tab or with th
 window.addEventListener("scroll", () => { if (document.body.classList.contains("fit") && window.scrollY) window.scrollTo(0, 0); }, { passive: true });
 
 async function showMonth(offset) {
+  const dir = Math.sign(offset - state.offset);
   state.offset = offset;
   renderNav();
   const { y, m } = monthFor(offset);
@@ -499,6 +519,7 @@ async function showMonth(offset) {
   state.market = res.ok && res.json.events.some(hasMarketFigures);
   state.days = !res.ok ? {} : state.market ? indexByDayMarket(res.json.events, y, m) : indexByDay(res.json.events, y, m);
   renderCalendar();
+  if (dir) moveCalendar([dir * 36, 0], 220);
   refreshWeather(monthKey(y, m), offset);
 }
 
@@ -737,8 +758,26 @@ function closeModal() {
 document.querySelectorAll(".month-btn").forEach((btn) =>
   btn.addEventListener("click", () => showMonth(Number(btn.dataset.offset)))
 );
-$("month-prev").addEventListener("click", () => { if (state.offset > minOffset()) showMonth(state.offset - 1); });
-$("month-next").addEventListener("click", () => { if (state.offset < MAX_OFFSET) showMonth(state.offset + 1); });
+$("month-prev").addEventListener("click", () => stepMonth(-1));
+$("month-next").addEventListener("click", () => stepMonth(1));
+// Swipe left or right on the calendar for the next or earlier month (Adam, 2026-11-18). The listeners are passive,
+// so scrolling, the swipe down for the address bar and taps on days work as before. A swipe that starts at the
+// screen's edge is left to the browser (Back and Forward on iPhones).
+(() => {
+  const cal = $("calendar");
+  let start = null;
+  cal.addEventListener("touchstart", (e) => {
+    const t = e.touches[0];
+    start = e.touches.length === 1 && t.clientX > 24 && t.clientX < innerWidth - 24 ? { x: t.clientX, y: t.clientY, at: Date.now() } : null;
+  }, { passive: true });
+  cal.addEventListener("touchend", (e) => {
+    if (!start) return;
+    const t = e.changedTouches[0], dx = t.clientX - start.x, dy = t.clientY - start.y, quick = Date.now() - start.at < 800;
+    start = null;
+    if (quick && Math.abs(dx) >= 50 && Math.abs(dx) > Math.abs(dy) * 1.5) stepMonth(dx < 0 ? 1 : -1);
+  }, { passive: true });
+  cal.addEventListener("touchcancel", () => { start = null; }, { passive: true });
+})();
 $("calendar").addEventListener("click", (e) => {
   const cell = e.target.closest("[data-date]");
   if (!cell) return;
