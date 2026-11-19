@@ -38,6 +38,8 @@ const Checkin = (() => {
   // The daily question offers today and the past RECENT_DAYS days. Any day from the calendar's first month on
   // (FIRST_MONTH in app.js) can be reported from the calendar itself: in pick-a-day mode or from the day's details.
   const MIN_FOR_SUMMARY = 3, NOTE_AFTER = 10, RECENT_DAYS = 14, EVENING_HOUR = 16;
+  // Your days names a pattern only once it has this many days of each kind to compare (Adam, 2026-11-18; was 2)
+  const MIN_DAYS = 4;
   const firstDay = () => `${FIRST_MONTH}-01`;
   const formReady = () => !!(CHECKIN_CONFIG.formUrl && Object.values(CHECKIN_CONFIG.entries).every(Boolean));
 
@@ -332,7 +334,8 @@ const Checkin = (() => {
     const busy = facts.filter((f) => f.s >= 4), slow = facts.filter((f) => f.s <= 2);
     const lines = [];
     // Market visitors
-    const mvBusy = avg(busy.map((f) => f.mv).filter((v) => v !== null)), mvSlow = avg(slow.map((f) => f.mv).filter((v) => v !== null));
+    const mvB = busy.map((f) => f.mv).filter((v) => v !== null), mvS = slow.map((f) => f.mv).filter((v) => v !== null);
+    const mvBusy = mvB.length >= MIN_DAYS && mvS.length >= MIN_DAYS ? avg(mvB) : null, mvSlow = mvBusy === null ? null : avg(mvS);
     const near100 = (x) => (Math.round(x / 100) * 100).toLocaleString();
     if (mvBusy !== null && mvSlow !== null) {
       lines.push(mvBusy > mvSlow * 1.15
@@ -342,18 +345,18 @@ const Checkin = (() => {
     // Weekdays
     const byWd = {};
     for (const f of facts) (byWd[f.a.weekday] ||= []).push(f.s);
-    const wds = Object.entries(byWd).filter(([, v]) => v.length >= 2).map(([w, v]) => [w, avg(v)]).sort((a, b) => b[1] - a[1]);
+    const wds = Object.entries(byWd).filter(([, v]) => v.length >= MIN_DAYS).map(([w, v]) => [w, avg(v)]).sort((a, b) => b[1] - a[1]);
     let bestWd = null;
     if (wds.length >= 2) { bestWd = wds[0][0]; lines.push(`Best weekday for you so far: ${wds[0][0]}. Slowest: ${wds[wds.length - 1][0]}.`); }
     // Kinds of events
     const byCat = {};
     for (const f of facts) if (f.top) (byCat[f.top] ||= []).push(f.s);
-    const cats = Object.entries(byCat).filter(([, v]) => v.length >= 2).map(([c, v]) => [c, avg(v)]).sort((a, b) => b[1] - a[1]);
+    const cats = Object.entries(byCat).filter(([, v]) => v.length >= MIN_DAYS).map(([c, v]) => [c, avg(v)]).sort((a, b) => b[1] - a[1]);
     let bestCat = null;
     if (cats.length >= 2) { bestCat = cats[0][0]; lines.push(`Days led by ${cats[0][0]} were your busiest; days led by ${cats[cats.length - 1][0]} were slower.`); }
     // Rain
     const wet = facts.filter((f) => f.rain === true).map((f) => f.s), dry = facts.filter((f) => f.rain === false).map((f) => f.s);
-    if (wet.length >= 2 && dry.length >= 2) {
+    if (wet.length >= MIN_DAYS && dry.length >= MIN_DAYS) {
       const dw = avg(wet), dd = avg(dry);
       lines.push(dw < dd - 0.4 ? "Rainy days were noticeably slower for you." : dw > dd + 0.4 ? "Rain didn't hurt your sales; rainy days were actually busier." : "Rain didn't make much difference to your days.");
     }
