@@ -798,10 +798,19 @@ $("weather-close").addEventListener("click", closeWeather);
 $("weather-modal").addEventListener("click", (e) => { if (e.target.hasAttribute("data-weather-close")) closeWeather(); });
 
 renderLegend();
-showMonth(0).then(() => {
-  // First visit → tutorial. Later visits → the vendor check-in (at most once a day).
+// First visit → tutorial. Later visits → the vendor check-in (at most once a day). tour.js and checkin.js load after
+// this file, so wait for them as well as for the month (DOMContentLoaded comes once every script has run). Before
+// 2026-11-20 only the month was awaited, and when it arrived first both were silently skipped.
+const scriptsReady = new Promise((r) => (document.readyState === "loading" ? document.addEventListener("DOMContentLoaded", r, { once: true }) : r()));
+Promise.all([showMonth(0), scriptsReady]).then(() => {
   if (typeof Tour === "undefined") return;
   if (!Tour.hasSeen()) Tour.playTutorial();
   else if (typeof Checkin !== "undefined") Checkin.maybeShow();
 });
+// Phones keep pages open for days. A page shown again on a new day reloads, so "today", the month files and the
+// daily check-in are current.
+const openedOn = today.toDateString();
+const reloadIfNewDay = () => { if (document.visibilityState === "visible" && new Date().toDateString() !== openedOn) location.reload(); };
+document.addEventListener("visibilitychange", reloadIfNewDay);
+window.addEventListener("pageshow", (e) => { if (e.persisted) reloadIfNewDay(); });
 $("how-it-works").addEventListener("click", () => { if (typeof Tour !== "undefined") Tour.playTutorial({ replay: true }); });

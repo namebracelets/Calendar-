@@ -81,7 +81,7 @@ In each month file, the admin page stores the figures as `"hotelOccupancy": { "2
 
 ## Vendor check-ins (Google Form setup)
 
-Returning visitors get a short "how was business?" question at most once a day. Answers are anonymous. Each one holds a random ID made once per phone, the date rated, the answer, the weekday and month, whether it was answered the same day or looking back, and the app version. There's no name, email, IP address or sales amount.
+Returning visitors get a short "how was business?" question at most once a day. The page asks once every script has loaded and the month is showing, and a page left open reloads when it's shown again on a new day. Answers are anonymous. Each one holds a random ID made once per phone, the date rated, the answer, the weekday and month, whether it was answered the same day or looking back, and the app version. There's no name, email, IP address or sales amount.
 
 Answer codes: `1` very busy, `2` somewhat busy, `3` average, `4` somewhat slow, `5` very slow, `didn't work`.
 
